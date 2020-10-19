@@ -1,0 +1,70 @@
+@import './colorlist.scss';
+
+:root {--vh:10px;--sc:1}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  flex: none;
+  scrollbar-width: thin;
+  outline: none;
+  user-select: none;
+  &.user-select {
+    user-select: text;
+  }
+}
+
+div {
+  display: flex;
+}
+
+a {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: $main;
+  color: #FFF;
+  width: 100vw;
+  height: 100rh;
+  font-size: 1.6vh;
+  font-family: 'Main';
+  overflow: hidden;
+}
+
+@media (max-height: 20vw) {
+  :root {
+    --vh: 0.4vw;
+  }
+}
+
+/*@font-face{
+  font-family: 'Title';
+  src: url('/static/fonts/Death Hector.otf');
+}*/
+
+@font-face{
+  font-family: 'Main';
+  src: url('/static/fonts/Exo2-Regular.ttf');
+}
+
+@font-face{
+  font-family: 'Exo2';
+  src: url('/static/fonts/Exo2-SemiBold.ttf');
+}
+
+@font-face{
+  font-family: 'Bold';
+  src: url('/static/fonts/Exo2-Bold.ttf');
+}
+
+@font-face{
+  font-family: 'Kanit';
+  src: url('/static/fonts/Kanit-Regular.ttf');
+}

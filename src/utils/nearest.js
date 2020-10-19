@@ -1,0 +1,1 @@
+export const nearest = (target, arr) => arr.reduce((x, y) => Math.abs(y - target) < Math.abs(x - target) ? y : x)

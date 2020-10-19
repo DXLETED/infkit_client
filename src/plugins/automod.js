@@ -1,0 +1,130 @@
+import React, { memo } from 'react'
+import { CategoryName } from '../components/categoryName'
+import { CustomTime } from '../components/customTime'
+import { EditableList } from '../components/editableList'
+import { Enabled } from '../components/enabled'
+import { ExpansionPanel } from '../components/expansionPanel'
+import { Input } from '../components/input'
+import { Label } from '../components/label'
+import { MultiSwitch } from '../components/multiSwitch'
+import { ObjectEdit } from '../components/objectEdit'
+import { Row } from '../components/row'
+import { Select } from '../components/select'
+import { Slider } from '../components/slider'
+import { Switch } from '../components/switch'
+
+const AutomodItem = memo(({state, label, api, trigger}) => <ExpansionPanel header={label} className="filters__item" dropdown={<Row elements={[
+  <>
+    {trigger && <>
+      <Label>Trigger</Label>
+      {trigger}
+    </>}
+    <Label mt>Action</Label>
+    <MultiSwitch label="Warns" selected={{o: state.warns}} set={api.setWarns} options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} m />
+    <CustomTime label="Text mute time" value={state.muteTime.text} set={api.setMuteTimeText} b m defsize />
+    <CustomTime label="Voice mute time" value={state.muteTime.voice} set={api.setMuteTimeVoice} b m defsize />
+    <Switch enabled={state.delMsg} set={api.setDelMsg}>Delete message</Switch>
+  </>,
+  <>
+    <ObjectEdit label="Enabled roles" type="roles" data={state.eroles} add={api.eroles.add} delete={api.eroles.del} default="ALL by default" m />
+    <ObjectEdit label="Disabled roles" type="roles" data={state.droles} add={api.droles.add} delete={api.droles.del} m />
+    <ObjectEdit label="Enabled channels" type="channels" data={state.echannels} add={api.echannels.add} delete={api.echannels.del} default="ANY by default" m />
+    <ObjectEdit label="Disabled channels" type="channels" data={state.dchannels} add={api.dchannels.add} delete={api.dchannels.del} m />
+    <ObjectEdit label="Groups" type="groups" data={state.groups} add={api.groups.add} delete={api.groups.del} />
+  </>
+]} margin={2} />} r={<Enabled state={state.enabled} set={api.enabled} />} column m />)
+
+export const Automod = props => {
+  const { state, api } = props
+  return <>
+    <div className="filters category">
+      <CategoryName>Filters</CategoryName>
+      {/*<AutomodItem label="Spam" state={state.filters.spam} api={api.filters.spam} trigger={
+        <>
+          <Row elements={[
+            <Input value={state.filters.spam.messages} set={n => api.filters.setMessages('spam', n)} label="Messages" type="number" b />,
+            <CustomTime value={state.filters.spam.reset} set={n => api.filters.setResetTime('spam', n)} label="Reset time" b defsize />
+          ]} m />
+        </>
+      } />*/}
+      {/*<AutomodItem label="Repeated messages" state={state.filters.repeatedMessages} api={api.filters.repeatedMessages} trigger={
+        <>
+          <Row elements={[
+            <Input value={state.filters.repeatedMessages.messages} set={n => api.filters.setMessages('spam', n)} label="Repeats" type="number" b />,
+            <CustomTime value={state.filters.repeatedMessages.reset} set={n => api.filters.setResetTime('spam', n)} label="Reset time" b defsize />
+          ]} m />
+        </>
+      } />*/}
+      <AutomodItem label="Caps" state={state.filters.caps} api={api.filters.caps} trigger={
+        <>
+          <Slider label="CAPS %" value={state.filters.caps.threshold} set={api.filters.caps.setThreshold} keyPoints={10} min={0.5} max={1} />
+          <Input value={state.filters.caps.minLength} set={api.filters.caps.setMinLength} label="Min message length" type="number" min={10} max={100} b />
+        </>
+      } />
+      <AutomodItem label="Emoji spam" state={state.filters.emoji} api={api.filters.emoji} trigger={
+        <>
+          <Slider label="EMOJI %" value={state.filters.emoji.threshold} set={() => {}} keyPoints={10} min={0.5} max={1} />
+        </>
+      } />
+      <AutomodItem label="Links" state={state.filters.links} api={api.filters.links} trigger={
+        <>
+          <Row elements={[
+            <Input value={state.filters.links.messages} set={api.filters.spam.setMessages} label="Repeats" type="number" b />,
+            <CustomTime value={state.filters.links.reset} set={api.filters.spam.setResetTime} label="Reset time" b defsize />
+          ]} m />
+          <ObjectEdit label="Allowed domains" type="aliases" data={['youtube.com'].map(a => ({name: a}))}
+            add={api.filters.links.allowedDomains.add}
+            delete={api.filters.links.allowedDomains.del} input m />
+        </>
+      } />
+      <AutomodItem label="Zalgo" state={state.filters.zalgo} api={api.filters.zalgo} trigger={
+        <>
+          <Slider label="Threshold" value={state.filters.zalgo.threshold} set={() => {}} keyPoints={10} min={0.5} max={1} />
+        </>
+      } />
+    </div>
+    <div className="autoactions category">
+      <CategoryName>Automated actions</CategoryName>
+      <EditableList data={state.autoActions.map((a, i) => <>
+        <Row elements={[
+          <>
+            <Label>Trigger</Label>
+            <Row elements={[
+              <Select selected={a.warns} set={n => api.autoActions.setWarns(i, n)} ending={a.warns === 1 ? ' warning' : ' warnings'} dropdown={[...Array(101)].map((_, i) => i)} nm />,
+              {width: 0, jcc: true, el: <Label nm>per</Label>},
+              {width: 2, el: <CustomTime value={a.reset} set={n => api.autoActions.setResetTime(i, n)} b defsize />}
+            ]} jcc />
+          </>,
+          <>
+            <Label>Action</Label>
+            <Select
+              type="options"
+              selected={a.action}
+              options={['none', 'mute', 'kick', 'ban']}
+              dropdown={['None', 'Mute', 'Kick', 'Ban']}
+              set={n => api.autoActions.setAction(i, n)} m />
+            {a.action === 'mute' && a.muteTime && <>
+              <CustomTime label="Text mute time" value={a.muteTime.text} set={n => api.autoActions.setMuteTime.text(i, n)} b m defsize />
+              <CustomTime label="Voice mute time" value={a.muteTime.voice} set={n => api.autoActions.setMuteTime.voice(i, n)} b m defsize />
+            </>}
+            {a.action === 'ban' && a.ban && <Select label="Ban type"
+              type="options"
+              selected={a.ban.type}
+              options={['permanently', 'time', 'reason']}
+              dropdown={['Permanently', 'Time selection', 'By reason']}
+              set={n => api.autoActions.setBanType(i, n)} m={a.ban.type === 'time' || a.ban.type === 'reason'} />}
+            {a.ban && a.ban.type === 'time' && <CustomTime label="Ban time"
+              value={0}
+              set={n => api.autoActions.setBanTime(i, n)} defsize b />}
+            {a.ban && a.ban.type === 'reason' && <Select label="Ban reason"
+              type="reason/ban"
+              selected={null}
+              set={n => api.autoActions.setBanReason(i, n)} />}
+          </>
+        ]} margin={2} />
+      </>)}
+      add={api.autoActions.create}
+      delete={api.autoActions.del} column p={1} limit={5} />
+    </div>
+  </>
+}

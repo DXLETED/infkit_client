@@ -1,0 +1,1 @@
+export const vh = vh => `calc(var(--vh) * (var(--sc) * ${vh}))`
