@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useCookies } from 'react-cookie'
 import { Dropdown } from '../components/dropdown'
 import { useAuth } from '../hooks/auth.hook'
-import{ config } from '../config'
 
 const HeaderEl = props => {
   let history = useHistory()
@@ -30,7 +29,7 @@ export const Header = memo(() => {
   const { isAuthenticated, user } = useAuth()
   const login = () => {
     window.open(
-      `https://discord.com/api/oauth2/authorize?client_id=${config.clientId}&redirect_uri=${config.url}login&response_type=code&scope=identify%20email%20guilds`,
+      `https://discord.com/api/oauth2/authorize?client_id=${SERVER_CONFIG.clientId}&redirect_uri=${SERVER_CONFIG.url}login&response_type=code&scope=identify%20email%20guilds`,
       'InfKit - Login',
       `width=500,height=800,top=${window.top.outerHeight / 2 + window.top.screenY - (800 / 2)},left=${window.top.outerWidth / 2 + window.top.screenX - (500 / 2)}`)
   }

@@ -15,17 +15,18 @@ export const emojis = {
   },
   get(e) {
     let r = this.all().findIndex(el => el.split(' ').includes(e))
-    return r !== -1 ? {label: this.all()[r], x: r % this.row, y: Math.floor(r / this.row)} : null
+    return r !== -1 ? {label: (this.all()[r] || '').split(' ')[0], x: r % this.row, y: Math.floor(r / this.row)} : null
   },
   getName(uni) {
-    let r = this.categories.map(c => Object.entries(emojiList[c])).flat().find(([name, str]) => str === uni)
-    return r ? `:${r[0]}:` : uni
+    const list = this.categories.map(c => Object.entries(emojiList[c])).flat()
+    let r = list.find(([str, name]) => str === uni) || list.find(([str, name]) => str.includes(uni))
+    return r ? `:${r[1].split(' ')[0]}:` : uni
   },
   getUnicode(name) {
     let key = name.charAt(0) === ':' ? name.slice(1, -1) : name
-    let r = this.categories.map(c => Object.entries(emojiList[c])).flat().find(([str, uni]) => str === key)
-    console.log(key, this.categories.map(c => Object.entries(emojiList[c])).flat())
-    return r ? r[1] : name
+    const list = this.categories.map(c => Object.entries(emojiList[c])).flat()
+    let r = list.find(([uni, str]) => str === key) || list.find(([uni, str]) => str.includes(key))
+    return r ? r[0] : name
   },
   list: {
     people: {

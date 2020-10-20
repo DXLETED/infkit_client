@@ -20,7 +20,7 @@ const AutomodItem = memo(({state, label, api, trigger}) => <ExpansionPanel heade
       {trigger}
     </>}
     <Label mt>Action</Label>
-    <MultiSwitch label="Warns" selected={{o: state.warns}} set={api.setWarns} options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} m />
+    <MultiSwitch label="Warns" selected={{o: state.warns}} set={n => api.setWarns(n.o)} options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} m />
     <CustomTime label="Text mute time" value={state.muteTime.text} set={api.setMuteTimeText} b m defsize />
     <CustomTime label="Voice mute time" value={state.muteTime.voice} set={api.setMuteTimeVoice} b m defsize />
     <Switch enabled={state.delMsg} set={api.setDelMsg}>Delete message</Switch>
@@ -39,22 +39,24 @@ export const Automod = props => {
   return <>
     <div className="filters category">
       <CategoryName>Filters</CategoryName>
-      {/*<AutomodItem label="Spam" state={state.filters.spam} api={api.filters.spam} trigger={
+      <AutomodItem label="Spam" state={state.filters.spam} api={api.filters.spam} trigger={
         <>
           <Row elements={[
-            <Input value={state.filters.spam.messages} set={n => api.filters.setMessages('spam', n)} label="Messages" type="number" b />,
-            <CustomTime value={state.filters.spam.reset} set={n => api.filters.setResetTime('spam', n)} label="Reset time" b defsize />
-          ]} m />
+            <Input value={state.filters.spam.messages} set={api.filters.spam.setMessages} type="number" min={2} b />,
+            {width: null, el: <Label nm>messages per</Label>},
+            {width: 2, el: <CustomTime value={state.filters.spam.reset} set={api.filters.spam.setResetTime} min={10000} b defsize />}
+          ]} aic m />
         </>
-      } />*/}
-      {/*<AutomodItem label="Repeated messages" state={state.filters.repeatedMessages} api={api.filters.repeatedMessages} trigger={
+      } />
+      <AutomodItem label="Repeated messages" state={state.filters.repeatedMessages} api={api.filters.repeatedMessages} trigger={
         <>
           <Row elements={[
-            <Input value={state.filters.repeatedMessages.messages} set={n => api.filters.setMessages('spam', n)} label="Repeats" type="number" b />,
-            <CustomTime value={state.filters.repeatedMessages.reset} set={n => api.filters.setResetTime('spam', n)} label="Reset time" b defsize />
-          ]} m />
+            <Input value={state.filters.repeatedMessages.messages} set={api.filters.repeatedMessages.setMessages} type="number" min={2} b />,
+            {width: null, el: <Label nm>repeated messages per</Label>},
+            {width: 2, el: <CustomTime value={state.filters.repeatedMessages.reset} set={api.filters.repeatedMessages.setResetTime} min={10000} b defsize />}
+          ]} aic m />
         </>
-      } />*/}
+      } />
       <AutomodItem label="Caps" state={state.filters.caps} api={api.filters.caps} trigger={
         <>
           <Slider label="CAPS %" value={state.filters.caps.threshold} set={api.filters.caps.setThreshold} keyPoints={10} min={0.5} max={1} />
@@ -63,15 +65,11 @@ export const Automod = props => {
       } />
       <AutomodItem label="Emoji spam" state={state.filters.emoji} api={api.filters.emoji} trigger={
         <>
-          <Slider label="EMOJI %" value={state.filters.emoji.threshold} set={() => {}} keyPoints={10} min={0.5} max={1} />
+          <Slider label="EMOJI %" value={state.filters.emoji.threshold} set={api.filters.emoji.setThreshold} keyPoints={10} min={0.5} max={1} />
         </>
       } />
       <AutomodItem label="Links" state={state.filters.links} api={api.filters.links} trigger={
         <>
-          <Row elements={[
-            <Input value={state.filters.links.messages} set={api.filters.spam.setMessages} label="Repeats" type="number" b />,
-            <CustomTime value={state.filters.links.reset} set={api.filters.spam.setResetTime} label="Reset time" b defsize />
-          ]} m />
           <ObjectEdit label="Allowed domains" type="aliases" data={['youtube.com'].map(a => ({name: a}))}
             add={api.filters.links.allowedDomains.add}
             delete={api.filters.links.allowedDomains.del} input m />
@@ -79,7 +77,7 @@ export const Automod = props => {
       } />
       <AutomodItem label="Zalgo" state={state.filters.zalgo} api={api.filters.zalgo} trigger={
         <>
-          <Slider label="Threshold" value={state.filters.zalgo.threshold} set={() => {}} keyPoints={10} min={0.5} max={1} />
+          <Slider label="Threshold" value={state.filters.zalgo.threshold} set={api.filters.zalgo.setThreshold} keyPoints={10} min={0.5} max={1} />
         </>
       } />
     </div>

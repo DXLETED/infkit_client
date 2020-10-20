@@ -31,6 +31,8 @@ function todos(state = {}, action) {
       return {...state, guild: {...state.guild || {}, ...action.data}}
     case 'SAVE_GUILD':
       return {...state, guildPrev: {...state.guild || {}, ...action.data}}
+    case 'CLEAR_GUILD':
+      return {...state, guild: null, guildPrev: null}
     case 'UPDATE_PLUGIN':
       return {...state, guild: {...state.guild, plugins: {...state.guild.plugins, [action.pl]: action.data}}}
     case 'UPDATE_GROUPS':

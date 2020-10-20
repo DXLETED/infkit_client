@@ -593,8 +593,10 @@
   &.m {
     margin-bottom: 1.5vh;
   }
+  &.aic {
+    align-items: center;
+  }
   > .row__el {
-    flex: 1;
     flex-direction: column;
     &:not(:last-child) {
       margin-right: 1vh;

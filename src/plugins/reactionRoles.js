@@ -44,6 +44,8 @@ export const reactionRoles = props => {
               add={n => api.addRole(i, ii, n)}
               delete={d => api.delRole(i, ii, d)} />
           </>)}
+          label="Reacts"
+          limit={20}
           addLabel="Add react"
           add={() => api.addReact(i)}
           delete={d => api.delReact(i, d)}

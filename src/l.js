@@ -21,11 +21,15 @@ let en = {
   plugindesc_music: 'Control high quality music right from the app',
   plugindesc_poll: 'Finally, decide what to play',
   plugindesc_userRooms: 'User-configurable channels',
+  cmddesc_rank: 'Your rank card or another member',
+  cmddesc_addxp: 'Adds XP to you or another member',
   cmddesc_clear: 'Delete channel messages',
   cmddesc_warn: 'Warns a user',
   cmddesc_mute: 'Mutes a user',
-  cmddesc_tempmute: 'Temperary mutes a user',
   cmddesc_unmute: 'Delete user mutes',
+  cmddesc_kick: 'Kicks a user',
+  cmddesc_ban: 'Bans a user',
+  cmddesc_unban: 'Unbans a user',
   commands: {
     moderation: {
       mute: {

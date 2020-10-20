@@ -17,22 +17,22 @@ const Group = ({g, i, api}) => {
   const [modalState, open, close] = useModal({fixed: true})
   return <>
     <Container onClick={e => !g.type && open(e)} hp2 vp1>{g.name}</Container>
-    <Modal className="ml" s={modalState} title={<Input className="groupName" value={g.name} set={n => api.setName(i, n)} fill black bold />}>
-      <ObjectEdit type="roles" data={g.enabledRoles}
-        add={n => api.enabledRoles.add(i, n)}
-        delete={d => api.enabledRoles.del(i, d)}
+    <Modal className="ml" s={modalState} title={<Input className="groupName" value={g.name} set={api.setName} fill black bold />}>
+      <ObjectEdit type="roles" data={g.eroles}
+        add={api.eroles.add}
+        delete={api.eroles.del}
         default="ALL by default" label="Enabled roles" m noML />
-      <ObjectEdit type="roles" data={g.disabledRoles}
-        add={n => api.disabledRoles.add(i, n)}
-        delete={d => api.disabledRoles.del(i, d)}
+      <ObjectEdit type="roles" data={g.droles}
+        add={api.droles.add}
+        delete={api.droles.del}
         label="Disabled roles" m noML />
-      <ObjectEdit type="channels" data={g.enabledChannels}
-        add={n => api.enabledChannels.add(i, n)}
-        delete={d => api.enabledChannels.del(i, d)}
+      <ObjectEdit type="channels" data={g.echannels}
+        add={api.echannels.add}
+        delete={api.echannels.del}
         default="ANY by default" label="Enabled channels" m noML />
-      <ObjectEdit type="channels" data={g.disabledChannels}
-        add={n => api.disabledChannels.add(i, n)}
-        delete={d => api.disabledChannels.del(i, d)}
+      <ObjectEdit type="channels" data={g.dchannels}
+        add={api.dchannels.add}
+        delete={api.dchannels.del}
         label="Disabled roles" noML />
     </Modal>
   </>
@@ -50,7 +50,7 @@ export const Groups = ({open, setOpen}) => {
           <div className="dropdown">
             <Scroll deps={[state]}>
               <div className="group-settings-list">
-                <EditableList data={state ? state.map((g, i) => ({fixed: !!g.type, img: g.type && '/static/img/lock.png', el: <Group g={g} i={i} api={api} key={g.id} />})) : []}
+                <EditableList data={state ? state.map((g, i) => ({fixed: !!g.type, img: g.type && '/static/img/lock.png', el: <Group g={g} i={i} api={api.group(i)} key={g.id} />})) : []}
                   delete={d => {
                     api.del(d)
                     setEdit(null)
@@ -59,27 +59,6 @@ export const Groups = ({open, setOpen}) => {
               </div>
             </Scroll>
           </div>}
-        <Modal id="group-settings" className="ml" s={mState}>
-          {edit !== null && edit in state && <>
-            <Input className="groupName" value={state[edit].name} set={n => api.setName(edit, n)} />
-            <ObjectEdit type="roles" data={state[edit].enabledRoles}
-              add={n => api.enabledRoles.add(edit, n)}
-              delete={d => api.enabledRoles.del(edit, d)}
-              default="ALL by default" label="Enabled roles" m />
-            <ObjectEdit type="roles" data={state[edit].disabledRoles}
-              add={n => api.disabledRoles.add(edit, n)}
-              delete={d => api.disabledRoles.del(edit, d)}
-              label="Disabled roles" m />
-            <ObjectEdit type="channels" data={state[edit].enabledChannels}
-              add={n => api.enabledChannels.add(edit, n)}
-              delete={d => api.enabledChannels.del(edit, d)}
-              default="ANY by default" label="Enabled channels" m />
-            <ObjectEdit type="channels" data={state[edit].disabledChannels}
-              add={n => api.disabledChannels.add(edit, n)}
-              delete={d => api.disabledChannels.del(edit, d)}
-              label="Disabled roles" />
-          </>}
-        </Modal>
     </div>
   )
 }

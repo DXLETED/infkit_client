@@ -39,8 +39,8 @@ export const Input = props => {
             prevValue.current = e.target.value
           }
       }} onBlur={e => {
-        if (props.max !== undefined && e.target.value < props.min)
-          e.target.value = props.mix
+        if (props.min !== undefined && e.target.value < props.min)
+          e.target.value = props.min
         if (props.max !== undefined && e.target.value > props.max)
           e.target.value = props.max
         props.set && props.set(props.type === 'number' ? parseInt(e.target.value) : e.target.value)

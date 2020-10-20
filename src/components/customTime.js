@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { Fragment, useEffect, useRef, useState } from 'react'
 import cn from 'classnames'
 import { MLabel } from './mlabel'
 import { memo } from 'react'
@@ -56,16 +56,17 @@ const TimeSelect = memo(({value, period, set, setMinPeriod, min, max} = {}) => {
       <div className={cn('time-select__dropdown', {v: open2})}>
         <div className="time-select__dropdown_in with-scroll">
           {periods
-            .filter(per => (min === undefined || min <= per[0] * per[1] * per[3]) && (max === undefined || max >= per[3]))
-            .map((per, i) => <div className="time-select__dropdown_in__item" onClick={() => {
-              const pre = val * per[3]
-              setMinPeriod(i)
-              setOpen2(false)
-              if (pre < min) return set(min)
-              if (pre > max) return set(max)
-              set(val * per[3])
-            }
-          } key={i * per[3]}>{per[2]}</div>)}
+            .map((per, i) => (min === undefined || min <= per[0] * per[1] * per[3]) && (max === undefined || max >= per[3])
+            ? <div className="time-select__dropdown_in__item" onClick={() => {
+                const pre = val * per[3]
+                setMinPeriod(i)
+                setOpen2(false)
+                if (pre < min) return set(min)
+                if (pre > max) return set(max)
+                set(val * per[3])
+              }
+            } key={i * per[3]}>{per[2]}</div>
+            : <Fragment key={i} />)}
         </div>
       </div>
     </div>

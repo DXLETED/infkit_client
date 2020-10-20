@@ -11,13 +11,15 @@ import { memo } from 'react'
 import { diff } from 'deep-diff'
 import { useMemo } from 'react'
 import { Input } from './input'
+import { useSettings } from '../hooks/settings.hook'
 
 const CategoryEmoji = props => {
   const scale = 28 / emojis.size
   const startFrom = emojis.list[props.cat] ? emojis.list[props.cat].startFrom : 0
-  return emojis.list[props.cat] 
+  const [open, setOpen] = useSettings('emoji_category_' + props.cat, true, {options: [true, false]})
+  return <ExpansionPanel header={props.header} dropdown={emojis.list[props.cat]
     ? emojis.list[props.cat].list.map((e, i) =>
-      <div className="category-emoji-el">
+      <div className="category-emoji-el" key={e}>
         <div
           style={{
             backgroundSize: `${emojis.width * scale}px ${emojis.height * scale}px`,
@@ -26,25 +28,44 @@ const CategoryEmoji = props => {
           }}
           onClick={() => props.set({label: e.split(' ')[0], x: i % emojis.row, y: Math.floor(i / emojis.row)})} />
       </div>)
-    : ''
+    : ''} onchange={setOpen} open={open} m></ExpansionPanel>
 }
 
-const EmojiList = memo(({open, set, us}) => <>
-  {open && <>
-    <Input input={n => console.log(n)} placeholder="Search" b m />
-    <ExpansionPanel header="People" dropdown={<CategoryEmoji cat="people" set={set} />} open m></ExpansionPanel>
-    <ExpansionPanel header="Nature" dropdown={<CategoryEmoji cat="nature" set={set} />} open m></ExpansionPanel>
-    <ExpansionPanel header="Food" dropdown={<CategoryEmoji cat="food" set={set} />} open m></ExpansionPanel>
-    <ExpansionPanel header="Activity" dropdown={<CategoryEmoji cat="activity" set={set} />} open m></ExpansionPanel>
-    <ExpansionPanel header="Travel" dropdown={<CategoryEmoji cat="travel" set={set} />} open m></ExpansionPanel>
-    <ExpansionPanel header="Objects" dropdown={<CategoryEmoji cat="objects" set={set} />} open m></ExpansionPanel>
-    <ExpansionPanel header="Symbols" dropdown={<CategoryEmoji cat="symbols" set={set} />} open m></ExpansionPanel>
-    <ExpansionPanel header="Flags" dropdown={<CategoryEmoji cat="flags" set={set} />} open m></ExpansionPanel>
-  </>}
-</>, (o, n) => o.open === n.open && o.us === n.us && o.set === n.set)
+const EmojiList = memo(({open, set, us}) => {
+  const [search, setSearch] = useState('')
+  const scale = 28 / emojis.size
+  return <>
+    {open && <>
+      <Input input={setSearch} placeholder="Search" b m />
+      {search
+      ? <div className="emoji-search-list">{
+        emojis.all().map((e, i) => [e, i]).filter(e => e[0].includes(search)).map(([e, i]) =>
+          <div className="emoji-el" key={e}>
+            <div
+              style={{
+                backgroundSize: `${emojis.width * scale}px ${emojis.height * scale}px`,
+                backgroundPositionX: i % emojis.row * -emojis.size * scale,
+                backgroundPositionY: Math.floor(i / emojis.row) * -emojis.size * scale
+              }}
+              onClick={() => set({label: e.split(' ')[0], x: i % emojis.row, y: Math.floor(i / emojis.row)})} />
+          </div>)}
+        </div>
+      : <>
+        <CategoryEmoji header="People" cat="people" set={set} />
+        <CategoryEmoji header="Nature" cat="nature" set={set} />
+        <CategoryEmoji header="Food" cat="food" set={set} />
+        <CategoryEmoji header="Activity" cat="activity" set={set} />
+        <CategoryEmoji header="Travel" cat="travel" set={set} />
+        <CategoryEmoji header="Objects" cat="objects" set={set} />
+        <CategoryEmoji header="Symbols" cat="symbols" set={set} />
+        <CategoryEmoji header="Flags" cat="flags" set={set} />
+      </>}
+    </>}
+  </>
+}, (o, n) => o.open === n.open && o.us === n.us && o.set === n.set)
 
 export const Emoji = props => {
-  const [mState, mOpen, close] = useModal({width: 50})
+  const [mState, mOpen, close] = useModal({width: 46.5})
   const set = useMemo(() => e => {
     props.set(e)
     close()

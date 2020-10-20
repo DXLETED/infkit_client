@@ -4,7 +4,7 @@ import cn from 'classnames'
 import { NavLink } from 'react-router-dom'
 import { l } from '../l'
 import { plugins } from '../plugins'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch, useStore } from 'react-redux'
 import { Scroll } from '../components/scroll'
 import { colors } from '../components/colorlist'
 import { Groups } from '../components/dashboard/groups'
@@ -20,6 +20,9 @@ import { CSSTransition } from 'react-transition-group'
 import { useSettings } from '../hooks/settings.hook'
 import { ConnectionState } from '../components/dashboard/connetionState'
 import { DashboardSide } from '../components/dashboard/side'
+import { useCookies } from 'react-cookie'
+import socketIOClient from 'socket.io-client'
+import { refreshToken } from '../hooks/auth.hook'
 
 const Plugin = props => {
   const state = useSelector(s => s.guild.plugins[props.title])
@@ -100,9 +103,60 @@ const ReviewType2 = memo(({name, to, className, img, onClick}) => {
 
 export const Dashboard = props => {
   const location = useLocation()
+  const [cookie] = useCookies(['guild', 'token'])
   const state = useSelector(s => s.guild)
-  const cnct = props.cn
+  const authorized = useSelector(s => s.authorized)
+  const dispatch = useDispatch()
   const [statsVisible, setStatsVisible] = useSettings('stats_visible', true)
+  const ws = useRef()
+  const store = useStore()
+  const setCn = n => dispatch({type: 'UPDATE_CNCT', data: n})
+  const updateGuildState = data => {
+    dispatch({type: 'SAVE_GUILD', data})
+    if (store.getState().guild && isEqual(store.getState().guild, data)) return
+    dispatch({type: 'UPDATE_GUILD', data})
+  }
+  const connect = (guild, authorized, {tries = 0} = {}) => {
+    if (!guild || !authorized || tries >= 3) return
+    dispatch({type: 'CLEAR_GUILD'})
+    ws.current && ws.current.disconnect()
+    const auth = store.getState().auth
+    const io = socketIOClient({path: '/socket/guilds', query: {token: auth.token, user_id: auth.userId}})
+    ws.current = io
+    io.emit('init', guild, async res => {
+      if (res.status === 401) {
+        await refreshToken()
+        return connect(guild, authorized, {tries: tries + 1})
+      }
+      res.status === 200 && updateGuildState(res.d)
+      setCn({active: true, sync: false, limited: false})
+    })
+    io.on('update/all', res => res.status === 200 && updateGuildState(res.d))
+    io.on('update/saving', () => setCn({sync: true}))
+    io.on('update/ustgs', res => {
+      console.log('GUILD UPDATE', res)
+      dispatch({type: 'SAVE_GUILD', data: res})
+      dispatch({type: 'UPDATE_GUILD', data: res})
+      setCn({active: true, sync: false})
+    })
+    io.on('update/server', res => {
+      console.log('UPDATE SERVER', res)
+      dispatch({type: 'SAVE_GUILD', data: {server: res}})
+      dispatch({type: 'UPDATE_GUILD_SERVER', data: res})
+    })
+    io.on('update/stats', res => {
+      dispatch({type: 'SAVE_GUILD', data: {stats: res}})
+      dispatch({type: 'UPDATE_GUILD_STATS', data: res})
+    })
+    io.on('error', () => {
+      notify.warn({text: 'Reconnecting'}, 5000)
+      setCn({active: false})
+      connect()
+    })
+  }
+  useEffect(() => {
+    connect(cookie.guild, authorized)
+  }, [cookie.guild, authorized])
   useEffect(() => {
     if (location.pathname === props.path) document.title = `${props.demo ? 'Demo' : 'Dashboard'} - InfinityKit`
   }, [location])

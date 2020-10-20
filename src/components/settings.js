@@ -13,6 +13,7 @@ import { useLocation } from 'react-router'
 import { NavLink } from 'react-router-dom'
 import { colors } from './colorlist'
 import { CSSTransition } from 'react-transition-group'
+import { Row } from './row'
 
 export const Settings = props => {
   const state = useSelector(s => s.guild.settings),
@@ -51,8 +52,10 @@ export const Settings = props => {
                 </div>
                 <div className="personalization category">
                   <CategoryName>Personalization</CategoryName>
-                  <Switch set={api.personalization.msg_nrchannel} m>MESSAGE: Wrong channel</Switch>
-                  <Switch set={api.personalization.msg_nrrole}>MESSAGE: No rights</Switch>
+                  <Row elements={[
+                    <Switch enabled={state.nopermRole} set={api.toggle.nopermRole}>MESSAGE: No rights</Switch>,
+                    <Switch enabled={state.nopermChannel} set={api.toggle.nopermChannel} m>MESSAGE: Wrong channel</Switch>
+                  ]} />
                 </div>
               </div>
             </Scroll>

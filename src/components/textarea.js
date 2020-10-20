@@ -3,23 +3,23 @@ import { Emoji } from "./emoji"
 import { Scroll } from './scroll'
 import cn from 'classnames'
 import { emojis } from './emojis'
-import { unicode } from 'emojis'
 import { notify } from './notify'
 
 export const TextArea = props => {
   const [length, setLength] = useState()
   const [edit, setEdit] = useState(false)
   let ref = useRef()
-  const getContent = nodes => {
+  const getContent = (nodes, {md = false} = {}) => {
     if (!nodes) nodes = ref.current.childNodes
-    return [...nodes].map(n => {
+    const c = [...nodes].map(n => {
       if (n.nodeType === Node.TEXT_NODE)
         return n.textContent
       else if (n.localName === 'img' && n.dataset.label)
         return n.dataset.label
       else if (n.localName === 'br')
         return '\n'
-    }).filter(Boolean).join('').replace(/\n$/gm, '')
+    }).filter(Boolean).join('').replace(/\n$/g, '')
+    return (md && c.match(/```(.|\s){0,}```/gm)) ? c.replace(/:[a-zA-Z0-9_]{1,25}:/g, p => emojis.getUnicode(p)) : c
   }
   const updateLength = () => setLength(getContent().length)
   const parseEmojis = ({setCursor=true} = {}) => {
@@ -33,10 +33,11 @@ export const TextArea = props => {
         let m = l[1][0]
         if(!m) return
         let e = emojis.get(m[0])
+        console.log(e)
         if (!e) return
         let range = document.createRange()
         range.selectNode(target)
-        console.log(n.textContent)
+        //console.log(n.textContent)
         range.setStart(n, m.index)
         range.setEnd(n, m.index + m[0].length)
         range.deleteContents()
@@ -58,10 +59,9 @@ export const TextArea = props => {
           selection.addRange(srange)
         }
     }
-    //setLength(getContent().length)
   }
   const updateValue = () => {
-    ref.current.innerHTML = props.value ? props.value.split('\n').map(v => v + '<br>').join('') : ''
+    ref.current.innerHTML = (props.value ? props.value.split('\n').map(v => v + '<br>').join('') : '').replace(/(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/g, p => emojis.getName(p))
     parseEmojis({setCursor: false})
     updateLength()
   }
@@ -83,7 +83,6 @@ export const TextArea = props => {
         <div className="ta-emoji">{props.emoji && <Emoji set={e => {
           ref.current.focus()
           document.execCommand('insertText', false, e.label)
-          //parseEmojis()
         }} />}</div>
         <div className={cn('ta-limit', {exceeded: length > (props.limit || 2000)})}>
           <div className="ta-length">{length}</div>
@@ -92,8 +91,7 @@ export const TextArea = props => {
           </div>
         <div className="ta-save" onClick={() => {
           setEdit(false)
-          props.set(getContent())
-          console.log(getContent())
+          props.set(getContent(null, {md: true}))
         }}><img src="/static/img/done.png" /></div>
       </div>
       <Scroll reff={r => ref.current = r.current}>
@@ -114,6 +112,11 @@ export const TextArea = props => {
           let div = document.createElement('div')
           div.appendChild(content)
           e.clipboardData.setData('text/plain', getContent(div.childNodes).replace(/:[a-zA-Z0-9_]{1,25}:/g, p => emojis.getUnicode(p)))
+        }} onCut={e => {
+          e.preventDefault()
+          let d = e.clipboardData.getData('text/plain').replace(/(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/g, p => emojis.getName(p))
+          document.execCommand('insertHTML', false, d)
+          parseEmojis({setCursor: e.clipboardData.getData('text/plain').length <= 2})
         }} onPaste={e => {
           e.preventDefault()
           let d = e.clipboardData.getData('text/plain').replace(/(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/g, p => emojis.getName(p))

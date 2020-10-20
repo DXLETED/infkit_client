@@ -7,6 +7,7 @@ import { generateId } from '../utils/generateId'
 import { useGuild } from '../hooks/useGuild'
 import { useRef } from 'react'
 import { Input } from '../components/input'
+import { notify } from '../components/notify'
 
 const MsgTips = ({ tips, add }) => tips.map(([text, description], i) => <div className="tip" onClick={() => add(`[${text}]`)} key={i}>[{text}]<span className="tip__description">&nbsp;- {description}</span></div>)
 
@@ -31,19 +32,19 @@ export const Counters = props => {
                 ['members_offline', 'Number of a members offline (without bots)'],
                 ['bots', 'Bot count'],
                 ['channels', 'Channel count']
-              ]} add={n => inputAdd.current && inputAdd.current(n)} />
+              ]} add={n => api.setName(i, c.name.concat(n))} />
             </>}
             {c.type === 1 && <>
               <MsgTips tips={[
                 ['role_name', 'Role name'],
                 ['role_amount', 'Number of members who have a role']
-              ]} add={n => inputAdd.current && inputAdd.current(n)} />
+              ]} add={n => api.setName(i, c.name.concat(n))} />
             </>}
           </div>
         </Fragment>})}
       addLabel="Add counter"
       add={api.create}
-      delete={api.del}
+      delete={d => notify.question({description: 'Delete channel?', options: [['Yes', () => api.del(d, true)], ['No', () => api.del(d, false)], ['Cancel']]})}
       column p={1} />
     </>
   )

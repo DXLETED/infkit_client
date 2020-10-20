@@ -5,7 +5,6 @@ import { store } from '../store'
 const getGuilds = async () => {
   const auth = store.getState().auth
   let r = await Axios.get('/api/v1/auth/guilds', {headers: {authorization: 'Bearer ' + auth.token, user_id: auth.userId}, validateStatus: () => true})
-  console.log(r)
   if (r.status === 200)
     store.dispatch({type: 'UPDATE_GUILDS', data: r.data})
 }

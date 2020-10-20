@@ -20,7 +20,8 @@ export const EditableList = props => {
             </>}
       </div>)}
       {!props.data.length && props.empty && <div className="editable-list-el-wr">{props.empty}</div>}
-      {!props.noAdd && <div className="add" onClick={props.add}><img src="/static/img/add.png" style={props.addLabel && {marginRight: '1vh'}} />{props.addLabel}</div>}
+      {!props.noAdd && (props.limit === undefined || props.data.length < props.limit) &&
+        <div className="add" onClick={props.add}><img src="/static/img/add.png" style={props.addLabel && {marginRight: '1vh'}} />{props.addLabel}</div>}
     </div>
   </div>
 }

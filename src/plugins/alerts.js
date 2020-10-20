@@ -13,10 +13,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { notify } from '../components/notify'
 import { User } from '../components/user'
 
+const MsgTips = ({ tips, add }) => tips.map(([text, description], i) => <div className="tip" onClick={() => add(`[${text}]`)} key={i}>[{text}]<span className="tip__description">&nbsp;- {description}</span></div>)
+
 const Alert = memo(({d, api, i}) => {
   const [searchResults, setResults] = useState([])
   const twitchChannel = useSelector(s => s.channels.twitch[d.sub])
   const inputVal = useRef()
+  const inputAdd = useRef()
   const [search, cancelSearch] = useDelayedRequest((input, data) => input.params.query === inputVal.current && setResults(data), 400)
   const dispatch = useDispatch()
   useEffect(() => {
@@ -44,6 +47,12 @@ const Alert = memo(({d, api, i}) => {
         }} dropdownVisible={searchResults.length} m b />}
     <Select type="text" selected={d.channelId} set={n => api.setChannelId(i, n)} add={[{id: null, name: 'Select channel'}]} m />
     <TextArea value={d.msg.content} placeholder="Message" set={n => api.setMsgContent(i, n)} emoji />
+    <div className="msg-tips">
+      <MsgTips tips={[
+        ['name', 'Streamer name'],
+        ['link', 'Link to stream']
+      ]} add={n => api.setMsgContent(i, d.msg.content.concat(n))} />
+    </div>
   </Fragment>
 }, isEqual)
 

@@ -58,12 +58,29 @@ const u = pn => {
   return fn
 }
 
-const groupsUpdate = (cb, events) => {
-  let st = cloneDeep(store.getState().guild.groups),
-      ev = events ? events(pl) : null
-  cb(st)
-  store.dispatch({type: 'UPDATE_GROUPS', data: st.filter(Boolean)})
-  post(ev)
+const groupsUpdate = () => {
+  const fn = (cb, events) => {
+    let st = cloneDeep(store.getState().guild.groups),
+        ev = events ? events(pl) : null
+    cb(st)
+    store.dispatch({type: 'UPDATE_GROUPS', data: st.filter(Boolean)})
+    post(ev)
+  }
+  fn.arr = function (path) {
+    return {
+      add: n => this(pl => {
+        let s = objectPath.get(pl, path) || []
+        s.push(n)
+        objectPath.set(pl, path, s)
+      }),
+      del: d => this(pl => {
+        let s = objectPath.get(pl, path) || []
+        s = s.filter((_, i) => i !== d)
+        s.length ? objectPath.set(pl, path, s) : objectPath.del(pl, path)
+      })
+    }
+  }
+  return fn
 }
 
 const settingsUpdate = (cb, events) => {
@@ -188,7 +205,7 @@ const levels = u => ({
   },
   cmds: {
     rank: cmd(u, 'rank'),
-    levels: cmd(u, 'levels')
+    addxp: cmd(u, 'addxp')
   }
 })
 
@@ -262,8 +279,8 @@ const automod = u => ({
     },
     repeatedMessages: {
       ...filtersItem(u, 'repeatedMessages'),
-      setMessages: n => u(pl => pl.filters[f].messages = n),
-      setResetTime: n => u(pl => pl.filters[f].reset = n)
+      setMessages: n => u(pl => pl.filters.repeatedMessages.messages = n),
+      setResetTime: n => u(pl => pl.filters.repeatedMessages.reset = n)
     },
     caps: {
       ...filtersItem(u, 'caps'),
@@ -330,7 +347,7 @@ const reactionRoles = u => ({
   addRole: (i, ii, n) => u(pl => pl.d[i].reacts[ii].roles.push(n), pl => [{action: 'RRAddRoles', v: {id: pl.d[i].id, roles: [n]}}]),
   delRole: (i, ii, d) => u(pl => pl.d[i].reacts[ii].roles = pl.d[i].reacts[ii].roles.filter((_, iii) => iii !== d), pl => [{action: 'RRDeleteRoles', v: {id: pl.d[i].id, roles: [pl.d[i].reacts[ii].roles[d]]}}]),
   delReact: (i, d) => u(pl => pl.d[i].reacts = pl.d[i].reacts.filter((_, ii) => ii !== d), pl => [{action: 'RREditReacts', v: pl.d[i].id}, {action: 'RRDeleteRoles', v: {id: pl.d[i].id, roles: pl.d[i].reacts[d].roles}}]),
-  del: (d, delMsg) => u(pl => pl.d = pl.d.filter((_, i) => i !== d), pl => delMsg && [{action: 'RRDelMsg', v: pl.d[d].id}])
+  del: (d, delMsg) => u(pl => pl.d = pl.d.filter((_, i) => i !== d), pl => delMsg && [{action: 'reactionRoles/delete', v: pl.d[d].id}])
 })
 
 const music = u => ({
@@ -384,12 +401,12 @@ const welcome = u => ({
 })
 
 const counters = u => ({
-  create: () => u(pl => pl.d.push({id: generateId(pl.d.map(c => c.id)), category: 0, type: 0, channel: null, role: null, ids: []})),
+  create: () => u(pl => pl.d.push({id: generateId(pl.d.map(c => c.id)), category: 0, type: 0, name: '', channel: null, role: null, ids: []})),
   setCategory: (i, n) => u(pl => pl.d[i].category = n, pl => [{action: 'CUpdate', v: pl.d[i].id}]),
   setType: (i, n) => u(pl => pl.d[i].type = n, pl => [{action: 'CUpdate', v: pl.d[i].id}]),
   setRole: (i, n) => u(pl => pl.d[i].role = n, pl => [{action: 'CUpdate', v: pl.d[i].id}]),
   setName: (i, n) => u(pl => pl.d[i].name = n, pl => [{action: 'CUpdate', v: pl.d[i].id}]),
-  del: d => u(pl => pl.d = pl.d.filter((_, i) => i !== d))
+  del: (d, delChannel) => u(pl => pl.d = pl.d.filter((_, i) => i !== d), pl => delChannel && [{action: 'counters/delete', v: pl.d[d].id}])
 })
 
 const poll = u => ({
@@ -422,25 +439,12 @@ export const pluginApi = pn => ({enabled: {toggle: () => u(pn)(pl => pl.enabled 
 
 export const groupsApi = (u => ({
   add: () => u(grps => grps.push({id: generateId(grps.map(g => g.id)), name: 'New group', enabledRoles: [], disabledRoles: [], enabledChannels: [], disabledChannels: []})),
-  setName: (i, n) => u(grps => grps[i].name = n || 'Group'),
-  enabledRoles: {
-    add: (i, n) => u(grps => grps[i].enabledRoles.push(n)),
-    del: (i, d) => u(grps => grps[i].enabledRoles = grps[i].enabledRoles.filter((_, i) => i !== d))
-  },
-  disabledRoles: {
-    add: (i, n) => u(grps => grps[i].disabledRoles.push(n)),
-    del: (i, d) => u(grps => grps[i].disabledRoles = grps[i].disabledRoles.filter((_, i) => i !== d))
-  },
-  enabledChannels: {
-    add: (i, n) => u(grps => grps[i].enabledChannels.push(n)),
-    del: (i, d) => u(grps => grps[i].enabledChannels = grps[i].enabledChannels.filter((_, i) => i !== d))
-  },
-  disabledChannels: {
-    add: (i, n) => u(grps => grps[i].disabledChannels.push(n)),
-    del: (i, d) => u(grps => grps[i].disabledChannels = grps[i].disabledChannels.filter((_, i) => i !== d))
-  },
+  group: i => ({
+    setName: n => u(grps => grps[i].name = n || 'Group'),
+    ...permissionsSelector(u, [i]),
+  }),
   del: d => u(grps => delete grps[d])
-}))(groupsUpdate)
+}))(groupsUpdate())
 
 export const settingsApi = (u => ({
   prefix: n => u(stgs => stgs.prefix = n),
@@ -449,8 +453,8 @@ export const settingsApi = (u => ({
     add: n => u(stgs => stgs.admRoles.push(n)),
     del: d => u(stgs => stgs.admRoles= stgs.admRoles.filter((_, i) => i !== d))
   },
-  personalization: {
-    msg_nrchannel: n => u(stgs => stgs.messages.nrchannel = n),
-    msg_nrrole: n => u(stgs => stgs.messages.nrrole = n)
+  toggle: {
+    nopermRole: n => u(stgs => stgs.nopermRole = n),
+    nopermChannel: n => u(stgs => stgs.nopermChannel = n)
   }
 }))(settingsUpdate)

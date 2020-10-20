@@ -6980,10 +6980,10 @@ function tryDecode(str, decode) {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/customTime.scss":
-/*!************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/customTime.scss ***!
-  \************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/customTime.scss":
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/customTime.scss ***!
+  \***********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6998,10 +6998,10 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/dropdownlist.scss":
-/*!**************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/dropdownlist.scss ***!
-  \**************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/dropdownlist.scss":
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/dropdownlist.scss ***!
+  \*************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7016,10 +7016,10 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/editableList.scss":
-/*!**************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/editableList.scss ***!
-  \**************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/editableList.scss":
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/editableList.scss ***!
+  \*************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7034,10 +7034,10 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/graph.scss":
-/*!*******************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/graph.scss ***!
-  \*******************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/graph.scss":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/graph.scss ***!
+  \******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7052,10 +7052,10 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/header.scss":
-/*!********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/header.scss ***!
-  \********************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/header.scss":
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/header.scss ***!
+  \*******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7070,10 +7070,10 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/init.scss":
-/*!******************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/init.scss ***!
-  \******************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/init.scss":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/init.scss ***!
+  \*****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7088,10 +7088,10 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/main.scss":
-/*!******************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/main.scss ***!
-  \******************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/main.scss":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/main.scss ***!
+  \*****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7099,17 +7099,17 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".page#main {\n  width: 100%;\n  height: calc(100vh - calc(var(--vh) * var(--sc) * 5)); }\n  .page#main > main {\n    position: relative;\n    flex: 1;\n    flex-direction: column; }\n    .page#main > main > .screen-start {\n      position: relative;\n      width: 100%;\n      height: 100%;\n      flex-direction: column;\n      align-items: center;\n      z-index: 1; }\n      .page#main > main > .screen-start > .preview {\n        width: 70%;\n        height: calc(var(--vh) * var(--sc) * 50);\n        max-height: calc(100% - calc(var(--vh) * var(--sc) * 20));\n        margin-top: calc(var(--vh) * var(--sc) * 5);\n        justify-content: space-between;\n        align-items: center;\n        z-index: 1; }\n        .page#main > main > .screen-start > .preview > .site {\n          flex-direction: column;\n          align-items: flex-start; }\n          .page#main > main > .screen-start > .preview > .site > .beta {\n            position: relative;\n            font-size: calc(var(--vh) * var(--sc) * 2);\n            padding: calc(var(--vh) * var(--sc) * 0.2) calc(var(--vh) * var(--sc) * 1); }\n            .page#main > main > .screen-start > .preview > .site > .beta::after {\n              content: \"\";\n              position: absolute;\n              left: 0;\n              top: 0;\n              width: 0%;\n              height: 100%;\n              background: #c04141;\n              animation: beta-fill 1s;\n              animation-fill-mode: forwards;\n              transform: skewX(-15deg);\n              z-index: -1; }\n\n@keyframes beta-fill {\n  0% {\n    width: 0%; }\n  100% {\n    width: 100%; } }\n          .page#main > main > .screen-start > .preview > .site > .sitename {\n            font-size: calc(var(--vh) * var(--sc) * 6);\n            font-family: 'Kanit';\n            letter-spacing: calc(var(--vh) * var(--sc) * 0.075); }\n        .page#main > main > .screen-start > .preview > .servers-wr {\n          width: calc(var(--vh) * var(--sc) * 35);\n          height: 100%; }\n          .page#main > main > .screen-start > .preview > .servers-wr > .servers {\n            flex: 1;\n            flex-direction: column;\n            padding-right: calc(var(--vh) * var(--sc) * 1); }\n            .page#main > main > .screen-start > .preview > .servers-wr > .servers:not(.overflow) {\n              justify-content: center; }\n            .page#main > main > .screen-start > .preview > .servers-wr > .servers > .login > .button-label {\n              border-color: #939393;\n              color: #FFF; }\n              .page#main > main > .screen-start > .preview > .servers-wr > .servers > .login > .button-label > .border {\n                border-color: #939393; }\n            .page#main > main > .screen-start > .preview > .servers-wr > .servers > .guild:not(:last-child) {\n              margin-bottom: calc(var(--vh) * var(--sc) * 1.5); }\n            .page#main > main > .screen-start > .preview > .servers-wr > .servers > .guild > .button-label > .icon {\n              width: calc(var(--vh) * var(--sc) * 3);\n              height: calc(var(--vh) * var(--sc) * 3);\n              border-radius: 50%;\n              justify-content: center;\n              align-items: center;\n              background: #939393;\n              color: #000;\n              font-family: 'Bold';\n              margin-right: calc(var(--vh) * var(--sc) * 1); }\n            .page#main > main > .screen-start > .preview > .servers-wr > .servers > .guild:not(.bot) > .button-label, .page#main > main > .screen-start > .preview > .servers-wr > .servers > .guild:not(.bot) > .border {\n              border-color: #939393; }\n            .page#main > main > .screen-start > .preview > .servers-wr > .servers > .guild.selected > .border, .page#main > main > .screen-start > .preview > .servers-wr > .servers > .guild.selected > .button-label {\n              border-color: #547ab3; }\n      .page#main > main > .screen-start .preview-arrow_wr {\n        width: 100%;\n        justify-content: center; }\n        .page#main > main > .screen-start .preview-arrow_wr .preview-arrow {\n          position: absolute;\n          width: calc(var(--vh) * var(--sc) * 20);\n          height: calc(var(--vh) * var(--sc) * 3);\n          bottom: calc(var(--vh) * var(--sc) * 0.5);\n          align-items: center;\n          animation: preview-arrow-animation linear infinite 2s; }\n\n@keyframes preview-arrow-animation {\n  0% {\n    opacity: 50%; }\n  50% {\n    opacity: 90%; }\n  100% {\n    opacity: 50%; } }\n          .page#main > main > .screen-start .preview-arrow_wr .preview-arrow > .p-arrow {\n            width: 50%;\n            height: calc(var(--vh) * var(--sc) * 0.3);\n            background: #FFF;\n            border-radius: calc(var(--vh) * var(--sc) * 0.1); }\n            .page#main > main > .screen-start .preview-arrow_wr .preview-arrow > .p-arrow__1 {\n              transform: rotateZ(8deg) translateX(1%); }\n            .page#main > main > .screen-start .preview-arrow_wr .preview-arrow > .p-arrow__2 {\n              transform: rotateZ(-8deg) translateX(-1%); }\n      .page#main > main > .screen-start .features-preview {\n        position: absolute;\n        width: 70%;\n        justify-content: center;\n        flex-wrap: wrap;\n        bottom: calc(var(--vh) * var(--sc) * 4);\n        padding-left: calc(var(--vh) * var(--sc) * 1); }\n        .page#main > main > .screen-start .features-preview__item {\n          position: relative;\n          padding: calc(var(--vh) * var(--sc) * 1) calc(var(--vh) * var(--sc) * 1.5);\n          background: rgba(0, 0, 0, 0.5);\n          border-radius: calc(var(--vh) * var(--sc) * 0.2);\n          overflow: hidden;\n          margin-right: calc(var(--vh) * var(--sc) * 1);\n          margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n          .page#main > main > .screen-start .features-preview__item.indev {\n            color: #939393; }\n          .page#main > main > .screen-start .features-preview__item__border {\n            position: absolute;\n            left: 0;\n            bottom: 0;\n            width: 100%;\n            height: calc(var(--vh) * var(--sc) * 0.2); }\n    .page#main > main .features {\n      width: calc(100vw - calc(var(--vh) * var(--sc) * 10));\n      flex-direction: column;\n      margin: calc(var(--vh) * var(--sc) * 10) auto; }\n      .page#main > main .features__item {\n        width: 100%;\n        height: calc(var(--vh) * var(--sc) * 20);\n        justify-content: space-between;\n        align-items: center;\n        background: rgba(0, 0, 0, 0.2);\n        backdrop-filter: blur(0.5vh);\n        border-radius: calc(var(--vh) * var(--sc) * 0.3);\n        margin-bottom: calc(var(--vh) * var(--sc) * 15); }\n        .page#main > main .features__item.reversed {\n          flex-direction: row-reverse; }\n          .page#main > main .features__item.reversed .features__item__d {\n            align-items: flex-end; }\n            .page#main > main .features__item.reversed .features__item__d__text {\n              text-align: right; }\n          .page#main > main .features__item.reversed img {\n            transform: perspective(2000px) rotateY(-20deg); }\n        .page#main > main .features__item img {\n          height: 150%;\n          max-width: 50%;\n          object-fit: cover;\n          transform: perspective(2000px) rotateY(20deg);\n          perspective-origin: left;\n          box-shadow: #535353 0 0 calc(var(--vh) * var(--sc) * 0.5); }\n        .page#main > main .features__item__d {\n          flex: 1;\n          height: 100%;\n          flex-direction: column;\n          justify-content: center;\n          align-items: flex-start;\n          padding: 0 calc(var(--vh) * var(--sc) * 4); }\n          .page#main > main .features__item__d__title {\n            line-height: calc(var(--vh) * var(--sc) * 4);\n            font-size: calc(var(--vh) * var(--sc) * 2.8);\n            text-transform: uppercase;\n            font-family: 'Bold';\n            border-bottom: #FFF calc(var(--vh) * var(--sc) * 0.2) solid;\n            margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n          .page#main > main .features__item__d__text {\n            line-height: calc(var(--vh) * var(--sc) * 3);\n            font-size: calc(var(--vh) * var(--sc) * 2);\n            color: #cccccc; }\n      .page#main > main .features__item_2 {\n        width: 100%;\n        flex-direction: column;\n        align-items: center;\n        padding: calc(var(--vh) * var(--sc) * 4);\n        background: rgba(0, 0, 0, 0.2);\n        backdrop-filter: blur(0.5vh); }\n        .page#main > main .features__item_2__title {\n          width: 100%;\n          justify-content: center;\n          line-height: calc(var(--vh) * var(--sc) * 4);\n          font-size: calc(var(--vh) * var(--sc) * 2.8);\n          text-transform: uppercase;\n          font-family: 'Bold';\n          border-bottom: #FFF calc(var(--vh) * var(--sc) * 0.2) solid;\n          margin-bottom: calc(var(--vh) * var(--sc) * 4); }\n        .page#main > main .features__item_2__video {\n          width: 100%;\n          position: relative; }\n          .page#main > main .features__item_2__video > video {\n            width: 100%;\n            opacity: 0.5;\n            transition: 0.2s opacity; }\n            .page#main > main .features__item_2__video > video.playing {\n              opacity: 1; }\n          .page#main > main .features__item_2__video .hovervideo__overlay {\n            position: absolute;\n            left: 0;\n            top: 0;\n            width: 100%;\n            height: 100%;\n            font-size: calc(var(--vh) * var(--sc) * 2.4);\n            justify-content: center;\n            align-items: center;\n            pointer-events: none;\n            transition: 0.2s opacity; }\n            .page#main > main .features__item_2__video .hovervideo__overlay.playing {\n              opacity: 0; }\n      .page#main > main .features__item_3 {\n        width: 100%;\n        flex-direction: column;\n        padding: calc(var(--vh) * var(--sc) * 4);\n        background: rgba(0, 0, 0, 0.2);\n        backdrop-filter: blur(0.5vh); }\n        .page#main > main .features__item_3__title {\n          width: 100%;\n          justify-content: center;\n          line-height: calc(var(--vh) * var(--sc) * 4);\n          font-size: calc(var(--vh) * var(--sc) * 2.8);\n          text-transform: uppercase;\n          font-family: 'Bold';\n          border-bottom: #FFF calc(var(--vh) * var(--sc) * 0.2) solid;\n          margin-bottom: calc(var(--vh) * var(--sc) * 4); }\n        .page#main > main .features__item_3__text {\n          justify-content: center;\n          line-height: calc(var(--vh) * var(--sc) * 3);\n          font-size: calc(var(--vh) * var(--sc) * 2);\n          color: #cccccc; }\n\n.main-bg {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  opacity: 0.075;\n  background: linear-gradient(to bottom, #202124 0%, transparent 100%), url(/static/img/bg.png);\n  filter: blur(0.5vh);\n  background-size: cover;\n  background-position: bottom 20% center;\n  z-index: -1; }\n\n.footer {\n  width: 100%;\n  height: calc(var(--vh) * var(--sc) * 5);\n  justify-content: space-between;\n  align-items: center;\n  padding: 0 calc(var(--vh) * var(--sc) * 5);\n  background: rgba(147, 147, 147, 0.2);\n  backdrop-filter: blur(1vh); }\n\n.button {\n  width: 100%;\n  height: calc(var(--vh) * var(--sc) * 5);\n  position: relative; }\n  .button.compact {\n    height: calc(var(--vh) * var(--sc) * 4); }\n  .button.center > .button-label {\n    justify-content: center; }\n  .button > .border {\n    content: \"\";\n    opacity: 0;\n    position: absolute;\n    width: calc(100% - calc(var(--vh) * var(--sc) * 0.2));\n    height: calc(100% - calc(var(--vh) * var(--sc) * 0.2));\n    border-top: calc(var(--vh) * var(--sc) * 0.2) solid #939393;\n    border-left: calc(var(--vh) * var(--sc) * 0.2) solid #939393;\n    transition: 0.2s opacity; }\n  .button > .button-label {\n    width: 100%;\n    height: 100%;\n    align-items: center;\n    border: calc(var(--vh) * var(--sc) * 0.2) solid #535353;\n    color: #939393;\n    overflow: hidden;\n    cursor: pointer;\n    background: rgba(255, 255, 255, 0.025);\n    transform: translate(0, 0);\n    transition: transform 0.2s; }\n    .button > .button-label > img {\n      height: calc(var(--vh) * var(--sc) * 3);\n      border-radius: 50%;\n      margin-right: calc(var(--vh) * var(--sc) * 1);\n      opacity: 0.5; }\n    .button > .button-label > .status {\n      position: absolute;\n      left: calc(var(--vh) * var(--sc) * -1.5);\n      width: calc(var(--vh) * var(--sc) * 4.5);\n      height: 100%;\n      transform: skewX(-20deg);\n      background: #535353; }\n  .button.enabled > .button-label {\n    color: #FFF;\n    border-color: #939393; }\n    .button.enabled > .button-label > .status {\n      background: #939393; }\n    .button.enabled > .button-label > img {\n      opacity: 1; }\n  .button:hover > .border {\n    opacity: 1; }\n  .button:hover > .button-label {\n    transform: translate(0.5vh, calc(var(--vh) * var(--sc) * 0.5));\n    border-color: #939393; }\n  .button.enabled:hover > .border {\n    border-color: #FFF; }\n  .button.enabled:hover > .button-label {\n    border-color: #FFF; }\n\n.title {\n  width: 100%;\n  height: calc(var(--vh) * var(--sc) * 5);\n  position: relative;\n  align-items: center;\n  background: #2c2e33; }\n  .title > *:not(.title-color) {\n    z-index: 1; }\n  .title > .plugin-title {\n    font-size: calc(var(--vh) * var(--sc) * 2.4);\n    font-family: 'Bold'; }\n  .title > .title-color {\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    opacity: 0.05; }\n  .title > .border {\n    width: 100%;\n    height: calc(var(--vh) * var(--sc) * 0.2);\n    position: absolute;\n    bottom: 0;\n    background: #535353; }\n  .title > .p-enabled {\n    position: absolute;\n    right: 0;\n    height: 100%;\n    padding: 0 calc(var(--vh) * var(--sc) * 2);\n    justify-content: flex-end;\n    align-items: center;\n    cursor: pointer; }\n    .title > .p-enabled:hover {\n      background: rgba(255, 255, 255, 0.2); }\n    .title > .p-enabled > img {\n      height: 30%;\n      margin-right: calc(var(--vh) * var(--sc) * 1); }\n  .title > .main {\n    margin-left: calc(var(--vh) * var(--sc) * 2); }\n  .title > .back {\n    width: calc(var(--vh) * var(--sc) * 6);\n    height: 100%;\n    justify-content: center;\n    align-items: center; }\n    .title > .back:hover > img {\n      opacity: 1; }\n    .title > .back > img {\n      height: calc(var(--vh) * var(--sc) * 2);\n      opacity: 0.5;\n      cursor: pointer; }\n  .title > img {\n    height: 60%;\n    margin-right: calc(var(--vh) * var(--sc) * 1); }\n\n.category-name-wr {\n  height: calc(var(--vh) * var(--sc) * 3);\n  position: relative;\n  margin-bottom: calc(var(--vh) * var(--sc) * 2);\n  overflow: hidden; }\n  .category-name-wr > .border {\n    content: \"\";\n    width: 100%;\n    height: calc(var(--vh) * var(--sc) * 0.2);\n    position: absolute;\n    bottom: 0;\n    background: #939393; }\n  .category-name-wr > .category-name {\n    height: 100%;\n    position: relative;\n    left: calc(var(--vh) * var(--sc) * -1.5);\n    align-items: center;\n    background: #939393;\n    color: #000;\n    transform: skewX(45deg);\n    font-family: 'Bold';\n    padding-left: calc(var(--vh) * var(--sc) * 2.5);\n    padding-right: calc(var(--vh) * var(--sc) * 1.5); }\n    .category-name-wr > .category-name > span {\n      transform: skewX(-45deg); }\n\n.label-wr {\n  position: relative;\n  width: 100%;\n  height: calc(var(--vh) * var(--sc) * 3);\n  align-items: center; }\n  .label-wr > .label {\n    position: relative;\n    height: 100%;\n    align-items: center; }\n    .label-wr > .label > img {\n      height: calc(var(--vh) * var(--sc) * 1.5);\n      margin-right: calc(var(--vh) * var(--sc) * 1); }\n  .label-wr:not(.text) > .label {\n    font-family: 'Bold';\n    color: #cccccc;\n    text-shadow: #939393 0 0 calc(var(--vh) * var(--sc) * 0.5); }\n  .label-wr.mt {\n    margin-top: calc(var(--vh) * var(--sc) * 1); }\n  .label-wr.p > .label {\n    padding: 0 calc(var(--vh) * var(--sc) * 1); }\n  .label-wr.bg {\n    background: rgba(147, 147, 147, 0.2); }\n  .label-wr:not(.nm) {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .label-wr.border > .label::before {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: calc(var(--vh) * var(--sc) * 0.2);\n    background: #939393; }\n  .label-wr.border > .label::after {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    width: 100%;\n    height: calc(var(--vh) * var(--sc) * 0.2);\n    background: #939393; }\n  .label-wr.label-channel > .label > img {\n    opacity: 0.7; }\n\n.stars {\n  width: 100%;\n  height: calc(var(--vh) * var(--sc) * 50);\n  position: absolute;\n  overflow: hidden;\n  justify-content: center;\n  top: calc(100% - calc(var(--vh) * var(--sc) * 40));\n  align-items: center;\n  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, white 40%, white 80%, transparent 100%);\n  mask-image: linear-gradient(to top, white 50%, transparent 100%);\n  z-index: -1; }\n  .stars > .field {\n    position: absolute;\n    width: 100%;\n    height: 100%; }\n    .stars > .field > .field-parallax {\n      width: 100%;\n      height: 200%; }\n      .stars > .field > .field-parallax > .star {\n        width: 1px;\n        height: 1px; }\n    .stars > .field.range3 {\n      animation: stars-animation 50s infinite linear, stars-start 2s; }\n      .stars > .field.range3 > .field-parallax > .star {\n        width: calc(var(--vh) * var(--sc) * 0.1);\n        height: calc(var(--vh) * var(--sc) * 0.1); }\n    .stars > .field.range2 {\n      animation: stars-animation 20s infinite linear, stars-start 2s; }\n      .stars > .field.range2 > .field-parallax > .star {\n        width: calc(var(--vh) * var(--sc) * 0.2);\n        height: calc(var(--vh) * var(--sc) * 0.2); }\n    .stars > .field.range1 {\n      animation: stars-animation 10s infinite linear, stars-start 2s; }\n      .stars > .field.range1 > .field-parallax > .star {\n        width: calc(var(--vh) * var(--sc) * 0.4);\n        height: calc(var(--vh) * var(--sc) * 0.4); }\n\n.row.m {\n  margin-bottom: calc(var(--vh) * var(--sc) * 1.5); }\n\n.row > .row__el {\n  flex: 1;\n  flex-direction: column; }\n  .row > .row__el:not(:last-child) {\n    margin-right: calc(var(--vh) * var(--sc) * 1); }\n  .row > .row__el.jcc {\n    justify-content: center; }\n\n.fill {\n  flex: 1; }\n\n.select-wr {\n  flex-direction: column; }\n  .select-wr.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .select-wr.mr {\n    margin-right: calc(var(--vh) * var(--sc) * 1); }\n  .select-wr.flex {\n    flex: 1; }\n  .select-wr .select {\n    height: calc(var(--vh) * var(--sc) * 4);\n    position: relative; }\n    .select-wr .select > .select-label-wr {\n      width: 100%;\n      height: 100%;\n      cursor: pointer;\n      padding: 0 calc(var(--vh) * var(--sc) * 1);\n      justify-content: space-between;\n      align-items: center; }\n      .select-wr .select > .select-label-wr > .arrow {\n        height: 100%;\n        align-items: center;\n        padding-left: calc(var(--vh) * var(--sc) * 1); }\n        .select-wr .select > .select-label-wr > .arrow > img {\n          height: 40%; }\n    .select-wr .select > .border {\n      content: \"\";\n      width: 100%;\n      height: calc(var(--vh) * var(--sc) * 0.2);\n      position: absolute;\n      bottom: 0;\n      background: #939393; }\n\n.scroll-wr {\n  width: calc(var(--vh) * var(--sc) * 0.5);\n  flex: 1 1 1; }\n  .scroll-wr > .scroll {\n    width: 100%;\n    position: relative;\n    background: #939393; }\n\n.with-scroll {\n  overflow: auto;\n  scrollbar-width: none; }\n  .with-scroll::-webkit-scrollbar {\n    display: none; }\n\n.dropdown-component {\n  position: relative; }\n  .dropdown-component > .dropdown-label {\n    height: 100%;\n    align-items: center; }\n  .dropdown-component > .dropdown-wr {\n    display: none;\n    width: 100%;\n    max-height: calc(var(--vh) * var(--sc) * 30);\n    min-height: calc(var(--vh) * var(--sc) * 1);\n    opacity: 0.8;\n    background: #141517;\n    position: absolute;\n    left: 0;\n    top: 100%;\n    z-index: 10; }\n    .dropdown-component > .dropdown-wr.open {\n      display: flex; }\n    .dropdown-component > .dropdown-wr > .dropdown {\n      flex: 1;\n      flex-direction: column; }\n      .dropdown-component > .dropdown-wr > .dropdown > * {\n        width: 100%;\n        cursor: pointer;\n        padding: calc(var(--vh) * var(--sc) * 0.5) calc(var(--vh) * var(--sc) * 1); }\n        .dropdown-component > .dropdown-wr > .dropdown > *:hover {\n          background: #939393;\n          color: #000; }\n\n.switch {\n  position: relative;\n  padding: calc(var(--vh) * var(--sc) * 0.7) calc(var(--vh) * var(--sc) * 1) calc(var(--vh) * var(--sc) * 0.7) calc(var(--vh) * var(--sc) * 1.5);\n  cursor: pointer;\n  align-items: center; }\n  .switch.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1.5); }\n  .switch:hover {\n    background: rgba(255, 255, 255, 0.1); }\n  .switch.enabled::before {\n    background: #FFF; }\n  .switch > img {\n    height: calc(var(--vh) * var(--sc) * 1.8);\n    margin-right: calc(var(--vh) * var(--sc) * 1);\n    filter: invert(1); }\n  .switch::before {\n    content: \"\";\n    width: calc(var(--vh) * var(--sc) * 0.5);\n    height: 100%;\n    position: absolute;\n    left: 0;\n    top: 0;\n    background: #939393; }\n\n.emoji:not(.emoji-disabled) > .emoji-sel {\n  cursor: pointer; }\n\n.emoji:not(.selected) > .emoji-sel {\n  filter: grayscale(1); }\n  .emoji:not(.selected) > .emoji-sel:hover {\n    filter: unset; }\n\n.emoji.mr {\n  margin-right: calc(var(--vh) * var(--sc) * 1); }\n\n.emoji > .emoji-sel {\n  width: calc(var(--vh) * var(--sc) * 2.8);\n  height: calc(var(--vh) * var(--sc) * 2.8);\n  background-image: url(/static/img/emoji.png); }\n\n.expansion-panel {\n  width: 100%;\n  flex-direction: column; }\n  .expansion-panel.open > .ep-header > .border {\n    opacity: 1; }\n  .expansion-panel.open > .ep-dropdown {\n    display: flex; }\n  .expansion-panel.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .expansion-panel.column > .ep-dropdown {\n    flex-direction: column; }\n  .expansion-panel > .ep-header {\n    position: relative;\n    height: calc(var(--vh) * var(--sc) * 4);\n    justify-content: space-between;\n    align-items: center;\n    font-family: 'Bold';\n    background: rgba(147, 147, 147, 0.2);\n    padding-left: calc(var(--vh) * var(--sc) * 1);\n    cursor: pointer; }\n    .expansion-panel > .ep-header > .border {\n      position: absolute;\n      left: 0;\n      bottom: 0;\n      width: 100%;\n      height: calc(var(--vh) * var(--sc) * 0.2);\n      opacity: 0;\n      background: #939393; }\n    .expansion-panel > .ep-header > .ep-header-r {\n      height: 100%; }\n      .expansion-panel > .ep-header > .ep-header-r > .ep-header-arrow {\n        height: 100%;\n        align-items: center;\n        padding: 0 calc(var(--vh) * var(--sc) * 2); }\n        .expansion-panel > .ep-header > .ep-header-r > .ep-header-arrow > img {\n          height: 50%; }\n  .expansion-panel > .ep-dropdown {\n    display: none;\n    background: rgba(147, 147, 147, 0.1);\n    padding: calc(var(--vh) * var(--sc) * 1); }\n\n.enabled-switch {\n  height: 100%;\n  align-items: center;\n  opacity: 0.5;\n  cursor: pointer; }\n  .enabled-switch.enabled {\n    opacity: 1; }\n  .enabled-switch.text {\n    width: calc(var(--vh) * var(--sc) * 12);\n    justify-content: center; }\n    .enabled-switch.text > img {\n      margin-right: calc(var(--vh) * var(--sc) * 1); }\n  .enabled-switch:not(.text) {\n    padding: 0 calc(var(--vh) * var(--sc) * 1); }\n  .enabled-switch:hover {\n    background: rgba(255, 255, 255, 0.5); }\n  .enabled-switch > img {\n    height: calc(var(--vh) * var(--sc) * 1.5); }\n\n.slider-wr {\n  flex-direction: column;\n  justify-content: center; }\n  .slider-wr.row {\n    flex-direction: row;\n    align-items: center; }\n    .slider-wr.row > .slider {\n      flex: 1; }\n  .slider-wr.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .slider-wr > img {\n    height: calc(var(--vh) * var(--sc) * 2);\n    margin-right: calc(var(--vh) * var(--sc) * 1); }\n  .slider-wr > .slider {\n    position: relative;\n    height: calc(var(--vh) * var(--sc) * 4);\n    align-items: center; }\n    .slider-wr > .slider > .slider-content {\n      position: absolute;\n      left: 0;\n      top: 0;\n      width: calc(100% - calc(var(--vh) * var(--sc) * 0.8));\n      height: 100%;\n      align-items: center;\n      margin: 0 calc(var(--vh) * var(--sc) * 0.4); }\n      .slider-wr > .slider > .slider-content > .slider-pos {\n        width: calc(var(--vh) * var(--sc) * 0.8);\n        height: calc(var(--vh) * var(--sc) * 3.5);\n        position: absolute;\n        background: #FFF;\n        transition: 0.1s;\n        transform: translateX(-50%);\n        z-index: 1; }\n      .slider-wr > .slider > .slider-content > .slider-keypoint {\n        opacity: 0;\n        width: calc(var(--vh) * var(--sc) * 0.2);\n        height: calc(var(--vh) * var(--sc) * 2);\n        position: absolute;\n        background: #939393;\n        transition: 0.1s;\n        transform: translateX(-50%); }\n        .slider-wr > .slider > .slider-content > .slider-keypoint.visible {\n          opacity: 1; }\n    .slider-wr > .slider > .slider-fill {\n      height: calc(var(--vh) * var(--sc) * 3);\n      background: rgba(147, 147, 147, 0.5);\n      position: absolute;\n      left: 0;\n      transition: 0.1s; }\n    .slider-wr > .slider > .slider-unfilled {\n      width: 100%;\n      height: calc(var(--vh) * var(--sc) * 3);\n      background: rgba(147, 147, 147, 0.1);\n      position: absolute;\n      left: 0; }\n\n.color-picker-wr {\n  position: relative; }\n  .color-picker-wr.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .color-picker-wr > .color-picker-label {\n    flex: 1;\n    align-items: center;\n    white-space: nowrap;\n    padding: calc(var(--vh) * var(--sc) * 1); }\n  .color-picker-wr > .color-picker {\n    width: calc(var(--vh) * var(--sc) * 14);\n    height: calc(var(--vh) * var(--sc) * 4);\n    position: relative;\n    justify-content: space-between;\n    flex-direction: column;\n    cursor: pointer; }\n    .color-picker-wr > .color-picker:hover > .color-picker-bg {\n      opacity: 0.5; }\n    .color-picker-wr > .color-picker > .color-picker-hex {\n      flex: 1;\n      justify-content: space-between;\n      align-items: center;\n      padding: 0 calc(var(--vh) * var(--sc) * 1); }\n    .color-picker-wr > .color-picker > .color-picker-bg {\n      position: absolute;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      opacity: 0.25;\n      z-index: -1; }\n  .color-picker-wr > .color-picker-border {\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    width: 100%;\n    height: calc(var(--vh) * var(--sc) * 0.2);\n    background: #939393; }\n\n.card {\n  background: #36393f;\n  padding: calc(var(--vh) * var(--sc) * 1); }\n  .card > canvas {\n    max-width: 100%;\n    max-height: calc(var(--vh) * var(--sc) * 17);\n    object-fit: contain;\n    border-radius: calc(var(--vh) * var(--sc) * 0.4); }\n\n#modal-wrapper {\n  display: block;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  left: 0;\n  top: 0;\n  pointer-events: none;\n  overflow: hidden; }\n  #modal-wrapper > .modal {\n    display: none;\n    width: calc(var(--vh) * var(--sc) * 30);\n    max-height: calc(var(--vh) * var(--sc) * 60);\n    max-height: clamp(4vh, calc(var(--vh) * var(--sc) * 60), calc(100vh - calc(var(--vh) * var(--sc) * 4)));\n    min-height: calc(var(--vh) * var(--sc) * 4);\n    opacity: 0;\n    position: absolute;\n    background: #2c2e33;\n    box-shadow: 0 0 calc(var(--vh) * var(--sc) * 0.5) #111111;\n    pointer-events: all;\n    z-index: 10; }\n    #modal-wrapper > .modal.visible {\n      display: flex; }\n    #modal-wrapper > .modal.modal_left.modal-fadein-enter {\n      opacity: 0;\n      transform: translateX(-5%); }\n      #modal-wrapper > .modal.modal_left.modal-fadein-enter-active {\n        opacity: 1;\n        transform: translateX(0);\n        transition: 0.2s linear; }\n      #modal-wrapper > .modal.modal_left.modal-fadein-enter-done {\n        opacity: 1; }\n    #modal-wrapper > .modal.modal_left.modal-fadein-exit {\n      opacity: 1;\n      transform: translateX(0); }\n      #modal-wrapper > .modal.modal_left.modal-fadein-exit-active {\n        opacity: 0;\n        transform: translateX(-5%);\n        transition: 0.2s linear; }\n    #modal-wrapper > .modal.modal_right.modal-fadein-enter {\n      opacity: 0;\n      transform: translateX(5%); }\n      #modal-wrapper > .modal.modal_right.modal-fadein-enter-active {\n        opacity: 1;\n        transform: translateX(0);\n        transition: 0.2s linear; }\n      #modal-wrapper > .modal.modal_right.modal-fadein-enter-done {\n        opacity: 1; }\n    #modal-wrapper > .modal.modal_right.modal-fadein-exit {\n      opacity: 1;\n      transform: translateX(0); }\n      #modal-wrapper > .modal.modal_right.modal-fadein-exit-active {\n        opacity: 0;\n        transform: translateX(5%);\n        transition: 0.2s linear; }\n    #modal-wrapper > .modal.modal_left_close {\n      transform: translateX(-5%);\n      opacity: 0;\n      transition: 0.2s linear; }\n    #modal-wrapper > .modal.modal_right_close {\n      transform: translateX(5%);\n      opacity: 0;\n      transition: 0.2s linear; }\n  #modal-wrapper > .modal-fs-bg {\n    display: none;\n    width: 100vw;\n    height: 100vh;\n    justify-content: center;\n    align-items: center;\n    position: absolute;\n    background: rgba(0, 0, 0, 0.5);\n    pointer-events: all;\n    z-index: 10; }\n    #modal-wrapper > .modal-fs-bg.open {\n      display: flex; }\n    #modal-wrapper > .modal-fs-bg.modal-fadein-enter {\n      display: flex;\n      opacity: 0; }\n      #modal-wrapper > .modal-fs-bg.modal-fadein-enter > .modal-fs-wr {\n        transform: translateY(5%); }\n      #modal-wrapper > .modal-fs-bg.modal-fadein-enter-active {\n        opacity: 1;\n        transition: 0.2s linear; }\n        #modal-wrapper > .modal-fs-bg.modal-fadein-enter-active > .modal-fs-wr {\n          transform: translateY(0);\n          transition: 0.2s linear; }\n      #modal-wrapper > .modal-fs-bg.modal-fadein-enter-done {\n        display: flex; }\n    #modal-wrapper > .modal-fs-bg.modal-fadein-exit {\n      display: flex;\n      opacity: 1; }\n      #modal-wrapper > .modal-fs-bg.modal-fadein-exit > .modal-fs-wr {\n        transform: translateY(0); }\n      #modal-wrapper > .modal-fs-bg.modal-fadein-exit-active {\n        opacity: 0;\n        transition: 0.2s linear; }\n        #modal-wrapper > .modal-fs-bg.modal-fadein-exit-active > .modal-fs-wr {\n          transform: translateY(5%);\n          transition: 0.2s linear; }\n    #modal-wrapper > .modal-fs-bg > .modal-fs-wr {\n      width: calc(var(--vh) * var(--sc) * 100);\n      max-width: calc(100vw - calc(var(--vh) * var(--sc) * 10));\n      flex-direction: column;\n      background: #2c2e33;\n      box-shadow: 0 0 calc(var(--vh) * var(--sc) * 0.5) #111111; }\n      #modal-wrapper > .modal-fs-bg > .modal-fs-wr > .modal-fs-header {\n        width: 100%;\n        height: calc(var(--vh) * var(--sc) * 5);\n        align-items: center;\n        padding: 0 calc(var(--vh) * var(--sc) * 2);\n        font-family: 'Bold';\n        font-size: calc(var(--vh) * var(--sc) * 2);\n        background: #939393;\n        color: #000; }\n      #modal-wrapper > .modal-fs-bg > .modal-fs-wr > .modal-fs-container {\n        width: 100%;\n        max-height: 80vh; }\n        #modal-wrapper > .modal-fs-bg > .modal-fs-wr > .modal-fs-container > .modal-fs {\n          flex: 1;\n          flex-direction: column;\n          padding-top: calc(var(--vh) * var(--sc) * 2); }\n  #modal-wrapper .cmd-settings {\n    flex-direction: column;\n    padding: 0 calc(var(--vh) * var(--sc) * 1); }\n    #modal-wrapper .cmd-settings > .cmd-label {\n      width: 100%;\n      padding: calc(var(--vh) * var(--sc) * 1) calc(var(--vh) * var(--sc) * 1.5);\n      margin-bottom: calc(var(--vh) * var(--sc) * 2);\n      background: #939393;\n      color: #000;\n      font-family: 'Bold'; }\n    #modal-wrapper .cmd-settings > .modallabel {\n      align-items: center; }\n      #modal-wrapper .cmd-settings > .modallabel.switchable:not(.enabled) {\n        opacity: 0.75; }\n      #modal-wrapper .cmd-settings > .modallabel > .object-edit {\n        padding: calc(var(--vh) * var(--sc) * 1); }\n      #modal-wrapper .cmd-settings > .modallabel > .custom-time {\n        height: calc(var(--vh) * var(--sc) * 4);\n        margin-right: calc(var(--vh) * var(--sc) * 1); }\n  #modal-wrapper > #modal-group-settings {\n    flex-direction: column;\n    padding-bottom: calc(var(--vh) * var(--sc) * 1); }\n    #modal-wrapper > #modal-group-settings > .groupName {\n      width: 100%;\n      background: #939393;\n      color: #000;\n      font-family: 'Bold'; }\n      #modal-wrapper > #modal-group-settings > .groupName > input {\n        padding: calc(var(--vh) * var(--sc) * 1) calc(var(--vh) * var(--sc) * 1.5); }\n  #modal-wrapper > #modal-emoji {\n    width: auto;\n    max-height: calc(var(--vh) * var(--sc) * 50); }\n    #modal-wrapper > #modal-emoji > .emoji-list {\n      width: calc(var(--vh) * var(--sc) * 30);\n      flex-direction: column; }\n      #modal-wrapper > #modal-emoji > .emoji-list > .expansion-panel > .ep-dropdown {\n        flex-wrap: wrap;\n        padding: calc(var(--vh) * var(--sc) * 1); }\n        #modal-wrapper > #modal-emoji > .emoji-list > .expansion-panel > .ep-dropdown > .category-emoji-el {\n          width: calc(var(--vh) * var(--sc) * 4);\n          height: calc(var(--vh) * var(--sc) * 4);\n          font-size: calc(var(--vh) * var(--sc) * 2);\n          justify-content: center;\n          align-items: center;\n          cursor: pointer; }\n          #modal-wrapper > #modal-emoji > .emoji-list > .expansion-panel > .ep-dropdown > .category-emoji-el > div {\n            width: calc(var(--vh) * var(--sc) * 2.8);\n            height: calc(var(--vh) * var(--sc) * 2.8);\n            background-image: url(/static/img/emoji.png); }\n          #modal-wrapper > #modal-emoji > .emoji-list > .expansion-panel > .ep-dropdown > .category-emoji-el:hover {\n            background: #141517; }\n      #modal-wrapper > #modal-emoji > .emoji-list > .category {\n        display: none;\n        width: 100%;\n        flex-direction: column;\n        margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n        #modal-wrapper > #modal-emoji > .emoji-list > .category > .label {\n          background: rgba(255, 255, 255, 0.1);\n          padding: calc(var(--vh) * var(--sc) * 1); }\n        #modal-wrapper > #modal-emoji > .emoji-list > .category > .category-emoji {\n          width: 100%;\n          flex-wrap: wrap;\n          padding: 0 calc(var(--vh) * var(--sc) * 1); }\n          #modal-wrapper > #modal-emoji > .emoji-list > .category > .category-emoji > .category-emoji-el {\n            width: calc(var(--vh) * var(--sc) * 4);\n            height: calc(var(--vh) * var(--sc) * 4);\n            font-size: calc(var(--vh) * var(--sc) * 2);\n            justify-content: center;\n            align-items: center;\n            cursor: pointer; }\n            #modal-wrapper > #modal-emoji > .emoji-list > .category > .category-emoji > .category-emoji-el > div {\n              width: calc(var(--vh) * var(--sc) * 2.8);\n              height: calc(var(--vh) * var(--sc) * 2.8);\n              background-image: url(/static/img/emoji.png); }\n            #modal-wrapper > #modal-emoji > .emoji-list > .category > .category-emoji > .category-emoji-el:hover {\n              background: #141517; }\n\n.mlabel {\n  width: 100%;\n  height: calc(var(--vh) * var(--sc) * 2);\n  justify-content: space-between;\n  align-items: center;\n  color: #cccccc;\n  font-family: 'Bold';\n  margin-bottom: calc(var(--vh) * var(--sc) * 0.5); }\n  .mlabel.bg {\n    height: calc(var(--vh) * var(--sc) * 3.5);\n    background: rgba(147, 147, 147, 0.4);\n    padding: 0 calc(var(--vh) * var(--sc) * 1);\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .mlabel > .mlabel-right {\n    color: #939393; }\n\n.modallabel-wr {\n  width: 100%;\n  min-height: calc(var(--vh) * var(--sc) * 6);\n  position: relative;\n  background: rgba(147, 147, 147, 0.15);\n  padding-right: calc(var(--vh) * var(--sc) * 1); }\n  .modallabel-wr.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .modallabel-wr > .ml-enabled {\n    width: calc(var(--vh) * var(--sc) * 4);\n    height: 100%;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer; }\n    .modallabel-wr > .ml-enabled:hover {\n      background: rgba(255, 255, 255, 0.2); }\n    .modallabel-wr > .ml-enabled > img {\n      height: calc(var(--vh) * var(--sc) * 2); }\n  .modallabel-wr > .modal-label {\n    flex: 1;\n    justify-content: space-between;\n    align-items: center; }\n    .modallabel-wr > .modal-label.column {\n      align-items: unset;\n      flex-direction: column;\n      padding: calc(var(--vh) * var(--sc) * 1); }\n      .modallabel-wr > .modal-label.column > .ml-type {\n        height: calc(var(--vh) * var(--sc) * 4);\n        padding: unset; }\n    .modallabel-wr > .modal-label > .ml-type {\n      height: 100%;\n      align-items: center;\n      padding: 0 calc(var(--vh) * var(--sc) * 1);\n      font-family: 'bold'; }\n    .modallabel-wr > .modal-label > .object-edit {\n      justify-content: flex-end; }\n\n.container:not(.noflex) {\n  flex: 1; }\n\n.container.column {\n  flex-direction: column; }\n\n.container.center {\n  justify-content: center; }\n\n.container.vcenter {\n  align-items: center; }\n\n.container.hp1 {\n  padding-left: calc(var(--vh) * var(--sc) * 0.5);\n  padding-right: calc(var(--vh) * var(--sc) * 0.5); }\n\n.container.hp2 {\n  padding-left: calc(var(--vh) * var(--sc) * 1);\n  padding-right: calc(var(--vh) * var(--sc) * 1); }\n\n.container.vp1 {\n  padding-top: calc(var(--vh) * var(--sc) * 0.5);\n  padding-bottom: calc(var(--vh) * var(--sc) * 0.5); }\n\n.container.vp2 {\n  padding-top: calc(var(--vh) * var(--sc) * 1);\n  padding-bottom: calc(var(--vh) * var(--sc) * 1); }\n\n.container.spaceBetween {\n  justify-content: space-between; }\n\n.input {\n  position: relative;\n  flex-direction: column; }\n  .input.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1.5); }\n  .input.b > input {\n    border-bottom: calc(var(--vh) * var(--sc) * 0.2) solid #939393; }\n  .input.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1.5); }\n  .input.oe {\n    height: calc(var(--vh) * var(--sc) * 3); }\n    .input.oe > input {\n      width: calc(var(--vh) * var(--sc) * 10);\n      padding: 0 calc(var(--vh) * var(--sc) * 1); }\n  .input.center > input {\n    text-align: center; }\n  .input.fill {\n    flex: 1; }\n  .input.bold > input {\n    font-family: 'Bold'; }\n  .input.black > input {\n    color: #000; }\n  .input > input {\n    width: unset;\n    flex: 1;\n    font: inherit;\n    color: inherit;\n    border: none;\n    background: none;\n    line-height: calc(var(--vh) * var(--sc) * 1.8);\n    padding: calc(var(--vh) * var(--sc) * 1); }\n  .input:hover .input__dropdown_wr {\n    visibility: visible; }\n  .input__dropdown_wr {\n    position: absolute;\n    left: 0;\n    top: 100%;\n    width: 100%;\n    max-height: calc(var(--vh) * var(--sc) * 30);\n    background: rgba(20, 21, 23, 0.8);\n    overflow-y: auto;\n    z-index: 10;\n    visibility: hidden; }\n    .input__dropdown_wr.visible {\n      visibility: visible; }\n  .input__dropdown {\n    flex: 1;\n    flex-direction: column; }\n    .input__dropdown__item {\n      width: 100%;\n      height: calc(var(--vh) * var(--sc) * 4);\n      align-items: center;\n      padding: 0 calc(var(--vh) * var(--sc) * 1);\n      cursor: pointer; }\n      .input__dropdown__item.selected {\n        border-top: calc(var(--vh) * var(--sc) * 0.2) solid #939393;\n        border-bottom: calc(var(--vh) * var(--sc) * 0.2) solid #939393; }\n      .input__dropdown__item:hover {\n        background: #939393; }\n      .input__dropdown__item:hover .input__dropdown__item__d__title, .input__dropdown__item:hover .input__dropdown__item__d__desc {\n        color: #000; }\n      .input__dropdown__item__thumbnail {\n        margin-right: calc(var(--vh) * var(--sc) * 1);\n        height: 100%; }\n      .input__dropdown__item > .icon {\n        margin-right: calc(var(--vh) * var(--sc) * 1); }\n      .input__dropdown__item__d {\n        flex-direction: column; }\n        .input__dropdown__item__d__desc {\n          color: #939393;\n          font-size: calc(var(--vh) * var(--sc) * 1.2); }\n\n.user {\n  align-items: center;\n  background: rgba(147, 147, 147, 0.2);\n  padding: calc(var(--vh) * var(--sc) * 0.5) calc(var(--vh) * var(--sc) * 1); }\n  .user.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .user > .icon {\n    margin-right: calc(var(--vh) * var(--sc) * 1); }\n\n.border_bottom::after {\n  content: \"\";\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  height: calc(var(--vh) * var(--sc) * 0.2);\n  background: #939393; }\n\n.icon {\n  width: calc(var(--vh) * var(--sc) * 3);\n  height: calc(var(--vh) * var(--sc) * 3);\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  overflow: hidden; }\n  .icon:not(.icon-no-bg) {\n    background: #939393; }\n  .icon > img {\n    height: 100%; }\n\n@keyframes stars-animation {\n  0% {\n    transform: translateY(0); }\n  100% {\n    transform: translateY(-100%); } }\n\n@keyframes stars-start {\n  0% {\n    opacity: 0;\n    top: 20%; }\n  100% {\n    opacity: 1;\n    top: 0; } }\n\n@keyframes modal-left {\n  0% {\n    opacity: 0;\n    transform: translateX(-5%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0); } }\n\n@keyframes modal-right {\n  0% {\n    opacity: 0;\n    transform: translateX(5%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0); } }\n", ""]);
+exports.push([module.i, ".page#main {\n  width: 100%;\n  height: calc(100vh - calc(var(--vh) * var(--sc) * 5)); }\n  .page#main > main {\n    position: relative;\n    flex: 1;\n    flex-direction: column; }\n    .page#main > main > .screen-start {\n      position: relative;\n      width: 100%;\n      height: 100%;\n      flex-direction: column;\n      align-items: center;\n      z-index: 1; }\n      .page#main > main > .screen-start > .preview {\n        width: 70%;\n        height: calc(var(--vh) * var(--sc) * 50);\n        max-height: calc(100% - calc(var(--vh) * var(--sc) * 20));\n        margin-top: calc(var(--vh) * var(--sc) * 5);\n        justify-content: space-between;\n        align-items: center;\n        z-index: 1; }\n        .page#main > main > .screen-start > .preview > .site {\n          flex-direction: column;\n          align-items: flex-start; }\n          .page#main > main > .screen-start > .preview > .site > .beta {\n            position: relative;\n            font-size: calc(var(--vh) * var(--sc) * 2);\n            padding: calc(var(--vh) * var(--sc) * 0.2) calc(var(--vh) * var(--sc) * 1); }\n            .page#main > main > .screen-start > .preview > .site > .beta::after {\n              content: \"\";\n              position: absolute;\n              left: 0;\n              top: 0;\n              width: 0%;\n              height: 100%;\n              background: #c04141;\n              animation: beta-fill 1s;\n              animation-fill-mode: forwards;\n              transform: skewX(-15deg);\n              z-index: -1; }\n\n@keyframes beta-fill {\n  0% {\n    width: 0%; }\n  100% {\n    width: 100%; } }\n          .page#main > main > .screen-start > .preview > .site > .sitename {\n            font-size: calc(var(--vh) * var(--sc) * 6);\n            font-family: 'Kanit';\n            letter-spacing: calc(var(--vh) * var(--sc) * 0.075); }\n        .page#main > main > .screen-start > .preview > .servers-wr {\n          width: calc(var(--vh) * var(--sc) * 35);\n          height: 100%; }\n          .page#main > main > .screen-start > .preview > .servers-wr > .servers {\n            flex: 1;\n            flex-direction: column;\n            padding-right: calc(var(--vh) * var(--sc) * 1); }\n            .page#main > main > .screen-start > .preview > .servers-wr > .servers:not(.overflow) {\n              justify-content: center; }\n            .page#main > main > .screen-start > .preview > .servers-wr > .servers > .login > .button-label {\n              border-color: #939393;\n              color: #FFF; }\n              .page#main > main > .screen-start > .preview > .servers-wr > .servers > .login > .button-label > .border {\n                border-color: #939393; }\n            .page#main > main > .screen-start > .preview > .servers-wr > .servers > .guild:not(:last-child) {\n              margin-bottom: calc(var(--vh) * var(--sc) * 1.5); }\n            .page#main > main > .screen-start > .preview > .servers-wr > .servers > .guild > .button-label > .icon {\n              width: calc(var(--vh) * var(--sc) * 3);\n              height: calc(var(--vh) * var(--sc) * 3);\n              border-radius: 50%;\n              justify-content: center;\n              align-items: center;\n              background: #939393;\n              color: #000;\n              font-family: 'Bold';\n              margin-right: calc(var(--vh) * var(--sc) * 1); }\n            .page#main > main > .screen-start > .preview > .servers-wr > .servers > .guild:not(.bot) > .button-label, .page#main > main > .screen-start > .preview > .servers-wr > .servers > .guild:not(.bot) > .border {\n              border-color: #939393; }\n            .page#main > main > .screen-start > .preview > .servers-wr > .servers > .guild.selected > .border, .page#main > main > .screen-start > .preview > .servers-wr > .servers > .guild.selected > .button-label {\n              border-color: #547ab3; }\n      .page#main > main > .screen-start .preview-arrow_wr {\n        width: 100%;\n        justify-content: center; }\n        .page#main > main > .screen-start .preview-arrow_wr .preview-arrow {\n          position: absolute;\n          width: calc(var(--vh) * var(--sc) * 20);\n          height: calc(var(--vh) * var(--sc) * 3);\n          bottom: calc(var(--vh) * var(--sc) * 0.5);\n          align-items: center;\n          animation: preview-arrow-animation linear infinite 2s; }\n\n@keyframes preview-arrow-animation {\n  0% {\n    opacity: 50%; }\n  50% {\n    opacity: 90%; }\n  100% {\n    opacity: 50%; } }\n          .page#main > main > .screen-start .preview-arrow_wr .preview-arrow > .p-arrow {\n            width: 50%;\n            height: calc(var(--vh) * var(--sc) * 0.3);\n            background: #FFF;\n            border-radius: calc(var(--vh) * var(--sc) * 0.1); }\n            .page#main > main > .screen-start .preview-arrow_wr .preview-arrow > .p-arrow__1 {\n              transform: rotateZ(8deg) translateX(1%); }\n            .page#main > main > .screen-start .preview-arrow_wr .preview-arrow > .p-arrow__2 {\n              transform: rotateZ(-8deg) translateX(-1%); }\n      .page#main > main > .screen-start .features-preview {\n        position: absolute;\n        width: 70%;\n        justify-content: center;\n        flex-wrap: wrap;\n        bottom: calc(var(--vh) * var(--sc) * 4);\n        padding-left: calc(var(--vh) * var(--sc) * 1); }\n        .page#main > main > .screen-start .features-preview__item {\n          position: relative;\n          padding: calc(var(--vh) * var(--sc) * 1) calc(var(--vh) * var(--sc) * 1.5);\n          background: rgba(0, 0, 0, 0.5);\n          border-radius: calc(var(--vh) * var(--sc) * 0.2);\n          overflow: hidden;\n          margin-right: calc(var(--vh) * var(--sc) * 1);\n          margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n          .page#main > main > .screen-start .features-preview__item.indev {\n            color: #939393; }\n          .page#main > main > .screen-start .features-preview__item__border {\n            position: absolute;\n            left: 0;\n            bottom: 0;\n            width: 100%;\n            height: calc(var(--vh) * var(--sc) * 0.2); }\n    .page#main > main .features {\n      width: calc(100vw - calc(var(--vh) * var(--sc) * 10));\n      flex-direction: column;\n      margin: calc(var(--vh) * var(--sc) * 10) auto; }\n      .page#main > main .features__item {\n        width: 100%;\n        height: calc(var(--vh) * var(--sc) * 20);\n        justify-content: space-between;\n        align-items: center;\n        background: rgba(0, 0, 0, 0.2);\n        backdrop-filter: blur(0.5vh);\n        border-radius: calc(var(--vh) * var(--sc) * 0.3);\n        margin-bottom: calc(var(--vh) * var(--sc) * 15); }\n        .page#main > main .features__item.reversed {\n          flex-direction: row-reverse; }\n          .page#main > main .features__item.reversed .features__item__d {\n            align-items: flex-end; }\n            .page#main > main .features__item.reversed .features__item__d__text {\n              text-align: right; }\n          .page#main > main .features__item.reversed img {\n            transform: perspective(2000px) rotateY(-20deg); }\n        .page#main > main .features__item img {\n          height: 150%;\n          max-width: 50%;\n          object-fit: cover;\n          transform: perspective(2000px) rotateY(20deg);\n          perspective-origin: left;\n          box-shadow: #535353 0 0 calc(var(--vh) * var(--sc) * 0.5); }\n        .page#main > main .features__item__d {\n          flex: 1;\n          height: 100%;\n          flex-direction: column;\n          justify-content: center;\n          align-items: flex-start;\n          padding: 0 calc(var(--vh) * var(--sc) * 4); }\n          .page#main > main .features__item__d__title {\n            line-height: calc(var(--vh) * var(--sc) * 4);\n            font-size: calc(var(--vh) * var(--sc) * 2.8);\n            text-transform: uppercase;\n            font-family: 'Bold';\n            border-bottom: #FFF calc(var(--vh) * var(--sc) * 0.2) solid;\n            margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n          .page#main > main .features__item__d__text {\n            line-height: calc(var(--vh) * var(--sc) * 3);\n            font-size: calc(var(--vh) * var(--sc) * 2);\n            color: #cccccc; }\n      .page#main > main .features__item_2 {\n        width: 100%;\n        flex-direction: column;\n        align-items: center;\n        padding: calc(var(--vh) * var(--sc) * 4);\n        background: rgba(0, 0, 0, 0.2);\n        backdrop-filter: blur(0.5vh); }\n        .page#main > main .features__item_2__title {\n          width: 100%;\n          justify-content: center;\n          line-height: calc(var(--vh) * var(--sc) * 4);\n          font-size: calc(var(--vh) * var(--sc) * 2.8);\n          text-transform: uppercase;\n          font-family: 'Bold';\n          border-bottom: #FFF calc(var(--vh) * var(--sc) * 0.2) solid;\n          margin-bottom: calc(var(--vh) * var(--sc) * 4); }\n        .page#main > main .features__item_2__video {\n          width: 100%;\n          position: relative; }\n          .page#main > main .features__item_2__video > video {\n            width: 100%;\n            opacity: 0.5;\n            transition: 0.2s opacity; }\n            .page#main > main .features__item_2__video > video.playing {\n              opacity: 1; }\n          .page#main > main .features__item_2__video .hovervideo__overlay {\n            position: absolute;\n            left: 0;\n            top: 0;\n            width: 100%;\n            height: 100%;\n            font-size: calc(var(--vh) * var(--sc) * 2.4);\n            justify-content: center;\n            align-items: center;\n            pointer-events: none;\n            transition: 0.2s opacity; }\n            .page#main > main .features__item_2__video .hovervideo__overlay.playing {\n              opacity: 0; }\n      .page#main > main .features__item_3 {\n        width: 100%;\n        flex-direction: column;\n        padding: calc(var(--vh) * var(--sc) * 4);\n        background: rgba(0, 0, 0, 0.2);\n        backdrop-filter: blur(0.5vh); }\n        .page#main > main .features__item_3__title {\n          width: 100%;\n          justify-content: center;\n          line-height: calc(var(--vh) * var(--sc) * 4);\n          font-size: calc(var(--vh) * var(--sc) * 2.8);\n          text-transform: uppercase;\n          font-family: 'Bold';\n          border-bottom: #FFF calc(var(--vh) * var(--sc) * 0.2) solid;\n          margin-bottom: calc(var(--vh) * var(--sc) * 4); }\n        .page#main > main .features__item_3__text {\n          justify-content: center;\n          line-height: calc(var(--vh) * var(--sc) * 3);\n          font-size: calc(var(--vh) * var(--sc) * 2);\n          color: #cccccc; }\n\n.main-bg {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  opacity: 0.075;\n  background: linear-gradient(to bottom, #202124 0%, transparent 100%), url(/static/img/bg.png);\n  filter: blur(0.5vh);\n  background-size: cover;\n  background-position: bottom 20% center;\n  z-index: -1; }\n\n.footer {\n  width: 100%;\n  height: calc(var(--vh) * var(--sc) * 5);\n  justify-content: space-between;\n  align-items: center;\n  padding: 0 calc(var(--vh) * var(--sc) * 5);\n  background: rgba(147, 147, 147, 0.2);\n  backdrop-filter: blur(1vh); }\n\n.button {\n  width: 100%;\n  height: calc(var(--vh) * var(--sc) * 5);\n  position: relative; }\n  .button.compact {\n    height: calc(var(--vh) * var(--sc) * 4); }\n  .button.center > .button-label {\n    justify-content: center; }\n  .button > .border {\n    content: \"\";\n    opacity: 0;\n    position: absolute;\n    width: calc(100% - calc(var(--vh) * var(--sc) * 0.2));\n    height: calc(100% - calc(var(--vh) * var(--sc) * 0.2));\n    border-top: calc(var(--vh) * var(--sc) * 0.2) solid #939393;\n    border-left: calc(var(--vh) * var(--sc) * 0.2) solid #939393;\n    transition: 0.2s opacity; }\n  .button > .button-label {\n    width: 100%;\n    height: 100%;\n    align-items: center;\n    border: calc(var(--vh) * var(--sc) * 0.2) solid #535353;\n    color: #939393;\n    overflow: hidden;\n    cursor: pointer;\n    background: rgba(255, 255, 255, 0.025);\n    transform: translate(0, 0);\n    transition: transform 0.2s; }\n    .button > .button-label > img {\n      height: calc(var(--vh) * var(--sc) * 3);\n      border-radius: 50%;\n      margin-right: calc(var(--vh) * var(--sc) * 1);\n      opacity: 0.5; }\n    .button > .button-label > .status {\n      position: absolute;\n      left: calc(var(--vh) * var(--sc) * -1.5);\n      width: calc(var(--vh) * var(--sc) * 4.5);\n      height: 100%;\n      transform: skewX(-20deg);\n      background: #535353; }\n  .button.enabled > .button-label {\n    color: #FFF;\n    border-color: #939393; }\n    .button.enabled > .button-label > .status {\n      background: #939393; }\n    .button.enabled > .button-label > img {\n      opacity: 1; }\n  .button:hover > .border {\n    opacity: 1; }\n  .button:hover > .button-label {\n    transform: translate(0.5vh, calc(var(--vh) * var(--sc) * 0.5));\n    border-color: #939393; }\n  .button.enabled:hover > .border {\n    border-color: #FFF; }\n  .button.enabled:hover > .button-label {\n    border-color: #FFF; }\n\n.title {\n  width: 100%;\n  height: calc(var(--vh) * var(--sc) * 5);\n  position: relative;\n  align-items: center;\n  background: #2c2e33; }\n  .title > *:not(.title-color) {\n    z-index: 1; }\n  .title > .plugin-title {\n    font-size: calc(var(--vh) * var(--sc) * 2.4);\n    font-family: 'Bold'; }\n  .title > .title-color {\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    opacity: 0.05; }\n  .title > .border {\n    width: 100%;\n    height: calc(var(--vh) * var(--sc) * 0.2);\n    position: absolute;\n    bottom: 0;\n    background: #535353; }\n  .title > .p-enabled {\n    position: absolute;\n    right: 0;\n    height: 100%;\n    padding: 0 calc(var(--vh) * var(--sc) * 2);\n    justify-content: flex-end;\n    align-items: center;\n    cursor: pointer; }\n    .title > .p-enabled:hover {\n      background: rgba(255, 255, 255, 0.2); }\n    .title > .p-enabled > img {\n      height: 30%;\n      margin-right: calc(var(--vh) * var(--sc) * 1); }\n  .title > .main {\n    margin-left: calc(var(--vh) * var(--sc) * 2); }\n  .title > .back {\n    width: calc(var(--vh) * var(--sc) * 6);\n    height: 100%;\n    justify-content: center;\n    align-items: center; }\n    .title > .back:hover > img {\n      opacity: 1; }\n    .title > .back > img {\n      height: calc(var(--vh) * var(--sc) * 2);\n      opacity: 0.5;\n      cursor: pointer; }\n  .title > img {\n    height: 60%;\n    margin-right: calc(var(--vh) * var(--sc) * 1); }\n\n.category-name-wr {\n  height: calc(var(--vh) * var(--sc) * 3);\n  position: relative;\n  margin-bottom: calc(var(--vh) * var(--sc) * 2);\n  overflow: hidden; }\n  .category-name-wr > .border {\n    content: \"\";\n    width: 100%;\n    height: calc(var(--vh) * var(--sc) * 0.2);\n    position: absolute;\n    bottom: 0;\n    background: #939393; }\n  .category-name-wr > .category-name {\n    height: 100%;\n    position: relative;\n    left: calc(var(--vh) * var(--sc) * -1.5);\n    align-items: center;\n    background: #939393;\n    color: #000;\n    transform: skewX(45deg);\n    font-family: 'Bold';\n    padding-left: calc(var(--vh) * var(--sc) * 2.5);\n    padding-right: calc(var(--vh) * var(--sc) * 1.5); }\n    .category-name-wr > .category-name > span {\n      transform: skewX(-45deg); }\n\n.label-wr {\n  position: relative;\n  width: 100%;\n  height: calc(var(--vh) * var(--sc) * 3);\n  align-items: center; }\n  .label-wr > .label {\n    position: relative;\n    height: 100%;\n    align-items: center; }\n    .label-wr > .label > img {\n      height: calc(var(--vh) * var(--sc) * 1.5);\n      margin-right: calc(var(--vh) * var(--sc) * 1); }\n  .label-wr:not(.text) > .label {\n    font-family: 'Bold';\n    color: #cccccc;\n    text-shadow: #939393 0 0 calc(var(--vh) * var(--sc) * 0.5); }\n  .label-wr.mt {\n    margin-top: calc(var(--vh) * var(--sc) * 1); }\n  .label-wr.p > .label {\n    padding: 0 calc(var(--vh) * var(--sc) * 1); }\n  .label-wr.bg {\n    background: rgba(147, 147, 147, 0.2); }\n  .label-wr:not(.nm) {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .label-wr.border > .label::before {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: calc(var(--vh) * var(--sc) * 0.2);\n    background: #939393; }\n  .label-wr.border > .label::after {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    width: 100%;\n    height: calc(var(--vh) * var(--sc) * 0.2);\n    background: #939393; }\n  .label-wr.label-channel > .label > img {\n    opacity: 0.7; }\n\n.stars {\n  width: 100%;\n  height: calc(var(--vh) * var(--sc) * 50);\n  position: absolute;\n  overflow: hidden;\n  justify-content: center;\n  top: calc(100% - calc(var(--vh) * var(--sc) * 40));\n  align-items: center;\n  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, white 40%, white 80%, transparent 100%);\n  mask-image: linear-gradient(to top, white 50%, transparent 100%);\n  z-index: -1; }\n  .stars > .field {\n    position: absolute;\n    width: 100%;\n    height: 100%; }\n    .stars > .field > .field-parallax {\n      width: 100%;\n      height: 200%; }\n      .stars > .field > .field-parallax > .star {\n        width: 1px;\n        height: 1px; }\n    .stars > .field.range3 {\n      animation: stars-animation 50s infinite linear, stars-start 2s; }\n      .stars > .field.range3 > .field-parallax > .star {\n        width: calc(var(--vh) * var(--sc) * 0.1);\n        height: calc(var(--vh) * var(--sc) * 0.1); }\n    .stars > .field.range2 {\n      animation: stars-animation 20s infinite linear, stars-start 2s; }\n      .stars > .field.range2 > .field-parallax > .star {\n        width: calc(var(--vh) * var(--sc) * 0.2);\n        height: calc(var(--vh) * var(--sc) * 0.2); }\n    .stars > .field.range1 {\n      animation: stars-animation 10s infinite linear, stars-start 2s; }\n      .stars > .field.range1 > .field-parallax > .star {\n        width: calc(var(--vh) * var(--sc) * 0.4);\n        height: calc(var(--vh) * var(--sc) * 0.4); }\n\n.row.m {\n  margin-bottom: calc(var(--vh) * var(--sc) * 1.5); }\n\n.row.aic {\n  align-items: center; }\n\n.row > .row__el {\n  flex-direction: column; }\n  .row > .row__el:not(:last-child) {\n    margin-right: calc(var(--vh) * var(--sc) * 1); }\n  .row > .row__el.jcc {\n    justify-content: center; }\n\n.fill {\n  flex: 1; }\n\n.select-wr {\n  flex-direction: column; }\n  .select-wr.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .select-wr.mr {\n    margin-right: calc(var(--vh) * var(--sc) * 1); }\n  .select-wr.flex {\n    flex: 1; }\n  .select-wr .select {\n    height: calc(var(--vh) * var(--sc) * 4);\n    position: relative; }\n    .select-wr .select > .select-label-wr {\n      width: 100%;\n      height: 100%;\n      cursor: pointer;\n      padding: 0 calc(var(--vh) * var(--sc) * 1);\n      justify-content: space-between;\n      align-items: center; }\n      .select-wr .select > .select-label-wr > .arrow {\n        height: 100%;\n        align-items: center;\n        padding-left: calc(var(--vh) * var(--sc) * 1); }\n        .select-wr .select > .select-label-wr > .arrow > img {\n          height: 40%; }\n    .select-wr .select > .border {\n      content: \"\";\n      width: 100%;\n      height: calc(var(--vh) * var(--sc) * 0.2);\n      position: absolute;\n      bottom: 0;\n      background: #939393; }\n\n.scroll-wr {\n  width: calc(var(--vh) * var(--sc) * 0.5);\n  flex: 1 1 1; }\n  .scroll-wr > .scroll {\n    width: 100%;\n    position: relative;\n    background: #939393; }\n\n.with-scroll {\n  overflow: auto;\n  scrollbar-width: none; }\n  .with-scroll::-webkit-scrollbar {\n    display: none; }\n\n.dropdown-component {\n  position: relative; }\n  .dropdown-component > .dropdown-label {\n    height: 100%;\n    align-items: center; }\n  .dropdown-component > .dropdown-wr {\n    display: none;\n    width: 100%;\n    max-height: calc(var(--vh) * var(--sc) * 30);\n    min-height: calc(var(--vh) * var(--sc) * 1);\n    opacity: 0.8;\n    background: #141517;\n    position: absolute;\n    left: 0;\n    top: 100%;\n    z-index: 10; }\n    .dropdown-component > .dropdown-wr.open {\n      display: flex; }\n    .dropdown-component > .dropdown-wr > .dropdown {\n      flex: 1;\n      flex-direction: column; }\n      .dropdown-component > .dropdown-wr > .dropdown > * {\n        width: 100%;\n        cursor: pointer;\n        padding: calc(var(--vh) * var(--sc) * 0.5) calc(var(--vh) * var(--sc) * 1); }\n        .dropdown-component > .dropdown-wr > .dropdown > *:hover {\n          background: #939393;\n          color: #000; }\n\n.switch {\n  position: relative;\n  padding: calc(var(--vh) * var(--sc) * 0.7) calc(var(--vh) * var(--sc) * 1) calc(var(--vh) * var(--sc) * 0.7) calc(var(--vh) * var(--sc) * 1.5);\n  cursor: pointer;\n  align-items: center; }\n  .switch.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1.5); }\n  .switch:hover {\n    background: rgba(255, 255, 255, 0.1); }\n  .switch.enabled::before {\n    background: #FFF; }\n  .switch > img {\n    height: calc(var(--vh) * var(--sc) * 1.8);\n    margin-right: calc(var(--vh) * var(--sc) * 1);\n    filter: invert(1); }\n  .switch::before {\n    content: \"\";\n    width: calc(var(--vh) * var(--sc) * 0.5);\n    height: 100%;\n    position: absolute;\n    left: 0;\n    top: 0;\n    background: #939393; }\n\n.emoji:not(.emoji-disabled) > .emoji-sel {\n  cursor: pointer; }\n\n.emoji:not(.selected) > .emoji-sel {\n  filter: grayscale(1); }\n  .emoji:not(.selected) > .emoji-sel:hover {\n    filter: unset; }\n\n.emoji.mr {\n  margin-right: calc(var(--vh) * var(--sc) * 1); }\n\n.emoji > .emoji-sel {\n  width: calc(var(--vh) * var(--sc) * 2.8);\n  height: calc(var(--vh) * var(--sc) * 2.8);\n  background-image: url(/static/img/emoji.png); }\n\n.expansion-panel {\n  width: 100%;\n  flex-direction: column; }\n  .expansion-panel.open > .ep-header > .border {\n    opacity: 1; }\n  .expansion-panel.open > .ep-dropdown {\n    display: flex; }\n  .expansion-panel.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .expansion-panel.column > .ep-dropdown {\n    flex-direction: column; }\n  .expansion-panel > .ep-header {\n    position: relative;\n    height: calc(var(--vh) * var(--sc) * 4);\n    justify-content: space-between;\n    align-items: center;\n    font-family: 'Bold';\n    background: rgba(147, 147, 147, 0.2);\n    padding-left: calc(var(--vh) * var(--sc) * 1);\n    cursor: pointer; }\n    .expansion-panel > .ep-header > .border {\n      position: absolute;\n      left: 0;\n      bottom: 0;\n      width: 100%;\n      height: calc(var(--vh) * var(--sc) * 0.2);\n      opacity: 0;\n      background: #939393; }\n    .expansion-panel > .ep-header > .ep-header-r {\n      height: 100%; }\n      .expansion-panel > .ep-header > .ep-header-r > .ep-header-arrow {\n        height: 100%;\n        align-items: center;\n        padding: 0 calc(var(--vh) * var(--sc) * 2); }\n        .expansion-panel > .ep-header > .ep-header-r > .ep-header-arrow > img {\n          height: 50%; }\n  .expansion-panel > .ep-dropdown {\n    display: none;\n    background: rgba(147, 147, 147, 0.1);\n    padding: calc(var(--vh) * var(--sc) * 1); }\n\n.enabled-switch {\n  height: 100%;\n  align-items: center;\n  opacity: 0.5;\n  cursor: pointer; }\n  .enabled-switch.enabled {\n    opacity: 1; }\n  .enabled-switch.text {\n    width: calc(var(--vh) * var(--sc) * 12);\n    justify-content: center; }\n    .enabled-switch.text > img {\n      margin-right: calc(var(--vh) * var(--sc) * 1); }\n  .enabled-switch:not(.text) {\n    padding: 0 calc(var(--vh) * var(--sc) * 1); }\n  .enabled-switch:hover {\n    background: rgba(255, 255, 255, 0.5); }\n  .enabled-switch > img {\n    height: calc(var(--vh) * var(--sc) * 1.5); }\n\n.slider-wr {\n  flex-direction: column;\n  justify-content: center; }\n  .slider-wr.row {\n    flex-direction: row;\n    align-items: center; }\n    .slider-wr.row > .slider {\n      flex: 1; }\n  .slider-wr.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .slider-wr > img {\n    height: calc(var(--vh) * var(--sc) * 2);\n    margin-right: calc(var(--vh) * var(--sc) * 1); }\n  .slider-wr > .slider {\n    position: relative;\n    height: calc(var(--vh) * var(--sc) * 4);\n    align-items: center; }\n    .slider-wr > .slider > .slider-content {\n      position: absolute;\n      left: 0;\n      top: 0;\n      width: calc(100% - calc(var(--vh) * var(--sc) * 0.8));\n      height: 100%;\n      align-items: center;\n      margin: 0 calc(var(--vh) * var(--sc) * 0.4); }\n      .slider-wr > .slider > .slider-content > .slider-pos {\n        width: calc(var(--vh) * var(--sc) * 0.8);\n        height: calc(var(--vh) * var(--sc) * 3.5);\n        position: absolute;\n        background: #FFF;\n        transition: 0.1s;\n        transform: translateX(-50%);\n        z-index: 1; }\n      .slider-wr > .slider > .slider-content > .slider-keypoint {\n        opacity: 0;\n        width: calc(var(--vh) * var(--sc) * 0.2);\n        height: calc(var(--vh) * var(--sc) * 2);\n        position: absolute;\n        background: #939393;\n        transition: 0.1s;\n        transform: translateX(-50%); }\n        .slider-wr > .slider > .slider-content > .slider-keypoint.visible {\n          opacity: 1; }\n    .slider-wr > .slider > .slider-fill {\n      height: calc(var(--vh) * var(--sc) * 3);\n      background: rgba(147, 147, 147, 0.5);\n      position: absolute;\n      left: 0;\n      transition: 0.1s; }\n    .slider-wr > .slider > .slider-unfilled {\n      width: 100%;\n      height: calc(var(--vh) * var(--sc) * 3);\n      background: rgba(147, 147, 147, 0.1);\n      position: absolute;\n      left: 0; }\n\n.color-picker-wr {\n  position: relative; }\n  .color-picker-wr.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .color-picker-wr > .color-picker-label {\n    flex: 1;\n    align-items: center;\n    white-space: nowrap;\n    padding: calc(var(--vh) * var(--sc) * 1); }\n  .color-picker-wr > .color-picker {\n    width: calc(var(--vh) * var(--sc) * 14);\n    height: calc(var(--vh) * var(--sc) * 4);\n    position: relative;\n    justify-content: space-between;\n    flex-direction: column;\n    cursor: pointer; }\n    .color-picker-wr > .color-picker:hover > .color-picker-bg {\n      opacity: 0.5; }\n    .color-picker-wr > .color-picker > .color-picker-hex {\n      flex: 1;\n      justify-content: space-between;\n      align-items: center;\n      padding: 0 calc(var(--vh) * var(--sc) * 1); }\n    .color-picker-wr > .color-picker > .color-picker-bg {\n      position: absolute;\n      left: 0;\n      top: 0;\n      width: 100%;\n      height: 100%;\n      opacity: 0.25;\n      z-index: -1; }\n  .color-picker-wr > .color-picker-border {\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    width: 100%;\n    height: calc(var(--vh) * var(--sc) * 0.2);\n    background: #939393; }\n\n.card {\n  background: #36393f;\n  padding: calc(var(--vh) * var(--sc) * 1); }\n  .card > canvas {\n    max-width: 100%;\n    max-height: calc(var(--vh) * var(--sc) * 17);\n    object-fit: contain;\n    border-radius: calc(var(--vh) * var(--sc) * 0.4); }\n\n#modal-wrapper {\n  display: block;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  left: 0;\n  top: 0;\n  pointer-events: none;\n  overflow: hidden; }\n  #modal-wrapper > .modal {\n    display: none;\n    width: calc(var(--vh) * var(--sc) * 30);\n    max-height: calc(var(--vh) * var(--sc) * 60);\n    max-height: clamp(4vh, calc(var(--vh) * var(--sc) * 60), calc(100vh - calc(var(--vh) * var(--sc) * 4)));\n    min-height: calc(var(--vh) * var(--sc) * 4);\n    opacity: 0;\n    position: absolute;\n    background: #2c2e33;\n    box-shadow: 0 0 calc(var(--vh) * var(--sc) * 0.5) #111111;\n    pointer-events: all;\n    z-index: 10; }\n    #modal-wrapper > .modal.visible {\n      display: flex; }\n    #modal-wrapper > .modal.modal_left.modal-fadein-enter {\n      opacity: 0;\n      transform: translateX(-5%); }\n      #modal-wrapper > .modal.modal_left.modal-fadein-enter-active {\n        opacity: 1;\n        transform: translateX(0);\n        transition: 0.2s linear; }\n      #modal-wrapper > .modal.modal_left.modal-fadein-enter-done {\n        opacity: 1; }\n    #modal-wrapper > .modal.modal_left.modal-fadein-exit {\n      opacity: 1;\n      transform: translateX(0); }\n      #modal-wrapper > .modal.modal_left.modal-fadein-exit-active {\n        opacity: 0;\n        transform: translateX(-5%);\n        transition: 0.2s linear; }\n    #modal-wrapper > .modal.modal_right.modal-fadein-enter {\n      opacity: 0;\n      transform: translateX(5%); }\n      #modal-wrapper > .modal.modal_right.modal-fadein-enter-active {\n        opacity: 1;\n        transform: translateX(0);\n        transition: 0.2s linear; }\n      #modal-wrapper > .modal.modal_right.modal-fadein-enter-done {\n        opacity: 1; }\n    #modal-wrapper > .modal.modal_right.modal-fadein-exit {\n      opacity: 1;\n      transform: translateX(0); }\n      #modal-wrapper > .modal.modal_right.modal-fadein-exit-active {\n        opacity: 0;\n        transform: translateX(5%);\n        transition: 0.2s linear; }\n    #modal-wrapper > .modal.modal_left_close {\n      transform: translateX(-5%);\n      opacity: 0;\n      transition: 0.2s linear; }\n    #modal-wrapper > .modal.modal_right_close {\n      transform: translateX(5%);\n      opacity: 0;\n      transition: 0.2s linear; }\n  #modal-wrapper > .modal-fs-bg {\n    display: none;\n    width: 100vw;\n    height: 100vh;\n    justify-content: center;\n    align-items: center;\n    position: absolute;\n    background: rgba(0, 0, 0, 0.5);\n    pointer-events: all;\n    z-index: 10; }\n    #modal-wrapper > .modal-fs-bg.open {\n      display: flex; }\n    #modal-wrapper > .modal-fs-bg.modal-fadein-enter {\n      display: flex;\n      opacity: 0; }\n      #modal-wrapper > .modal-fs-bg.modal-fadein-enter > .modal-fs-wr {\n        transform: translateY(5%); }\n      #modal-wrapper > .modal-fs-bg.modal-fadein-enter-active {\n        opacity: 1;\n        transition: 0.2s linear; }\n        #modal-wrapper > .modal-fs-bg.modal-fadein-enter-active > .modal-fs-wr {\n          transform: translateY(0);\n          transition: 0.2s linear; }\n      #modal-wrapper > .modal-fs-bg.modal-fadein-enter-done {\n        display: flex; }\n    #modal-wrapper > .modal-fs-bg.modal-fadein-exit {\n      display: flex;\n      opacity: 1; }\n      #modal-wrapper > .modal-fs-bg.modal-fadein-exit > .modal-fs-wr {\n        transform: translateY(0); }\n      #modal-wrapper > .modal-fs-bg.modal-fadein-exit-active {\n        opacity: 0;\n        transition: 0.2s linear; }\n        #modal-wrapper > .modal-fs-bg.modal-fadein-exit-active > .modal-fs-wr {\n          transform: translateY(5%);\n          transition: 0.2s linear; }\n    #modal-wrapper > .modal-fs-bg > .modal-fs-wr {\n      width: calc(var(--vh) * var(--sc) * 100);\n      max-width: calc(100vw - calc(var(--vh) * var(--sc) * 10));\n      flex-direction: column;\n      background: #2c2e33;\n      box-shadow: 0 0 calc(var(--vh) * var(--sc) * 0.5) #111111; }\n      #modal-wrapper > .modal-fs-bg > .modal-fs-wr > .modal-fs-header {\n        width: 100%;\n        height: calc(var(--vh) * var(--sc) * 5);\n        align-items: center;\n        padding: 0 calc(var(--vh) * var(--sc) * 2);\n        font-family: 'Bold';\n        font-size: calc(var(--vh) * var(--sc) * 2);\n        background: #939393;\n        color: #000; }\n      #modal-wrapper > .modal-fs-bg > .modal-fs-wr > .modal-fs-container {\n        width: 100%;\n        max-height: 80vh; }\n        #modal-wrapper > .modal-fs-bg > .modal-fs-wr > .modal-fs-container > .modal-fs {\n          flex: 1;\n          flex-direction: column;\n          padding-top: calc(var(--vh) * var(--sc) * 2); }\n  #modal-wrapper .cmd-settings {\n    flex-direction: column;\n    padding: 0 calc(var(--vh) * var(--sc) * 1); }\n    #modal-wrapper .cmd-settings > .cmd-label {\n      width: 100%;\n      padding: calc(var(--vh) * var(--sc) * 1) calc(var(--vh) * var(--sc) * 1.5);\n      margin-bottom: calc(var(--vh) * var(--sc) * 2);\n      background: #939393;\n      color: #000;\n      font-family: 'Bold'; }\n    #modal-wrapper .cmd-settings > .modallabel {\n      align-items: center; }\n      #modal-wrapper .cmd-settings > .modallabel.switchable:not(.enabled) {\n        opacity: 0.75; }\n      #modal-wrapper .cmd-settings > .modallabel > .object-edit {\n        padding: calc(var(--vh) * var(--sc) * 1); }\n      #modal-wrapper .cmd-settings > .modallabel > .custom-time {\n        height: calc(var(--vh) * var(--sc) * 4);\n        margin-right: calc(var(--vh) * var(--sc) * 1); }\n  #modal-wrapper > #modal-group-settings {\n    flex-direction: column;\n    padding-bottom: calc(var(--vh) * var(--sc) * 1); }\n    #modal-wrapper > #modal-group-settings > .groupName {\n      width: 100%;\n      background: #939393;\n      color: #000;\n      font-family: 'Bold'; }\n      #modal-wrapper > #modal-group-settings > .groupName > input {\n        padding: calc(var(--vh) * var(--sc) * 1) calc(var(--vh) * var(--sc) * 1.5); }\n  #modal-wrapper > #modal-emoji {\n    width: auto;\n    max-height: calc(var(--vh) * var(--sc) * 50); }\n    #modal-wrapper > #modal-emoji > .emoji-list {\n      width: calc(var(--vh) * var(--sc) * 30);\n      flex-direction: column; }\n      #modal-wrapper > #modal-emoji > .emoji-list > .expansion-panel > .ep-dropdown {\n        flex-wrap: wrap;\n        padding: calc(var(--vh) * var(--sc) * 1); }\n        #modal-wrapper > #modal-emoji > .emoji-list > .expansion-panel > .ep-dropdown > .category-emoji-el {\n          width: calc(var(--vh) * var(--sc) * 4);\n          height: calc(var(--vh) * var(--sc) * 4);\n          font-size: calc(var(--vh) * var(--sc) * 2);\n          justify-content: center;\n          align-items: center;\n          cursor: pointer; }\n          #modal-wrapper > #modal-emoji > .emoji-list > .expansion-panel > .ep-dropdown > .category-emoji-el > div {\n            width: calc(var(--vh) * var(--sc) * 2.8);\n            height: calc(var(--vh) * var(--sc) * 2.8);\n            background-image: url(/static/img/emoji.png); }\n          #modal-wrapper > #modal-emoji > .emoji-list > .expansion-panel > .ep-dropdown > .category-emoji-el:hover {\n            background: #141517; }\n      #modal-wrapper > #modal-emoji > .emoji-list > .category {\n        display: none;\n        width: 100%;\n        flex-direction: column;\n        margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n        #modal-wrapper > #modal-emoji > .emoji-list > .category > .label {\n          background: rgba(255, 255, 255, 0.1);\n          padding: calc(var(--vh) * var(--sc) * 1); }\n        #modal-wrapper > #modal-emoji > .emoji-list > .category > .category-emoji {\n          width: 100%;\n          flex-wrap: wrap;\n          padding: 0 calc(var(--vh) * var(--sc) * 1); }\n          #modal-wrapper > #modal-emoji > .emoji-list > .category > .category-emoji > .category-emoji-el {\n            width: calc(var(--vh) * var(--sc) * 4);\n            height: calc(var(--vh) * var(--sc) * 4);\n            font-size: calc(var(--vh) * var(--sc) * 2);\n            justify-content: center;\n            align-items: center;\n            cursor: pointer; }\n            #modal-wrapper > #modal-emoji > .emoji-list > .category > .category-emoji > .category-emoji-el > div {\n              width: calc(var(--vh) * var(--sc) * 2.8);\n              height: calc(var(--vh) * var(--sc) * 2.8);\n              background-image: url(/static/img/emoji.png); }\n            #modal-wrapper > #modal-emoji > .emoji-list > .category > .category-emoji > .category-emoji-el:hover {\n              background: #141517; }\n\n.mlabel {\n  width: 100%;\n  height: calc(var(--vh) * var(--sc) * 2);\n  justify-content: space-between;\n  align-items: center;\n  color: #cccccc;\n  font-family: 'Bold';\n  margin-bottom: calc(var(--vh) * var(--sc) * 0.5); }\n  .mlabel.bg {\n    height: calc(var(--vh) * var(--sc) * 3.5);\n    background: rgba(147, 147, 147, 0.4);\n    padding: 0 calc(var(--vh) * var(--sc) * 1);\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .mlabel > .mlabel-right {\n    color: #939393; }\n\n.modallabel-wr {\n  width: 100%;\n  min-height: calc(var(--vh) * var(--sc) * 6);\n  position: relative;\n  background: rgba(147, 147, 147, 0.15);\n  padding-right: calc(var(--vh) * var(--sc) * 1); }\n  .modallabel-wr.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .modallabel-wr > .ml-enabled {\n    width: calc(var(--vh) * var(--sc) * 4);\n    height: 100%;\n    justify-content: center;\n    align-items: center;\n    cursor: pointer; }\n    .modallabel-wr > .ml-enabled:hover {\n      background: rgba(255, 255, 255, 0.2); }\n    .modallabel-wr > .ml-enabled > img {\n      height: calc(var(--vh) * var(--sc) * 2); }\n  .modallabel-wr > .modal-label {\n    flex: 1;\n    justify-content: space-between;\n    align-items: center; }\n    .modallabel-wr > .modal-label.column {\n      align-items: unset;\n      flex-direction: column;\n      padding: calc(var(--vh) * var(--sc) * 1); }\n      .modallabel-wr > .modal-label.column > .ml-type {\n        height: calc(var(--vh) * var(--sc) * 4);\n        padding: unset; }\n    .modallabel-wr > .modal-label > .ml-type {\n      height: 100%;\n      align-items: center;\n      padding: 0 calc(var(--vh) * var(--sc) * 1);\n      font-family: 'bold'; }\n    .modallabel-wr > .modal-label > .object-edit {\n      justify-content: flex-end; }\n\n.container:not(.noflex) {\n  flex: 1; }\n\n.container.column {\n  flex-direction: column; }\n\n.container.center {\n  justify-content: center; }\n\n.container.vcenter {\n  align-items: center; }\n\n.container.hp1 {\n  padding-left: calc(var(--vh) * var(--sc) * 0.5);\n  padding-right: calc(var(--vh) * var(--sc) * 0.5); }\n\n.container.hp2 {\n  padding-left: calc(var(--vh) * var(--sc) * 1);\n  padding-right: calc(var(--vh) * var(--sc) * 1); }\n\n.container.vp1 {\n  padding-top: calc(var(--vh) * var(--sc) * 0.5);\n  padding-bottom: calc(var(--vh) * var(--sc) * 0.5); }\n\n.container.vp2 {\n  padding-top: calc(var(--vh) * var(--sc) * 1);\n  padding-bottom: calc(var(--vh) * var(--sc) * 1); }\n\n.container.spaceBetween {\n  justify-content: space-between; }\n\n.input {\n  position: relative;\n  flex-direction: column; }\n  .input.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1.5); }\n  .input.b > input {\n    border-bottom: calc(var(--vh) * var(--sc) * 0.2) solid #939393; }\n  .input.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1.5); }\n  .input.oe {\n    height: calc(var(--vh) * var(--sc) * 3); }\n    .input.oe > input {\n      width: calc(var(--vh) * var(--sc) * 10);\n      padding: 0 calc(var(--vh) * var(--sc) * 1); }\n  .input.center > input {\n    text-align: center; }\n  .input.fill {\n    flex: 1; }\n  .input.bold > input {\n    font-family: 'Bold'; }\n  .input.black > input {\n    color: #000; }\n  .input > input {\n    width: unset;\n    flex: 1;\n    font: inherit;\n    color: inherit;\n    border: none;\n    background: none;\n    line-height: calc(var(--vh) * var(--sc) * 1.8);\n    padding: calc(var(--vh) * var(--sc) * 1); }\n  .input:hover .input__dropdown_wr {\n    visibility: visible; }\n  .input__dropdown_wr {\n    position: absolute;\n    left: 0;\n    top: 100%;\n    width: 100%;\n    max-height: calc(var(--vh) * var(--sc) * 30);\n    background: rgba(20, 21, 23, 0.8);\n    overflow-y: auto;\n    z-index: 10;\n    visibility: hidden; }\n    .input__dropdown_wr.visible {\n      visibility: visible; }\n  .input__dropdown {\n    flex: 1;\n    flex-direction: column; }\n    .input__dropdown__item {\n      width: 100%;\n      height: calc(var(--vh) * var(--sc) * 4);\n      align-items: center;\n      padding: 0 calc(var(--vh) * var(--sc) * 1);\n      cursor: pointer; }\n      .input__dropdown__item.selected {\n        border-top: calc(var(--vh) * var(--sc) * 0.2) solid #939393;\n        border-bottom: calc(var(--vh) * var(--sc) * 0.2) solid #939393; }\n      .input__dropdown__item:hover {\n        background: #939393; }\n      .input__dropdown__item:hover .input__dropdown__item__d__title, .input__dropdown__item:hover .input__dropdown__item__d__desc {\n        color: #000; }\n      .input__dropdown__item__thumbnail {\n        margin-right: calc(var(--vh) * var(--sc) * 1);\n        height: 100%; }\n      .input__dropdown__item > .icon {\n        margin-right: calc(var(--vh) * var(--sc) * 1); }\n      .input__dropdown__item__d {\n        flex-direction: column; }\n        .input__dropdown__item__d__desc {\n          color: #939393;\n          font-size: calc(var(--vh) * var(--sc) * 1.2); }\n\n.user {\n  align-items: center;\n  background: rgba(147, 147, 147, 0.2);\n  padding: calc(var(--vh) * var(--sc) * 0.5) calc(var(--vh) * var(--sc) * 1); }\n  .user.m {\n    margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n  .user > .icon {\n    margin-right: calc(var(--vh) * var(--sc) * 1); }\n\n.border_bottom::after {\n  content: \"\";\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  height: calc(var(--vh) * var(--sc) * 0.2);\n  background: #939393; }\n\n.icon {\n  width: calc(var(--vh) * var(--sc) * 3);\n  height: calc(var(--vh) * var(--sc) * 3);\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  overflow: hidden; }\n  .icon:not(.icon-no-bg) {\n    background: #939393; }\n  .icon > img {\n    height: 100%; }\n\n@keyframes stars-animation {\n  0% {\n    transform: translateY(0); }\n  100% {\n    transform: translateY(-100%); } }\n\n@keyframes stars-start {\n  0% {\n    opacity: 0;\n    top: 20%; }\n  100% {\n    opacity: 1;\n    top: 0; } }\n\n@keyframes modal-left {\n  0% {\n    opacity: 0;\n    transform: translateX(-5%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0); } }\n\n@keyframes modal-right {\n  0% {\n    opacity: 0;\n    transform: translateX(5%); }\n  100% {\n    opacity: 1;\n    transform: translateX(0); } }\n", ""]);
 // Exports
 module.exports = exports;
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/modals.scss":
-/*!********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/modals.scss ***!
-  \********************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/modals.scss":
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/modals.scss ***!
+  \*******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7117,17 +7117,17 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".modals {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  pointer-events: none; }\n  .modals > .modal-wr {\n    position: absolute;\n    width: calc(var(--vh) * var(--sc) * 30);\n    flex-direction: column;\n    opacity: 0;\n    pointer-events: all;\n    z-index: 10;\n    background: rgba(147, 147, 147, 0.1);\n    backdrop-filter: blur(4vh); }\n    @supports not (backdrop-filter: blur(1vh)) {\n      .modals > .modal-wr {\n        background: rgba(44, 46, 51, 0.8); } }\n    .modals > .modal-wr.modal-fadein-enter {\n      opacity: 0; }\n      .modals > .modal-wr.modal-fadein-enter.align-right {\n        transform: translateX(4vh); }\n      .modals > .modal-wr.modal-fadein-enter.align-left {\n        transform: translateX(-4vh); }\n      .modals > .modal-wr.modal-fadein-enter-active {\n        opacity: 1;\n        transition: 0.2s linear; }\n        .modals > .modal-wr.modal-fadein-enter-active.align-right {\n          transform: translateX(1vh); }\n        .modals > .modal-wr.modal-fadein-enter-active.align-left {\n          transform: translateX(-1vh); }\n      .modals > .modal-wr.modal-fadein-enter-done {\n        opacity: 1; }\n        .modals > .modal-wr.modal-fadein-enter-done.align-right {\n          transform: translateX(1vh); }\n        .modals > .modal-wr.modal-fadein-enter-done.align-left {\n          transform: translateX(-1vh); }\n    .modals > .modal-wr.modal-fadein-exit {\n      opacity: 1; }\n      .modals > .modal-wr.modal-fadein-exit.align-right {\n        transform: translateX(1vh); }\n      .modals > .modal-wr.modal-fadein-exit.align-left {\n        transform: translateX(-1vh); }\n      .modals > .modal-wr.modal-fadein-exit-active {\n        opacity: 0;\n        transition: 0.2s linear; }\n        .modals > .modal-wr.modal-fadein-exit-active.align-right {\n          transform: translateX(4vh); }\n        .modals > .modal-wr.modal-fadein-exit-active.align-left {\n          transform: translateX(-4vh); }\n    .modals > .modal-wr.p > .modal-container > .modal {\n      padding: calc(var(--vh) * var(--sc) * 1); }\n    .modals > .modal-wr > .modal-title {\n      width: 100%;\n      height: calc(var(--vh) * var(--sc) * 4);\n      background: rgba(255, 255, 255, 0.5); }\n    .modals > .modal-wr > .modal-container {\n      width: 100%;\n      max-height: calc(var(--vh) * var(--sc) * 60);\n      max-height: clamp(4vh, calc(var(--vh) * var(--sc) * 60), calc(100vh - calc(var(--vh) * var(--sc) * 4)));\n      min-height: calc(var(--vh) * var(--sc) * 4); }\n      .modals > .modal-wr > .modal-container > .modal {\n        flex: 1;\n        flex-direction: column; }\n        .modals > .modal-wr > .modal-container > .modal > .obj-edit-el {\n          align-items: center;\n          padding: calc(var(--vh) * var(--sc) * 0.7) calc(var(--vh) * var(--sc) * 1);\n          border-left: calc(var(--vh) * var(--sc) * 0.5) solid;\n          cursor: pointer; }\n          .modals > .modal-wr > .modal-container > .modal > .obj-edit-el:not(:last-child) {\n            margin-bottom: calc(var(--vh) * var(--sc) * 0.5); }\n          .modals > .modal-wr > .modal-container > .modal > .obj-edit-el:hover {\n            background: #141517; }\n          .modals > .modal-wr > .modal-container > .modal > .obj-edit-el > img {\n            height: calc(var(--vh) * var(--sc) * 1.5);\n            opacity: 0.5;\n            margin-right: calc(var(--vh) * var(--sc) * 1); }\n    .modals > .modal-wr.emoji > .modal-container > .modal > .expansion-panel > .ep-dropdown {\n      flex-wrap: wrap;\n      padding: calc(var(--vh) * var(--sc) * 0.5); }\n      .modals > .modal-wr.emoji > .modal-container > .modal > .expansion-panel > .ep-dropdown > .category-emoji-el {\n        width: calc(var(--vh) * var(--sc) * 4);\n        height: calc(var(--vh) * var(--sc) * 4);\n        font-size: calc(var(--vh) * var(--sc) * 2);\n        justify-content: center;\n        align-items: center;\n        cursor: pointer; }\n        .modals > .modal-wr.emoji > .modal-container > .modal > .expansion-panel > .ep-dropdown > .category-emoji-el > div {\n          width: calc(var(--vh) * var(--sc) * 2.8);\n          height: calc(var(--vh) * var(--sc) * 2.8);\n          background-image: url(/static/img/emoji.png); }\n        .modals > .modal-wr.emoji > .modal-container > .modal > .expansion-panel > .ep-dropdown > .category-emoji-el:hover {\n          background: #141517; }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal > * > canvas {\n      flex: 1; }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal > #c-picker {\n      position: relative;\n      height: calc(var(--vh) * var(--sc) * 20);\n      flex: 1;\n      margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n      .modals > .modal-wr.color-picker-modal > .modal-container > .modal > #c-picker > .cursor {\n        position: absolute;\n        width: calc(var(--vh) * var(--sc) * 1);\n        height: calc(var(--vh) * var(--sc) * 1);\n        border: calc(var(--vh) * var(--sc) * 0.2) solid #FFF;\n        transform: translateX(-50%) translateY(-50%); }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal > #c-slider {\n      position: relative;\n      height: calc(var(--vh) * var(--sc) * 3);\n      margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal > #c-opacity {\n      position: relative;\n      height: calc(var(--vh) * var(--sc) * 3);\n      margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal > #c-slider > .cursor, .modals > .modal-wr.color-picker-modal > .modal-container > .modal > #c-opacity > .cursor {\n      position: absolute;\n      width: calc(var(--vh) * var(--sc) * 1);\n      height: 100%;\n      border: calc(var(--vh) * var(--sc) * 0.2) solid #FFF;\n      transform: translateX(-50%); }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal > .picked {\n      height: calc(var(--vh) * var(--sc) * 3.5); }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal .cp-button {\n      height: calc(var(--vh) * var(--sc) * 3.5);\n      flex: 1; }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal .cp-button-wide {\n      width: 100%;\n      height: calc(var(--vh) * var(--sc) * 3.5); }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal .cp-button, .modals > .modal-wr.color-picker-modal > .modal-container > .modal .cp-button-wide {\n      justify-content: center;\n      align-items: center;\n      border-bottom: calc(var(--vh) * var(--sc) * 0.2) solid;\n      cursor: pointer; }\n      .modals > .modal-wr.color-picker-modal > .modal-container > .modal .cp-button:hover, .modals > .modal-wr.color-picker-modal > .modal-container > .modal .cp-button-wide:hover {\n        background: rgba(147, 147, 147, 0.2); }\n  .modals > .modal-fs-bg {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100vw;\n    height: 100vh;\n    opacity: 0;\n    justify-content: center;\n    align-items: center;\n    background: rgba(0, 0, 0, 0.5);\n    z-index: 10;\n    pointer-events: all; }\n    .modals > .modal-fs-bg > .modal-fs-wr {\n      width: calc(var(--vh) * var(--sc) * 75);\n      flex-direction: column;\n      background: rgba(147, 147, 147, 0.2);\n      backdrop-filter: blur(1vh); }\n      @supports not (backdrop-filter: blur(1vh)) {\n        .modals > .modal-fs-bg > .modal-fs-wr {\n          background: rgba(44, 46, 51, 0.8); } }\n      .modals > .modal-fs-bg > .modal-fs-wr > .modal-title {\n        width: 100%;\n        height: calc(var(--vh) * var(--sc) * 4);\n        align-items: center;\n        padding: 0 calc(var(--vh) * var(--sc) * 2);\n        color: #000;\n        font-family: 'Bold';\n        font-size: calc(var(--vh) * var(--sc) * 2);\n        background: rgba(255, 255, 255, 0.5); }\n      .modals > .modal-fs-bg > .modal-fs-wr > .modal-fs-container {\n        max-height: 90vh; }\n        .modals > .modal-fs-bg > .modal-fs-wr > .modal-fs-container > .modal-fs {\n          flex: 1;\n          flex-direction: column;\n          padding: calc(var(--vh) * var(--sc) * 1); }\n    .modals > .modal-fs-bg.modal-fadein-enter {\n      opacity: 0; }\n      .modals > .modal-fs-bg.modal-fadein-enter > .modal-fs-wr {\n        transform: translateY(4vh); }\n      .modals > .modal-fs-bg.modal-fadein-enter-active {\n        opacity: 1;\n        transition: 0.2s linear; }\n        .modals > .modal-fs-bg.modal-fadein-enter-active > .modal-fs-wr {\n          transform: translateY(0);\n          transition: 0.2s linear; }\n      .modals > .modal-fs-bg.modal-fadein-enter-done {\n        opacity: 1;\n        transform: translateY(0); }\n    .modals > .modal-fs-bg.modal-fadein-exit {\n      opacity: 1; }\n      .modals > .modal-fs-bg.modal-fadein-exit > .modal-fs-wr {\n        transform: translateY(0); }\n      .modals > .modal-fs-bg.modal-fadein-exit-active {\n        opacity: 0;\n        transition: 0.2s linear; }\n        .modals > .modal-fs-bg.modal-fadein-exit-active > .modal-fs-wr {\n          transform: translateY(4vh);\n          transition: 0.2s linear; }\n", ""]);
+exports.push([module.i, ".modals {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  pointer-events: none; }\n  .modals > .modal-wr {\n    position: absolute;\n    width: calc(var(--vh) * var(--sc) * 30);\n    flex-direction: column;\n    opacity: 0;\n    pointer-events: all;\n    z-index: 10;\n    background: rgba(147, 147, 147, 0.1);\n    backdrop-filter: blur(4vh); }\n    @supports not (backdrop-filter: blur(1vh)) {\n      .modals > .modal-wr {\n        background: rgba(44, 46, 51, 0.8); } }\n    .modals > .modal-wr.modal-fadein-enter {\n      opacity: 0; }\n      .modals > .modal-wr.modal-fadein-enter.align-right {\n        transform: translateX(4vh); }\n      .modals > .modal-wr.modal-fadein-enter.align-left {\n        transform: translateX(-4vh); }\n      .modals > .modal-wr.modal-fadein-enter-active {\n        opacity: 1;\n        transition: 0.2s linear; }\n        .modals > .modal-wr.modal-fadein-enter-active.align-right {\n          transform: translateX(1vh); }\n        .modals > .modal-wr.modal-fadein-enter-active.align-left {\n          transform: translateX(-1vh); }\n      .modals > .modal-wr.modal-fadein-enter-done {\n        opacity: 1; }\n        .modals > .modal-wr.modal-fadein-enter-done.align-right {\n          transform: translateX(1vh); }\n        .modals > .modal-wr.modal-fadein-enter-done.align-left {\n          transform: translateX(-1vh); }\n    .modals > .modal-wr.modal-fadein-exit {\n      opacity: 1; }\n      .modals > .modal-wr.modal-fadein-exit.align-right {\n        transform: translateX(1vh); }\n      .modals > .modal-wr.modal-fadein-exit.align-left {\n        transform: translateX(-1vh); }\n      .modals > .modal-wr.modal-fadein-exit-active {\n        opacity: 0;\n        transition: 0.2s linear; }\n        .modals > .modal-wr.modal-fadein-exit-active.align-right {\n          transform: translateX(4vh); }\n        .modals > .modal-wr.modal-fadein-exit-active.align-left {\n          transform: translateX(-4vh); }\n    .modals > .modal-wr.p > .modal-container > .modal {\n      padding: calc(var(--vh) * var(--sc) * 1); }\n    .modals > .modal-wr > .modal-title {\n      width: 100%;\n      height: calc(var(--vh) * var(--sc) * 4);\n      background: rgba(255, 255, 255, 0.5); }\n    .modals > .modal-wr > .modal-container {\n      width: 100%;\n      max-height: calc(var(--vh) * var(--sc) * 60);\n      max-height: clamp(4vh, calc(var(--vh) * var(--sc) * 60), calc(100vh - calc(var(--vh) * var(--sc) * 4)));\n      min-height: calc(var(--vh) * var(--sc) * 4); }\n      .modals > .modal-wr > .modal-container > .modal {\n        flex: 1;\n        flex-direction: column; }\n        .modals > .modal-wr > .modal-container > .modal > .obj-edit-el {\n          align-items: center;\n          padding: calc(var(--vh) * var(--sc) * 0.7) calc(var(--vh) * var(--sc) * 1);\n          border-left: calc(var(--vh) * var(--sc) * 0.5) solid;\n          cursor: pointer; }\n          .modals > .modal-wr > .modal-container > .modal > .obj-edit-el:not(:last-child) {\n            margin-bottom: calc(var(--vh) * var(--sc) * 0.5); }\n          .modals > .modal-wr > .modal-container > .modal > .obj-edit-el:hover {\n            background: #141517; }\n          .modals > .modal-wr > .modal-container > .modal > .obj-edit-el > img {\n            height: calc(var(--vh) * var(--sc) * 1.5);\n            opacity: 0.5;\n            margin-right: calc(var(--vh) * var(--sc) * 1); }\n    .modals > .modal-wr.emoji > .modal-container > .modal > .emoji-search-list {\n      flex-wrap: wrap;\n      padding: calc(var(--vh) * var(--sc) * 0.5); }\n      .modals > .modal-wr.emoji > .modal-container > .modal > .emoji-search-list > .emoji-el {\n        width: calc(var(--vh) * var(--sc) * 4);\n        height: calc(var(--vh) * var(--sc) * 4);\n        font-size: calc(var(--vh) * var(--sc) * 2);\n        justify-content: center;\n        align-items: center;\n        cursor: pointer; }\n        .modals > .modal-wr.emoji > .modal-container > .modal > .emoji-search-list > .emoji-el > div {\n          width: calc(var(--vh) * var(--sc) * 2.8);\n          height: calc(var(--vh) * var(--sc) * 2.8);\n          background-image: url(/static/img/emoji.png); }\n        .modals > .modal-wr.emoji > .modal-container > .modal > .emoji-search-list > .emoji-el:hover {\n          background: #141517; }\n    .modals > .modal-wr.emoji > .modal-container > .modal > .expansion-panel > .ep-dropdown {\n      flex-wrap: wrap;\n      padding: 0; }\n      .modals > .modal-wr.emoji > .modal-container > .modal > .expansion-panel > .ep-dropdown > .category-emoji-el {\n        width: calc(var(--vh) * var(--sc) * 4);\n        height: calc(var(--vh) * var(--sc) * 4);\n        font-size: calc(var(--vh) * var(--sc) * 2);\n        justify-content: center;\n        align-items: center;\n        cursor: pointer; }\n        .modals > .modal-wr.emoji > .modal-container > .modal > .expansion-panel > .ep-dropdown > .category-emoji-el > div {\n          width: calc(var(--vh) * var(--sc) * 2.8);\n          height: calc(var(--vh) * var(--sc) * 2.8);\n          background-image: url(/static/img/emoji.png); }\n        .modals > .modal-wr.emoji > .modal-container > .modal > .expansion-panel > .ep-dropdown > .category-emoji-el:hover {\n          background: #141517; }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal > * > canvas {\n      flex: 1; }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal > #c-picker {\n      position: relative;\n      height: calc(var(--vh) * var(--sc) * 20);\n      flex: 1;\n      margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n      .modals > .modal-wr.color-picker-modal > .modal-container > .modal > #c-picker > .cursor {\n        position: absolute;\n        width: calc(var(--vh) * var(--sc) * 1);\n        height: calc(var(--vh) * var(--sc) * 1);\n        border: calc(var(--vh) * var(--sc) * 0.2) solid #FFF;\n        transform: translateX(-50%) translateY(-50%); }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal > #c-slider {\n      position: relative;\n      height: calc(var(--vh) * var(--sc) * 3);\n      margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal > #c-opacity {\n      position: relative;\n      height: calc(var(--vh) * var(--sc) * 3);\n      margin-bottom: calc(var(--vh) * var(--sc) * 1); }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal > #c-slider > .cursor, .modals > .modal-wr.color-picker-modal > .modal-container > .modal > #c-opacity > .cursor {\n      position: absolute;\n      width: calc(var(--vh) * var(--sc) * 1);\n      height: 100%;\n      border: calc(var(--vh) * var(--sc) * 0.2) solid #FFF;\n      transform: translateX(-50%); }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal > .picked {\n      height: calc(var(--vh) * var(--sc) * 3.5); }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal .cp-button {\n      height: calc(var(--vh) * var(--sc) * 3.5);\n      flex: 1; }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal .cp-button-wide {\n      width: 100%;\n      height: calc(var(--vh) * var(--sc) * 3.5); }\n    .modals > .modal-wr.color-picker-modal > .modal-container > .modal .cp-button, .modals > .modal-wr.color-picker-modal > .modal-container > .modal .cp-button-wide {\n      justify-content: center;\n      align-items: center;\n      border-bottom: calc(var(--vh) * var(--sc) * 0.2) solid;\n      cursor: pointer; }\n      .modals > .modal-wr.color-picker-modal > .modal-container > .modal .cp-button:hover, .modals > .modal-wr.color-picker-modal > .modal-container > .modal .cp-button-wide:hover {\n        background: rgba(147, 147, 147, 0.2); }\n  .modals > .modal-fs-bg {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100vw;\n    height: 100vh;\n    opacity: 0;\n    justify-content: center;\n    align-items: center;\n    background: rgba(0, 0, 0, 0.5);\n    z-index: 10;\n    pointer-events: all; }\n    .modals > .modal-fs-bg > .modal-fs-wr {\n      width: calc(var(--vh) * var(--sc) * 75);\n      flex-direction: column;\n      background: rgba(147, 147, 147, 0.2);\n      backdrop-filter: blur(1vh); }\n      @supports not (backdrop-filter: blur(1vh)) {\n        .modals > .modal-fs-bg > .modal-fs-wr {\n          background: rgba(44, 46, 51, 0.8); } }\n      .modals > .modal-fs-bg > .modal-fs-wr > .modal-title {\n        width: 100%;\n        height: calc(var(--vh) * var(--sc) * 4);\n        align-items: center;\n        padding: 0 calc(var(--vh) * var(--sc) * 2);\n        color: #000;\n        font-family: 'Bold';\n        font-size: calc(var(--vh) * var(--sc) * 2);\n        background: rgba(255, 255, 255, 0.5); }\n      .modals > .modal-fs-bg > .modal-fs-wr > .modal-fs-container {\n        max-height: 90vh; }\n        .modals > .modal-fs-bg > .modal-fs-wr > .modal-fs-container > .modal-fs {\n          flex: 1;\n          flex-direction: column;\n          padding: calc(var(--vh) * var(--sc) * 1); }\n    .modals > .modal-fs-bg.modal-fadein-enter {\n      opacity: 0; }\n      .modals > .modal-fs-bg.modal-fadein-enter > .modal-fs-wr {\n        transform: translateY(4vh); }\n      .modals > .modal-fs-bg.modal-fadein-enter-active {\n        opacity: 1;\n        transition: 0.2s linear; }\n        .modals > .modal-fs-bg.modal-fadein-enter-active > .modal-fs-wr {\n          transform: translateY(0);\n          transition: 0.2s linear; }\n      .modals > .modal-fs-bg.modal-fadein-enter-done {\n        opacity: 1;\n        transform: translateY(0); }\n    .modals > .modal-fs-bg.modal-fadein-exit {\n      opacity: 1; }\n      .modals > .modal-fs-bg.modal-fadein-exit > .modal-fs-wr {\n        transform: translateY(0); }\n      .modals > .modal-fs-bg.modal-fadein-exit-active {\n        opacity: 0;\n        transition: 0.2s linear; }\n        .modals > .modal-fs-bg.modal-fadein-exit-active > .modal-fs-wr {\n          transform: translateY(4vh);\n          transition: 0.2s linear; }\n", ""]);
 // Exports
 module.exports = exports;
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/multiSwitch.scss":
-/*!*************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/multiSwitch.scss ***!
-  \*************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/multiSwitch.scss":
+/*!************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/multiSwitch.scss ***!
+  \************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7142,10 +7142,10 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/notifications.scss":
-/*!***************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/notifications.scss ***!
-  \***************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/notifications.scss":
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/notifications.scss ***!
+  \**************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7160,10 +7160,10 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/plugins.scss":
-/*!*********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/plugins.scss ***!
-  \*********************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/plugins.scss":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/plugins.scss ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7178,10 +7178,10 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/settings.scss":
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/settings.scss ***!
-  \**********************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/settings.scss":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/settings.scss ***!
+  \*********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7196,10 +7196,10 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/side.scss":
-/*!******************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/side.scss ***!
-  \******************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/side.scss":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/side.scss ***!
+  \*****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8487,74 +8487,6 @@ function removeClass(element, className) {
     element.setAttribute('class', replaceClassName(element.className && element.className.baseVal || '', className));
   }
 }
-
-/***/ }),
-
-/***/ "./node_modules/emojis/characters.json":
-/*!*********************************************!*\
-  !*** ./node_modules/emojis/characters.json ***!
-  \*********************************************/
-/*! exports provided: 100, 1234, +1, -1, 8ball, a, ab, abc, abcd, accept, aerial_tramway, airplane, alarm_clock, alien, ambulance, anchor, angel, anger, angry, anguished, ant, apple, aquarius, aries, arrow_backward, arrow_double_down, arrow_double_up, arrow_down, arrow_down_small, arrow_forward, arrow_heading_down, arrow_heading_up, arrow_left, arrow_lower_left, arrow_lower_right, arrow_right, arrow_right_hook, arrow_up, arrow_up_down, arrow_up_small, arrow_upper_left, arrow_upper_right, arrows_clockwise, arrows_counterclockwise, art, articulated_lorry, astonished, atm, b, baby, baby_bottle, baby_chick, baby_symbol, back, baggage_claim, balloon, ballot_box_with_check, bamboo, banana, bangbang, bank, bar_chart, barber, baseball, basketball, bath, bathtub, battery, bear, beer, beers, beetle, beginner, bell, bento, bicyclist, bike, bikini, bird, birthday, black_circle, black_joker, black_medium_small_square, black_medium_square, black_nib, black_small_square, black_square, black_square_button, blossom, blowfish, blue_book, blue_car, blue_heart, blush, boar, boat, bomb, book, bookmark, bookmark_tabs, books, boom, boot, bouquet, bow, bowling, bowtie, boy, bread, bride_with_veil, bridge_at_night, briefcase, broken_heart, bug, bulb, bullettrain_front, bullettrain_side, bus, busstop, bust_in_silhouette, busts_in_silhouette, cactus, cake, calendar, calling, camel, camera, cancer, candy, capital_abcd, capricorn, car, card_index, carousel_horse, cat, cat2, cd, chart, chart_with_downwards_trend, chart_with_upwards_trend, checkered_flag, cherries, cherry_blossom, chestnut, chicken, children_crossing, chocolate_bar, christmas_tree, church, cinema, circus_tent, city_sunrise, city_sunset, cl, clap, clapper, clipboard, clock1, clock10, clock1030, clock11, clock1130, clock12, clock1230, clock130, clock2, clock230, clock3, clock330, clock4, clock430, clock5, clock530, clock6, clock630, clock7, clock730, clock8, clock830, clock9, clock930, closed_book, closed_lock_with_key, closed_umbrella, cloud, clubs, cn, cocktail, coffee, cold_sweat, collision, computer, confetti_ball, confounded, confused, congratulations, construction, construction_worker, convenience_store, cookie, cool, cop, copyright, corn, couple, couple_with_heart, couplekiss, cow, cow2, credit_card, crocodile, crossed_flags, crown, cry, crying_cat_face, crystal_ball, cupid, curly_loop, currency_exchange, curry, custard, customs, cyclone, dancer, dancers, dango, dart, dash, date, de, deciduous_tree, department_store, diamond_shape_with_a_dot_inside, diamonds, disappointed, disappointed_relieved, dizzy, dizzy_face, do_not_litter, dog, dog2, dollar, dolls, dolphin, door, doughnut, dragon, dragon_face, dress, dromedary_camel, droplet, dvd, e-mail, ear, ear_of_rice, earth_africa, earth_americas, earth_asia, egg, eggplant, eight, eight_pointed_black_star, eight_spoked_asterisk, electric_plug, elephant, email, end, envelope, es, euro, european_castle, european_post_office, evergreen_tree, exclamation, expressionless, eyeglasses, eyes, facepunch, factory, fallen_leaf, family, fast_forward, fax, fearful, feelsgood, feet, ferris_wheel, file_folder, finnadie, fire, fire_engine, fireworks, first_quarter_moon, first_quarter_moon_with_face, fish, fish_cake, fishing_pole_and_fish, fist, five, flags, flashlight, floppy_disk, flower_playing_cards, flushed, foggy, football, fork_and_knife, fountain, four, four_leaf_clover, fr, free, fried_shrimp, fries, frog, frowning, fu, fuelpump, full_moon, full_moon_with_face, game_die, gb, gem, gemini, ghost, gift, gift_heart, girl, globe_with_meridians, goat, goberserk, godmode, golf, grapes, green_apple, green_book, green_heart, grey_exclamation, grey_question, grimacing, grin, grinning, guardsman, guitar, gun, haircut, hamburger, hammer, hamster, hand, handbag, hankey, hash, hatched_chick, hatching_chick, headphones, hear_no_evil, heart, heart_decoration, heart_eyes, heart_eyes_cat, heartbeat, heartpulse, hearts, heavy_check_mark, heavy_division_sign, heavy_dollar_sign, heavy_exclamation_mark, heavy_minus_sign, heavy_multiplication_x, heavy_plus_sign, helicopter, herb, hibiscus, high_brightness, high_heel, hocho, honey_pot, honeybee, horse, horse_racing, hospital, hotel, hotsprings, hourglass, hourglass_flowing_sand, house, house_with_garden, hurtrealbad, hushed, ice_cream, icecream, id, ideograph_advantage, imp, inbox_tray, incoming_envelope, information_desk_person, information_source, innocent, interrobang, iphone, it, izakaya_lantern, jack_o_lantern, japan, japanese_castle, japanese_goblin, japanese_ogre, jeans, joy, joy_cat, jp, key, keycap_ten, kimono, kiss, kissing, kissing_cat, kissing_closed_eyes, kissing_heart, kissing_smiling_eyes, koala, koko, kr, large_blue_circle, large_blue_diamond, large_orange_diamond, last_quarter_moon, last_quarter_moon_with_face, laughing, leaves, ledger, left_luggage, left_right_arrow, leftwards_arrow_with_hook, lemon, leo, leopard, libra, light_rail, link, lips, lipstick, lock, lock_with_ink_pen, lollipop, loop, loudspeaker, love_hotel, love_letter, low_brightness, m, mag, mag_right, mahjong, mailbox, mailbox_closed, mailbox_with_mail, mailbox_with_no_mail, man, man_with_gua_pi_mao, man_with_turban, mans_shoe, maple_leaf, mask, massage, meat_on_bone, mega, melon, memo, mens, metal, metro, microphone, microscope, milky_way, minibus, minidisc, mobile_phone_off, money_with_wings, moneybag, monkey, monkey_face, monorail, moon, mortar_board, mount_fuji, mountain_bicyclist, mountain_cableway, mountain_railway, mouse, mouse2, movie_camera, moyai, muscle, mushroom, musical_keyboard, musical_note, musical_score, mute, nail_care, name_badge, neckbeard, necktie, negative_squared_cross_mark, neutral_face, new, new_moon, new_moon_with_face, newspaper, ng, nine, no_bell, no_bicycles, no_entry, no_entry_sign, no_good, no_mobile_phones, no_mouth, no_pedestrians, no_smoking, non-potable_water, nose, notebook, notebook_with_decorative_cover, notes, nut_and_bolt, o, o2, ocean, octocat, octopus, oden, office, ok, ok_hand, ok_woman, older_man, older_woman, on, oncoming_automobile, oncoming_bus, oncoming_police_car, oncoming_taxi, one, open_file_folder, open_hands, open_mouth, ophiuchus, orange_book, outbox_tray, ox, package, page_facing_up, page_with_curl, pager, palm_tree, panda_face, paperclip, parking, part_alternation_mark, partly_sunny, passport_control, paw_prints, peach, pear, pencil, pencil2, penguin, pensive, performing_arts, persevere, person_frowning, person_with_blond_hair, person_with_pouting_face, phone, pig, pig2, pig_nose, pill, pineapple, pisces, pizza, plus1, point_down, point_left, point_right, point_up, point_up_2, police_car, poodle, poop, post_office, postal_horn, postbox, potable_water, pouch, poultry_leg, pound, pouting_cat, pray, princess, punch, purple_heart, purse, pushpin, put_litter_in_its_place, question, rabbit, rabbit2, racehorse, radio, radio_button, rage, rage1, rage2, rage3, rage4, railway_car, rainbow, raised_hand, raised_hands, raising_hand, ram, ramen, rat, recycle, red_car, red_circle, registered, relaxed, relieved, repeat, repeat_one, restroom, revolving_hearts, rewind, ribbon, rice, rice_ball, rice_cracker, rice_scene, ring, rocket, roller_coaster, rooster, rose, rotating_light, round_pushpin, rowboat, ru, rugby_football, runner, running, running_shirt_with_sash, sa, sagittarius, sailboat, sake, sandal, santa, satellite, satisfied, saxophone, school, school_satchel, scissors, scorpius, scream, scream_cat, scroll, seat, secret, see_no_evil, seedling, seven, shaved_ice, sheep, shell, ship, shipit, shirt, shit, shoe, shower, signal_strength, six, six_pointed_star, ski, skull, sleeping, sleepy, slot_machine, small_blue_diamond, small_orange_diamond, small_red_triangle, small_red_triangle_down, smile, smile_cat, smiley, smiley_cat, smiling_imp, smirk, smirk_cat, smoking, snail, snake, snowboarder, snowflake, snowman, sob, soccer, soon, sos, sound, space_invader, spades, spaghetti, sparkle, sparkler, sparkles, sparkling_heart, speak_no_evil, speaker, speech_balloon, speedboat, squirrel, star, star2, stars, station, statue_of_liberty, steam_locomotive, stew, straight_ruler, strawberry, stuck_out_tongue, stuck_out_tongue_closed_eyes, stuck_out_tongue_winking_eye, sun_with_face, sunflower, sunglasses, sunny, sunrise, sunrise_over_mountains, surfer, sushi, suspect, suspension_railway, sweat, sweat_drops, sweat_smile, sweet_potato, swimmer, symbols, syringe, tada, tanabata_tree, tangerine, taurus, taxi, tea, telephone, telephone_receiver, telescope, tennis, tent, thought_balloon, three, thumbsdown, thumbsup, ticket, tiger, tiger2, tired_face, tm, toilet, tokyo_tower, tomato, tongue, top, tophat, tractor, traffic_light, train, train2, tram, triangular_flag_on_post, triangular_ruler, trident, triumph, trolleybus, trollface, trophy, tropical_drink, tropical_fish, truck, trumpet, tshirt, tulip, turtle, tv, twisted_rightwards_arrows, two, two_hearts, two_men_holding_hands, two_women_holding_hands, u5272, u5408, u55b6, u6307, u6708, u6709, u6e80, u7121, u7533, u7981, u7a7a, uk, umbrella, unamused, underage, unlock, up, us, v, vertical_traffic_light, vhs, vibration_mode, video_camera, video_game, violin, virgo, volcano, vs, walking, waning_crescent_moon, waning_gibbous_moon, warning, watch, water_buffalo, watermelon, wave, wavy_dash, waxing_crescent_moon, waxing_gibbous_moon, wc, weary, wedding, whale, whale2, wheelchair, white_check_mark, white_circle, white_flower, white_large_square, white_medium_small_square, white_medium_square, white_small_square, white_square_button, wind_chime, wine_glass, wink, wolf, woman, womans_clothes, womans_hat, womens, worried, wrench, x, yellow_heart, yen, yum, zap, zero, zzz, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"100\":\"💯\",\"1234\":\"🔢\",\"+1\":\"👍\",\"-1\":\"👎\",\"8ball\":\"🎱\",\"a\":\"🅰️\",\"ab\":\"🆎\",\"abc\":\"🔤\",\"abcd\":\"🔡\",\"accept\":\"🉑\",\"aerial_tramway\":\"🚡\",\"airplane\":\"✈️\",\"alarm_clock\":\"⏰\",\"alien\":\"👽\",\"ambulance\":\"🚑\",\"anchor\":\"⚓\",\"angel\":\"👼\",\"anger\":\"💢\",\"angry\":\"😠\",\"anguished\":\"😧\",\"ant\":\"🐜\",\"apple\":\"🍎\",\"aquarius\":\"♒\",\"aries\":\"♈\",\"arrow_backward\":\"◀️\",\"arrow_double_down\":\"⏬\",\"arrow_double_up\":\"⏫\",\"arrow_down\":\"⬇️\",\"arrow_down_small\":\"🔽\",\"arrow_forward\":\"▶️\",\"arrow_heading_down\":\"⤵️\",\"arrow_heading_up\":\"⤴️\",\"arrow_left\":\"⬅️\",\"arrow_lower_left\":\"↙️\",\"arrow_lower_right\":\"↘️\",\"arrow_right\":\"➡️\",\"arrow_right_hook\":\"↪️\",\"arrow_up\":\"⬆️\",\"arrow_up_down\":\"↕️\",\"arrow_up_small\":\"🔼\",\"arrow_upper_left\":\"↖️\",\"arrow_upper_right\":\"↗️\",\"arrows_clockwise\":\"🔃\",\"arrows_counterclockwise\":\"🔄\",\"art\":\"🎨\",\"articulated_lorry\":\"🚛\",\"astonished\":\"😲\",\"atm\":\"🏧\",\"b\":\"🅱️\",\"baby\":\"👶\",\"baby_bottle\":\"🍼\",\"baby_chick\":\"🐤\",\"baby_symbol\":\"🚼\",\"back\":\"🔙\",\"baggage_claim\":\"🛄\",\"balloon\":\"🎈\",\"ballot_box_with_check\":\"☑️\",\"bamboo\":\"🎍\",\"banana\":\"🍌\",\"bangbang\":\"‼️\",\"bank\":\"🏦\",\"bar_chart\":\"📊\",\"barber\":\"💈\",\"baseball\":\"⚾️\",\"basketball\":\"🏀\",\"bath\":\"🛀\",\"bathtub\":\"🛁\",\"battery\":\"🔋\",\"bear\":\"🐻\",\"beer\":\"🍺\",\"beers\":\"🍻\",\"beetle\":\"🐞\",\"beginner\":\"🔰\",\"bell\":\"🔔\",\"bento\":\"🍱\",\"bicyclist\":\"🚴\",\"bike\":\"🚲\",\"bikini\":\"👙\",\"bird\":\"🐦\",\"birthday\":\"🎂\",\"black_circle\":\"⚫\",\"black_joker\":\"🃏\",\"black_medium_small_square\":\"◾\",\"black_medium_square\":\"◼️\",\"black_nib\":\"✒️\",\"black_small_square\":\"▪️\",\"black_square\":\"\",\"black_square_button\":\"🔲\",\"blossom\":\"🌼\",\"blowfish\":\"🐡\",\"blue_book\":\"📘\",\"blue_car\":\"🚙\",\"blue_heart\":\"💙\",\"blush\":\"😊\",\"boar\":\"🐗\",\"boat\":\"⛵\",\"bomb\":\"💣\",\"book\":\"📖\",\"bookmark\":\"🔖\",\"bookmark_tabs\":\"📑\",\"books\":\"📚\",\"boom\":\"💥\",\"boot\":\"👢\",\"bouquet\":\"💐\",\"bow\":\"🙇\",\"bowling\":\"🎳\",\"bowtie\":\"\",\"boy\":\"👦\",\"bread\":\"🍞\",\"bride_with_veil\":\"👰\",\"bridge_at_night\":\"🌉\",\"briefcase\":\"💼\",\"broken_heart\":\"💔\",\"bug\":\"🐛\",\"bulb\":\"💡\",\"bullettrain_front\":\"🚅\",\"bullettrain_side\":\"🚄\",\"bus\":\"🚌\",\"busstop\":\"🚏\",\"bust_in_silhouette\":\"👤\",\"busts_in_silhouette\":\"👥\",\"cactus\":\"🌵\",\"cake\":\"🍰\",\"calendar\":\"📆\",\"calling\":\"📲\",\"camel\":\"🐫\",\"camera\":\"📷\",\"cancer\":\"♋\",\"candy\":\"🍬\",\"capital_abcd\":\"🔠\",\"capricorn\":\"♑\",\"car\":\"🚗\",\"card_index\":\"📇\",\"carousel_horse\":\"🎠\",\"cat\":\"🐱\",\"cat2\":\"🐈\",\"cd\":\"💿\",\"chart\":\"💹\",\"chart_with_downwards_trend\":\"📉\",\"chart_with_upwards_trend\":\"📈\",\"checkered_flag\":\"🏁\",\"cherries\":\"🍒\",\"cherry_blossom\":\"🌸\",\"chestnut\":\"🌰\",\"chicken\":\"🐔\",\"children_crossing\":\"🚸\",\"chocolate_bar\":\"🍫\",\"christmas_tree\":\"🎄\",\"church\":\"⛪\",\"cinema\":\"🎦\",\"circus_tent\":\"🎪\",\"city_sunrise\":\"🌇\",\"city_sunset\":\"🌆\",\"cl\":\"🆑\",\"clap\":\"👏\",\"clapper\":\"🎬\",\"clipboard\":\"📋\",\"clock1\":\"🕐\",\"clock10\":\"🕙\",\"clock1030\":\"🕥\",\"clock11\":\"🕚\",\"clock1130\":\"🕦\",\"clock12\":\"🕛\",\"clock1230\":\"🕧\",\"clock130\":\"🕜\",\"clock2\":\"🕑\",\"clock230\":\"🕝\",\"clock3\":\"🕒\",\"clock330\":\"🕞\",\"clock4\":\"🕓\",\"clock430\":\"🕟\",\"clock5\":\"🕔\",\"clock530\":\"🕠\",\"clock6\":\"🕕\",\"clock630\":\"🕡\",\"clock7\":\"🕖\",\"clock730\":\"🕢\",\"clock8\":\"🕗\",\"clock830\":\"🕣\",\"clock9\":\"🕘\",\"clock930\":\"🕤\",\"closed_book\":\"📕\",\"closed_lock_with_key\":\"🔐\",\"closed_umbrella\":\"🌂\",\"cloud\":\"☁️\",\"clubs\":\"♣️\",\"cn\":\"🇨🇳\",\"cocktail\":\"🍸\",\"coffee\":\"☕\",\"cold_sweat\":\"😰\",\"collision\":\"💥\",\"computer\":\"💻\",\"confetti_ball\":\"🎊\",\"confounded\":\"😖\",\"confused\":\"😕\",\"congratulations\":\"㊗️\",\"construction\":\"🚧\",\"construction_worker\":\"👷\",\"convenience_store\":\"🏪\",\"cookie\":\"🍪\",\"cool\":\"🆒\",\"cop\":\"👮\",\"copyright\":\"©️\",\"corn\":\"🌽\",\"couple\":\"👫\",\"couple_with_heart\":\"💑\",\"couplekiss\":\"💏\",\"cow\":\"🐮\",\"cow2\":\"🐄\",\"credit_card\":\"💳\",\"crocodile\":\"🐊\",\"crossed_flags\":\"🎌\",\"crown\":\"👑\",\"cry\":\"😢\",\"crying_cat_face\":\"😿\",\"crystal_ball\":\"🔮\",\"cupid\":\"💘\",\"curly_loop\":\"➰\",\"currency_exchange\":\"💱\",\"curry\":\"🍛\",\"custard\":\"🍮\",\"customs\":\"🛃\",\"cyclone\":\"🌀\",\"dancer\":\"💃\",\"dancers\":\"👯\",\"dango\":\"🍡\",\"dart\":\"🎯\",\"dash\":\"💨\",\"date\":\"📅\",\"de\":\"🇩🇪\",\"deciduous_tree\":\"🌳\",\"department_store\":\"🏬\",\"diamond_shape_with_a_dot_inside\":\"💠\",\"diamonds\":\"♦️\",\"disappointed\":\"😞\",\"disappointed_relieved\":\"😥\",\"dizzy\":\"💫\",\"dizzy_face\":\"😵\",\"do_not_litter\":\"🚯\",\"dog\":\"🐶\",\"dog2\":\"🐕\",\"dollar\":\"💵\",\"dolls\":\"🎎\",\"dolphin\":\"🐬\",\"door\":\"🚪\",\"doughnut\":\"🍩\",\"dragon\":\"🐉\",\"dragon_face\":\"🐲\",\"dress\":\"👗\",\"dromedary_camel\":\"🐪\",\"droplet\":\"💧\",\"dvd\":\"📀\",\"e-mail\":\"📧\",\"ear\":\"👂\",\"ear_of_rice\":\"🌾\",\"earth_africa\":\"🌍\",\"earth_americas\":\"🌎\",\"earth_asia\":\"🌏\",\"egg\":\"🍳\",\"eggplant\":\"🍆\",\"eight\":\"8️⃣\",\"eight_pointed_black_star\":\"✴️\",\"eight_spoked_asterisk\":\"✳️\",\"electric_plug\":\"🔌\",\"elephant\":\"🐘\",\"email\":\"✉️\",\"end\":\"🔚\",\"envelope\":\"✉️\",\"es\":\"🇪🇸\",\"euro\":\"💶\",\"european_castle\":\"🏰\",\"european_post_office\":\"🏤\",\"evergreen_tree\":\"🌲\",\"exclamation\":\"❗\",\"expressionless\":\"😑\",\"eyeglasses\":\"👓\",\"eyes\":\"👀\",\"facepunch\":\"👊\",\"factory\":\"🏭\",\"fallen_leaf\":\"🍂\",\"family\":\"👪\",\"fast_forward\":\"⏩\",\"fax\":\"📠\",\"fearful\":\"😨\",\"feelsgood\":\"\",\"feet\":\"🐾\",\"ferris_wheel\":\"🎡\",\"file_folder\":\"📁\",\"finnadie\":\"\",\"fire\":\"🔥\",\"fire_engine\":\"🚒\",\"fireworks\":\"🎆\",\"first_quarter_moon\":\"🌓\",\"first_quarter_moon_with_face\":\"🌛\",\"fish\":\"🐟\",\"fish_cake\":\"🍥\",\"fishing_pole_and_fish\":\"🎣\",\"fist\":\"✊\",\"five\":\"5️⃣\",\"flags\":\"🎏\",\"flashlight\":\"🔦\",\"floppy_disk\":\"💾\",\"flower_playing_cards\":\"🎴\",\"flushed\":\"😳\",\"foggy\":\"🌁\",\"football\":\"🏈\",\"fork_and_knife\":\"🍴\",\"fountain\":\"⛲\",\"four\":\"4️⃣\",\"four_leaf_clover\":\"🍀\",\"fr\":\"🇫🇷\",\"free\":\"🆓\",\"fried_shrimp\":\"🍤\",\"fries\":\"🍟\",\"frog\":\"🐸\",\"frowning\":\"😦\",\"fu\":\"\",\"fuelpump\":\"⛽\",\"full_moon\":\"🌕\",\"full_moon_with_face\":\"🌝\",\"game_die\":\"🎲\",\"gb\":\"🇬🇧\",\"gem\":\"💎\",\"gemini\":\"♊\",\"ghost\":\"👻\",\"gift\":\"🎁\",\"gift_heart\":\"💝\",\"girl\":\"👧\",\"globe_with_meridians\":\"🌐\",\"goat\":\"🐐\",\"goberserk\":\"\",\"godmode\":\"\",\"golf\":\"⛳\",\"grapes\":\"🍇\",\"green_apple\":\"🍏\",\"green_book\":\"📗\",\"green_heart\":\"💚\",\"grey_exclamation\":\"❕\",\"grey_question\":\"❔\",\"grimacing\":\"😬\",\"grin\":\"😁\",\"grinning\":\"😀\",\"guardsman\":\"💂\",\"guitar\":\"🎸\",\"gun\":\"🔫\",\"haircut\":\"💇\",\"hamburger\":\"🍔\",\"hammer\":\"🔨\",\"hamster\":\"🐹\",\"hand\":\"✋\",\"handbag\":\"👜\",\"hankey\":\"💩\",\"hash\":\"#️⃣\",\"hatched_chick\":\"🐥\",\"hatching_chick\":\"🐣\",\"headphones\":\"🎧\",\"hear_no_evil\":\"🙉\",\"heart\":\"❤️\",\"heart_decoration\":\"💟\",\"heart_eyes\":\"😍\",\"heart_eyes_cat\":\"😻\",\"heartbeat\":\"💓\",\"heartpulse\":\"💗\",\"hearts\":\"♥️\",\"heavy_check_mark\":\"✔️\",\"heavy_division_sign\":\"➗\",\"heavy_dollar_sign\":\"💲\",\"heavy_exclamation_mark\":\"❗\",\"heavy_minus_sign\":\"➖\",\"heavy_multiplication_x\":\"✖️\",\"heavy_plus_sign\":\"➕\",\"helicopter\":\"🚁\",\"herb\":\"🌿\",\"hibiscus\":\"🌺\",\"high_brightness\":\"🔆\",\"high_heel\":\"👠\",\"hocho\":\"🔪\",\"honey_pot\":\"🍯\",\"honeybee\":\"🐝\",\"horse\":\"🐴\",\"horse_racing\":\"🏇\",\"hospital\":\"🏥\",\"hotel\":\"🏨\",\"hotsprings\":\"♨️\",\"hourglass\":\"⌛\",\"hourglass_flowing_sand\":\"⏳\",\"house\":\"🏠\",\"house_with_garden\":\"🏡\",\"hurtrealbad\":\"\",\"hushed\":\"😯\",\"ice_cream\":\"🍨\",\"icecream\":\"🍦\",\"id\":\"🆔\",\"ideograph_advantage\":\"🉐\",\"imp\":\"👿\",\"inbox_tray\":\"📥\",\"incoming_envelope\":\"📨\",\"information_desk_person\":\"💁\",\"information_source\":\"ℹ️\",\"innocent\":\"😇\",\"interrobang\":\"⁉️\",\"iphone\":\"📱\",\"it\":\"🇮🇹\",\"izakaya_lantern\":\"🏮\",\"jack_o_lantern\":\"🎃\",\"japan\":\"🗾\",\"japanese_castle\":\"🏯\",\"japanese_goblin\":\"👺\",\"japanese_ogre\":\"👹\",\"jeans\":\"👖\",\"joy\":\"😂\",\"joy_cat\":\"😹\",\"jp\":\"🇯🇵\",\"key\":\"🔑\",\"keycap_ten\":\"🔟\",\"kimono\":\"👘\",\"kiss\":\"💋\",\"kissing\":\"😗\",\"kissing_cat\":\"😽\",\"kissing_closed_eyes\":\"😚\",\"kissing_heart\":\"😘\",\"kissing_smiling_eyes\":\"😙\",\"koala\":\"🐨\",\"koko\":\"🈁\",\"kr\":\"🇰🇷\",\"large_blue_circle\":\"🔵\",\"large_blue_diamond\":\"🔷\",\"large_orange_diamond\":\"🔶\",\"last_quarter_moon\":\"🌗\",\"last_quarter_moon_with_face\":\"🌜\",\"laughing\":\"😆\",\"leaves\":\"🍃\",\"ledger\":\"📒\",\"left_luggage\":\"🛅\",\"left_right_arrow\":\"↔️\",\"leftwards_arrow_with_hook\":\"↩️\",\"lemon\":\"🍋\",\"leo\":\"♌\",\"leopard\":\"🐆\",\"libra\":\"♎\",\"light_rail\":\"🚈\",\"link\":\"🔗\",\"lips\":\"👄\",\"lipstick\":\"💄\",\"lock\":\"🔒\",\"lock_with_ink_pen\":\"🔏\",\"lollipop\":\"🍭\",\"loop\":\"➿\",\"loudspeaker\":\"📢\",\"love_hotel\":\"🏩\",\"love_letter\":\"💌\",\"low_brightness\":\"🔅\",\"m\":\"Ⓜ️\",\"mag\":\"🔍\",\"mag_right\":\"🔎\",\"mahjong\":\"🀄\",\"mailbox\":\"📫\",\"mailbox_closed\":\"📪\",\"mailbox_with_mail\":\"📬\",\"mailbox_with_no_mail\":\"📭\",\"man\":\"👨\",\"man_with_gua_pi_mao\":\"👲\",\"man_with_turban\":\"👳\",\"mans_shoe\":\"👞\",\"maple_leaf\":\"🍁\",\"mask\":\"😷\",\"massage\":\"💆\",\"meat_on_bone\":\"🍖\",\"mega\":\"📣\",\"melon\":\"🍈\",\"memo\":\"📝\",\"mens\":\"🚹\",\"metal\":\"\",\"metro\":\"🚇\",\"microphone\":\"🎤\",\"microscope\":\"🔬\",\"milky_way\":\"🌌\",\"minibus\":\"🚐\",\"minidisc\":\"💽\",\"mobile_phone_off\":\"📴\",\"money_with_wings\":\"💸\",\"moneybag\":\"💰\",\"monkey\":\"🐒\",\"monkey_face\":\"🐵\",\"monorail\":\"🚝\",\"moon\":\"🌔\",\"mortar_board\":\"🎓\",\"mount_fuji\":\"🗻\",\"mountain_bicyclist\":\"🚵\",\"mountain_cableway\":\"🚠\",\"mountain_railway\":\"🚞\",\"mouse\":\"🐭\",\"mouse2\":\"🐁\",\"movie_camera\":\"🎥\",\"moyai\":\"🗿\",\"muscle\":\"💪\",\"mushroom\":\"🍄\",\"musical_keyboard\":\"🎹\",\"musical_note\":\"🎵\",\"musical_score\":\"🎼\",\"mute\":\"🔇\",\"nail_care\":\"💅\",\"name_badge\":\"📛\",\"neckbeard\":\"\",\"necktie\":\"👔\",\"negative_squared_cross_mark\":\"❎\",\"neutral_face\":\"😐\",\"new\":\"🆕\",\"new_moon\":\"🌑\",\"new_moon_with_face\":\"🌚\",\"newspaper\":\"📰\",\"ng\":\"🆖\",\"nine\":\"9️⃣\",\"no_bell\":\"🔕\",\"no_bicycles\":\"🚳\",\"no_entry\":\"⛔\",\"no_entry_sign\":\"🚫\",\"no_good\":\"🙅\",\"no_mobile_phones\":\"📵\",\"no_mouth\":\"😶\",\"no_pedestrians\":\"🚷\",\"no_smoking\":\"🚭\",\"non-potable_water\":\"🚱\",\"nose\":\"👃\",\"notebook\":\"📓\",\"notebook_with_decorative_cover\":\"📔\",\"notes\":\"🎶\",\"nut_and_bolt\":\"🔩\",\"o\":\"⭕\",\"o2\":\"🅾️\",\"ocean\":\"🌊\",\"octocat\":\"\",\"octopus\":\"🐙\",\"oden\":\"🍢\",\"office\":\"🏢\",\"ok\":\"🆗\",\"ok_hand\":\"👌\",\"ok_woman\":\"🙆\",\"older_man\":\"👴\",\"older_woman\":\"👵\",\"on\":\"🔛\",\"oncoming_automobile\":\"🚘\",\"oncoming_bus\":\"🚍\",\"oncoming_police_car\":\"🚔\",\"oncoming_taxi\":\"🚖\",\"one\":\"1️⃣\",\"open_file_folder\":\"📂\",\"open_hands\":\"👐\",\"open_mouth\":\"😮\",\"ophiuchus\":\"⛎\",\"orange_book\":\"📙\",\"outbox_tray\":\"📤\",\"ox\":\"🐂\",\"package\":\"📦\",\"page_facing_up\":\"📄\",\"page_with_curl\":\"📃\",\"pager\":\"📟\",\"palm_tree\":\"🌴\",\"panda_face\":\"🐼\",\"paperclip\":\"📎\",\"parking\":\"🅿️\",\"part_alternation_mark\":\"〽️\",\"partly_sunny\":\"⛅\",\"passport_control\":\"🛂\",\"paw_prints\":\"🐾\",\"peach\":\"🍑\",\"pear\":\"🍐\",\"pencil\":\"📝\",\"pencil2\":\"✏️\",\"penguin\":\"🐧\",\"pensive\":\"😔\",\"performing_arts\":\"🎭\",\"persevere\":\"😣\",\"person_frowning\":\"🙍\",\"person_with_blond_hair\":\"👱\",\"person_with_pouting_face\":\"🙎\",\"phone\":\"☎️\",\"pig\":\"🐷\",\"pig2\":\"🐖\",\"pig_nose\":\"🐽\",\"pill\":\"💊\",\"pineapple\":\"🍍\",\"pisces\":\"♓\",\"pizza\":\"🍕\",\"plus1\":\"\",\"point_down\":\"👇\",\"point_left\":\"👈\",\"point_right\":\"👉\",\"point_up\":\"☝️\",\"point_up_2\":\"👆\",\"police_car\":\"🚓\",\"poodle\":\"🐩\",\"poop\":\"💩\",\"post_office\":\"🏣\",\"postal_horn\":\"📯\",\"postbox\":\"📮\",\"potable_water\":\"🚰\",\"pouch\":\"👝\",\"poultry_leg\":\"🍗\",\"pound\":\"💷\",\"pouting_cat\":\"😾\",\"pray\":\"🙏\",\"princess\":\"👸\",\"punch\":\"👊\",\"purple_heart\":\"💜\",\"purse\":\"👛\",\"pushpin\":\"📌\",\"put_litter_in_its_place\":\"🚮\",\"question\":\"❓\",\"rabbit\":\"🐰\",\"rabbit2\":\"🐇\",\"racehorse\":\"🐎\",\"radio\":\"📻\",\"radio_button\":\"🔘\",\"rage\":\"😡\",\"rage1\":\"\",\"rage2\":\"\",\"rage3\":\"\",\"rage4\":\"\",\"railway_car\":\"🚃\",\"rainbow\":\"🌈\",\"raised_hand\":\"✋\",\"raised_hands\":\"🙌\",\"raising_hand\":\"🙋\",\"ram\":\"🐏\",\"ramen\":\"🍜\",\"rat\":\"🐀\",\"recycle\":\"♻️\",\"red_car\":\"🚗\",\"red_circle\":\"🔴\",\"registered\":\"®️\",\"relaxed\":\"☺️\",\"relieved\":\"😌\",\"repeat\":\"🔁\",\"repeat_one\":\"🔂\",\"restroom\":\"🚻\",\"revolving_hearts\":\"💞\",\"rewind\":\"⏪\",\"ribbon\":\"🎀\",\"rice\":\"🍚\",\"rice_ball\":\"🍙\",\"rice_cracker\":\"🍘\",\"rice_scene\":\"🎑\",\"ring\":\"💍\",\"rocket\":\"🚀\",\"roller_coaster\":\"🎢\",\"rooster\":\"🐓\",\"rose\":\"🌹\",\"rotating_light\":\"🚨\",\"round_pushpin\":\"📍\",\"rowboat\":\"🚣\",\"ru\":\"🇷🇺\",\"rugby_football\":\"🏉\",\"runner\":\"🏃\",\"running\":\"🏃\",\"running_shirt_with_sash\":\"🎽\",\"sa\":\"🈂️\",\"sagittarius\":\"♐\",\"sailboat\":\"⛵\",\"sake\":\"🍶\",\"sandal\":\"👡\",\"santa\":\"🎅\",\"satellite\":\"📡\",\"satisfied\":\"😆\",\"saxophone\":\"🎷\",\"school\":\"🏫\",\"school_satchel\":\"🎒\",\"scissors\":\"✂️\",\"scorpius\":\"♏\",\"scream\":\"😱\",\"scream_cat\":\"🙀\",\"scroll\":\"📜\",\"seat\":\"💺\",\"secret\":\"㊙️\",\"see_no_evil\":\"🙈\",\"seedling\":\"🌱\",\"seven\":\"7️⃣\",\"shaved_ice\":\"🍧\",\"sheep\":\"🐑\",\"shell\":\"🐚\",\"ship\":\"🚢\",\"shipit\":\"\",\"shirt\":\"👕\",\"shit\":\"💩\",\"shoe\":\"👞\",\"shower\":\"🚿\",\"signal_strength\":\"📶\",\"six\":\"6️⃣\",\"six_pointed_star\":\"🔯\",\"ski\":\"🎿\",\"skull\":\"💀\",\"sleeping\":\"😴\",\"sleepy\":\"😪\",\"slot_machine\":\"🎰\",\"small_blue_diamond\":\"🔹\",\"small_orange_diamond\":\"🔸\",\"small_red_triangle\":\"🔺\",\"small_red_triangle_down\":\"🔻\",\"smile\":\"😄\",\"smile_cat\":\"😸\",\"smiley\":\"😃\",\"smiley_cat\":\"😺\",\"smiling_imp\":\"😈\",\"smirk\":\"😏\",\"smirk_cat\":\"😼\",\"smoking\":\"🚬\",\"snail\":\"🐌\",\"snake\":\"🐍\",\"snowboarder\":\"🏂\",\"snowflake\":\"❄️\",\"snowman\":\"⛄\",\"sob\":\"😭\",\"soccer\":\"⚽\",\"soon\":\"🔜\",\"sos\":\"🆘\",\"sound\":\"🔉\",\"space_invader\":\"👾\",\"spades\":\"♠️\",\"spaghetti\":\"🍝\",\"sparkle\":\"❇️\",\"sparkler\":\"🎇\",\"sparkles\":\"✨\",\"sparkling_heart\":\"💖\",\"speak_no_evil\":\"🙊\",\"speaker\":\"🔈\",\"speech_balloon\":\"💬\",\"speedboat\":\"🚤\",\"squirrel\":\"\",\"star\":\"⭐\",\"star2\":\"🌟\",\"stars\":\"🌠\",\"station\":\"🚉\",\"statue_of_liberty\":\"🗽\",\"steam_locomotive\":\"🚂\",\"stew\":\"🍲\",\"straight_ruler\":\"📏\",\"strawberry\":\"🍓\",\"stuck_out_tongue\":\"😛\",\"stuck_out_tongue_closed_eyes\":\"😝\",\"stuck_out_tongue_winking_eye\":\"😜\",\"sun_with_face\":\"🌞\",\"sunflower\":\"🌻\",\"sunglasses\":\"😎\",\"sunny\":\"☀️\",\"sunrise\":\"🌅\",\"sunrise_over_mountains\":\"🌄\",\"surfer\":\"🏄\",\"sushi\":\"🍣\",\"suspect\":\"\",\"suspension_railway\":\"🚟\",\"sweat\":\"😓\",\"sweat_drops\":\"💦\",\"sweat_smile\":\"😅\",\"sweet_potato\":\"🍠\",\"swimmer\":\"🏊\",\"symbols\":\"🔣\",\"syringe\":\"💉\",\"tada\":\"🎉\",\"tanabata_tree\":\"🎋\",\"tangerine\":\"🍊\",\"taurus\":\"♉\",\"taxi\":\"🚕\",\"tea\":\"🍵\",\"telephone\":\"☎️\",\"telephone_receiver\":\"📞\",\"telescope\":\"🔭\",\"tennis\":\"🎾\",\"tent\":\"⛺\",\"thought_balloon\":\"💭\",\"three\":\"3️⃣\",\"thumbsdown\":\"👎\",\"thumbsup\":\"👍\",\"ticket\":\"🎫\",\"tiger\":\"🐯\",\"tiger2\":\"🐅\",\"tired_face\":\"😫\",\"tm\":\"™️\",\"toilet\":\"🚽\",\"tokyo_tower\":\"🗼\",\"tomato\":\"🍅\",\"tongue\":\"👅\",\"top\":\"🔝\",\"tophat\":\"🎩\",\"tractor\":\"🚜\",\"traffic_light\":\"🚥\",\"train\":\"🚋\",\"train2\":\"🚆\",\"tram\":\"🚊\",\"triangular_flag_on_post\":\"🚩\",\"triangular_ruler\":\"📐\",\"trident\":\"🔱\",\"triumph\":\"😤\",\"trolleybus\":\"🚎\",\"trollface\":\"\",\"trophy\":\"🏆\",\"tropical_drink\":\"🍹\",\"tropical_fish\":\"🐠\",\"truck\":\"🚚\",\"trumpet\":\"🎺\",\"tshirt\":\"👕\",\"tulip\":\"🌷\",\"turtle\":\"🐢\",\"tv\":\"📺\",\"twisted_rightwards_arrows\":\"🔀\",\"two\":\"2️⃣\",\"two_hearts\":\"💕\",\"two_men_holding_hands\":\"👬\",\"two_women_holding_hands\":\"👭\",\"u5272\":\"🈹\",\"u5408\":\"🈴\",\"u55b6\":\"🈺\",\"u6307\":\"🈯\",\"u6708\":\"🈷️\",\"u6709\":\"🈶\",\"u6e80\":\"🈵\",\"u7121\":\"🈚\",\"u7533\":\"🈸\",\"u7981\":\"🈲\",\"u7a7a\":\"🈳\",\"uk\":\"🇬🇧\",\"umbrella\":\"☔\",\"unamused\":\"😒\",\"underage\":\"🔞\",\"unlock\":\"🔓\",\"up\":\"🆙\",\"us\":\"🇺🇸\",\"v\":\"✌️\",\"vertical_traffic_light\":\"🚦\",\"vhs\":\"📼\",\"vibration_mode\":\"📳\",\"video_camera\":\"📹\",\"video_game\":\"🎮\",\"violin\":\"🎻\",\"virgo\":\"♍\",\"volcano\":\"🌋\",\"vs\":\"🆚\",\"walking\":\"🚶\",\"waning_crescent_moon\":\"🌘\",\"waning_gibbous_moon\":\"🌖\",\"warning\":\"⚠️\",\"watch\":\"⌚\",\"water_buffalo\":\"🐃\",\"watermelon\":\"🍉\",\"wave\":\"👋\",\"wavy_dash\":\"〰️\",\"waxing_crescent_moon\":\"🌒\",\"waxing_gibbous_moon\":\"🌔\",\"wc\":\"🚾\",\"weary\":\"😩\",\"wedding\":\"💒\",\"whale\":\"🐳\",\"whale2\":\"🐋\",\"wheelchair\":\"♿\",\"white_check_mark\":\"✅\",\"white_circle\":\"⚪\",\"white_flower\":\"💮\",\"white_large_square\":\"⬜\",\"white_medium_small_square\":\"◽\",\"white_medium_square\":\"◻️\",\"white_small_square\":\"▫️\",\"white_square_button\":\"🔳\",\"wind_chime\":\"🎐\",\"wine_glass\":\"🍷\",\"wink\":\"😉\",\"wolf\":\"🐺\",\"woman\":\"👩\",\"womans_clothes\":\"👚\",\"womans_hat\":\"👒\",\"womens\":\"🚺\",\"worried\":\"😟\",\"wrench\":\"🔧\",\"x\":\"❌\",\"yellow_heart\":\"💛\",\"yen\":\"💴\",\"yum\":\"😋\",\"zap\":\"⚡\",\"zero\":\"0️⃣\",\"zzz\":\"💤\"}");
-
-/***/ }),
-
-/***/ "./node_modules/emojis/index.js":
-/*!**************************************!*\
-  !*** ./node_modules/emojis/index.js ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-const url = __webpack_require__(/*! url */ "./node_modules/url/url.js")
-const emojis = __webpack_require__(/*! ./characters */ "./node_modules/emojis/characters.json")
-
-exports.unicode = (input) => {
-  return replace(input, unicodeForEmoji)
-}
-
-exports.html = (input, baseUrl) => {
-  return replace(input, htmlForEmoji, baseUrl)
-}
-
-function replace (input, fn, baseUrl) {
-  const tokens = input.split(':') // tokens split by colon
-  const parsed = [ ]              // parsed tokens
-  let emojiBefore = true          // flag indicating if previous iteration token is an emoji
-
-  for (let i = 0; i < tokens.length; ++i) { // for each token
-    const emojiCurrent = isEmoji(tokens[i]) // flag indicating if current iteration token is an emoji
-
-    if (!emojiBefore && !emojiCurrent) {    // if we are not dealing with an emoji
-      parsed.push(':') // adds the colon back
-    }
-
-    if (emojiCurrent) { // if current iteration token is an emoji
-      parsed.push(fn(tokens[i], baseUrl)) // parses the emoji and push it to the parsed array
-    } else {            // if current iteration token isn't an emoji
-      parsed.push(tokens[i]) // push it without any parsing
-    }
-    emojiBefore = emojiCurrent // setting current flag as before flag
-  }
-
-  return parsed.join('') // joining the parsed tokens and returning it
-}
-
-function isEmoji (token) {
-  return emojis[token] !== undefined
-}
-
-function unicodeForEmoji (token) {
-  return emojis[token]
-}
-
-function htmlForEmoji (token, baseUrl) {
-  const src = (baseUrl ? url.resolve(baseUrl, token) : token) + '.png'
-  return `<img class="emoji" width="20" height="20" src="${src}" alt="${token}">`
-}
-
 
 /***/ }),
 
@@ -54135,537 +54067,6 @@ function plural(ms, msAbs, n, name) {
 
 /***/ }),
 
-/***/ "./node_modules/node-libs-browser/node_modules/punycode/punycode.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/node-libs-browser/node_modules/punycode/punycode.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.4.1 by @mathias */
-;(function(root) {
-
-	/** Detect free variables */
-	var freeExports =  true && exports &&
-		!exports.nodeType && exports;
-	var freeModule =  true && module &&
-		!module.nodeType && module;
-	var freeGlobal = typeof global == 'object' && global;
-	if (
-		freeGlobal.global === freeGlobal ||
-		freeGlobal.window === freeGlobal ||
-		freeGlobal.self === freeGlobal
-	) {
-		root = freeGlobal;
-	}
-
-	/**
-	 * The `punycode` object.
-	 * @name punycode
-	 * @type Object
-	 */
-	var punycode,
-
-	/** Highest positive signed 32-bit float value */
-	maxInt = 2147483647, // aka. 0x7FFFFFFF or 2^31-1
-
-	/** Bootstring parameters */
-	base = 36,
-	tMin = 1,
-	tMax = 26,
-	skew = 38,
-	damp = 700,
-	initialBias = 72,
-	initialN = 128, // 0x80
-	delimiter = '-', // '\x2D'
-
-	/** Regular expressions */
-	regexPunycode = /^xn--/,
-	regexNonASCII = /[^\x20-\x7E]/, // unprintable ASCII chars + non-ASCII chars
-	regexSeparators = /[\x2E\u3002\uFF0E\uFF61]/g, // RFC 3490 separators
-
-	/** Error messages */
-	errors = {
-		'overflow': 'Overflow: input needs wider integers to process',
-		'not-basic': 'Illegal input >= 0x80 (not a basic code point)',
-		'invalid-input': 'Invalid input'
-	},
-
-	/** Convenience shortcuts */
-	baseMinusTMin = base - tMin,
-	floor = Math.floor,
-	stringFromCharCode = String.fromCharCode,
-
-	/** Temporary variable */
-	key;
-
-	/*--------------------------------------------------------------------------*/
-
-	/**
-	 * A generic error utility function.
-	 * @private
-	 * @param {String} type The error type.
-	 * @returns {Error} Throws a `RangeError` with the applicable error message.
-	 */
-	function error(type) {
-		throw new RangeError(errors[type]);
-	}
-
-	/**
-	 * A generic `Array#map` utility function.
-	 * @private
-	 * @param {Array} array The array to iterate over.
-	 * @param {Function} callback The function that gets called for every array
-	 * item.
-	 * @returns {Array} A new array of values returned by the callback function.
-	 */
-	function map(array, fn) {
-		var length = array.length;
-		var result = [];
-		while (length--) {
-			result[length] = fn(array[length]);
-		}
-		return result;
-	}
-
-	/**
-	 * A simple `Array#map`-like wrapper to work with domain name strings or email
-	 * addresses.
-	 * @private
-	 * @param {String} domain The domain name or email address.
-	 * @param {Function} callback The function that gets called for every
-	 * character.
-	 * @returns {Array} A new string of characters returned by the callback
-	 * function.
-	 */
-	function mapDomain(string, fn) {
-		var parts = string.split('@');
-		var result = '';
-		if (parts.length > 1) {
-			// In email addresses, only the domain name should be punycoded. Leave
-			// the local part (i.e. everything up to `@`) intact.
-			result = parts[0] + '@';
-			string = parts[1];
-		}
-		// Avoid `split(regex)` for IE8 compatibility. See #17.
-		string = string.replace(regexSeparators, '\x2E');
-		var labels = string.split('.');
-		var encoded = map(labels, fn).join('.');
-		return result + encoded;
-	}
-
-	/**
-	 * Creates an array containing the numeric code points of each Unicode
-	 * character in the string. While JavaScript uses UCS-2 internally,
-	 * this function will convert a pair of surrogate halves (each of which
-	 * UCS-2 exposes as separate characters) into a single code point,
-	 * matching UTF-16.
-	 * @see `punycode.ucs2.encode`
-	 * @see <https://mathiasbynens.be/notes/javascript-encoding>
-	 * @memberOf punycode.ucs2
-	 * @name decode
-	 * @param {String} string The Unicode input string (UCS-2).
-	 * @returns {Array} The new array of code points.
-	 */
-	function ucs2decode(string) {
-		var output = [],
-		    counter = 0,
-		    length = string.length,
-		    value,
-		    extra;
-		while (counter < length) {
-			value = string.charCodeAt(counter++);
-			if (value >= 0xD800 && value <= 0xDBFF && counter < length) {
-				// high surrogate, and there is a next character
-				extra = string.charCodeAt(counter++);
-				if ((extra & 0xFC00) == 0xDC00) { // low surrogate
-					output.push(((value & 0x3FF) << 10) + (extra & 0x3FF) + 0x10000);
-				} else {
-					// unmatched surrogate; only append this code unit, in case the next
-					// code unit is the high surrogate of a surrogate pair
-					output.push(value);
-					counter--;
-				}
-			} else {
-				output.push(value);
-			}
-		}
-		return output;
-	}
-
-	/**
-	 * Creates a string based on an array of numeric code points.
-	 * @see `punycode.ucs2.decode`
-	 * @memberOf punycode.ucs2
-	 * @name encode
-	 * @param {Array} codePoints The array of numeric code points.
-	 * @returns {String} The new Unicode string (UCS-2).
-	 */
-	function ucs2encode(array) {
-		return map(array, function(value) {
-			var output = '';
-			if (value > 0xFFFF) {
-				value -= 0x10000;
-				output += stringFromCharCode(value >>> 10 & 0x3FF | 0xD800);
-				value = 0xDC00 | value & 0x3FF;
-			}
-			output += stringFromCharCode(value);
-			return output;
-		}).join('');
-	}
-
-	/**
-	 * Converts a basic code point into a digit/integer.
-	 * @see `digitToBasic()`
-	 * @private
-	 * @param {Number} codePoint The basic numeric code point value.
-	 * @returns {Number} The numeric value of a basic code point (for use in
-	 * representing integers) in the range `0` to `base - 1`, or `base` if
-	 * the code point does not represent a value.
-	 */
-	function basicToDigit(codePoint) {
-		if (codePoint - 48 < 10) {
-			return codePoint - 22;
-		}
-		if (codePoint - 65 < 26) {
-			return codePoint - 65;
-		}
-		if (codePoint - 97 < 26) {
-			return codePoint - 97;
-		}
-		return base;
-	}
-
-	/**
-	 * Converts a digit/integer into a basic code point.
-	 * @see `basicToDigit()`
-	 * @private
-	 * @param {Number} digit The numeric value of a basic code point.
-	 * @returns {Number} The basic code point whose value (when used for
-	 * representing integers) is `digit`, which needs to be in the range
-	 * `0` to `base - 1`. If `flag` is non-zero, the uppercase form is
-	 * used; else, the lowercase form is used. The behavior is undefined
-	 * if `flag` is non-zero and `digit` has no uppercase form.
-	 */
-	function digitToBasic(digit, flag) {
-		//  0..25 map to ASCII a..z or A..Z
-		// 26..35 map to ASCII 0..9
-		return digit + 22 + 75 * (digit < 26) - ((flag != 0) << 5);
-	}
-
-	/**
-	 * Bias adaptation function as per section 3.4 of RFC 3492.
-	 * https://tools.ietf.org/html/rfc3492#section-3.4
-	 * @private
-	 */
-	function adapt(delta, numPoints, firstTime) {
-		var k = 0;
-		delta = firstTime ? floor(delta / damp) : delta >> 1;
-		delta += floor(delta / numPoints);
-		for (/* no initialization */; delta > baseMinusTMin * tMax >> 1; k += base) {
-			delta = floor(delta / baseMinusTMin);
-		}
-		return floor(k + (baseMinusTMin + 1) * delta / (delta + skew));
-	}
-
-	/**
-	 * Converts a Punycode string of ASCII-only symbols to a string of Unicode
-	 * symbols.
-	 * @memberOf punycode
-	 * @param {String} input The Punycode string of ASCII-only symbols.
-	 * @returns {String} The resulting string of Unicode symbols.
-	 */
-	function decode(input) {
-		// Don't use UCS-2
-		var output = [],
-		    inputLength = input.length,
-		    out,
-		    i = 0,
-		    n = initialN,
-		    bias = initialBias,
-		    basic,
-		    j,
-		    index,
-		    oldi,
-		    w,
-		    k,
-		    digit,
-		    t,
-		    /** Cached calculation results */
-		    baseMinusT;
-
-		// Handle the basic code points: let `basic` be the number of input code
-		// points before the last delimiter, or `0` if there is none, then copy
-		// the first basic code points to the output.
-
-		basic = input.lastIndexOf(delimiter);
-		if (basic < 0) {
-			basic = 0;
-		}
-
-		for (j = 0; j < basic; ++j) {
-			// if it's not a basic code point
-			if (input.charCodeAt(j) >= 0x80) {
-				error('not-basic');
-			}
-			output.push(input.charCodeAt(j));
-		}
-
-		// Main decoding loop: start just after the last delimiter if any basic code
-		// points were copied; start at the beginning otherwise.
-
-		for (index = basic > 0 ? basic + 1 : 0; index < inputLength; /* no final expression */) {
-
-			// `index` is the index of the next character to be consumed.
-			// Decode a generalized variable-length integer into `delta`,
-			// which gets added to `i`. The overflow checking is easier
-			// if we increase `i` as we go, then subtract off its starting
-			// value at the end to obtain `delta`.
-			for (oldi = i, w = 1, k = base; /* no condition */; k += base) {
-
-				if (index >= inputLength) {
-					error('invalid-input');
-				}
-
-				digit = basicToDigit(input.charCodeAt(index++));
-
-				if (digit >= base || digit > floor((maxInt - i) / w)) {
-					error('overflow');
-				}
-
-				i += digit * w;
-				t = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
-
-				if (digit < t) {
-					break;
-				}
-
-				baseMinusT = base - t;
-				if (w > floor(maxInt / baseMinusT)) {
-					error('overflow');
-				}
-
-				w *= baseMinusT;
-
-			}
-
-			out = output.length + 1;
-			bias = adapt(i - oldi, out, oldi == 0);
-
-			// `i` was supposed to wrap around from `out` to `0`,
-			// incrementing `n` each time, so we'll fix that now:
-			if (floor(i / out) > maxInt - n) {
-				error('overflow');
-			}
-
-			n += floor(i / out);
-			i %= out;
-
-			// Insert `n` at position `i` of the output
-			output.splice(i++, 0, n);
-
-		}
-
-		return ucs2encode(output);
-	}
-
-	/**
-	 * Converts a string of Unicode symbols (e.g. a domain name label) to a
-	 * Punycode string of ASCII-only symbols.
-	 * @memberOf punycode
-	 * @param {String} input The string of Unicode symbols.
-	 * @returns {String} The resulting Punycode string of ASCII-only symbols.
-	 */
-	function encode(input) {
-		var n,
-		    delta,
-		    handledCPCount,
-		    basicLength,
-		    bias,
-		    j,
-		    m,
-		    q,
-		    k,
-		    t,
-		    currentValue,
-		    output = [],
-		    /** `inputLength` will hold the number of code points in `input`. */
-		    inputLength,
-		    /** Cached calculation results */
-		    handledCPCountPlusOne,
-		    baseMinusT,
-		    qMinusT;
-
-		// Convert the input in UCS-2 to Unicode
-		input = ucs2decode(input);
-
-		// Cache the length
-		inputLength = input.length;
-
-		// Initialize the state
-		n = initialN;
-		delta = 0;
-		bias = initialBias;
-
-		// Handle the basic code points
-		for (j = 0; j < inputLength; ++j) {
-			currentValue = input[j];
-			if (currentValue < 0x80) {
-				output.push(stringFromCharCode(currentValue));
-			}
-		}
-
-		handledCPCount = basicLength = output.length;
-
-		// `handledCPCount` is the number of code points that have been handled;
-		// `basicLength` is the number of basic code points.
-
-		// Finish the basic string - if it is not empty - with a delimiter
-		if (basicLength) {
-			output.push(delimiter);
-		}
-
-		// Main encoding loop:
-		while (handledCPCount < inputLength) {
-
-			// All non-basic code points < n have been handled already. Find the next
-			// larger one:
-			for (m = maxInt, j = 0; j < inputLength; ++j) {
-				currentValue = input[j];
-				if (currentValue >= n && currentValue < m) {
-					m = currentValue;
-				}
-			}
-
-			// Increase `delta` enough to advance the decoder's <n,i> state to <m,0>,
-			// but guard against overflow
-			handledCPCountPlusOne = handledCPCount + 1;
-			if (m - n > floor((maxInt - delta) / handledCPCountPlusOne)) {
-				error('overflow');
-			}
-
-			delta += (m - n) * handledCPCountPlusOne;
-			n = m;
-
-			for (j = 0; j < inputLength; ++j) {
-				currentValue = input[j];
-
-				if (currentValue < n && ++delta > maxInt) {
-					error('overflow');
-				}
-
-				if (currentValue == n) {
-					// Represent delta as a generalized variable-length integer
-					for (q = delta, k = base; /* no condition */; k += base) {
-						t = k <= bias ? tMin : (k >= bias + tMax ? tMax : k - bias);
-						if (q < t) {
-							break;
-						}
-						qMinusT = q - t;
-						baseMinusT = base - t;
-						output.push(
-							stringFromCharCode(digitToBasic(t + qMinusT % baseMinusT, 0))
-						);
-						q = floor(qMinusT / baseMinusT);
-					}
-
-					output.push(stringFromCharCode(digitToBasic(q, 0)));
-					bias = adapt(delta, handledCPCountPlusOne, handledCPCount == basicLength);
-					delta = 0;
-					++handledCPCount;
-				}
-			}
-
-			++delta;
-			++n;
-
-		}
-		return output.join('');
-	}
-
-	/**
-	 * Converts a Punycode string representing a domain name or an email address
-	 * to Unicode. Only the Punycoded parts of the input will be converted, i.e.
-	 * it doesn't matter if you call it on a string that has already been
-	 * converted to Unicode.
-	 * @memberOf punycode
-	 * @param {String} input The Punycoded domain name or email address to
-	 * convert to Unicode.
-	 * @returns {String} The Unicode representation of the given Punycode
-	 * string.
-	 */
-	function toUnicode(input) {
-		return mapDomain(input, function(string) {
-			return regexPunycode.test(string)
-				? decode(string.slice(4).toLowerCase())
-				: string;
-		});
-	}
-
-	/**
-	 * Converts a Unicode string representing a domain name or an email address to
-	 * Punycode. Only the non-ASCII parts of the domain name will be converted,
-	 * i.e. it doesn't matter if you call it with a domain that's already in
-	 * ASCII.
-	 * @memberOf punycode
-	 * @param {String} input The domain name or email address to convert, as a
-	 * Unicode string.
-	 * @returns {String} The Punycode representation of the given domain name or
-	 * email address.
-	 */
-	function toASCII(input) {
-		return mapDomain(input, function(string) {
-			return regexNonASCII.test(string)
-				? 'xn--' + encode(string)
-				: string;
-		});
-	}
-
-	/*--------------------------------------------------------------------------*/
-
-	/** Define the public API */
-	punycode = {
-		/**
-		 * A string representing the current Punycode.js version number.
-		 * @memberOf punycode
-		 * @type String
-		 */
-		'version': '1.4.1',
-		/**
-		 * An object of methods to convert from JavaScript's internal character
-		 * representation (UCS-2) to Unicode code points, and back.
-		 * @see <https://mathiasbynens.be/notes/javascript-encoding>
-		 * @memberOf punycode
-		 * @type Object
-		 */
-		'ucs2': {
-			'decode': ucs2decode,
-			'encode': ucs2encode
-		},
-		'decode': decode,
-		'encode': encode,
-		'toASCII': toASCII,
-		'toUnicode': toUnicode
-	};
-
-	/** Expose `punycode` */
-	// Some AMD build optimizers, like r.js, check for specific condition patterns
-	// like the following:
-	if (
-		true
-	) {
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
-			return punycode;
-		}).call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else {}
-
-}(this));
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module), __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
   !*** ./node_modules/object-assign/index.js ***!
@@ -57011,215 +56412,6 @@ module.exports = {
     maybeMap: maybeMap,
     merge: merge
 };
-
-
-/***/ }),
-
-/***/ "./node_modules/querystring-es3/decode.js":
-/*!************************************************!*\
-  !*** ./node_modules/querystring-es3/decode.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-// If obj.hasOwnProperty has been overridden, then calling
-// obj.hasOwnProperty(prop) will break.
-// See: https://github.com/joyent/node/issues/1707
-function hasOwnProperty(obj, prop) {
-  return Object.prototype.hasOwnProperty.call(obj, prop);
-}
-
-module.exports = function(qs, sep, eq, options) {
-  sep = sep || '&';
-  eq = eq || '=';
-  var obj = {};
-
-  if (typeof qs !== 'string' || qs.length === 0) {
-    return obj;
-  }
-
-  var regexp = /\+/g;
-  qs = qs.split(sep);
-
-  var maxKeys = 1000;
-  if (options && typeof options.maxKeys === 'number') {
-    maxKeys = options.maxKeys;
-  }
-
-  var len = qs.length;
-  // maxKeys <= 0 means that we should not limit keys count
-  if (maxKeys > 0 && len > maxKeys) {
-    len = maxKeys;
-  }
-
-  for (var i = 0; i < len; ++i) {
-    var x = qs[i].replace(regexp, '%20'),
-        idx = x.indexOf(eq),
-        kstr, vstr, k, v;
-
-    if (idx >= 0) {
-      kstr = x.substr(0, idx);
-      vstr = x.substr(idx + 1);
-    } else {
-      kstr = x;
-      vstr = '';
-    }
-
-    k = decodeURIComponent(kstr);
-    v = decodeURIComponent(vstr);
-
-    if (!hasOwnProperty(obj, k)) {
-      obj[k] = v;
-    } else if (isArray(obj[k])) {
-      obj[k].push(v);
-    } else {
-      obj[k] = [obj[k], v];
-    }
-  }
-
-  return obj;
-};
-
-var isArray = Array.isArray || function (xs) {
-  return Object.prototype.toString.call(xs) === '[object Array]';
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/querystring-es3/encode.js":
-/*!************************************************!*\
-  !*** ./node_modules/querystring-es3/encode.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-var stringifyPrimitive = function(v) {
-  switch (typeof v) {
-    case 'string':
-      return v;
-
-    case 'boolean':
-      return v ? 'true' : 'false';
-
-    case 'number':
-      return isFinite(v) ? v : '';
-
-    default:
-      return '';
-  }
-};
-
-module.exports = function(obj, sep, eq, name) {
-  sep = sep || '&';
-  eq = eq || '=';
-  if (obj === null) {
-    obj = undefined;
-  }
-
-  if (typeof obj === 'object') {
-    return map(objectKeys(obj), function(k) {
-      var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
-      if (isArray(obj[k])) {
-        return map(obj[k], function(v) {
-          return ks + encodeURIComponent(stringifyPrimitive(v));
-        }).join(sep);
-      } else {
-        return ks + encodeURIComponent(stringifyPrimitive(obj[k]));
-      }
-    }).join(sep);
-
-  }
-
-  if (!name) return '';
-  return encodeURIComponent(stringifyPrimitive(name)) + eq +
-         encodeURIComponent(stringifyPrimitive(obj));
-};
-
-var isArray = Array.isArray || function (xs) {
-  return Object.prototype.toString.call(xs) === '[object Array]';
-};
-
-function map (xs, f) {
-  if (xs.map) return xs.map(f);
-  var res = [];
-  for (var i = 0; i < xs.length; i++) {
-    res.push(f(xs[i], i));
-  }
-  return res;
-}
-
-var objectKeys = Object.keys || function (obj) {
-  var res = [];
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) res.push(key);
-  }
-  return res;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/querystring-es3/index.js":
-/*!***********************************************!*\
-  !*** ./node_modules/querystring-es3/index.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.decode = exports.parse = __webpack_require__(/*! ./decode */ "./node_modules/querystring-es3/decode.js");
-exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node_modules/querystring-es3/encode.js");
 
 
 /***/ }),
@@ -96534,778 +95726,6 @@ function cleanupCookieValue(value) {
 
 /***/ }),
 
-/***/ "./node_modules/url/url.js":
-/*!*********************************!*\
-  !*** ./node_modules/url/url.js ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-var punycode = __webpack_require__(/*! punycode */ "./node_modules/node-libs-browser/node_modules/punycode/punycode.js");
-var util = __webpack_require__(/*! ./util */ "./node_modules/url/util.js");
-
-exports.parse = urlParse;
-exports.resolve = urlResolve;
-exports.resolveObject = urlResolveObject;
-exports.format = urlFormat;
-
-exports.Url = Url;
-
-function Url() {
-  this.protocol = null;
-  this.slashes = null;
-  this.auth = null;
-  this.host = null;
-  this.port = null;
-  this.hostname = null;
-  this.hash = null;
-  this.search = null;
-  this.query = null;
-  this.pathname = null;
-  this.path = null;
-  this.href = null;
-}
-
-// Reference: RFC 3986, RFC 1808, RFC 2396
-
-// define these here so at least they only have to be
-// compiled once on the first module load.
-var protocolPattern = /^([a-z0-9.+-]+:)/i,
-    portPattern = /:[0-9]*$/,
-
-    // Special case for a simple path URL
-    simplePathPattern = /^(\/\/?(?!\/)[^\?\s]*)(\?[^\s]*)?$/,
-
-    // RFC 2396: characters reserved for delimiting URLs.
-    // We actually just auto-escape these.
-    delims = ['<', '>', '"', '`', ' ', '\r', '\n', '\t'],
-
-    // RFC 2396: characters not allowed for various reasons.
-    unwise = ['{', '}', '|', '\\', '^', '`'].concat(delims),
-
-    // Allowed by RFCs, but cause of XSS attacks.  Always escape these.
-    autoEscape = ['\''].concat(unwise),
-    // Characters that are never ever allowed in a hostname.
-    // Note that any invalid chars are also handled, but these
-    // are the ones that are *expected* to be seen, so we fast-path
-    // them.
-    nonHostChars = ['%', '/', '?', ';', '#'].concat(autoEscape),
-    hostEndingChars = ['/', '?', '#'],
-    hostnameMaxLen = 255,
-    hostnamePartPattern = /^[+a-z0-9A-Z_-]{0,63}$/,
-    hostnamePartStart = /^([+a-z0-9A-Z_-]{0,63})(.*)$/,
-    // protocols that can allow "unsafe" and "unwise" chars.
-    unsafeProtocol = {
-      'javascript': true,
-      'javascript:': true
-    },
-    // protocols that never have a hostname.
-    hostlessProtocol = {
-      'javascript': true,
-      'javascript:': true
-    },
-    // protocols that always contain a // bit.
-    slashedProtocol = {
-      'http': true,
-      'https': true,
-      'ftp': true,
-      'gopher': true,
-      'file': true,
-      'http:': true,
-      'https:': true,
-      'ftp:': true,
-      'gopher:': true,
-      'file:': true
-    },
-    querystring = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
-
-function urlParse(url, parseQueryString, slashesDenoteHost) {
-  if (url && util.isObject(url) && url instanceof Url) return url;
-
-  var u = new Url;
-  u.parse(url, parseQueryString, slashesDenoteHost);
-  return u;
-}
-
-Url.prototype.parse = function(url, parseQueryString, slashesDenoteHost) {
-  if (!util.isString(url)) {
-    throw new TypeError("Parameter 'url' must be a string, not " + typeof url);
-  }
-
-  // Copy chrome, IE, opera backslash-handling behavior.
-  // Back slashes before the query string get converted to forward slashes
-  // See: https://code.google.com/p/chromium/issues/detail?id=25916
-  var queryIndex = url.indexOf('?'),
-      splitter =
-          (queryIndex !== -1 && queryIndex < url.indexOf('#')) ? '?' : '#',
-      uSplit = url.split(splitter),
-      slashRegex = /\\/g;
-  uSplit[0] = uSplit[0].replace(slashRegex, '/');
-  url = uSplit.join(splitter);
-
-  var rest = url;
-
-  // trim before proceeding.
-  // This is to support parse stuff like "  http://foo.com  \n"
-  rest = rest.trim();
-
-  if (!slashesDenoteHost && url.split('#').length === 1) {
-    // Try fast path regexp
-    var simplePath = simplePathPattern.exec(rest);
-    if (simplePath) {
-      this.path = rest;
-      this.href = rest;
-      this.pathname = simplePath[1];
-      if (simplePath[2]) {
-        this.search = simplePath[2];
-        if (parseQueryString) {
-          this.query = querystring.parse(this.search.substr(1));
-        } else {
-          this.query = this.search.substr(1);
-        }
-      } else if (parseQueryString) {
-        this.search = '';
-        this.query = {};
-      }
-      return this;
-    }
-  }
-
-  var proto = protocolPattern.exec(rest);
-  if (proto) {
-    proto = proto[0];
-    var lowerProto = proto.toLowerCase();
-    this.protocol = lowerProto;
-    rest = rest.substr(proto.length);
-  }
-
-  // figure out if it's got a host
-  // user@server is *always* interpreted as a hostname, and url
-  // resolution will treat //foo/bar as host=foo,path=bar because that's
-  // how the browser resolves relative URLs.
-  if (slashesDenoteHost || proto || rest.match(/^\/\/[^@\/]+@[^@\/]+/)) {
-    var slashes = rest.substr(0, 2) === '//';
-    if (slashes && !(proto && hostlessProtocol[proto])) {
-      rest = rest.substr(2);
-      this.slashes = true;
-    }
-  }
-
-  if (!hostlessProtocol[proto] &&
-      (slashes || (proto && !slashedProtocol[proto]))) {
-
-    // there's a hostname.
-    // the first instance of /, ?, ;, or # ends the host.
-    //
-    // If there is an @ in the hostname, then non-host chars *are* allowed
-    // to the left of the last @ sign, unless some host-ending character
-    // comes *before* the @-sign.
-    // URLs are obnoxious.
-    //
-    // ex:
-    // http://a@b@c/ => user:a@b host:c
-    // http://a@b?@c => user:a host:c path:/?@c
-
-    // v0.12 TODO(isaacs): This is not quite how Chrome does things.
-    // Review our test case against browsers more comprehensively.
-
-    // find the first instance of any hostEndingChars
-    var hostEnd = -1;
-    for (var i = 0; i < hostEndingChars.length; i++) {
-      var hec = rest.indexOf(hostEndingChars[i]);
-      if (hec !== -1 && (hostEnd === -1 || hec < hostEnd))
-        hostEnd = hec;
-    }
-
-    // at this point, either we have an explicit point where the
-    // auth portion cannot go past, or the last @ char is the decider.
-    var auth, atSign;
-    if (hostEnd === -1) {
-      // atSign can be anywhere.
-      atSign = rest.lastIndexOf('@');
-    } else {
-      // atSign must be in auth portion.
-      // http://a@b/c@d => host:b auth:a path:/c@d
-      atSign = rest.lastIndexOf('@', hostEnd);
-    }
-
-    // Now we have a portion which is definitely the auth.
-    // Pull that off.
-    if (atSign !== -1) {
-      auth = rest.slice(0, atSign);
-      rest = rest.slice(atSign + 1);
-      this.auth = decodeURIComponent(auth);
-    }
-
-    // the host is the remaining to the left of the first non-host char
-    hostEnd = -1;
-    for (var i = 0; i < nonHostChars.length; i++) {
-      var hec = rest.indexOf(nonHostChars[i]);
-      if (hec !== -1 && (hostEnd === -1 || hec < hostEnd))
-        hostEnd = hec;
-    }
-    // if we still have not hit it, then the entire thing is a host.
-    if (hostEnd === -1)
-      hostEnd = rest.length;
-
-    this.host = rest.slice(0, hostEnd);
-    rest = rest.slice(hostEnd);
-
-    // pull out port.
-    this.parseHost();
-
-    // we've indicated that there is a hostname,
-    // so even if it's empty, it has to be present.
-    this.hostname = this.hostname || '';
-
-    // if hostname begins with [ and ends with ]
-    // assume that it's an IPv6 address.
-    var ipv6Hostname = this.hostname[0] === '[' &&
-        this.hostname[this.hostname.length - 1] === ']';
-
-    // validate a little.
-    if (!ipv6Hostname) {
-      var hostparts = this.hostname.split(/\./);
-      for (var i = 0, l = hostparts.length; i < l; i++) {
-        var part = hostparts[i];
-        if (!part) continue;
-        if (!part.match(hostnamePartPattern)) {
-          var newpart = '';
-          for (var j = 0, k = part.length; j < k; j++) {
-            if (part.charCodeAt(j) > 127) {
-              // we replace non-ASCII char with a temporary placeholder
-              // we need this to make sure size of hostname is not
-              // broken by replacing non-ASCII by nothing
-              newpart += 'x';
-            } else {
-              newpart += part[j];
-            }
-          }
-          // we test again with ASCII char only
-          if (!newpart.match(hostnamePartPattern)) {
-            var validParts = hostparts.slice(0, i);
-            var notHost = hostparts.slice(i + 1);
-            var bit = part.match(hostnamePartStart);
-            if (bit) {
-              validParts.push(bit[1]);
-              notHost.unshift(bit[2]);
-            }
-            if (notHost.length) {
-              rest = '/' + notHost.join('.') + rest;
-            }
-            this.hostname = validParts.join('.');
-            break;
-          }
-        }
-      }
-    }
-
-    if (this.hostname.length > hostnameMaxLen) {
-      this.hostname = '';
-    } else {
-      // hostnames are always lower case.
-      this.hostname = this.hostname.toLowerCase();
-    }
-
-    if (!ipv6Hostname) {
-      // IDNA Support: Returns a punycoded representation of "domain".
-      // It only converts parts of the domain name that
-      // have non-ASCII characters, i.e. it doesn't matter if
-      // you call it with a domain that already is ASCII-only.
-      this.hostname = punycode.toASCII(this.hostname);
-    }
-
-    var p = this.port ? ':' + this.port : '';
-    var h = this.hostname || '';
-    this.host = h + p;
-    this.href += this.host;
-
-    // strip [ and ] from the hostname
-    // the host field still retains them, though
-    if (ipv6Hostname) {
-      this.hostname = this.hostname.substr(1, this.hostname.length - 2);
-      if (rest[0] !== '/') {
-        rest = '/' + rest;
-      }
-    }
-  }
-
-  // now rest is set to the post-host stuff.
-  // chop off any delim chars.
-  if (!unsafeProtocol[lowerProto]) {
-
-    // First, make 100% sure that any "autoEscape" chars get
-    // escaped, even if encodeURIComponent doesn't think they
-    // need to be.
-    for (var i = 0, l = autoEscape.length; i < l; i++) {
-      var ae = autoEscape[i];
-      if (rest.indexOf(ae) === -1)
-        continue;
-      var esc = encodeURIComponent(ae);
-      if (esc === ae) {
-        esc = escape(ae);
-      }
-      rest = rest.split(ae).join(esc);
-    }
-  }
-
-
-  // chop off from the tail first.
-  var hash = rest.indexOf('#');
-  if (hash !== -1) {
-    // got a fragment string.
-    this.hash = rest.substr(hash);
-    rest = rest.slice(0, hash);
-  }
-  var qm = rest.indexOf('?');
-  if (qm !== -1) {
-    this.search = rest.substr(qm);
-    this.query = rest.substr(qm + 1);
-    if (parseQueryString) {
-      this.query = querystring.parse(this.query);
-    }
-    rest = rest.slice(0, qm);
-  } else if (parseQueryString) {
-    // no query string, but parseQueryString still requested
-    this.search = '';
-    this.query = {};
-  }
-  if (rest) this.pathname = rest;
-  if (slashedProtocol[lowerProto] &&
-      this.hostname && !this.pathname) {
-    this.pathname = '/';
-  }
-
-  //to support http.request
-  if (this.pathname || this.search) {
-    var p = this.pathname || '';
-    var s = this.search || '';
-    this.path = p + s;
-  }
-
-  // finally, reconstruct the href based on what has been validated.
-  this.href = this.format();
-  return this;
-};
-
-// format a parsed object into a url string
-function urlFormat(obj) {
-  // ensure it's an object, and not a string url.
-  // If it's an obj, this is a no-op.
-  // this way, you can call url_format() on strings
-  // to clean up potentially wonky urls.
-  if (util.isString(obj)) obj = urlParse(obj);
-  if (!(obj instanceof Url)) return Url.prototype.format.call(obj);
-  return obj.format();
-}
-
-Url.prototype.format = function() {
-  var auth = this.auth || '';
-  if (auth) {
-    auth = encodeURIComponent(auth);
-    auth = auth.replace(/%3A/i, ':');
-    auth += '@';
-  }
-
-  var protocol = this.protocol || '',
-      pathname = this.pathname || '',
-      hash = this.hash || '',
-      host = false,
-      query = '';
-
-  if (this.host) {
-    host = auth + this.host;
-  } else if (this.hostname) {
-    host = auth + (this.hostname.indexOf(':') === -1 ?
-        this.hostname :
-        '[' + this.hostname + ']');
-    if (this.port) {
-      host += ':' + this.port;
-    }
-  }
-
-  if (this.query &&
-      util.isObject(this.query) &&
-      Object.keys(this.query).length) {
-    query = querystring.stringify(this.query);
-  }
-
-  var search = this.search || (query && ('?' + query)) || '';
-
-  if (protocol && protocol.substr(-1) !== ':') protocol += ':';
-
-  // only the slashedProtocols get the //.  Not mailto:, xmpp:, etc.
-  // unless they had them to begin with.
-  if (this.slashes ||
-      (!protocol || slashedProtocol[protocol]) && host !== false) {
-    host = '//' + (host || '');
-    if (pathname && pathname.charAt(0) !== '/') pathname = '/' + pathname;
-  } else if (!host) {
-    host = '';
-  }
-
-  if (hash && hash.charAt(0) !== '#') hash = '#' + hash;
-  if (search && search.charAt(0) !== '?') search = '?' + search;
-
-  pathname = pathname.replace(/[?#]/g, function(match) {
-    return encodeURIComponent(match);
-  });
-  search = search.replace('#', '%23');
-
-  return protocol + host + pathname + search + hash;
-};
-
-function urlResolve(source, relative) {
-  return urlParse(source, false, true).resolve(relative);
-}
-
-Url.prototype.resolve = function(relative) {
-  return this.resolveObject(urlParse(relative, false, true)).format();
-};
-
-function urlResolveObject(source, relative) {
-  if (!source) return relative;
-  return urlParse(source, false, true).resolveObject(relative);
-}
-
-Url.prototype.resolveObject = function(relative) {
-  if (util.isString(relative)) {
-    var rel = new Url();
-    rel.parse(relative, false, true);
-    relative = rel;
-  }
-
-  var result = new Url();
-  var tkeys = Object.keys(this);
-  for (var tk = 0; tk < tkeys.length; tk++) {
-    var tkey = tkeys[tk];
-    result[tkey] = this[tkey];
-  }
-
-  // hash is always overridden, no matter what.
-  // even href="" will remove it.
-  result.hash = relative.hash;
-
-  // if the relative url is empty, then there's nothing left to do here.
-  if (relative.href === '') {
-    result.href = result.format();
-    return result;
-  }
-
-  // hrefs like //foo/bar always cut to the protocol.
-  if (relative.slashes && !relative.protocol) {
-    // take everything except the protocol from relative
-    var rkeys = Object.keys(relative);
-    for (var rk = 0; rk < rkeys.length; rk++) {
-      var rkey = rkeys[rk];
-      if (rkey !== 'protocol')
-        result[rkey] = relative[rkey];
-    }
-
-    //urlParse appends trailing / to urls like http://www.example.com
-    if (slashedProtocol[result.protocol] &&
-        result.hostname && !result.pathname) {
-      result.path = result.pathname = '/';
-    }
-
-    result.href = result.format();
-    return result;
-  }
-
-  if (relative.protocol && relative.protocol !== result.protocol) {
-    // if it's a known url protocol, then changing
-    // the protocol does weird things
-    // first, if it's not file:, then we MUST have a host,
-    // and if there was a path
-    // to begin with, then we MUST have a path.
-    // if it is file:, then the host is dropped,
-    // because that's known to be hostless.
-    // anything else is assumed to be absolute.
-    if (!slashedProtocol[relative.protocol]) {
-      var keys = Object.keys(relative);
-      for (var v = 0; v < keys.length; v++) {
-        var k = keys[v];
-        result[k] = relative[k];
-      }
-      result.href = result.format();
-      return result;
-    }
-
-    result.protocol = relative.protocol;
-    if (!relative.host && !hostlessProtocol[relative.protocol]) {
-      var relPath = (relative.pathname || '').split('/');
-      while (relPath.length && !(relative.host = relPath.shift()));
-      if (!relative.host) relative.host = '';
-      if (!relative.hostname) relative.hostname = '';
-      if (relPath[0] !== '') relPath.unshift('');
-      if (relPath.length < 2) relPath.unshift('');
-      result.pathname = relPath.join('/');
-    } else {
-      result.pathname = relative.pathname;
-    }
-    result.search = relative.search;
-    result.query = relative.query;
-    result.host = relative.host || '';
-    result.auth = relative.auth;
-    result.hostname = relative.hostname || relative.host;
-    result.port = relative.port;
-    // to support http.request
-    if (result.pathname || result.search) {
-      var p = result.pathname || '';
-      var s = result.search || '';
-      result.path = p + s;
-    }
-    result.slashes = result.slashes || relative.slashes;
-    result.href = result.format();
-    return result;
-  }
-
-  var isSourceAbs = (result.pathname && result.pathname.charAt(0) === '/'),
-      isRelAbs = (
-          relative.host ||
-          relative.pathname && relative.pathname.charAt(0) === '/'
-      ),
-      mustEndAbs = (isRelAbs || isSourceAbs ||
-                    (result.host && relative.pathname)),
-      removeAllDots = mustEndAbs,
-      srcPath = result.pathname && result.pathname.split('/') || [],
-      relPath = relative.pathname && relative.pathname.split('/') || [],
-      psychotic = result.protocol && !slashedProtocol[result.protocol];
-
-  // if the url is a non-slashed url, then relative
-  // links like ../.. should be able
-  // to crawl up to the hostname, as well.  This is strange.
-  // result.protocol has already been set by now.
-  // Later on, put the first path part into the host field.
-  if (psychotic) {
-    result.hostname = '';
-    result.port = null;
-    if (result.host) {
-      if (srcPath[0] === '') srcPath[0] = result.host;
-      else srcPath.unshift(result.host);
-    }
-    result.host = '';
-    if (relative.protocol) {
-      relative.hostname = null;
-      relative.port = null;
-      if (relative.host) {
-        if (relPath[0] === '') relPath[0] = relative.host;
-        else relPath.unshift(relative.host);
-      }
-      relative.host = null;
-    }
-    mustEndAbs = mustEndAbs && (relPath[0] === '' || srcPath[0] === '');
-  }
-
-  if (isRelAbs) {
-    // it's absolute.
-    result.host = (relative.host || relative.host === '') ?
-                  relative.host : result.host;
-    result.hostname = (relative.hostname || relative.hostname === '') ?
-                      relative.hostname : result.hostname;
-    result.search = relative.search;
-    result.query = relative.query;
-    srcPath = relPath;
-    // fall through to the dot-handling below.
-  } else if (relPath.length) {
-    // it's relative
-    // throw away the existing file, and take the new path instead.
-    if (!srcPath) srcPath = [];
-    srcPath.pop();
-    srcPath = srcPath.concat(relPath);
-    result.search = relative.search;
-    result.query = relative.query;
-  } else if (!util.isNullOrUndefined(relative.search)) {
-    // just pull out the search.
-    // like href='?foo'.
-    // Put this after the other two cases because it simplifies the booleans
-    if (psychotic) {
-      result.hostname = result.host = srcPath.shift();
-      //occationaly the auth can get stuck only in host
-      //this especially happens in cases like
-      //url.resolveObject('mailto:local1@domain1', 'local2@domain2')
-      var authInHost = result.host && result.host.indexOf('@') > 0 ?
-                       result.host.split('@') : false;
-      if (authInHost) {
-        result.auth = authInHost.shift();
-        result.host = result.hostname = authInHost.shift();
-      }
-    }
-    result.search = relative.search;
-    result.query = relative.query;
-    //to support http.request
-    if (!util.isNull(result.pathname) || !util.isNull(result.search)) {
-      result.path = (result.pathname ? result.pathname : '') +
-                    (result.search ? result.search : '');
-    }
-    result.href = result.format();
-    return result;
-  }
-
-  if (!srcPath.length) {
-    // no path at all.  easy.
-    // we've already handled the other stuff above.
-    result.pathname = null;
-    //to support http.request
-    if (result.search) {
-      result.path = '/' + result.search;
-    } else {
-      result.path = null;
-    }
-    result.href = result.format();
-    return result;
-  }
-
-  // if a url ENDs in . or .., then it must get a trailing slash.
-  // however, if it ends in anything else non-slashy,
-  // then it must NOT get a trailing slash.
-  var last = srcPath.slice(-1)[0];
-  var hasTrailingSlash = (
-      (result.host || relative.host || srcPath.length > 1) &&
-      (last === '.' || last === '..') || last === '');
-
-  // strip single dots, resolve double dots to parent dir
-  // if the path tries to go above the root, `up` ends up > 0
-  var up = 0;
-  for (var i = srcPath.length; i >= 0; i--) {
-    last = srcPath[i];
-    if (last === '.') {
-      srcPath.splice(i, 1);
-    } else if (last === '..') {
-      srcPath.splice(i, 1);
-      up++;
-    } else if (up) {
-      srcPath.splice(i, 1);
-      up--;
-    }
-  }
-
-  // if the path is allowed to go above the root, restore leading ..s
-  if (!mustEndAbs && !removeAllDots) {
-    for (; up--; up) {
-      srcPath.unshift('..');
-    }
-  }
-
-  if (mustEndAbs && srcPath[0] !== '' &&
-      (!srcPath[0] || srcPath[0].charAt(0) !== '/')) {
-    srcPath.unshift('');
-  }
-
-  if (hasTrailingSlash && (srcPath.join('/').substr(-1) !== '/')) {
-    srcPath.push('');
-  }
-
-  var isAbsolute = srcPath[0] === '' ||
-      (srcPath[0] && srcPath[0].charAt(0) === '/');
-
-  // put the host back
-  if (psychotic) {
-    result.hostname = result.host = isAbsolute ? '' :
-                                    srcPath.length ? srcPath.shift() : '';
-    //occationaly the auth can get stuck only in host
-    //this especially happens in cases like
-    //url.resolveObject('mailto:local1@domain1', 'local2@domain2')
-    var authInHost = result.host && result.host.indexOf('@') > 0 ?
-                     result.host.split('@') : false;
-    if (authInHost) {
-      result.auth = authInHost.shift();
-      result.host = result.hostname = authInHost.shift();
-    }
-  }
-
-  mustEndAbs = mustEndAbs || (result.host && srcPath.length);
-
-  if (mustEndAbs && !isAbsolute) {
-    srcPath.unshift('');
-  }
-
-  if (!srcPath.length) {
-    result.pathname = null;
-    result.path = null;
-  } else {
-    result.pathname = srcPath.join('/');
-  }
-
-  //to support request.http
-  if (!util.isNull(result.pathname) || !util.isNull(result.search)) {
-    result.path = (result.pathname ? result.pathname : '') +
-                  (result.search ? result.search : '');
-  }
-  result.auth = relative.auth || result.auth;
-  result.slashes = result.slashes || relative.slashes;
-  result.href = result.format();
-  return result;
-};
-
-Url.prototype.parseHost = function() {
-  var host = this.host;
-  var port = portPattern.exec(host);
-  if (port) {
-    port = port[0];
-    if (port !== ':') {
-      this.port = port.substr(1);
-    }
-    host = host.substr(0, host.length - port.length);
-  }
-  if (host) this.hostname = host;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/url/util.js":
-/*!**********************************!*\
-  !*** ./node_modules/url/util.js ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = {
-  isString: function(arg) {
-    return typeof(arg) === 'string';
-  },
-  isObject: function(arg) {
-    return typeof(arg) === 'object' && arg !== null;
-  },
-  isNull: function(arg) {
-    return arg === null;
-  },
-  isNullOrUndefined: function(arg) {
-    return arg == null;
-  }
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/use-callback-ref/dist/es2015/assignRef.js":
 /*!****************************************************************!*\
   !*** ./node_modules/use-callback-ref/dist/es2015/assignRef.js ***!
@@ -98128,15 +96548,34 @@ var u = pn => {
   return fn;
 };
 
-var groupsUpdate = (cb, events) => {
-  var st = Object(lodash__WEBPACK_IMPORTED_MODULE_1__["cloneDeep"])(_store__WEBPACK_IMPORTED_MODULE_4__["store"].getState().guild.groups),
-      ev = events ? events(pl) : null;
-  cb(st);
-  _store__WEBPACK_IMPORTED_MODULE_4__["store"].dispatch({
-    type: 'UPDATE_GROUPS',
-    data: st.filter(Boolean)
-  });
-  post(ev);
+var groupsUpdate = () => {
+  var fn = (cb, events) => {
+    var st = Object(lodash__WEBPACK_IMPORTED_MODULE_1__["cloneDeep"])(_store__WEBPACK_IMPORTED_MODULE_4__["store"].getState().guild.groups),
+        ev = events ? events(pl) : null;
+    cb(st);
+    _store__WEBPACK_IMPORTED_MODULE_4__["store"].dispatch({
+      type: 'UPDATE_GROUPS',
+      data: st.filter(Boolean)
+    });
+    post(ev);
+  };
+
+  fn.arr = function (path) {
+    return {
+      add: n => this(pl => {
+        var s = object_path__WEBPACK_IMPORTED_MODULE_8___default.a.get(pl, path) || [];
+        s.push(n);
+        object_path__WEBPACK_IMPORTED_MODULE_8___default.a.set(pl, path, s);
+      }),
+      del: d => this(pl => {
+        var s = object_path__WEBPACK_IMPORTED_MODULE_8___default.a.get(pl, path) || [];
+        s = s.filter((_, i) => i !== d);
+        s.length ? object_path__WEBPACK_IMPORTED_MODULE_8___default.a.set(pl, path, s) : object_path__WEBPACK_IMPORTED_MODULE_8___default.a.del(pl, path);
+      })
+    };
+  };
+
+  return fn;
 };
 
 var settingsUpdate = (cb, events) => {
@@ -98272,7 +96711,7 @@ var levels = u => ({
   },
   cmds: {
     rank: cmd(u, 'rank'),
-    levels: cmd(u, 'levels')
+    addxp: cmd(u, 'addxp')
   }
 });
 
@@ -98344,8 +96783,8 @@ var automod = u => ({
       setResetTime: n => u(pl => pl.filters.spam.reset = n)
     }),
     repeatedMessages: _objectSpread(_objectSpread({}, filtersItem(u, 'repeatedMessages')), {}, {
-      setMessages: n => u(pl => pl.filters[f].messages = n),
-      setResetTime: n => u(pl => pl.filters[f].reset = n)
+      setMessages: n => u(pl => pl.filters.repeatedMessages.messages = n),
+      setResetTime: n => u(pl => pl.filters.repeatedMessages.reset = n)
     }),
     caps: _objectSpread(_objectSpread({}, filtersItem(u, 'caps')), {}, {
       setThreshold: n => u(pl => pl.filters.caps.threshold = n),
@@ -98450,7 +96889,7 @@ var reactionRoles = u => ({
     }
   }]),
   del: (d, delMsg) => u(pl => pl.d = pl.d.filter((_, i) => i !== d), pl => delMsg && [{
-    action: 'RRDelMsg',
+    action: 'reactionRoles/delete',
     v: pl.d[d].id
   }])
 });
@@ -98535,6 +96974,7 @@ var counters = u => ({
     id: Object(_utils_generateId__WEBPACK_IMPORTED_MODULE_6__["generateId"])(pl.d.map(c => c.id)),
     category: 0,
     type: 0,
+    name: '',
     channel: null,
     role: null,
     ids: []
@@ -98555,7 +96995,10 @@ var counters = u => ({
     action: 'CUpdate',
     v: pl.d[i].id
   }]),
-  del: d => u(pl => pl.d = pl.d.filter((_, i) => i !== d))
+  del: (d, delChannel) => u(pl => pl.d = pl.d.filter((_, i) => i !== d), pl => delChannel && [{
+    action: 'counters/delete',
+    v: pl.d[d].id
+  }])
 });
 
 var poll = u => ({
@@ -98632,25 +97075,11 @@ var groupsApi = (u => ({
     enabledChannels: [],
     disabledChannels: []
   })),
-  setName: (i, n) => u(grps => grps[i].name = n || 'Group'),
-  enabledRoles: {
-    add: (i, n) => u(grps => grps[i].enabledRoles.push(n)),
-    del: (i, d) => u(grps => grps[i].enabledRoles = grps[i].enabledRoles.filter((_, i) => i !== d))
-  },
-  disabledRoles: {
-    add: (i, n) => u(grps => grps[i].disabledRoles.push(n)),
-    del: (i, d) => u(grps => grps[i].disabledRoles = grps[i].disabledRoles.filter((_, i) => i !== d))
-  },
-  enabledChannels: {
-    add: (i, n) => u(grps => grps[i].enabledChannels.push(n)),
-    del: (i, d) => u(grps => grps[i].enabledChannels = grps[i].enabledChannels.filter((_, i) => i !== d))
-  },
-  disabledChannels: {
-    add: (i, n) => u(grps => grps[i].disabledChannels.push(n)),
-    del: (i, d) => u(grps => grps[i].disabledChannels = grps[i].disabledChannels.filter((_, i) => i !== d))
-  },
+  group: i => _objectSpread({
+    setName: n => u(grps => grps[i].name = n || 'Group')
+  }, permissionsSelector(u, [i])),
   del: d => u(grps => delete grps[d])
-}))(groupsUpdate);
+}))(groupsUpdate());
 var settingsApi = (u => ({
   prefix: n => u(stgs => stgs.prefix = n),
   setLanguage: n => u(stgs => stgs.language = n),
@@ -98658,9 +97087,9 @@ var settingsApi = (u => ({
     add: n => u(stgs => stgs.admRoles.push(n)),
     del: d => u(stgs => stgs.admRoles = stgs.admRoles.filter((_, i) => i !== d))
   },
-  personalization: {
-    msg_nrchannel: n => u(stgs => stgs.messages.nrchannel = n),
-    msg_nrrole: n => u(stgs => stgs.messages.nrrole = n)
+  toggle: {
+    nopermRole: n => u(stgs => stgs.nopermRole = n),
+    nopermChannel: n => u(stgs => stgs.nopermChannel = n)
   }
 }))(settingsUpdate);
 
@@ -98700,10 +97129,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_login__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/login */ "./src/pages/login.js");
 /* harmony import */ var _hooks_auth_hook__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./hooks/auth.hook */ "./src/hooks/auth.hook.js");
 /* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/modals */ "./src/components/modals.js");
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 
 
 
@@ -98729,14 +97154,6 @@ var Main = () => {
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["useDispatch"])();
   var [cookie] = Object(react_cookie__WEBPACK_IMPORTED_MODULE_8__["useCookies"])(['guild', 'token']);
   var auth = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["useSelector"])(s => s.auth);
-  var authorized = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["useSelector"])(s => s.authorized);
-  var store = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["useStore"])();
-
-  var setCn = n => dispatch({
-    type: 'UPDATE_CNCT',
-    data: n
-  });
-
   var [cookiesAccepted, cookiesAccept] = Object(_hooks_settings_hook__WEBPACK_IMPORTED_MODULE_16__["useSettings"])('cookiesAccepted', false);
   var {
     getUser
@@ -98747,120 +97164,11 @@ var Main = () => {
       data: Object.values(res.data).sort(g => g.bot ? -1 : 1)
     }));
   }, [cookie.account]);
-  var ws = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])();
-
-  var updateGuildState = data => {
-    dispatch({
-      type: 'SAVE_GUILD',
-      data
-    });
-    if (store.getState().guild && Object(lodash__WEBPACK_IMPORTED_MODULE_15__["isEqual"])(store.getState().guild, data)) return;
-    dispatch({
-      type: 'UPDATE_GUILD',
-      data
-    });
-  };
-
-  var connect = function connect() {
-    var {
-      tries = 0
-    } = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-    if (!cookie.guild || !authorized || tries >= 3) return;
-    ws.current && ws.current.disconnect();
-    var io = socket_io_client__WEBPACK_IMPORTED_MODULE_13___default()({
-      path: '/socket/guilds',
-      query: {
-        token: auth.token,
-        user_id: auth.userId
-      }
-    });
-    ws.current = io;
-    io.emit('init', cookie.guild, /*#__PURE__*/function () {
-      var _ref = _asyncToGenerator(function* (res) {
-        if (res.status === 401) {
-          yield Object(_hooks_auth_hook__WEBPACK_IMPORTED_MODULE_18__["refreshToken"])();
-          return connect({
-            tries: tries + 1
-          });
-        }
-
-        console.log(res);
-        res.status === 200 && updateGuildState(res.d);
-        setCn({
-          active: true,
-          sync: false,
-          limited: false
-        });
-      });
-
-      return function (_x) {
-        return _ref.apply(this, arguments);
-      };
-    }());
-    io.on('update/all', res => res.status === 200 && updateGuildState(res.d));
-    io.on('update/saving', () => setCn({
-      sync: true
-    }));
-    io.on('update/ustgs', res => {
-      console.log(res);
-      dispatch({
-        type: 'SAVE_GUILD',
-        data: res
-      });
-      dispatch({
-        type: 'UPDATE_GUILD',
-        data: res
-      });
-      setCn({
-        active: true,
-        sync: false
-      });
-    });
-    io.on('update/server', res => {
-      console.log('UPDATE SERVER', res);
-      dispatch({
-        type: 'SAVE_GUILD',
-        data: {
-          server: res
-        }
-      });
-      dispatch({
-        type: 'UPDATE_GUILD_SERVER',
-        data: res
-      });
-    });
-    io.on('update/stats', res => {
-      dispatch({
-        type: 'SAVE_GUILD',
-        data: {
-          stats: res
-        }
-      });
-      dispatch({
-        type: 'UPDATE_GUILD_STATS',
-        data: res
-      });
-    });
-    io.on('error', () => {
-      _components_notify__WEBPACK_IMPORTED_MODULE_14__["notify"].warn({
-        text: 'Reconnecting'
-      }, 5000);
-      setCn({
-        active: false
-      });
-      connect();
-    });
-  };
-
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
-    connect();
-  }, [cookie.guild, authorized]);
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
     if (!cookiesAccepted) setTimeout(() => _components_notify__WEBPACK_IMPORTED_MODULE_14__["notify"].question({
       text: 'InfinityKit uses cookies, by continuing to browse the site you are agreeing to our use of cookies',
       options: [['ACCEPT', () => cookiesAccept(true)]]
     }), 5000);
-    console.log(cookie);
     if (auth.userId && auth.token) getUser();
     window.addEventListener('storage', e => {
       if (e.key === 'authorized' && e.newValue === 'true') {
@@ -100015,7 +98323,7 @@ var TimeSelect = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["memo"])
     })
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "time-select__dropdown_in with-scroll"
-  }, periods.filter(per => (min === undefined || min <= per[0] * per[1] * per[3]) && (max === undefined || max >= per[3])).map((per, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, periods.map((per, i) => (min === undefined || min <= per[0] * per[1] * per[3]) && (max === undefined || max >= per[3]) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "time-select__dropdown_in__item",
     onClick: () => {
       var pre = val * per[3];
@@ -100026,7 +98334,9 @@ var TimeSelect = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["memo"])
       set(val * per[3]);
     },
     key: i * per[3]
-  }, per[2]))))));
+  }, per[2]) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+    key: i
+  }))))));
 }, lodash__WEBPACK_IMPORTED_MODULE_3__["isEqual"]);
 var CustomTime = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["memo"])((_ref) => {
   var {
@@ -100209,42 +98519,42 @@ var Group = (_ref) => {
     title: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_input__WEBPACK_IMPORTED_MODULE_10__["Input"], {
       className: "groupName",
       value: g.name,
-      set: n => api.setName(i, n),
+      set: api.setName,
       fill: true,
       black: true,
       bold: true
     })
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_objectEdit__WEBPACK_IMPORTED_MODULE_4__["ObjectEdit"], {
     type: "roles",
-    data: g.enabledRoles,
-    add: n => api.enabledRoles.add(i, n),
-    delete: d => api.enabledRoles.del(i, d),
+    data: g.eroles,
+    add: api.eroles.add,
+    delete: api.eroles.del,
     default: "ALL by default",
     label: "Enabled roles",
     m: true,
     noML: true
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_objectEdit__WEBPACK_IMPORTED_MODULE_4__["ObjectEdit"], {
     type: "roles",
-    data: g.disabledRoles,
-    add: n => api.disabledRoles.add(i, n),
-    delete: d => api.disabledRoles.del(i, d),
+    data: g.droles,
+    add: api.droles.add,
+    delete: api.droles.del,
     label: "Disabled roles",
     m: true,
     noML: true
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_objectEdit__WEBPACK_IMPORTED_MODULE_4__["ObjectEdit"], {
     type: "channels",
-    data: g.enabledChannels,
-    add: n => api.enabledChannels.add(i, n),
-    delete: d => api.enabledChannels.del(i, d),
+    data: g.echannels,
+    add: api.echannels.add,
+    delete: api.echannels.del,
     default: "ANY by default",
     label: "Enabled channels",
     m: true,
     noML: true
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_objectEdit__WEBPACK_IMPORTED_MODULE_4__["ObjectEdit"], {
     type: "channels",
-    data: g.disabledChannels,
-    add: n => api.disabledChannels.add(i, n),
-    delete: d => api.disabledChannels.del(i, d),
+    data: g.dchannels,
+    add: api.dchannels.add,
+    delete: api.dchannels.del,
     label: "Disabled roles",
     noML: true
   })));
@@ -100287,7 +98597,7 @@ var Groups = (_ref2) => {
       el: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Group, {
         g: g,
         i: i,
-        api: api,
+        api: api.group(i),
         key: g.id
       })
     })) : [],
@@ -100297,44 +98607,7 @@ var Groups = (_ref2) => {
     },
     add: api.add,
     cpointer: true
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal__WEBPACK_IMPORTED_MODULE_3__["Modal"], {
-    id: "group-settings",
-    className: "ml",
-    s: mState
-  }, edit !== null && edit in state && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_input__WEBPACK_IMPORTED_MODULE_10__["Input"], {
-    className: "groupName",
-    value: state[edit].name,
-    set: n => api.setName(edit, n)
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_objectEdit__WEBPACK_IMPORTED_MODULE_4__["ObjectEdit"], {
-    type: "roles",
-    data: state[edit].enabledRoles,
-    add: n => api.enabledRoles.add(edit, n),
-    delete: d => api.enabledRoles.del(edit, d),
-    default: "ALL by default",
-    label: "Enabled roles",
-    m: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_objectEdit__WEBPACK_IMPORTED_MODULE_4__["ObjectEdit"], {
-    type: "roles",
-    data: state[edit].disabledRoles,
-    add: n => api.disabledRoles.add(edit, n),
-    delete: d => api.disabledRoles.del(edit, d),
-    label: "Disabled roles",
-    m: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_objectEdit__WEBPACK_IMPORTED_MODULE_4__["ObjectEdit"], {
-    type: "channels",
-    data: state[edit].enabledChannels,
-    add: n => api.enabledChannels.add(edit, n),
-    delete: d => api.enabledChannels.del(edit, d),
-    default: "ANY by default",
-    label: "Enabled channels",
-    m: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_objectEdit__WEBPACK_IMPORTED_MODULE_4__["ObjectEdit"], {
-    type: "channels",
-    data: state[edit].disabledChannels,
-    add: n => api.disabledChannels.add(edit, n),
-    delete: d => api.disabledChannels.del(edit, d),
-    label: "Disabled roles"
-  }))));
+  })))));
 };
 
 /***/ }),
@@ -100700,7 +98973,7 @@ var EditableList = props => {
     src: el.img || (!el.fixed ? '/static/img/delete.png' : '')
   }))))), !props.data.length && props.empty && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "editable-list-el-wr"
-  }, props.empty), !props.noAdd && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, props.empty), !props.noAdd && (props.limit === undefined || props.data.length < props.limit) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "add",
     onClick: props.add
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -100738,6 +99011,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var deep_diff__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! deep-diff */ "./node_modules/deep-diff/index.js");
 /* harmony import */ var deep_diff__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(deep_diff__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _input__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./input */ "./src/components/input.js");
+/* harmony import */ var _hooks_settings_hook__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../hooks/settings.hook */ "./src/hooks/settings.hook.js");
+
 
 
 
@@ -100755,20 +99030,30 @@ __webpack_require__.r(__webpack_exports__);
 var CategoryEmoji = props => {
   var scale = 28 / _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].size;
   var startFrom = _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].list[props.cat] ? _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].list[props.cat].startFrom : 0;
-  return _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].list[props.cat] ? _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].list[props.cat].list.map((e, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "category-emoji-el"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      backgroundSize: "".concat(_emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].width * scale, "px ").concat(_emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].height * scale, "px"),
-      backgroundPositionX: (i + startFrom) % _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].row * -_emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].size * scale,
-      backgroundPositionY: Math.floor((i + startFrom) / _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].row) * -_emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].size * scale
-    },
-    onClick: () => props.set({
-      label: e.split(' ')[0],
-      x: i % _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].row,
-      y: Math.floor(i / _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].row)
-    })
-  }))) : '';
+  var [open, setOpen] = Object(_hooks_settings_hook__WEBPACK_IMPORTED_MODULE_11__["useSettings"])('emoji_category_' + props.cat, true, {
+    options: [true, false]
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_expansionPanel__WEBPACK_IMPORTED_MODULE_8__["ExpansionPanel"], {
+    header: props.header,
+    dropdown: _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].list[props.cat] ? _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].list[props.cat].list.map((e, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "category-emoji-el",
+      key: e
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        backgroundSize: "".concat(_emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].width * scale, "px ").concat(_emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].height * scale, "px"),
+        backgroundPositionX: (i + startFrom) % _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].row * -_emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].size * scale,
+        backgroundPositionY: Math.floor((i + startFrom) / _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].row) * -_emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].size * scale
+      },
+      onClick: () => props.set({
+        label: e.split(' ')[0],
+        x: i % _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].row,
+        y: Math.floor(i / _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].row)
+      })
+    }))) : '',
+    onchange: setOpen,
+    open: open,
+    m: true
+  });
 };
 
 var EmojiList = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["memo"])((_ref) => {
@@ -100777,80 +99062,69 @@ var EmojiList = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["memo"])(
     set,
     us
   } = _ref;
+  var [search, setSearch] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  var scale = 28 / _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].size;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, open && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_input__WEBPACK_IMPORTED_MODULE_10__["Input"], {
-    input: n => console.log(n),
+    input: setSearch,
     placeholder: "Search",
     b: true,
     m: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_expansionPanel__WEBPACK_IMPORTED_MODULE_8__["ExpansionPanel"], {
+  }), search ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "emoji-search-list"
+  }, _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].all().map((e, i) => [e, i]).filter(e => e[0].includes(search)).map((_ref2) => {
+    var [e, i] = _ref2;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "emoji-el",
+      key: e
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        backgroundSize: "".concat(_emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].width * scale, "px ").concat(_emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].height * scale, "px"),
+        backgroundPositionX: i % _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].row * -_emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].size * scale,
+        backgroundPositionY: Math.floor(i / _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].row) * -_emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].size * scale
+      },
+      onClick: () => set({
+        label: e.split(' ')[0],
+        x: i % _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].row,
+        y: Math.floor(i / _emojis__WEBPACK_IMPORTED_MODULE_7__["emojis"].row)
+      })
+    }));
+  })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
     header: "People",
-    dropdown: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
-      cat: "people",
-      set: set
-    }),
-    open: true,
-    m: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_expansionPanel__WEBPACK_IMPORTED_MODULE_8__["ExpansionPanel"], {
+    cat: "people",
+    set: set
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
     header: "Nature",
-    dropdown: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
-      cat: "nature",
-      set: set
-    }),
-    open: true,
-    m: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_expansionPanel__WEBPACK_IMPORTED_MODULE_8__["ExpansionPanel"], {
+    cat: "nature",
+    set: set
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
     header: "Food",
-    dropdown: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
-      cat: "food",
-      set: set
-    }),
-    open: true,
-    m: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_expansionPanel__WEBPACK_IMPORTED_MODULE_8__["ExpansionPanel"], {
+    cat: "food",
+    set: set
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
     header: "Activity",
-    dropdown: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
-      cat: "activity",
-      set: set
-    }),
-    open: true,
-    m: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_expansionPanel__WEBPACK_IMPORTED_MODULE_8__["ExpansionPanel"], {
+    cat: "activity",
+    set: set
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
     header: "Travel",
-    dropdown: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
-      cat: "travel",
-      set: set
-    }),
-    open: true,
-    m: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_expansionPanel__WEBPACK_IMPORTED_MODULE_8__["ExpansionPanel"], {
+    cat: "travel",
+    set: set
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
     header: "Objects",
-    dropdown: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
-      cat: "objects",
-      set: set
-    }),
-    open: true,
-    m: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_expansionPanel__WEBPACK_IMPORTED_MODULE_8__["ExpansionPanel"], {
+    cat: "objects",
+    set: set
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
     header: "Symbols",
-    dropdown: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
-      cat: "symbols",
-      set: set
-    }),
-    open: true,
-    m: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_expansionPanel__WEBPACK_IMPORTED_MODULE_8__["ExpansionPanel"], {
+    cat: "symbols",
+    set: set
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
     header: "Flags",
-    dropdown: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CategoryEmoji, {
-      cat: "flags",
-      set: set
-    }),
-    open: true,
-    m: true
-  })));
+    cat: "flags",
+    set: set
+  }))));
 }, (o, n) => o.open === n.open && o.us === n.us && o.set === n.set);
 var Emoji = props => {
   var [mState, mOpen, close] = Object(_hooks_useModal__WEBPACK_IMPORTED_MODULE_6__["useModal"])({
-    width: 50
+    width: 46.5
   });
   var set = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(() => e => {
     props.set(e);
@@ -100928,28 +99202,35 @@ var emojis = {
   get(e) {
     var r = this.all().findIndex(el => el.split(' ').includes(e));
     return r !== -1 ? {
-      label: this.all()[r],
+      label: (this.all()[r] || '').split(' ')[0],
       x: r % this.row,
       y: Math.floor(r / this.row)
     } : null;
   },
 
   getName(uni) {
-    var r = this.categories.map(c => Object.entries(_emojis_json__WEBPACK_IMPORTED_MODULE_0__[c])).flat().find((_ref) => {
-      var [name, str] = _ref;
+    var list = this.categories.map(c => Object.entries(_emojis_json__WEBPACK_IMPORTED_MODULE_0__[c])).flat();
+    var r = list.find((_ref) => {
+      var [str, name] = _ref;
       return str === uni;
+    }) || list.find((_ref2) => {
+      var [str, name] = _ref2;
+      return str.includes(uni);
     });
-    return r ? ":".concat(r[0], ":") : uni;
+    return r ? ":".concat(r[1].split(' ')[0], ":") : uni;
   },
 
   getUnicode(name) {
     var key = name.charAt(0) === ':' ? name.slice(1, -1) : name;
-    var r = this.categories.map(c => Object.entries(_emojis_json__WEBPACK_IMPORTED_MODULE_0__[c])).flat().find((_ref2) => {
-      var [str, uni] = _ref2;
+    var list = this.categories.map(c => Object.entries(_emojis_json__WEBPACK_IMPORTED_MODULE_0__[c])).flat();
+    var r = list.find((_ref3) => {
+      var [uni, str] = _ref3;
       return str === key;
+    }) || list.find((_ref4) => {
+      var [uni, str] = _ref4;
+      return str.includes(key);
     });
-    console.log(key, this.categories.map(c => Object.entries(_emojis_json__WEBPACK_IMPORTED_MODULE_0__[c])).flat());
-    return r ? r[1] : name;
+    return r ? r[0] : name;
   },
 
   list: {
@@ -101528,7 +99809,7 @@ var Input = props => {
       }
     },
     onBlur: e => {
-      if (props.max !== undefined && e.target.value < props.min) e.target.value = props.mix;
+      if (props.min !== undefined && e.target.value < props.min) e.target.value = props.min;
       if (props.max !== undefined && e.target.value > props.max) e.target.value = props.max;
       props.set && props.set(props.type === 'number' ? parseInt(e.target.value) : e.target.value);
       props.clearOnSet && clear();
@@ -102867,12 +101148,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var Row = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["memo"])(props => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
   className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('row', props.className, {
-    m: props.m
+    m: props.m,
+    aic: props.aic
   })
 }, props.elements.map((el, i) => /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["isValidElement"])(el) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
   className: "row__el",
   key: i,
   style: {
+    flex: 1,
     marginRight: i !== props.elements.length && props.margin && Object(_cssVar__WEBPACK_IMPORTED_MODULE_3__["vh"])(props.margin)
   }
 }, el) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -103135,6 +101418,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _colorlist__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./colorlist */ "./src/components/colorlist.js");
 /* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/esm/index.js");
+/* harmony import */ var _row__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./row */ "./src/components/row.js");
+
 
 
 
@@ -103228,12 +101513,16 @@ var Settings = props => {
     m: true
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "personalization category"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_categoryName__WEBPACK_IMPORTED_MODULE_7__["CategoryName"], null, "Personalization"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_switch__WEBPACK_IMPORTED_MODULE_6__["Switch"], {
-    set: api.personalization.msg_nrchannel,
-    m: true
-  }, "MESSAGE: Wrong channel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_switch__WEBPACK_IMPORTED_MODULE_6__["Switch"], {
-    set: api.personalization.msg_nrrole
-  }, "MESSAGE: No rights"))))))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_categoryName__WEBPACK_IMPORTED_MODULE_7__["CategoryName"], null, "Personalization"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_row__WEBPACK_IMPORTED_MODULE_15__["Row"], {
+    elements: [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_switch__WEBPACK_IMPORTED_MODULE_6__["Switch"], {
+      enabled: state.nopermRole,
+      set: api.toggle.nopermRole
+    }, "MESSAGE: No rights"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_switch__WEBPACK_IMPORTED_MODULE_6__["Switch"], {
+      enabled: state.nopermChannel,
+      set: api.toggle.nopermChannel,
+      m: true
+    }, "MESSAGE: Wrong channel")]
+  }))))))));
 };
 
 /***/ }),
@@ -103448,10 +101737,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _emojis__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./emojis */ "./src/components/emojis.js");
-/* harmony import */ var emojis__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! emojis */ "./node_modules/emojis/index.js");
-/* harmony import */ var emojis__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(emojis__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _notify__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./notify */ "./src/components/notify.js");
-
+/* harmony import */ var _notify__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./notify */ "./src/components/notify.js");
 
 
 
@@ -103463,11 +101749,15 @@ var TextArea = props => {
   var [edit, setEdit] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   var ref = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
 
-  var getContent = nodes => {
+  var getContent = function getContent(nodes) {
+    var {
+      md = false
+    } = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     if (!nodes) nodes = ref.current.childNodes;
-    return [...nodes].map(n => {
+    var c = [...nodes].map(n => {
       if (n.nodeType === Node.TEXT_NODE) return n.textContent;else if (n.localName === 'img' && n.dataset.label) return n.dataset.label;else if (n.localName === 'br') return '\n';
-    }).filter(Boolean).join('').replace(/\n$/gm, '');
+    }).filter(Boolean).join('').replace(/\n$/g, '');
+    return md && c.match(/```(.|\s){0,}```/gm) ? c.replace(/:[a-zA-Z0-9_]{1,25}:/g, p => _emojis__WEBPACK_IMPORTED_MODULE_4__["emojis"].getUnicode(p)) : c;
   };
 
   var updateLength = () => setLength(getContent().length);
@@ -103486,12 +101776,13 @@ var TextArea = props => {
         v: void 0
       };
       var e = _emojis__WEBPACK_IMPORTED_MODULE_4__["emojis"].get(m[0]);
+      console.log(e);
       if (!e) return {
         v: void 0
       };
       var range = document.createRange();
-      range.selectNode(target);
-      console.log(n.textContent);
+      range.selectNode(target); //console.log(n.textContent)
+
       range.setStart(n, m.index);
       range.setEnd(n, m.index + m[0].length);
       range.deleteContents();
@@ -103519,12 +101810,11 @@ var TextArea = props => {
       var _ret = _loop();
 
       if (typeof _ret === "object") return _ret.v;
-    } //setLength(getContent().length)
-
+    }
   };
 
   var updateValue = () => {
-    ref.current.innerHTML = props.value ? props.value.split('\n').map(v => v + '<br>').join('') : '';
+    ref.current.innerHTML = (props.value ? props.value.split('\n').map(v => v + '<br>').join('') : '').replace(/(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/g, p => _emojis__WEBPACK_IMPORTED_MODULE_4__["emojis"].getName(p));
     parseEmojis({
       setCursor: false
     });
@@ -103532,7 +101822,7 @@ var TextArea = props => {
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    if (edit) _notify__WEBPACK_IMPORTED_MODULE_6__["notify"].yesno({
+    if (edit) _notify__WEBPACK_IMPORTED_MODULE_5__["notify"].yesno({
       description: 'Editable text has been changed',
       text: 'Update?'
     }, 15000, [updateValue]);else updateValue();
@@ -103553,7 +101843,7 @@ var TextArea = props => {
   }, props.emoji && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_emoji__WEBPACK_IMPORTED_MODULE_1__["Emoji"], {
     set: e => {
       ref.current.focus();
-      document.execCommand('insertText', false, e.label); //parseEmojis()
+      document.execCommand('insertText', false, e.label);
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classnames__WEBPACK_IMPORTED_MODULE_3___default()('ta-limit', {
@@ -103569,8 +101859,9 @@ var TextArea = props => {
     className: "ta-save",
     onClick: () => {
       setEdit(false);
-      props.set(getContent());
-      console.log(getContent());
+      props.set(getContent(null, {
+        md: true
+      }));
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "/static/img/done.png"
@@ -103600,6 +101891,14 @@ var TextArea = props => {
       var div = document.createElement('div');
       div.appendChild(content);
       e.clipboardData.setData('text/plain', getContent(div.childNodes).replace(/:[a-zA-Z0-9_]{1,25}:/g, p => _emojis__WEBPACK_IMPORTED_MODULE_4__["emojis"].getUnicode(p)));
+    },
+    onCut: e => {
+      e.preventDefault();
+      var d = e.clipboardData.getData('text/plain').replace(/(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/g, p => _emojis__WEBPACK_IMPORTED_MODULE_4__["emojis"].getName(p));
+      document.execCommand('insertHTML', false, d);
+      parseEmojis({
+        setCursor: e.clipboardData.getData('text/plain').length <= 2
+      });
     },
     onPaste: e => {
       e.preventDefault();
@@ -103703,7 +102002,7 @@ var config = {
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./customTime.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/customTime.scss");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./customTime.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/customTime.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -103732,7 +102031,7 @@ module.exports = content.locals || {};
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./dropdownlist.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/dropdownlist.scss");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./dropdownlist.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/dropdownlist.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -103761,7 +102060,7 @@ module.exports = content.locals || {};
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./editableList.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/editableList.scss");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./editableList.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/editableList.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -103790,7 +102089,7 @@ module.exports = content.locals || {};
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./graph.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/graph.scss");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./graph.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/graph.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -103819,7 +102118,7 @@ module.exports = content.locals || {};
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./header.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/header.scss");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./header.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/header.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -103848,7 +102147,7 @@ module.exports = content.locals || {};
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./init.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/init.scss");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./init.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/init.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -103877,7 +102176,7 @@ module.exports = content.locals || {};
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./main.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/main.scss");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./main.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/main.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -103906,7 +102205,7 @@ module.exports = content.locals || {};
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./modals.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/modals.scss");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./modals.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/modals.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -103935,7 +102234,7 @@ module.exports = content.locals || {};
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./multiSwitch.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/multiSwitch.scss");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./multiSwitch.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/multiSwitch.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -103964,7 +102263,7 @@ module.exports = content.locals || {};
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./notifications.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/notifications.scss");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./notifications.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/notifications.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -103993,7 +102292,7 @@ module.exports = content.locals || {};
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./plugins.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/plugins.scss");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./plugins.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/plugins.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -104022,7 +102321,7 @@ module.exports = content.locals || {};
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./settings.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/settings.scss");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./settings.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/settings.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -104051,7 +102350,7 @@ module.exports = content.locals || {};
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./side.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=rjhwwsqcske!./src/css/side.scss");
+            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!../../node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./side.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/string-replace-webpack-plugin/loader.js?id=kb22ttmd4s!./src/css/side.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -104156,7 +102455,6 @@ var getGuilds = /*#__PURE__*/function () {
       },
       validateStatus: () => true
     });
-    console.log(r);
     if (r.status === 200) _store__WEBPACK_IMPORTED_MODULE_2__["store"].dispatch({
       type: 'UPDATE_GUILDS',
       data: r.data
@@ -104650,11 +102948,15 @@ var en = {
   plugindesc_music: 'Control high quality music right from the app',
   plugindesc_poll: 'Finally, decide what to play',
   plugindesc_userRooms: 'User-configurable channels',
+  cmddesc_rank: 'Your rank card or another member',
+  cmddesc_addxp: 'Adds XP to you or another member',
   cmddesc_clear: 'Delete channel messages',
   cmddesc_warn: 'Warns a user',
   cmddesc_mute: 'Mutes a user',
-  cmddesc_tempmute: 'Temperary mutes a user',
   cmddesc_unmute: 'Delete user mutes',
+  cmddesc_kick: 'Kicks a user',
+  cmddesc_ban: 'Bans a user',
+  cmddesc_unban: 'Unbans a user',
   commands: {
     moderation: {
       mute: {
@@ -104710,11 +103012,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _hooks_settings_hook__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../hooks/settings.hook */ "./src/hooks/settings.hook.js");
 /* harmony import */ var _components_dashboard_connetionState__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/dashboard/connetionState */ "./src/components/dashboard/connetionState.js");
 /* harmony import */ var _components_dashboard_side__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../components/dashboard/side */ "./src/components/dashboard/side.js");
+/* harmony import */ var react_cookie__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! react-cookie */ "./node_modules/react-cookie/es6/index.js");
+/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! socket.io-client */ "./node_modules/socket.io-client/lib/index.js");
+/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(socket_io_client__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var _hooks_auth_hook__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../hooks/auth.hook */ "./src/hooks/auth.hook.js");
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
 
 
 
@@ -104884,17 +103197,136 @@ var ReviewType2 = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["memo"]
 });
 var Dashboard = props => {
   var location = Object(react_router__WEBPACK_IMPORTED_MODULE_1__["useLocation"])();
+  var [cookie] = Object(react_cookie__WEBPACK_IMPORTED_MODULE_21__["useCookies"])(['guild', 'token']);
   var state = Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["useSelector"])(s => s.guild);
-  var cnct = props.cn;
+  var authorized = Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["useSelector"])(s => s.authorized);
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["useDispatch"])();
   var [statsVisible, setStatsVisible] = Object(_hooks_settings_hook__WEBPACK_IMPORTED_MODULE_18__["useSettings"])('stats_visible', true);
+  var ws = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  var store = Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["useStore"])();
+
+  var setCn = n => dispatch({
+    type: 'UPDATE_CNCT',
+    data: n
+  });
+
+  var updateGuildState = data => {
+    dispatch({
+      type: 'SAVE_GUILD',
+      data
+    });
+    if (store.getState().guild && isEqual(store.getState().guild, data)) return;
+    dispatch({
+      type: 'UPDATE_GUILD',
+      data
+    });
+  };
+
+  var connect = function connect(guild, authorized) {
+    var {
+      tries = 0
+    } = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    if (!guild || !authorized || tries >= 3) return;
+    dispatch({
+      type: 'CLEAR_GUILD'
+    });
+    ws.current && ws.current.disconnect();
+    var auth = store.getState().auth;
+    var io = socket_io_client__WEBPACK_IMPORTED_MODULE_22___default()({
+      path: '/socket/guilds',
+      query: {
+        token: auth.token,
+        user_id: auth.userId
+      }
+    });
+    ws.current = io;
+    io.emit('init', guild, /*#__PURE__*/function () {
+      var _ref2 = _asyncToGenerator(function* (res) {
+        if (res.status === 401) {
+          yield Object(_hooks_auth_hook__WEBPACK_IMPORTED_MODULE_23__["refreshToken"])();
+          return connect(guild, authorized, {
+            tries: tries + 1
+          });
+        }
+
+        res.status === 200 && updateGuildState(res.d);
+        setCn({
+          active: true,
+          sync: false,
+          limited: false
+        });
+      });
+
+      return function (_x) {
+        return _ref2.apply(this, arguments);
+      };
+    }());
+    io.on('update/all', res => res.status === 200 && updateGuildState(res.d));
+    io.on('update/saving', () => setCn({
+      sync: true
+    }));
+    io.on('update/ustgs', res => {
+      console.log('GUILD UPDATE', res);
+      dispatch({
+        type: 'SAVE_GUILD',
+        data: res
+      });
+      dispatch({
+        type: 'UPDATE_GUILD',
+        data: res
+      });
+      setCn({
+        active: true,
+        sync: false
+      });
+    });
+    io.on('update/server', res => {
+      console.log('UPDATE SERVER', res);
+      dispatch({
+        type: 'SAVE_GUILD',
+        data: {
+          server: res
+        }
+      });
+      dispatch({
+        type: 'UPDATE_GUILD_SERVER',
+        data: res
+      });
+    });
+    io.on('update/stats', res => {
+      dispatch({
+        type: 'SAVE_GUILD',
+        data: {
+          stats: res
+        }
+      });
+      dispatch({
+        type: 'UPDATE_GUILD_STATS',
+        data: res
+      });
+    });
+    io.on('error', () => {
+      notify.warn({
+        text: 'Reconnecting'
+      }, 5000);
+      setCn({
+        active: false
+      });
+      connect();
+    });
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    connect(cookie.guild, authorized);
+  }, [cookie.guild, authorized]);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     if (location.pathname === props.path) document.title = "".concat(props.demo ? 'Demo' : 'Dashboard', " - InfinityKit");
   }, [location]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "plugins",
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('page')
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, state && Object.entries(state.plugins).map((_ref2, i) => {
-    var [pluginName, plugin] = _ref2;
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, state && Object.entries(state.plugins).map((_ref3, i) => {
+    var [pluginName, plugin] = _ref3;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Plugin, {
       title: pluginName,
       state: plugin,
@@ -105282,15 +103714,34 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-var Alert = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["memo"])((_ref) => {
+
+var MsgTips = (_ref) => {
+  var {
+    tips,
+    add
+  } = _ref;
+  return tips.map((_ref2, i) => {
+    var [text, description] = _ref2;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "tip",
+      onClick: () => add("[".concat(text, "]")),
+      key: i
+    }, "[", text, "]", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "tip__description"
+    }, "\xA0- ", description));
+  });
+};
+
+var Alert = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["memo"])((_ref3) => {
   var {
     d,
     api,
     i
-  } = _ref;
+  } = _ref3;
   var [searchResults, setResults] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
   var twitchChannel = Object(react_redux__WEBPACK_IMPORTED_MODULE_9__["useSelector"])(s => s.channels.twitch[d.sub]);
   var inputVal = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  var inputAdd = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
   var [search, cancelSearch] = Object(_hooks_useDelayedRequest__WEBPACK_IMPORTED_MODULE_5__["useDelayedRequest"])((input, data) => input.params.query === inputVal.current && setResults(data), 400);
   var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_9__["useDispatch"])();
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
@@ -105365,13 +103816,18 @@ var Alert = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["memo"])((_re
     placeholder: "Message",
     set: n => api.setMsgContent(i, n),
     emoji: true
-  }));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "msg-tips"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MsgTips, {
+    tips: [['name', 'Streamer name'], ['link', 'Link to stream']],
+    add: n => api.setMsgContent(i, d.msg.content.concat(n))
+  })));
 }, lodash__WEBPACK_IMPORTED_MODULE_6__["isEqual"]);
-var Alerts = (_ref3) => {
+var Alerts = (_ref5) => {
   var {
     state,
     api
-  } = _ref3;
+  } = _ref5;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_editableList__WEBPACK_IMPORTED_MODULE_1__["EditableList"], {
     data: state.d.map((al, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Alert, {
       d: al,
@@ -105448,7 +103904,7 @@ var AutomodItem = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["memo"]
         selected: {
           o: state.warns
         },
-        set: api.setWarns,
+        set: n => api.setWarns(n.o),
         options: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         m: true
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_customTime__WEBPACK_IMPORTED_MODULE_2__["CustomTime"], {
@@ -105523,6 +103979,64 @@ var Automod = props => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "filters category"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_categoryName__WEBPACK_IMPORTED_MODULE_1__["CategoryName"], null, "Filters"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AutomodItem, {
+    label: "Spam",
+    state: state.filters.spam,
+    api: api.filters.spam,
+    trigger: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_row__WEBPACK_IMPORTED_MODULE_10__["Row"], {
+      elements: [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_input__WEBPACK_IMPORTED_MODULE_6__["Input"], {
+        value: state.filters.spam.messages,
+        set: api.filters.spam.setMessages,
+        type: "number",
+        min: 2,
+        b: true
+      }), {
+        width: null,
+        el: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_label__WEBPACK_IMPORTED_MODULE_7__["Label"], {
+          nm: true
+        }, "messages per")
+      }, {
+        width: 2,
+        el: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_customTime__WEBPACK_IMPORTED_MODULE_2__["CustomTime"], {
+          value: state.filters.spam.reset,
+          set: api.filters.spam.setResetTime,
+          min: 10000,
+          b: true,
+          defsize: true
+        })
+      }],
+      aic: true,
+      m: true
+    }))
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AutomodItem, {
+    label: "Repeated messages",
+    state: state.filters.repeatedMessages,
+    api: api.filters.repeatedMessages,
+    trigger: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_row__WEBPACK_IMPORTED_MODULE_10__["Row"], {
+      elements: [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_input__WEBPACK_IMPORTED_MODULE_6__["Input"], {
+        value: state.filters.repeatedMessages.messages,
+        set: api.filters.repeatedMessages.setMessages,
+        type: "number",
+        min: 2,
+        b: true
+      }), {
+        width: null,
+        el: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_label__WEBPACK_IMPORTED_MODULE_7__["Label"], {
+          nm: true
+        }, "repeated messages per")
+      }, {
+        width: 2,
+        el: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_customTime__WEBPACK_IMPORTED_MODULE_2__["CustomTime"], {
+          value: state.filters.repeatedMessages.reset,
+          set: api.filters.repeatedMessages.setResetTime,
+          min: 10000,
+          b: true,
+          defsize: true
+        })
+      }],
+      aic: true,
+      m: true
+    }))
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AutomodItem, {
     label: "Caps",
     state: state.filters.caps,
     api: api.filters.caps,
@@ -105549,7 +104063,7 @@ var Automod = props => {
     trigger: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_slider__WEBPACK_IMPORTED_MODULE_12__["Slider"], {
       label: "EMOJI %",
       value: state.filters.emoji.threshold,
-      set: () => {},
+      set: api.filters.emoji.setThreshold,
       keyPoints: 10,
       min: 0.5,
       max: 1
@@ -105558,22 +104072,7 @@ var Automod = props => {
     label: "Links",
     state: state.filters.links,
     api: api.filters.links,
-    trigger: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_row__WEBPACK_IMPORTED_MODULE_10__["Row"], {
-      elements: [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_input__WEBPACK_IMPORTED_MODULE_6__["Input"], {
-        value: state.filters.links.messages,
-        set: api.filters.spam.setMessages,
-        label: "Repeats",
-        type: "number",
-        b: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_customTime__WEBPACK_IMPORTED_MODULE_2__["CustomTime"], {
-        value: state.filters.links.reset,
-        set: api.filters.spam.setResetTime,
-        label: "Reset time",
-        b: true,
-        defsize: true
-      })],
-      m: true
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_objectEdit__WEBPACK_IMPORTED_MODULE_9__["ObjectEdit"], {
+    trigger: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_objectEdit__WEBPACK_IMPORTED_MODULE_9__["ObjectEdit"], {
       label: "Allowed domains",
       type: "aliases",
       data: ['youtube.com'].map(a => ({
@@ -105591,7 +104090,7 @@ var Automod = props => {
     trigger: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_slider__WEBPACK_IMPORTED_MODULE_12__["Slider"], {
       label: "Threshold",
       value: state.filters.zalgo.threshold,
-      set: () => {},
+      set: api.filters.zalgo.setThreshold,
       keyPoints: 10,
       min: 0.5,
       max: 1
@@ -105696,6 +104195,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_generateId__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/generateId */ "./src/utils/generateId.js");
 /* harmony import */ var _hooks_useGuild__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../hooks/useGuild */ "./src/hooks/useGuild.js");
 /* harmony import */ var _components_input__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/input */ "./src/components/input.js");
+/* harmony import */ var _components_notify__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/notify */ "./src/components/notify.js");
+
 
 
 
@@ -105772,15 +104273,18 @@ var Counters = props => {
         className: "msg-tips"
       }, c.type === 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MsgTips, {
         tips: [['members', 'Member count'], ['members_online', 'Number of a members online (without bots)'], ['members_offline', 'Number of a members offline (without bots)'], ['bots', 'Bot count'], ['channels', 'Channel count']],
-        add: n => inputAdd.current && inputAdd.current(n)
+        add: n => api.setName(i, c.name.concat(n))
       })), c.type === 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MsgTips, {
         tips: [['role_name', 'Role name'], ['role_amount', 'Number of members who have a role']],
-        add: n => inputAdd.current && inputAdd.current(n)
+        add: n => api.setName(i, c.name.concat(n))
       }))));
     }),
     addLabel: "Add counter",
     add: api.create,
-    delete: api.del,
+    delete: d => _components_notify__WEBPACK_IMPORTED_MODULE_8__["notify"].question({
+      description: 'Delete channel?',
+      options: [['Yes', () => api.del(d, true)], ['No', () => api.del(d, false)], ['Cancel']]
+    }),
     column: true,
     p: 1
   }));
@@ -106598,6 +105102,8 @@ var reactionRoles = props => {
         add: n => api.addRole(i, ii, n),
         delete: d => api.delRole(i, ii, d)
       }))),
+      label: "Reacts",
+      limit: 20,
       addLabel: "Add react",
       add: () => api.addReact(i),
       delete: d => api.delReact(i, d),
@@ -106821,6 +105327,12 @@ function todos() {
     case 'SAVE_GUILD':
       return _objectSpread(_objectSpread({}, state), {}, {
         guildPrev: _objectSpread(_objectSpread({}, state.guild || {}), action.data)
+      });
+
+    case 'CLEAR_GUILD':
+      return _objectSpread(_objectSpread({}, state), {}, {
+        guild: null,
+        guildPrev: null
       });
 
     case 'UPDATE_PLUGIN':

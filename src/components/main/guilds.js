@@ -8,7 +8,6 @@ import { Scroll } from '../scroll'
 import { useScroll } from '../../hooks/scroll.hook'
 import socketIOClient from 'socket.io-client'
 import { useHistory } from 'react-router'
-import { config } from '../../config'
 
 export const Guilds = memo(() => {
   const guilds = useSelector(s => s.guilds)
@@ -21,7 +20,7 @@ export const Guilds = memo(() => {
   const addGuild = id => {
     ioRef.current && ioRef.current.disconnect()
     const w = window.open(
-      `https://discord.com/oauth2/authorize?client_id=${config.clientId}&scope=bot&permissions=8&redirect_uri=${config.url}joinGuild&guild_id=${id}`,
+      `https://discord.com/oauth2/authorize?client_id=${SERVER_CONFIG.clientId}&scope=bot&permissions=8&redirect_uri=${SERVER_CONFIG.url}joinGuild&guild_id=${id}`,
       'Add guild',
       `width=500,height=800,top=${window.top.outerHeight / 2 + window.top.screenY - (800 / 2)},left=${window.top.outerWidth / 2 + window.top.screenX - (500 / 2)}`)
     const io = socketIOClient({path: '/socket/awaitForJoin'})
@@ -36,7 +35,7 @@ export const Guilds = memo(() => {
   }
   const login = () => {
     window.open(
-      `https://discord.com/api/oauth2/authorize?client_id=${config.clientId}&redirect_uri=${config.url}login&response_type=code&scope=identify%20email%20guilds`,
+      `https://discord.com/api/oauth2/authorize?client_id=${SERVER_CONFIG.clientId}&redirect_uri=${SERVER_CONFIG.url}login&response_type=code&scope=identify%20email%20guilds`,
       'InfKit - Login',
       `width=500,height=800,top=${window.top.outerHeight / 2 + window.top.screenY - (800 / 2)},left=${window.top.outerWidth / 2 + window.top.screenX - (500 / 2)}`)
   }
