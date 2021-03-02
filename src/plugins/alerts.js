@@ -34,7 +34,7 @@ const Alert = memo(({d, api, i}) => {
     })()
   }, [d.sub])
   return <Fragment key={d.id}>
-    {!d.sub && <Select type="options" selected={d.platform} options={['twitch']} dropdown={['Twitch']} set={n => api.setPlatform(i, n)} m />}
+    {/*!d.sub && <Select type="options" selected={d.platform} options={['twitch']} dropdown={['Twitch']} set={n => api.setPlatform(i, n)} m />*/}
     {d.sub
       ? <User img={twitchChannel ? twitchChannel.profile_image_url : '/static/img/loading.gif'} name={twitchChannel && twitchChannel.display_name} bg={!!twitchChannel} m />
       : <Input placeholder="Search" ddset={n => api.setSub(i, searchResults[n].id)} dropdown={searchResults ? searchResults.map(r => <>
@@ -44,7 +44,7 @@ const Alert = memo(({d, api, i}) => {
           inputVal.current = n
           setResults([])
           search({url: '/api/v1/twitch-channels', params: {query: n}})
-        }} dropdownVisible={searchResults.length} m b />}
+        }} dropdownVisible={true} defsize p m b />}
     <Select type="text" selected={d.channelId} set={n => api.setChannelId(i, n)} add={[{id: null, name: 'Select channel'}]} m />
     <TextArea value={d.msg.content} placeholder="Message" set={n => api.setMsgContent(i, n)} emoji />
     <div className="msg-tips">

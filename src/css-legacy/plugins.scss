@@ -1,0 +1,335 @@
+@import './colorlist.scss';
+
+.page#plugins {
+  width: 100%;
+  max-width: 2250px;
+  position: relative;
+  margin: 0 auto;
+  height: calc(100% - 5vh);
+  justify-content: space-between;
+  padding: 0 1vh;
+  > main {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    > .plugins-list-page {
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      padding-top: 1vh;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: 0.2s opacity, 0.2s visibility;
+      &.visible {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: initial;
+        transition: 0.2s opacity, 0.2s visibility;
+      }
+      > .plugins-list-wr {
+        width: 100%;
+        height: 100%;
+        > .scroll-wr {
+          margin-left: 0.5vh;
+        }
+      }
+    }
+  }
+}
+
+.plugins-list {
+  flex: 1;
+  flex-direction: column;
+  > .demo-alert {
+    width: 100%;
+    height: 5vh;
+    align-items: center;
+    background: $dmain;
+    margin-bottom: 2vh;
+    &::before {
+      content: "";
+      display: flex;
+      width: 0.5vh;
+      height: 100%;
+      margin-right: 2vh;
+      background: rgb(141, 189, 51);
+    }
+  }
+  > .stats {
+    width: 100%;
+    height: 16vh;
+    margin-bottom: 2vh;
+    > .stat {
+      width: calc(100% / 3 - 1vh / 3 * 2);
+      background: $dmain;
+      flex-direction: column;
+      &:not(:last-child) {
+        margin-right: 1vh;
+      }
+      > .stat-header {
+        width: 100%;
+        height: 4vh;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        > .stat-name {
+          padding: 0 1vh;
+        }
+        > .select {
+          width: 25%;
+        }
+      }
+      > .graph {
+        flex: 1;
+        margin: 1vh;
+      }
+    }
+  }
+  > .settings-buttons {
+    margin-bottom: 3vh;
+  }
+  .preview_type2 {
+    height: 4vh;
+    align-items: center;
+    position: relative;
+    background: $dmain;
+    //border-top: 0.2vh solid $grey;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+      > .border {
+        height: 100%;
+      }
+      > .preview_type2__d {
+        color: $black;
+        > .preview_type2__d__img {
+          filter: invert(1);
+        }
+      }
+    }
+    > .border {
+      width: 100%;
+      height: 0.2vh;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: $grey;
+      transition: 0.2s;
+    }
+    &__d {
+      width: 100%;
+      height: 100%;
+      padding: 0 2vh;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      align-items: center;
+      font-family: 'bold';
+      font-size: 1.8vh;
+      transition: 0.2s;
+      &__img {
+        margin-right: 1vh;
+        height: 1.8vh;
+        transition: 0.2s;
+      }
+    }
+    &__color {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: $grey;
+      opacity: 0;
+      transition: 0.5s opacity;
+    }
+  }
+}
+
+.plugin-page {
+  width: 100%;
+  height: calc(100% - 5vh);
+  position: absolute;
+  flex-direction: column;
+  padding-top: 1vh;
+  pointer-events: none;
+}
+
+#plugin-music {
+  > .control {
+    > .np {
+      > .thumbnail {
+        height: 15vh;
+        width: calc((var(--vh) * var(--sc) * 15) / 9 * 16);
+        background: rgba($black, 0.5);
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      > .np-d {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 4vh;
+        > .np-nothing {
+          font-size: 2.2vh;
+          color: $grey;
+        }
+        > .np-title {
+          font-size: 2.2vh;
+          font-family: 'Bold';
+          margin-bottom: 0.5vh;
+        }
+        > .np-author {
+          margin-top: 1vh;
+          color: $grey;
+        }
+        > .np-views {
+          margin-top: 0.5vh;
+          color: $grey;
+        }
+      }
+    }
+    > .control-panel {
+      flex-direction: column;
+      margin-bottom: 1vh;
+      > .control-1 {
+        height: 4vh;
+        margin: 1vh 0;
+        > * {
+          position: relative;
+          flex: 1;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          &:hover {
+            > .border {
+              height: 0.3vh;
+              background: $white;
+            }
+            > img {
+              opacity: 1;
+            }
+          }
+          > img {
+            height: 50%;
+            opacity: 0.5;
+            filter: invert(1);
+          }
+          > .border {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0.2vh;
+            bottom: 0;
+            background: $grey;
+          }
+        }
+      }
+    }
+    > .queue-wr {
+      max-height: 29vh;
+      > .queue {
+        flex: 1;
+        flex-direction: column;
+        > .queue-song {
+          width: 100%;
+          height: 4vh;
+          background: $dmain;
+          &:not(:last-child) {
+            margin-bottom: 1vh;
+          }
+          > .q-d {
+            flex: 1;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2vh;
+          }
+          > .q-delete {
+            width: 4vh;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            &:hover {
+              background: $red;
+              > img {
+                opacity: 1;
+              }
+            }
+            > img {
+              height: 40%;
+              opacity: 0.5;
+              filter: invert(1);
+            }
+          }
+        }
+        > .queue-nothing {
+          height: 4vh;
+          align-items: center;
+          padding: 0 2vh;
+          background: $dmain;
+        }
+      }
+    }
+  }
+}
+
+#plugin-alerts {
+  > .input-list {
+    > .input-list-el > .al {
+      flex: 1;
+      flex-direction: column;
+      padding: 1vh;
+      > * {
+        margin-bottom: 1vh;
+      }
+      > input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.disabled {
+  opacity: 0.25;
+  cursor: default;
+  pointer-events: none;
+}
+
+.msg-tips {
+  flex-wrap: wrap;
+  > .tip {
+    background: rgba($grey, 0.2);
+    padding: 0.5vh 1vh;
+    margin-right: 1vh;
+    margin-bottom: 1vh;
+    cursor: pointer;
+    &:hover {
+      background: rgba($grey, 0.4);
+    }
+  }
+}
+
+textarea {
+  width: 0;
+  height: 0;
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  resize: none;
+  background: $main;
+  line-height: 2vh;
+}
+
+@keyframes cync-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

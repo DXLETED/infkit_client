@@ -86,7 +86,7 @@ export const Select = memo(props => {
     return i
   }
   return (
-    <div className={cn('select-wr', props.className, {m: props.m, mr: props.mr, flex: props.flex})} style={{width: props.width && vh(props.width)}}>
+    <div className={cn('select-wr', props.className, {m: props.m, mr: props.mr, flex: props.flex, requirederr: props.required && !props.selected})} style={{width: props.width && vh(props.width)}}>
       <MLabel d={props.label} />
       <div className="select" ref={ref}>
     <div className="select-label-wr" onClick={() => setOpen(!open)}><div className="select-label">{props.prefix}{name(props.selected)}{props.ending}</div><div className="arrow"><img src={open ? '/static/img/arrow/top.png' : '/static/img/arrow/bottom.png'} /></div></div>

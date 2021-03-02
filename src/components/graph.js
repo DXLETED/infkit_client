@@ -3,6 +3,7 @@ import classnames from 'classnames'
 import { convertHexToRGBA } from '../utils/convertHexToRGBA'
 import { colors } from './colorlist'
 import Color from 'color'
+import { Tip } from './Tip'
 
 export const Graph = props => {
   let dataset = props.dataset
@@ -88,7 +89,9 @@ export const Graph = props => {
         </div>
       }
       {highlight && <div className="highlight" style={{width: labels ? `calc(100% - ${labelsWidth})` : '100%'}}>
-        {dataset.map((d, i) => <div className="chunk" key={i}></div>)}
+        {dataset.map((d, i) => <div className="chunk" key={i}>
+          {props.tips?.[i]}
+        </div>)}
       </div>}
       {props.alert && <div className="graph__alert">{props.alert}</div>}
     </div>

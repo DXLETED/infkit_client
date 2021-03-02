@@ -18,10 +18,14 @@ import { isEqual } from 'lodash'
 import { CustomTime } from './customTime'
 import { config } from '../config'
 import { Container } from './container'
+import { Enabled } from './enabled'
+
+import st from './Command.sass'
+import { Category } from './Category'
 
 export const Command = memo(props => {
   const { state, api } = props
-  const [mState, mOpen, close] = useModal({fixed: true, fullScreen: true})
+  const [mState, mOpen] = useModal({fixed: true, fullScreen: true})
   const getRole = useGuild.roles().get
   const getChannel = useGuild.channels().get
   const getGroup = useGuild.groups().get
@@ -33,48 +37,42 @@ export const Command = memo(props => {
     state.groups && state.groups.length ? state.groups.length === 1 ? ['groups', getGroup(state.groups[0]).name, 4] : ['groups', state.groups.length, 4] : ['nogroups', null]
   ].filter(Boolean)
   return (
-    <div className={cn('command', {enabled: state.enabled})}>
-      <div className="cmd-border"></div>
-      <div className="cmd-d">
-        <div className="cmd-label">{`${props.prefix}${props.label}`}</div>
-        <div className="cmd-desc">{l('cmddesc_' + props.label)}</div>
+    <div className={cn(st.command, {enabled: state.enabled})}>
+      <div className={st.border}></div>
+      <div className={st.d}>
+        <div className={st.label}>{`${props.prefix}${props.label}`}</div>
+        <div className={st.desc}>{l('cmddesc_' + props.label)}</div>
       </div>
-      <div className="cmd-options">
-        {options.map(([k, o, priority = 2]) => <div className="cmd-state cd" key={k}><img src={`/static/img/cmd-options/${k}.png`} style={{opacity: o ? 1 : 0.5}} />{o && priority >= options.length && <div className="cmd-state__val">{o}</div>}</div>)}
-        <Switch className="cmd-enabled" enabled={state.enabled} set={api.enabled.toggle}>{state.enabled ? 'Enabled' : 'Disabled'}</Switch>
-        <div className="cmd-settings ml" onClick={mOpen}><img src="/static/img/settings.png" /></div>
-        <Modal className="cmd-settings" s={mState} title={`${props.prefix}${props.label}`}>
+      <div className={st.options}>
+        {options.map(([k, o, priority = 2]) => <div className={st.state} onClick={mOpen} key={k}><img src={`/static/img/cmd-options/${k}.png`} style={{opacity: o ? 1 : 0.5}} />{o && priority >= options.length && <div className={st.val}>{o}</div>}</div>)}
+        <Enabled state={state.enabled} set={api.enabled.toggle} />
+        <Modal className={st.settings} s={mState} title={`${props.prefix}${props.label}`} column>
           <ModalLabel type="Aliases" m>
-            <ObjectEdit type="aliases" data={(state.aliases || []).map(a => ({name: a}))}
+            <ObjectEdit type="aliases" data={state.aliases}
               add={api.aliases.add}
-              delete={api.aliases.del} input />
+              delete={api.aliases.del} right input />
           </ModalLabel>
           <ModalLabel type="Enabled roles" m>
             <ObjectEdit type="roles" data={state.eroles}
               add={api.eroles.add}
               delete={api.eroles.del}
-              default="ALL by default" />
+              default="ALL by default" right flex />
           </ModalLabel>
-          <ModalLabel type="Disabled roles" m>
+          <ModalLabel type="Disabled roles" disabled={!!state.eroles} m>
             <ObjectEdit type="roles" data={state.droles}
               add={api.droles.add}
-              delete={api.droles.del} />
+              delete={api.droles.del} right flex />
           </ModalLabel>
           <ModalLabel type="Enabled channels" m>
             <ObjectEdit type="channels" data={state.echannels}
               add={api.echannels.add}
               delete={api.echannels.del}
-              default="ANY by default" />
+              default="ANY by default" right flex />
           </ModalLabel>
-          <ModalLabel type="Disabled channels" m>
+          <ModalLabel type="Disabled channels" disabled={!!state.echannels} m>
             <ObjectEdit type="channels" data={state.dchannels}
               add={api.dchannels.add}
-              delete={api.dchannels.del} />
-          </ModalLabel>
-          <ModalLabel type="Groups" m>
-            <ObjectEdit type="groups" data={state.groups}
-              add={api.groups.add}
-              delete={api.groups.del} />
+              delete={api.dchannels.del} right flex />
           </ModalLabel>
           {state.defaultAction && state.defaultAction.reason && <>
             <ModalLabel type="Action if reason isn't specified" m>
@@ -130,7 +128,11 @@ export const Command = memo(props => {
 }, isEqual)
 
 export const CommandsList = memo(props => {
-  return Object.entries(props.cmds).filter(([cmdName]) => props.api[cmdName]).map(([commandName, command], i) =>
-    <Command prefix={props.prefix} title={commandName} state={command} api={props.api[commandName]} key={i} label={commandName} />
-  )
+  return <Category title="Commands">
+    <div className={st.commands}>
+      {Object.entries(props.cmds).filter(([cmdName]) => props.api[cmdName]).map(([commandName, command], i) =>
+        <Command prefix={props.prefix} title={commandName} state={command} api={props.api[commandName]} key={i} label={commandName} />
+      )}
+    </div>
+  </Category>
 }, isEqual)

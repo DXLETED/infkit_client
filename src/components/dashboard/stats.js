@@ -3,7 +3,8 @@ import { Select } from '../select'
 import { Graph } from '../graph'
 import { useSettings } from '../../hooks/settings.hook'
 import { isEqual } from 'lodash'
-import Color from 'color'
+import moment from 'moment'
+import { Tip } from '../Tip'
 
 const periods = [300000, 3600000, 86400000]
 
@@ -16,6 +17,14 @@ const StatsItem = memo(({title, state, color, k}) => {
       color={color}
       margin={0}
       alert={state[period].find(el => el !== undefined) === undefined && 'Not enough data'}
+      tips={state[period].map((d, i) => <Tip column>
+        {d === undefined
+          ? 'NO DATA'
+          : <>
+            <div>{moment(Math.floor(Date.now() / periods[period] - (state[period].length - i)) * periods[period]).format('HH:mm')} - {moment(Math.floor(Date.now() / periods[period] - (state[period].length - i - 1)) * periods[period]).format('HH:mm')}</div>
+            <div>{d} messages</div>
+          </>}
+      </Tip>)}
       min={0} />
   </div>
 })

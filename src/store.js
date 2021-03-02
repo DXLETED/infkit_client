@@ -8,6 +8,10 @@ const initialState = {
   ntfs: [],
   cnct: {active: false, sync: false, limited: false},
   modals: [],
+  menus: [],
+  members: [],
+  membersCache: {},
+  membersLoaded: false,
   channels: {
     twitch: {}
   }
@@ -45,6 +49,14 @@ function todos(state = {}, action) {
       return {...state, guild: {...state.guild, settings: action.data}}
     case 'UPDATE_CNCT':
       return {...state, cnct: {...state.cnct, ...action.data}}
+    case 'SET_MEMBERS':
+      return {...state, members: action.data}
+    case 'SET_MEMBERS_LOADED':
+      return {...state, membersLoaded: action.data}
+    case 'UPDATE_MEMBERS_CACHE':
+      return {...state, membersCache: {...state.membersCache, ...action.data}}
+    case 'UPDATE_MEMBERS':
+      return {...state, guild: {...state.guild, members: action.data}}
     case 'SET':
       return {...state, ...action.data}
     case 'NEW_NOTIFY':
@@ -55,12 +67,16 @@ function todos(state = {}, action) {
       return {...state, settings: {...state.settings, [action.key]: action.data}}
     case 'SET_CHANNEL_TWITCH':
       return {...state, channels: {...state.channels, twitch: {...state.channels.twitch, [action.id]: action.data}}}
+    case 'MENU_OPEN':
+      return {...state, menus: {...state.menus, [action.data]: true}}
+    case 'MENU_CLOSE':
+      return {...state, menus: {...state.menus, [action.data]: false}}
     default:
       return state
   }
 }
 
-const store = createStore(todos, initialState)
+const store = createStore(todos, initialState, window.__REDUX_DEVTOOLS_EXTENSION__?.())
 
 storeSync(store, ['settings', 'auth'])
 

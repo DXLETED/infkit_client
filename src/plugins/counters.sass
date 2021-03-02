@@ -1,0 +1,25 @@
+@import ./../css-legacy/colorlist.scss
+
+.update
+  width: 45vh
+  height: 100%
+  justify-content: space-between
+  align-items: center
+  overflow: hidden
+  padding: 0 2vh
+  cursor: default
+  background: rgba($orange, 0.2)
+  > .updateNow
+    width: 17.5vh
+    height: 100%
+    justify-content: center
+    align-items: center
+    padding-right: 2.5vh
+    margin-right: -5vh
+    cursor: pointer
+    background: rgba($grey, 0.5)
+    transform: skew(45deg)
+    &:hover
+      background: $grey
+    > span
+      transform: skew(-45deg)

@@ -4,11 +4,13 @@ import { useState } from 'react'
 import { useRef } from 'react'
 import { memo } from 'react'
 
+import st from './VideoHover.sass'
+
 export const VideoHover = memo(props => {
   const ref = useRef()
   const [playing, setPlaying] = useState(false)
   return <div {...props}>
-    <video className={cn({playing})} onMouseEnter={() => {
+    <video className={cn({[st.playing]: playing})} onMouseEnter={() => {
       if (ref.current) {
         ref.current.play()
         setPlaying(true)
@@ -19,6 +21,6 @@ export const VideoHover = memo(props => {
         }}} ref={ref} muted loop>
       <source src="/static/img/features/coediting-demo.mp4" />
     </video>
-    <div className={cn('hovervideo__overlay', {playing})}>Hover mouse to play</div>
+    <div className={cn(st.overlay, {[st.playing]: playing})}>Hover mouse to play</div>
   </div>
 })

@@ -1,0 +1,72 @@
+@import ./../../css-legacy/colorlist.scss
+
+\:global
+  main
+    height: 100%
+  .members-wr
+    height: 100%
+
+.members
+  flex: 1
+  flex-direction: column
+  padding-top: 1vh
+  .member
+    width: 100%
+    height: 5vh
+    align-items: center
+    padding: 0 1vh
+    margin-bottom: 1vh
+    background: rgba($grey, 0.15)
+    border-left: 0.2vh solid $grey
+    transition: 0.15s border-left
+    &:hover
+      border-left: 0.5vh solid $grey
+      background: rgba($grey, 0.3)
+    .avatar
+      height: 3.5vh
+      margin-right: 1vh
+      border-radius: 0.3vh
+    .ds
+      flex: 1
+      flex-direction: column
+      .discr
+        font-size: 1.3vh
+        color: $grey
+    .mutes, .warns, .bans
+      width: 7vh
+      height: 100%
+      align-items: center
+      justify-content: space-between
+      padding: 0 1.8vh
+      cursor: pointer
+      &.bans
+        margin-right: 3vh
+      &:hover
+        background: rgba($grey, 0.5)
+      img
+        height: 1.5vh
+        margin-right: 0.5vh
+    .exp
+      width: 11vh
+      flex-direction: column
+      align-items: center
+      .xp
+        width: 100%
+        align-items: center
+        margin-bottom: 0.5vh
+      .level
+        width: 100%
+        font-size: 1.4vh
+        align-items: center
+        img
+          height: 1vh
+          margin: 0 0.7vh
+        .curLevel
+          color: $green
+
+.modal
+  .reason
+    margin-bottom: 1vh
+  .d
+    justify-content: space-between
+    font-size: 1.3vh

@@ -1,0 +1,42 @@
+@import ./../../css-legacy/colorlist.scss
+
+.log
+  padding-top: 1vh
+  .logItem
+    width: 100%
+    flex-direction: column
+    background: rgba($grey, 0.1)
+    margin-bottom: 1vh
+    &:hover
+      background: rgba($grey, 0.2)
+    .title
+      justify-content: space-between
+      background: rgba($grey, 0.1)
+      padding: 0.5vh 1vh
+      .member
+        .name
+          width: 15vh
+      .t
+        width: 30vh
+      .ts
+        .time
+          justify-content: flex-end
+          width: 10vh
+        .date
+          justify-content: flex-end
+          width: 15vh
+    .body
+      flex-direction: column
+      padding: 0.5vh 1vh
+      .arrow
+        height: 1.2vh
+        padding: 0 0.5vh
+
+.member
+  align-items: center
+  .mr
+    margin-right: 1vh
+  .avatar
+    height: 2vh
+    margin-right: 1vh
+    border-radius: 0.3vh

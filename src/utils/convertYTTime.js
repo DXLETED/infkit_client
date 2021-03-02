@@ -1,4 +1,4 @@
-export const convertTYTime = duration => {
+export const convertYTTime = duration => {
   if (!duration) duration = '0:00'
   var a = duration.match(/\d+/g)
   if (duration.indexOf('M') >= 0 && duration.indexOf('H') == -1 && duration.indexOf('S') == -1) {

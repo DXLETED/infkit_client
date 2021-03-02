@@ -3,6 +3,9 @@ import cn from 'classnames'
 import { MLabel } from './mlabel'
 import { memo } from 'react'
 import { isEqual } from 'lodash'
+
+import st from './customTime.sass'
+
 const periods = [
   [40, 25, 'ms', 1],
   [60, 1, 's', 1000],
@@ -37,13 +40,13 @@ const TimeSelect = memo(({value, period, set, setMinPeriod, min, max} = {}) => {
   }), []
   const val = Math.floor(value % nextMultiplier / multiplier)
   return <>
-    <div className="time-select time-select_period" ref={ref1}>
-      <div className="time-select__selected" onClick={() => setOpen1(true)}>{Math.floor(value % nextMultiplier / multiplier)}</div>
-      <div className={cn('time-select__dropdown', {v: open1})}>
-        <div className="time-select__dropdown_in with-scroll">
+    <div className={cn(st.timeSelect, st.timeSelect_period)} ref={ref1}>
+      <div className={st.selected} onClick={() => setOpen1(true)}>{Math.floor(value % nextMultiplier / multiplier)}</div>
+      <div className={cn(st.dropdown, {[st.v]: open1})}>
+        <div className={cn(st.dropdownInner, 'withScroll')}>
           {dropdown
             .filter(amount => (min === undefined || min <= value - val * multiplier + amount * multiplier) && (max === undefined || max >= value - val * multiplier + amount * multiplier))
-            .map(amount => <div className="time-select__dropdown_in__item" onClick={() => {
+            .map(amount => <div className={st.item} onClick={() => {
               set(value - val * multiplier + amount * multiplier)
               setOpen1(false)
             }
@@ -51,13 +54,13 @@ const TimeSelect = memo(({value, period, set, setMinPeriod, min, max} = {}) => {
         </div>
       </div>
     </div>
-    <div className="time-select time-select_format" ref={ref2}>
-      <div className="time-select__selected" onClick={() => setOpen2(true)}>{ending}</div>
-      <div className={cn('time-select__dropdown', {v: open2})}>
-        <div className="time-select__dropdown_in with-scroll">
+    <div className={cn(st.timeSelect, st.timeSelect_format)} ref={ref2}>
+      <div className={st.selected} onClick={() => setOpen2(true)}>{ending}</div>
+      <div className={cn(st.dropdown, {[st.v]: open2})}>
+        <div className={cn(st.dropdownInner, 'withScroll')}>
           {periods
             .map((per, i) => (min === undefined || min <= per[0] * per[1] * per[3]) && (max === undefined || max >= per[3])
-            ? <div className="time-select__dropdown_in__item" onClick={() => {
+            ? <div className={st.item} onClick={() => {
                 const pre = val * per[3]
                 setMinPeriod(i)
                 setOpen2(false)
@@ -76,11 +79,11 @@ const TimeSelect = memo(({value, period, set, setMinPeriod, min, max} = {}) => {
 export const CustomTime = memo(({value, label, set, covered, activate, border, min, max = 86400000, defsize, b, m}) => {
   const [minPeriod, setMinPeriod] = useState(0)
   return (
-    <div className={cn('custom-time-wr', {border, defsize, border_bottom: b, m})}>
+    <div className={cn(st.customTime, {[st.border]: border, [st.defsize]: defsize, [st.border_bottom]: b, [st.m]: m})}>
       <MLabel d={label} />
-      <div className="custom-time">
+      <div className={st.customTimeInner}>
         {covered
-        ? <div className={cn('custom-time__cover')} onClick={() => activate()}>CUSTOM TIME</div>
+        ? <div className={st.cover} onClick={() => activate()}>CUSTOM TIME</div>
         : <>
           {(value >= 31449600000 || minPeriod >= 6) && <TimeSelect value={value} period={6} set={set} setMinPeriod={setMinPeriod} min={min} max={max} />}
           {(value >= 604800000 || minPeriod >= 5) && <TimeSelect value={value} period={5} set={set} setMinPeriod={setMinPeriod} min={min} max={max} />}

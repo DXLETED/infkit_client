@@ -25,4 +25,5 @@ export const colors = {
   poll: 'rgb(189, 145, 51)',
   userRooms: 'rgb(141, 189, 51)',
   settings: 'rgb(189, 95, 51)',
+  discordBg: '#36393f'
 }

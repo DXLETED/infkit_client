@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import cn from 'classnames'
-import { Select } from './select'
 import { Scroll } from './scroll'
 import { MLabel } from './mlabel'
+
+import st from './Input.sass'
 
 export const Input = props => {
   const [target, setTarget] = useState(false)
@@ -18,24 +19,24 @@ export const Input = props => {
   }, [props.clear])
   useEffect(() => {
     props.addFn && props.addFn(n => ref.current.value += n)
-  })
+  }, [])
   const clear = () => {
     if (ref.current) ref.current.value = ''
   }
   return (
-    <div className={cn('input', props.className, {b: props.b, m: props.m, center: props.center, oe: props.oe, fill: props.fill, black: props.black, bold: props.bold})}>
+    <div className={cn(st.input, props.className, {[st.b]: props.b, [st.m]: props.m, [st.p]: props.p, [st.center]: props.center, [st.oe]: props.oe, [st.fill]: props.fill, [st.black]: props.black, [st.bold]: props.bold, [st.defsize]: props.defsize})}>
       <MLabel d={props.label} />
       <input ref={ref} onInput={e => {
           if (props.type === 'number') {
             e.target.value = parseInt(e.target.value) || 0
           }
+          props.input && e.target.value !== prevValue.current && props.input(e.target.value)
           if (props.limit && e.target.value.length > props.limit)
             return e.target.value = e.target.value.slice(0, props.limit)
         }} onKeyUp={e => {
           if (e.keyCode === 13) {
             e.target.blur()
           } else {
-            props.input && e.target.value !== prevValue.current && props.input(e.target.value)
             prevValue.current = e.target.value
           }
       }} onBlur={e => {
@@ -47,10 +48,10 @@ export const Input = props => {
         props.clearOnSet && clear()
         setTarget(false)
       }} placeholder={props.placeholder} onClick={props.onClick} spellCheck={false} onFocus={() => setTarget(true)} size={1} />
-      {props.dropdown && <div className={cn('input__dropdown_wr', {visible: target && props.dropdownVisible})}>
+      {props.dropdown && <div className={cn(st.dropdownWr, {[st.visible]: target && props.dropdownVisible})}>
         <Scroll>
-          <div className="input__dropdown">
-            {props.dropdown.map((item, i) => <div className="input__dropdown__item" onClick={() => props.ddset && props.ddset(i)} key={i}>{item}</div>)}
+          <div className={st.dropdown}>
+            {props.dropdown.map((item, i) => <div className={st.item} onClick={() => props.ddset && props.ddset(i)} key={i}>{item}</div>)}
           </div>
         </Scroll>
       </div>}

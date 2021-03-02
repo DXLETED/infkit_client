@@ -1,0 +1,112 @@
+@import ./../../css-legacy/colorlist.scss
+
+.featuresPreview
+  position: absolute
+  width: 70%
+  justify-content: center
+  flex-wrap: wrap
+  bottom: 4vh
+  padding-left: 1vh
+  > .item
+    position: relative
+    padding: 1vh 1.5vh
+    background: rgba($black, 0.5)
+    border-radius: 0.2vh
+    overflow: hidden
+    margin-right: 1vh
+    margin-bottom: 1vh
+    &.indev
+      color: $grey
+    > .border
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      height: 0.2vh
+
+.features
+  width: calc(100vw - 10vh)
+  flex-direction: column
+  margin: 10vh auto
+  > .item
+    width: 100%
+    height: 20vh
+    justify-content: space-between
+    align-items: center
+    background: rgba($black, 0.2)
+    backdrop-filter: blur(0.5rh)
+    border-radius: 0.3vh
+    margin-bottom: 15vh
+    &.reversed
+      flex-direction: row-reverse
+      > .d
+        align-items: flex-end
+        > .text
+          text-align: right
+      > img
+        transform: perspective(2000px) rotateY(-20deg)
+    > img
+      height: 150%
+      max-width: 50%
+      object-fit: cover
+      transform: perspective(2000px) rotateY(20deg)
+      perspective-origin: left
+      box-shadow: $dgrey 0 0 0.5vh
+    > .d
+      flex: 1
+      height: 100%
+      flex-direction: column
+      justify-content: center
+      align-items: flex-start
+      padding: 0 4vh
+      > .title
+        line-height: 4vh
+        font-size: 2.8vh
+        text-transform: uppercase
+        font-family: 'Bold'
+        border-bottom: $white 0.2vh solid
+        margin-bottom: 1vh
+      > .text
+        line-height: 3vh
+        font-size: 2vh
+        color: $lgrey
+  > .item_2
+    width: 100%
+    flex-direction: column
+    align-items: center
+    padding: 4vh
+    background: rgba($black, 0.2)
+    backdrop-filter: blur(0.5rh)
+    .title
+      width: 100%
+      justify-content: center
+      line-height: 4vh
+      font-size: 2.8vh
+      text-transform: uppercase
+      font-family: 'Bold'
+      border-bottom: $white 0.2vh solid
+      margin-bottom: 4vh
+  > .item_3
+    width: 100%
+    flex-direction: column
+    padding: 4vh
+    background: rgba($black, 0.2)
+    backdrop-filter: blur(0.5rh)
+    .title
+      width: 100%
+      justify-content: center
+      line-height: 4vh
+      font-size: 2.8vh
+      text-transform: uppercase
+      font-family: 'Bold'
+      border-bottom: $white 0.2vh solid
+      margin-bottom: 4vh
+    .text
+      justify-content: center
+      line-height: 3vh
+      font-size: 2vh
+      color: $lgrey
+
+.video
+  width: 100%
+  position: relative

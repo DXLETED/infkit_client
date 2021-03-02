@@ -7,8 +7,9 @@ import { notify } from "./components/notify"
 import { generateId } from "./utils/generateId"
 import { refreshToken } from './hooks/auth.hook'
 import objectPath from "object-path"
+import { emit } from "./hooks/connection.hook"
 
-export const post = events => {
+export const post = async events => {
   let prev = store.getState().guildPrev
   let current = store.getState().guild
   if (!prev) return
@@ -16,7 +17,13 @@ export const post = events => {
   if (!changes && !events) return
   store.dispatch({type: 'UPDATE_CNCT', data: {sync: true}})
   const storeState = store.getState()
-  axios.post('/api/v1/update', {id: current.id, changes, events}, {headers: {authorization: 'Bearer ' + storeState.auth.token, user_id: storeState.auth.userId}, validateStatus: () => true})
+  const res = await emit.update.guild({changes, events})
+  if (res.status >= 400) {
+    if (res.err === 'invalid_changes')
+      notify.error({title: 'Invalid changes', text: 'Try reloading the page'})
+  }
+  console.log(res, changes, events)
+  /*axios.post('/api/v1/update', {id: current.id, changes, events}, {headers: {authorization: 'Bearer ' + storeState.auth.token, user_id: storeState.auth.userId}, validateStatus: () => true})
     .then(async r => {
       console.log('CHANGES', changes, r, events)
       if (r.status === 200) {
@@ -30,7 +37,7 @@ export const post = events => {
         }
         notify.error({title: 'Changes not saved', text: 'Unknown error'})
       }
-    })
+    })*/
 }
 
 const u = pn => {
@@ -88,6 +95,16 @@ const settingsUpdate = (cb, events) => {
       ev = events ? events(pl) : null
   cb(st)
   store.dispatch({type: 'UPDATE_GUILD_SETTINGS', data: st})
+  post(ev)
+}
+
+const membersUpdate = (cb, events) => {
+  let mm = cloneDeep(store.getState().members),
+      members = cloneDeep(store.getState().guild.members),
+      ev = events ? events(mm) : null
+  cb(mm, members)
+  store.dispatch({type: 'SET_MEMBERS_CACHE', data: mm})
+  store.dispatch({type: 'UPDATE_MEMBERS', data: members})
   post(ev)
 }
 
@@ -295,8 +312,8 @@ const automod = u => ({
     links: {
       ...filtersItem(u, 'links'),
       allowedDomains: {
-        add: n => u.arr('filters.links.alloweddomains').add(n),
-        del: d => u.arr('filters.links.alloweddomains').del(d)
+        add: n => u.arr('filters.links.allowedDomains').add(n),
+        del: d => u.arr('filters.links.allowedDomains').del(d)
       }
     },
     zalgo: {
@@ -341,7 +358,7 @@ const automod = u => ({
 const reactionRoles = u => ({
   add: () => u(pl => pl.d.push({id: generateId(pl.d.map(ms => ms.id)), channel: null, msg: '', msgId: null, reacts: []})),
   setChannel: (i, n) => u(pl => pl.d[i].channel = n, pl => [{action: 'RRSetMsg', v: pl.d[i].id}]),
-  setMsg: (i, n) => u(pl => pl.d[i].msg = n, pl => [{action: 'RRSetMsg', v: pl.d[i].id}]),
+  setMsgContent: (i, n) => u(pl => pl.d[i].msg.content = n, pl => [{action: 'RRSetMsg', v: pl.d[i].id}]),
   addReact: i => u(pl => pl.d[i].reacts.push({emoji: null, roles: []}), pl => [{action: 'RREditReacts', v: pl.d[i].id}]),
   setEmoji: (i, ii, n) => u(pl => pl.d[i].reacts[ii].emoji = n, pl => [{action: 'RREditReacts', v: pl.d[i].id}]),
   addRole: (i, ii, n) => u(pl => pl.d[i].reacts[ii].roles.push(n), pl => [{action: 'RRAddRoles', v: {id: pl.d[i].id, roles: [n]}}]),
@@ -402,11 +419,16 @@ const welcome = u => ({
 
 const counters = u => ({
   create: () => u(pl => pl.d.push({id: generateId(pl.d.map(c => c.id)), category: 0, type: 0, name: '', channel: null, role: null, ids: []})),
-  setCategory: (i, n) => u(pl => pl.d[i].category = n, pl => [{action: 'CUpdate', v: pl.d[i].id}]),
-  setType: (i, n) => u(pl => pl.d[i].type = n, pl => [{action: 'CUpdate', v: pl.d[i].id}]),
-  setRole: (i, n) => u(pl => pl.d[i].role = n, pl => [{action: 'CUpdate', v: pl.d[i].id}]),
-  setName: (i, n) => u(pl => pl.d[i].name = n, pl => [{action: 'CUpdate', v: pl.d[i].id}]),
-  del: (d, delChannel) => u(pl => pl.d = pl.d.filter((_, i) => i !== d), pl => delChannel && [{action: 'counters/delete', v: pl.d[d].id}])
+  counter: i => ({
+    upd: () => u(null, pl => [{action: 'CUpdate', v: pl.d[i].id}]),
+    set: {
+      category: n => u(pl => pl.d[i].category = n, pl => [{action: 'CUpdate', v: pl.d[i].id}]),
+      type: n => u(pl => pl.d[i].type = n, pl => [{action: 'CUpdate', v: pl.d[i].id}]),
+      role: n => u(pl => pl.d[i].role = n, pl => [{action: 'CUpdate', v: pl.d[i].id}]),
+      name: n => u(pl => pl.d[i].name = n, pl => [{action: 'CUpdate', v: pl.d[i].id}])
+    },
+    del: delChannel => u(pl => pl.d = pl.d.filter((_, ii) => ii !== i), pl => delChannel && [{action: 'counters/delete', v: pl.d[i].id}])
+  })
 })
 
 const poll = u => ({
@@ -441,7 +463,14 @@ export const groupsApi = (u => ({
   add: () => u(grps => grps.push({id: generateId(grps.map(g => g.id)), name: 'New group', enabledRoles: [], disabledRoles: [], enabledChannels: [], disabledChannels: []})),
   group: i => ({
     setName: n => u(grps => grps[i].name = n || 'Group'),
-    ...permissionsSelector(u, [i]),
+    roles: {
+      add: n => u.arr([i, 'roles']).add(n),
+      del: d => u.arr([i, 'roles']).del(d)
+    },
+    channels: {
+      add: n => u.arr([i, 'channels']).add(n),
+      del: d => u.arr([i, 'channels']).del(d)
+    }
   }),
   del: d => u(grps => delete grps[d])
 }))(groupsUpdate())
@@ -455,6 +484,18 @@ export const settingsApi = (u => ({
   },
   toggle: {
     nopermRole: n => u(stgs => stgs.nopermRole = n),
-    nopermChannel: n => u(stgs => stgs.nopermChannel = n)
+    nopermChannel: n => u(stgs => stgs.nopermChannel = n),
+    border: n => u(stgs => stgs.border = n)
+  },
+  set: {
+    responseDesign: n => u(stgs => stgs.responseDesign = n.o)
   }
 }))(settingsUpdate)
+
+export const membersApi = (u => ({
+  member: m => ({
+    set: {
+      XP: n => u((mm, members) => members.levels[m] = n)
+    }
+  })
+}))(membersUpdate)

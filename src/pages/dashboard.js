@@ -1,93 +1,34 @@
-import React, { useEffect, useState, useRef, useReducer, memo } from 'react'
-import { useLocation, Route, useHistory } from 'react-router'
+import React, { useEffect, memo } from 'react'
+import { useLocation, useHistory } from 'react-router'
 import cn from 'classnames'
-import { NavLink } from 'react-router-dom'
 import { l } from '../l'
 import { plugins } from '../plugins'
-import { useSelector, useDispatch, useStore } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { Scroll } from '../components/scroll'
-import { colors } from '../components/colorlist'
-import { Groups } from '../components/dashboard/groups'
 import value from '../../server/discord/value'
-import { CategoryName } from '../components/categoryName'
 import { Stats } from '../components/dashboard/stats'
-import equal from 'fast-deep-equal'
 import { pluginApi } from '../api'
 import { useMemo } from 'react'
 import { Row } from '../components/row'
 import { Settings } from '../components/settings'
-import { CSSTransition } from 'react-transition-group'
 import { useSettings } from '../hooks/settings.hook'
-import { ConnectionState } from '../components/dashboard/connetionState'
 import { DashboardSide } from '../components/dashboard/side'
 import { useCookies } from 'react-cookie'
-import socketIOClient from 'socket.io-client'
-import { refreshToken } from '../hooks/auth.hook'
+import { Members } from '../components/dashboard/members'
+import { useConnection } from '../hooks/connection.hook'
+import { PluginPreview } from '../components/dashboard/PluginPreview'
+import { Category } from '../components/Category'
+import { DashboardContainer } from '../components/dashboard/Container'
+import { colors } from '../components/colorlist'
+import { Log } from '../components/dashboard/Log'
+import { notify } from '../components/notify'
 
-const Plugin = props => {
-  const state = useSelector(s => s.guild.plugins[props.title])
-  const api = useMemo(() => pluginApi(props.title), [])
-  const location = useLocation()
-  const [visible, setVisible] = useState(false)
-  const [v2, setV2] = useState(false)
-  useEffect(() => {
-    setVisible(location.pathname === `${props.path}/${props.title}`)
-  }, [location])
-  useEffect(() => {
-    if (v2) document.title = `${l(`plugin_${props.title}`)} - InfinityKit`
-  }, [v2])
-  return (
-    <CSSTransition in={visible} classNames="dashboard-item-fadein" timeout={200} onEnter={() => setV2(true)} onExited={() => setV2(false)}>
-      <div className={cn('plugin-page')}>
-        {v2 && <>
-          <div className="title">
-            <NavLink to={props.path} className="back">
-              <img src="/static/img/arrow/left.png" />
-            </NavLink>
-            <img src={`/static/img/plugins/${props.title}.png`} />
-            <div className="plugin-title">{l('plugin_' + props.title)}</div>
-            <div className="title-color" style={{background: colors[props.title]}} />
-            <div className="p-enabled" onClick={api.enabled.toggle}>{state.enabled ? <><img src="/static/img/on.png" />ENABLED</> : <><img src="/static/img/off.png" />DISABLED</>}</div>
-            <div className="pp-border" style={{background: colors[props.title]}} />
-            <div className="border" style={{background: colors[props.title]}} />
-          </div>
-          <div className={cn('plugin-wr')}>
-            <Scroll>
-              <div id={'plugin-' + props.title} className={cn('plugin', {visible})}>
-                {props.title in plugins && React.createElement(plugins[props.title], {...props, state, api})}
-              </div>
-            </Scroll>
-          </div>
-        </>}
-      </div>
-    </CSSTransition>
-  )
-}
-
-const PluginReviewEl = memo(props => {
-  const { pn, path } = props
-  let history = useHistory()
-  const state = useSelector(s => s.guild.plugins[pn])
-  const api = useMemo(() => pluginApi(pn), [])
-  return (
-    <div to={`${path}/${pn}`} className={cn('plugin-preview', {enabled: state.enabled})} onClick={() => history.push(`${path}/${pn}`)}>
-      <img src={`/static/img/plugins/${pn}.png`} />
-      <div className="pp-d">
-        <div className="pp-name">{l('plugin_' + pn)}</div>
-        <div className="pp-desc">{l('plugindesc_' + pn)}</div>
-      </div>
-      <div className="pp-enabled" onClick={e => {
-        api.enabled.toggle()
-        e.stopPropagation()
-      }}>{state.enabled ? <img src="/static/img/on.png" /> : <img src="/static/img/off.png" />}</div>
-      <div className="pp-border" style={{background: colors[pn]}} />
-      <div className="pp-color" style={{background: colors[pn]}} />
-    </div>
-  )
-}, (o, n) => equal(o.enabled, n.enabled))
-
-const PluginReview = props => {
-  return props.plugins.map((plugin, i) => <PluginReviewEl pn={plugin} path={props.path} key={i} />)
+const Plugin = ({title, path, prefix}) => {
+  const state = useSelector(s => s.guild.plugins[title])
+  const api = useMemo(() => pluginApi(title), [])
+  return <DashboardContainer k={title} title={l('plugin_' + title)} icon={`/static/img/plugins/${title}.png`} color={colors[title]} enabled={state.enabled} p {...{path, api}}>
+    {title in plugins && React.createElement(plugins[title], {state, api, prefix})}
+  </DashboardContainer>
 }
 
 const ReviewType2 = memo(({name, to, className, img, onClick}) => {
@@ -96,105 +37,62 @@ const ReviewType2 = memo(({name, to, className, img, onClick}) => {
     history.push(to)
     onClick && onClick(e)
   }}>
-    <div className="preview_type2__d">{name}{img && <img className="preview_type2__d__img" src={img} />}</div>
+    <div className="border" />
+    <div className="preview_type2__d">{img && <img className="preview_type2__d__img" src={img} />}{name}</div>
     <div className="preview_type2__color" />
   </div>
 })
 
 export const Dashboard = props => {
-  const location = useLocation()
-  const [cookie] = useCookies(['guild', 'token'])
-  const state = useSelector(s => s.guild)
-  const authorized = useSelector(s => s.authorized)
-  const dispatch = useDispatch()
-  const [statsVisible, setStatsVisible] = useSettings('stats_visible', true)
-  const ws = useRef()
-  const store = useStore()
-  const setCn = n => dispatch({type: 'UPDATE_CNCT', data: n})
-  const updateGuildState = data => {
-    dispatch({type: 'SAVE_GUILD', data})
-    if (store.getState().guild && isEqual(store.getState().guild, data)) return
-    dispatch({type: 'UPDATE_GUILD', data})
-  }
-  const connect = (guild, authorized, {tries = 0} = {}) => {
-    if (!guild || !authorized || tries >= 3) return
-    dispatch({type: 'CLEAR_GUILD'})
-    ws.current && ws.current.disconnect()
-    const auth = store.getState().auth
-    const io = socketIOClient({path: '/socket/guilds', query: {token: auth.token, user_id: auth.userId}})
-    ws.current = io
-    io.emit('init', guild, async res => {
-      if (res.status === 401) {
-        await refreshToken()
-        return connect(guild, authorized, {tries: tries + 1})
-      }
-      res.status === 200 && updateGuildState(res.d)
-      setCn({active: true, sync: false, limited: false})
-    })
-    io.on('update/all', res => res.status === 200 && updateGuildState(res.d))
-    io.on('update/saving', () => setCn({sync: true}))
-    io.on('update/ustgs', res => {
-      console.log('GUILD UPDATE', res)
-      dispatch({type: 'SAVE_GUILD', data: res})
-      dispatch({type: 'UPDATE_GUILD', data: res})
-      setCn({active: true, sync: false})
-    })
-    io.on('update/server', res => {
-      console.log('UPDATE SERVER', res)
-      dispatch({type: 'SAVE_GUILD', data: {server: res}})
-      dispatch({type: 'UPDATE_GUILD_SERVER', data: res})
-    })
-    io.on('update/stats', res => {
-      dispatch({type: 'SAVE_GUILD', data: {stats: res}})
-      dispatch({type: 'UPDATE_GUILD_STATS', data: res})
-    })
-    io.on('error', () => {
-      notify.warn({text: 'Reconnecting'}, 5000)
-      setCn({active: false})
-      connect()
-    })
-  }
+  const location = useLocation(),
+        history = useHistory(),
+        [cookie] = useCookies(['guild', 'token']),
+        state = useSelector(s => s.guild),
+        authorized = useSelector(s => s.authorized),
+        [statsVisible, setStatsVisible] = useSettings('stats_visible', true),
+        { connect } = useConnection()
   useEffect(() => {
     connect(cookie.guild, authorized)
   }, [cookie.guild, authorized])
   useEffect(() => {
     if (location.pathname === props.path) document.title = `${props.demo ? 'Demo' : 'Dashboard'} - InfinityKit`
   }, [location])
+  /*useEffect(() => {
+    setTimeout(() => navigator.userAgent.toLowerCase().indexOf('firefox') > -1 && notify.question({
+        title: 'Firefox detected',
+        text: 'The site may look worse in this browser, but it can be fixed',
+        options: [['Find out how', () => history.push('firefox-fix')], ['Later', () => 1], ['Do not remind', () => 1]]
+      }), 5000)
+  }, [])*/
+  if (!state) return <></>
   return (
     <div id="plugins" className={cn('page')}>
       <main>
-        {state && Object.entries(state.plugins).map(([pluginName, plugin], i) => <Plugin title={pluginName} state={plugin} updateState={(n, events) => props.updateState({...state, plugins: {...state.plugins, ...{[pluginName]: n}}, events})} prefix={value.fromOptions(state.settings.prefix, 'prefix')} path={props.path} key={i} />)}
-        {state && <Settings path={props.path} />}
+        {Object.entries(state.plugins).map(([pluginName, plugin], i) => <Plugin title={pluginName} prefix={value.fromOptions(state.settings.prefix, 'prefix')} path={props.path} key={i} />)}
+        <Settings path={props.path} />
+        <Members path={props.path} />
+        <Log path={props.path} />
         <div className={cn('plugins-list-page', {visible: location.pathname === props.path})}>
           <div className="plugins-list-wr">
-            <Scroll>
+            <Scroll column>
               <div className="plugins-list">
-                {state && <>
-                  {props.path === '/demo' && <div className="demo-alert">DEMO MODE | Сhanges will be lost when the page is reloaded</div>}
-                  <Stats visible={statsVisible} state={state.stats} />
-                  <Row className="settings-buttons" elements={[
-                    <ReviewType2 name="STATS" onClick={() => setStatsVisible(!statsVisible)} className="settings-review" img={statsVisible ? '/static/img/arrow/top.png' : '/static/img/arrow/bottom.png'} />,
-                    <ReviewType2 name="SETTINGS" to={`${props.path}/settings`} className="settings-review" img="/static/img/settings.png" />
-                ]} />
-                  <div className="category">
-                    <CategoryName>Server management</CategoryName>
-                    <div className="list">
-                      <PluginReview plugins={['levels', 'moderation', 'automod']} state={state} updateState={props.updateState} path={props.path} />
-                    </div>
-                  </div>
-                  <div className="category">
-                    <CategoryName>Info</CategoryName>
-                    <div className="list">
-                      <PluginReview plugins={['welcome', 'counters', 'alerts']} state={state} updateState={props.updateState} path={props.path} />
-                    </div>
-                  </div>
-                  <div className="category">
-                    <CategoryName>Utils</CategoryName>
-                    <div className="list">
-                      <PluginReview plugins={['reactionRoles', 'music', 'poll', 'userRooms']} state={state} updateState={props.updateState} path={props.path} />
-                    </div>
-                  </div>
-                </>}
+                {props.path === '/demo' && <div className="demo-alert">DEMO MODE | Сhanges will be lost when the page is reloaded</div>}
+                <Stats visible={statsVisible} state={state.stats} />
+                <Row className="settings-buttons" elements={[
+                  <ReviewType2 name="STATS" onClick={() => setStatsVisible(!statsVisible)} className="settings-review" img={statsVisible ? '/static/img/arrow/top.png' : '/static/img/arrow/bottom.png'} />,
+                  <ReviewType2 name="LOG" to={`${props.path}/log`} className="player-review" img="/static/img/log.png" />,
+                  <ReviewType2 name="MEMBERS" to={`${props.path}/members`} className="members-review" img="/static/img/members.png" />,
+                  <ReviewType2 name="SETTINGS" to={`${props.path}/settings`} className="settings-review" img="/static/img/settings.png" />
+              ]} />
+                <Category title="Server management" dashboard>
+                  <PluginPreview plugins={['levels', 'moderation', 'automod']} state={state} updateState={props.updateState} path={props.path} />
+                </Category>
+                <Category title="Info" dashboard>
+                  <PluginPreview plugins={['welcome', 'counters', 'alerts']} state={state} updateState={props.updateState} path={props.path} />
+                </Category>
+                <Category title="Utilities" dashboard>
+                  <PluginPreview plugins={['reactionRoles', 'music', 'poll', 'userRooms']} state={state} updateState={props.updateState} path={props.path} />
+                </Category>
               </div>
             </Scroll>
           </div>

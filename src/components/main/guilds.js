@@ -9,6 +9,14 @@ import { useScroll } from '../../hooks/scroll.hook'
 import socketIOClient from 'socket.io-client'
 import { useHistory } from 'react-router'
 
+import st from './Guilds.sass'
+import { colors } from '../colorlist'
+
+const Guild = ({id, icon, name, bot}) => <div className={cn(st.guildPreview, {[st.bot]: bot})}>
+  {icon ? <img src={`https://cdn.discordapp.com/icons/${id}/${icon}`} /> : <div className={st.icon}>{name.split(' ').length <= 1 ? name.split(' ')[0][0] : name.split(' ')[0][0] + name.split(' ')[1][0]}</div>}
+  <div className={st.name}>{name}</div>
+</div>
+
 export const Guilds = memo(() => {
   const guilds = useSelector(s => s.guilds)
   const [cookie, setCookie] = useCookies(['guild'])
@@ -39,28 +47,29 @@ export const Guilds = memo(() => {
       'InfKit - Login',
       `width=500,height=800,top=${window.top.outerHeight / 2 + window.top.screenY - (800 / 2)},left=${window.top.outerWidth / 2 + window.top.screenX - (500 / 2)}`)
   }
-  return <div className="servers-wr" style={{opacity: (800 - scrollTop) / 800}}>
-    <Scroll>
-      <div className="servers">
-        {authorized
-          ? guilds
-            ? <>
-              {guilds.map((g, i) =>
-                <EdgedButton
-                  className={cn('guild', {selected: cookie.guild && g.id === cookie.guild, enabled: g.bot})}
-                  onClick={() => g.bot
-                    ? setCookie('guild', g.id, {path: '/'})
-                    : addGuild(g.id)}
-                  to={g.bot && '/dashboard'}
-                  key={i}
-                >
-                  {g.icon ? <img src={`https://cdn.discordapp.com/icons/${g.id}/${g.icon}`} /> : <div className="icon">{g.name.split(' ').length <= 1 ? g.name.split(' ')[0][0] : g.name.split(' ')[0][0] + g.name.split(' ')[1][0]}</div>}
-                  {g.name}
-                </EdgedButton>)}
-            </>
-            : <EdgedButton to="/dashboard">Guilds not found</EdgedButton>
-          : <EdgedButton className="login" onClick={() => login()}>LOG IN</EdgedButton>}
-      </div>
+  return <div className={st.guildsWr} style={{opacity: (800 - scrollTop) / 800}}>
+    <Scroll className={st.guilds} deps={[guilds]} column>
+      {authorized
+        ? guilds
+          ? <>
+            {guilds.map((g, i) =>
+              <EdgedButton
+                className={cn(st.guild, {selected: cookie.guild && g.id === cookie.guild, enabled: g.bot})}
+                onClick={() => g.bot
+                  ? setCookie('guild', g.id, {path: '/'})
+                  : addGuild(g.id)}
+                to={g.bot && '/dashboard'}
+                borderColor={cookie.guild && g.id === cookie.guild ? colors.blue : null}
+                key={i}
+              >
+                <Guild {...g} />
+              </EdgedButton>)}
+          </>
+          : <EdgedButton to="/dashboard">Guilds not found</EdgedButton>
+        : <>
+          <EdgedButton className={st.login} onClick={() => login()} m><img src="/static/img/login.png" />LOG IN</EdgedButton>
+          <EdgedButton className={st.login} to="/demo"><img src="/static/img/demo.png" />DEMO</EdgedButton>
+        </>}
     </Scroll>
   </div>
 })

@@ -1,0 +1,23 @@
+@import ./../css-legacy/colorlist.scss
+
+.tip
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  &.column > .tipContent
+    flex-direction: column
+  .tipContent
+    position: fixed
+    left: 100%
+    top: 0
+    padding: 1vh 1.5vh
+    background: rgba($white, 0.2)
+    backdrop-filter: blur(1vh)
+    opacity: 0
+    z-index: 10
+    transition: 0.2s opacity
+    pointer-events: none
+    &.visible
+      opacity: 1

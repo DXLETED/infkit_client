@@ -1,4 +1,4 @@
-import './css/styles'
+import './css-legacy/styles'
 import React, { useEffect, useState, useRef } from 'react'
 import ReactDOM from 'react-dom'
 import { Header } from './components/header'
@@ -16,8 +16,9 @@ import { notify } from './components/notify'
 import { isEqual } from 'lodash'
 import { useSettings } from './hooks/settings.hook'
 import { Login } from './pages/login'
-import { refreshToken, useAuth } from './hooks/auth.hook'
-import { Modals } from './components/modals'
+import { useAuth } from './hooks/auth.hook'
+
+import st from './pages/Main.sass'
 
 const Main = () => {
   const dispatch = useDispatch()
@@ -49,7 +50,7 @@ const Main = () => {
   return (
     <>
       <Router>
-        <div className="main-bg" />
+        <div className={st.mainBg} />
         <Header />
         <Route exact path="/" component={MainPage} />
         <Route path="/dashboard"><Dashboard path="/dashboard" /></Route>

@@ -1,0 +1,102 @@
+@import ./../css-legacy/colorlist.scss
+
+\:global
+  .page#main
+    width: 100%
+    height: calc(100rh - 5vh)
+    > main
+      position: relative
+      flex: 1
+      flex-direction: column
+
+.screenStart
+  position: relative
+  width: 100%
+  height: 100%
+  flex-direction: column
+  align-items: center
+  z-index: 1
+  > .preview
+    width: 70%
+    height: 50vh
+    max-height: calc(100% - 20vh)
+    margin-top: 5vh
+    justify-content: space-between
+    align-items: center
+    z-index: 1
+    > .site
+      flex-direction: column
+      align-items: flex-start
+      > .beta
+        position: relative
+        font-size: 2vh
+        padding: 0.2vh 1vh
+        &::after
+          content: ""
+          position: absolute
+          left: 0
+          top: 0
+          width: 0%
+          height: 100%
+          background: $red
+          animation: beta-fill 1s
+          animation-fill-mode: forwards
+          transform: skewX(-15deg)
+          z-index: -1
+          @keyframes beta-fill
+            0%
+              width: 0%
+            100%
+              width: 100%
+      > .sitename
+        font-size: 6vh
+        font-family: 'Kanit'
+        letter-spacing: 0.075vh
+  .preview-arrow_wr
+    width: 100%
+    justify-content: center
+    .preview-arrow
+      position: absolute
+      width: 20vh
+      height: 3vh
+      bottom: 0.5vh
+      align-items: center
+      animation: preview-arrow-animation linear infinite 2s
+      @keyframes preview-arrow-animation
+        0%
+          opacity: 50%
+        50%
+          opacity: 90%
+        100%
+          opacity: 50%
+      > .p-arrow
+        width: 50%
+        height: 0.3vh
+        background: $white
+        border-radius: 0.1vh
+        &__1
+          transform: rotateZ(8deg) translateX(1%)
+        &__2
+          transform: rotateZ(-8deg) translateX(-1%)
+
+.mainBg
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  opacity: 0.075
+  background: linear-gradient(to bottom, $main 0%, transparent 100%), url(/static/img/bg.png)
+  filter: blur(0.5rh)
+  background-size: cover
+  background-position: bottom 20% center
+  z-index: -1
+
+.footer
+  width: 100%
+  height: 5vh
+  justify-content: space-between
+  align-items: center
+  padding: 0 5vh
+  background: rgba($grey, 0.2)
+  backdrop-filter: blur(1rh)

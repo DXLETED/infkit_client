@@ -1,17 +1,20 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { Emoji } from "./emoji"
+import { Emoji, EmojiBtn } from "./emoji"
 import { Scroll } from './scroll'
 import cn from 'classnames'
 import { emojis } from './emojis'
 import { notify } from './notify'
 
+import st from './TextArea.sass'
+import { MessageVisualizer } from './MessageVisualizer'
+
 export const TextArea = props => {
   const [length, setLength] = useState()
   const [edit, setEdit] = useState(false)
-  let ref = useRef()
+  const ref = useRef()
   const getContent = (nodes, {md = false} = {}) => {
     if (!nodes) nodes = ref.current.childNodes
-    const c = [...nodes].map(n => {
+    let c = [...nodes].map(n => {
       if (n.nodeType === Node.TEXT_NODE)
         return n.textContent
       else if (n.localName === 'img' && n.dataset.label)
@@ -19,8 +22,12 @@ export const TextArea = props => {
       else if (n.localName === 'br')
         return '\n'
     }).filter(Boolean).join('').replace(/\n$/g, '')
-    return (md && c.match(/```(.|\s){0,}```/gm)) ? c.replace(/:[a-zA-Z0-9_]{1,25}:/g, p => emojis.getUnicode(p)) : c
+    const mdmatch = md && c.match(/^```(?:([a-z0-9_+\-.]+?)\n)?\n*([^\n][^]*?)\n*```/gm)
+    Array.isArray(mdmatch) && mdmatch.map(m => c = c.replace(m, m.replace(/:[a-zA-Z0-9_]{1,25}:/g, p => emojis.getUnicode(p))))
+    return c
   }
+  const [content, setContent] = useState(props.value)
+  const [previewVisible, setPreviewVisible] = useState(props.preview || false)
   const updateLength = () => setLength(getContent().length)
   const parseEmojis = ({setCursor=true} = {}) => {
     let target = ref.current
@@ -33,17 +40,15 @@ export const TextArea = props => {
         let m = l[1][0]
         if(!m) return
         let e = emojis.get(m[0])
-        console.log(e)
         if (!e) return
         let range = document.createRange()
         range.selectNode(target)
-        //console.log(n.textContent)
         range.setStart(n, m.index)
         range.setEnd(n, m.index + m[0].length)
         range.deleteContents()
         let node = document.createElement('img')
         node.dataset.label = e.label
-        node.classList.add('text-emoji')
+        node.classList.add(st.textEmoji)
         node.src = '/static/img/null.png'
         node.style.backgroundSize = `${emojis.width / emojis.size * 16}px ${emojis.height / emojis.size * 16}px`
         node.style.backgroundPosition = `-${e.x * 16}px -${e.y * 16}px`
@@ -71,59 +76,70 @@ export const TextArea = props => {
     else
       updateValue()
   }, [props.value])
-  useEffect(() => {
-    document.addEventListener('click', e => {
-      if ((!e.target.closest('.textarea') && !e.target.closest('#modal-emoji')) || e.target.closest('.textarea').querySelector('.ta-input') !== ref.current)
-        setEdit(false)
-    })
-  }, [])
   return (
-    <div className="textarea">
-      <div className={cn('ta-control', {edit})}>
-        <div className="ta-emoji">{props.emoji && <Emoji set={e => {
-          ref.current.focus()
-          document.execCommand('insertText', false, e.label)
-        }} />}</div>
-        <div className={cn('ta-limit', {exceeded: length > (props.limit || 2000)})}>
-          <div className="ta-length">{length}</div>
-          <div className="br"></div>
-          <div className="ta-lim">{props.limit || 2000}</div>
-          </div>
-        <div className="ta-save" onClick={() => {
+    <div className={st.textarea}>
+      <div className={st.textareaInner}>
+        <Scroll deps={[content]}>
+          <div className={st.input} suppressContentEditableWarning contentEditable spellCheck={false} onClick={() => {
+            setEdit(true)
+          }} onKeyDown={e => {
+            if (e.keyCode === 13) {
+              e.preventDefault()
+              const selection = window.getSelection()
+              const range = selection.getRangeAt(0)
+              const el = document.createElement('br')
+              range.insertNode(el)
+              range.setStartAfter(el, 0)
+              range.setEndAfter(el, 0)
+            }
+          }} onInput={e => {
+            //undoImages.current.push([getContent(), [...ref.current.childNodes].findIndex(n => n === document.getSelection().anchorNode), document.getSelection().anchorOffset])
+            setContent(getContent())
+            if (e.nativeEvent.inputType)
+              parseEmojis()
+            if (!length)
+              updateLength()
+          }} onKeyUp={() => window.requestIdleCallback ? window.requestIdleCallback(updateLength) : updateLength()} onCopy={e => {
+            e.preventDefault()
+            let content = window.getSelection().getRangeAt(0).cloneContents()
+            let div = document.createElement('div')
+            div.appendChild(content)
+            e.clipboardData.setData('text/plain', getContent(div.childNodes).replace(/:[a-zA-Z0-9_]{1,25}:/g, p => emojis.getUnicode(p)))
+          }} onCut={e => {
+            e.preventDefault()
+            let d = e.clipboardData.getData('text/plain').replace(/(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/g, p => emojis.getName(p))
+            document.execCommand('insertHTML', false, d)
+            parseEmojis({setCursor: e.clipboardData.getData('text/plain').length <= 2})
+          }} onPaste={e => {
+            e.preventDefault()
+            let d = e.clipboardData.getData('text/plain').replace(/(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/g, p => emojis.getName(p))
+            document.execCommand('insertHTML', false, d)
+            parseEmojis({setCursor: e.clipboardData.getData('text/plain').length <= 2})
+          }} aria-multiline={true} placeholder={!length ? props.placeholder : ''} ref={ref}></div>
+          {previewVisible && <MessageVisualizer className={st.messageVisualizer} msg={{content}} bot />}
+        </Scroll>
+      </div>
+      <div className={cn(st.controls, {[st.edit]: edit})}>
+        {props.emoji && <EmojiBtn className={st.emoji} set={e => {
+            ref.current.focus()
+            document.execCommand('insertText', false, e.label)
+          }}><img src="/static/img/emojiBtn.png" /> Emoji</EmojiBtn>}
+        <div className={cn(st.limit, {exceeded: length > (props.limit || 2000)})}>
+          {length} / {props.limit || 2000}
+        </div>
+        <div className={st.cancel} onClick={() => {
+          setEdit(false)
+          updateValue()
+        }}><img src="/static/img/delete.png" />Cancel</div>
+        <div className={st.save} onClick={() => {
           setEdit(false)
           props.set(getContent(null, {md: true}))
-        }}><img src="/static/img/done.png" /></div>
+        }}><img src="/static/img/done.png" />Save</div>
+        <div className="fill" />
+        {!props.preview && <div className={cn(st.previewButton, {[st.enabled]: previewVisible})} onClick={() => setPreviewVisible(!previewVisible)}>
+          {previewVisible ? <img src="/static/img/arrow/right.png" /> : <img src="/static/img/arrow/left.png" />}Preview
+        </div>}
       </div>
-      <Scroll reff={r => ref.current = r.current}>
-        <div className="ta-input" suppressContentEditableWarning contentEditable spellCheck={false} onClick={() => setEdit(true)} onKeyDown={e => {
-          if (e.keyCode === 13) {
-            document.execCommand('insertHTML', false, '<br><br>')
-            e.preventDefault()
-            return false
-          }
-        }} onInput={e => {
-          if (e.nativeEvent.inputType)
-            parseEmojis()
-          if (!length)
-            updateLength()
-        }} onKeyUp={() => window.requestIdleCallback ? window.requestIdleCallback(updateLength) : updateLength()} onCopy={e => {
-          e.preventDefault()
-          let content = window.getSelection().getRangeAt(0).cloneContents()
-          let div = document.createElement('div')
-          div.appendChild(content)
-          e.clipboardData.setData('text/plain', getContent(div.childNodes).replace(/:[a-zA-Z0-9_]{1,25}:/g, p => emojis.getUnicode(p)))
-        }} onCut={e => {
-          e.preventDefault()
-          let d = e.clipboardData.getData('text/plain').replace(/(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/g, p => emojis.getName(p))
-          document.execCommand('insertHTML', false, d)
-          parseEmojis({setCursor: e.clipboardData.getData('text/plain').length <= 2})
-        }} onPaste={e => {
-          e.preventDefault()
-          let d = e.clipboardData.getData('text/plain').replace(/(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/g, p => emojis.getName(p))
-          document.execCommand('insertHTML', false, d)
-          parseEmojis({setCursor: e.clipboardData.getData('text/plain').length <= 2})
-        }} aria-multiline={true} placeholder={!length ? props.placeholder : ''}></div>
-      </Scroll>
     </div>
   )
 }

@@ -1,29 +1,16 @@
-import React, { memo, useMemo, useState } from 'react'
-import { CategoryName } from '../components/categoryName'
-import { MultiSwitch } from '../components/multiSwitch'
+import React from 'react'
 import { CommandsList } from '../components/command'
-import { ExpansionPanel } from '../components/expansionPanel'
 import { EditableList } from '../components/editableList'
-import { ObjectEdit } from '../components/objectEdit'
 import { Input } from '../components/input'
 import { CustomTime } from '../components/customTime'
 import { Row } from '../components/row'
-import { Switch } from '../components/switch'
-import { Label } from '../components/label'
-import { Enabled } from '../components/enabled'
-import { Slider } from '../components/slider'
+import { Category } from '../components/Category'
 
 export const Moderation = props => {
   const { state, api } = props
   return <>
-    <div className="commands-wr category">
-      <CategoryName>Commands</CategoryName>
-      <div className="commands">
-        <CommandsList cmds={state.commands} api={api.cmds} prefix={props.prefix} />
-      </div>
-    </div>
-    <div className="reasons category">
-      <CategoryName>Reasons</CategoryName>
+    <CommandsList cmds={state.commands} api={api.cmds} prefix={props.prefix} />
+    <Category title="Reasons">
       <Row elements={[
       <EditableList label="Mute" data={state.reasons.mute.map((r, i) => <>
           <Input label="Reason" value={r.reason} set={n => api.reasons.mute.setReason(i, n)} b m />
@@ -46,6 +33,6 @@ export const Moderation = props => {
             delete={api.reasons.ban.del} m2 column p={1} limit={5} />
         </>
       ]} />
-    </div>
+    </Category>
   </>
 }

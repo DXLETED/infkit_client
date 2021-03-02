@@ -17,30 +17,57 @@ module.exports = {
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: "babel-loader"
-        }
+        use: { loader: "babel-loader" }
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.css$/i,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.sass$/i,
+        use: [
+          'style-loader',
+          { loader: 'css-loader', options: { modules: true, modules: { localIdentName: '[local]_[hash:base64:5]' } } },
+          'sass-loader',
+          {
+            loader: StringReplacePlugin.replace({
+              replacements: [
+                {
+                  pattern: /(\ \-?[\d\.]*vh)/g,
+                  replacement: (match, p1, offset, string) => ' calc(var(--vh) * var(--sc) *' + p1.replace('vh', ')')
+                },
+                {
+                  pattern: /(rh)/g,
+                  replacement: () => 'vh'
+                }
+              ]
+            })
+          }
+        ],
+      },
+      {
+        test: /\.scss$/i,
         use: [
           'style-loader',
           'css-loader',
           'sass-loader',
           {
-           loader: StringReplacePlugin.replace({
-            replacements: [
-              {
-                pattern: /(\ \-?[\d\.]*vh)/g,
-                replacement: (match, p1, offset, string) => ' calc(var(--vh) * var(--sc) *' + p1.replace('vh', ')')
-              },
-              {
-                pattern: /(rh)/g,
-                replacement: () => 'vh'
-              }
-            ]
-          })
-         }
+            loader: StringReplacePlugin.replace({
+              replacements: [
+                {
+                  pattern: /(\ \-?[\d\.]*vh)/g,
+                  replacement: (match, p1, offset, string) => ' calc(var(--vh) * var(--sc) *' + p1.replace('vh', ')')
+                },
+                {
+                  pattern: /(rh)/g,
+                  replacement: () => 'vh'
+                }
+              ]
+            })
+          }
         ],
       },
       {

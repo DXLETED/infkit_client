@@ -1,0 +1,41 @@
+.stars
+  width: 100%
+  height: 50vh
+  position: absolute
+  overflow: hidden
+  justify-content: center
+  top: calc(100% - 40vh)
+  align-items: center
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgb(255, 255, 255) 40%, rgb(255, 255, 255) 80%, transparent 100%)
+  mask-image: linear-gradient(to top, rgb(255, 255, 255) 50%, transparent 100%)
+  z-index: -1
+  > .field
+    position: absolute
+    width: 100%
+    height: 100%
+    > .fieldParallax
+      width: 100%
+      height: 200%
+      > .star
+        width: 1px
+        height: 1px
+    &.range3
+      animation: stars-animation 50s infinite linear, stars-start 2s
+    &.range2
+      animation: stars-animation 20s infinite linear, stars-start 3s
+    &.range1
+      animation: stars-animation 10s infinite linear, stars-start 4s
+
+@keyframes stars-animation
+  0%
+    transform: translateY(0)
+  100%
+    transform: translateY(-100%)
+
+@keyframes stars-start
+  0%
+    opacity: 0
+    top: 20%
+  100%
+    opacity: 1
+    top: 0

@@ -36,5 +36,27 @@ export const useGuild = {
       let list = sel(s => s.guild.plugins.moderation.reasons.ban)
       return {list, get: id => list.find(el => el.id == id) || {}}
     }
+  },
+  members: {
+    mutes: () => {
+      let list = sel(s => s.guild.members.mutes)
+      return {list, get: id => list.filter(el => el.user === id)}
+    },
+    warns: () => {
+      let list = sel(s => s.guild.members.warns)
+      return {list, get: id => list.filter(el => el.user === id)}
+    },
+    bans: () => {
+      let list = sel(s => s.guild.members.bans)
+      return {list, get: id => list.filter(el => el.user === id)}
+    },
+    xp: () => {
+      let list = sel(s => s.guild.members.levels)
+      return {list, get: id => list[id] || 0}
+    }
+  },
+  membersCache: () => {
+    let list = sel(s => s.members)
+    return {list, get: id => list.find(el => el.id === id) || {}}
   }
 }

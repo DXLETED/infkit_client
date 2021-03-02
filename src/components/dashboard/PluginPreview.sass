@@ -1,0 +1,91 @@
+@import ./../../css-legacy/colorlist.scss
+
+.pluginPreviewList
+  width: 100%
+  flex-wrap: wrap
+  align-content: flex-start
+
+.pluginPreview
+  width: calc(100% / 3 - 2vh / 3)
+  height: 6vh
+  align-items: center
+  position: relative
+  opacity: 0.5
+  background: rgba($grey, 0.15)
+  margin-bottom: 2vh
+  overflow: hidden
+  cursor: pointer
+  &.enabled
+    opacity: 1
+    > .d > .name
+      color: $white
+    > .enabled
+      opacity: 0
+  &:not(:nth-child(3n))
+    margin-right: 1vh
+  &:hover
+    > img
+      height: 80%
+      opacity: 0.4
+    > .color
+      left: calc(0% - 3vh)
+      opacity: 0.25
+    > .d
+      > .name, > .desc
+        color: $white
+    > .enabled
+      opacity: 0.5
+  > img
+    position: absolute
+    right: 5vh
+    height: 135%
+    opacity: 0.2
+    z-index: 1
+    transition: 0.4s
+  > .d
+    flex: 1
+    padding: 0 2vh
+    flex-direction: column
+    justify-content: center
+    z-index: 1
+    > .name
+      width: 100%
+      height: 50%
+      color: $grey
+      align-items: center
+      font-family: 'bold'
+      font-size: 2.2vh
+      transition: 0.4s
+    > .desc
+      width: 100%
+      height: 30%
+      align-items: center
+      font-size: 1.3vh
+      color: $grey
+      transition: 0.4s
+  > .enabled
+    width: 4vh
+    height: 100%
+    justify-content: center
+    align-items: center
+    opacity: 0.5
+    transition: 0.4s opacity
+    z-index: 1
+    &:hover
+      background: rgba($white, 0.2)
+    > img
+      height: 40%
+  > .border
+    position: absolute
+    width: 0.5vh
+    height: 100%
+    bottom: 0
+  > .color
+    position: absolute
+    width: calc(100% + 6vh)
+    height: 100%
+    left: calc(100% + 3vh)
+    transform: skew(45deg)
+    opacity: 0
+    transition: 0.7s
+    background: rgb(189, 189, 189)

@@ -1,0 +1,32 @@
+@import ../css-legacy/colorlist.scss
+
+.scrollWr
+  width: 0.5vh
+  flex: 1 1 1
+  > .scroll
+    width: 100%
+    position: relative
+    background: $grey
+
+.withScroll
+  flex: 1
+  overflow: auto
+  scrollbar-width: none
+  &::-webkit-scrollbar
+    display: none
+  &.column
+    flex-direction: column
+  &.relative
+    position: relative
+
+\:global
+  .withScroll
+    flex: 1
+    overflow: auto
+    scrollbar-width: none
+    &::-webkit-scrollbar
+      display: none
+    &.column
+      flex-direction: column
+    &.relative
+      position: relative

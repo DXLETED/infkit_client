@@ -6,7 +6,7 @@ import { CSSTransition } from 'react-transition-group'
 import { Memoized } from './Memoized'
 import { vh } from './cssVar'
 
-export const ModalLabel = props => <div className={cn('modallabel-wr', {enabled: props.enabled === true, switchable: props.enabled !== undefined, m: props.m})}>
+export const ModalLabel = props => <div className={cn('modallabel-wr', {enabled: props.enabled === true, switchable: props.enabled !== undefined, m: props.m, disabled: props.disabled})}>
   {props.enabled !== undefined && <div className={cn('ml-enabled', {open: props.enabled})} onClick={() => props.toggle()}><img src={`/static/img/${props.enabled ? 'on' : 'off'}.png`} /></div>}
   <div className={cn('modal-label', {column: props.column, disabled: props.enabled === false})}>
     <div className="ml-type">{props.type}</div>
@@ -14,7 +14,7 @@ export const ModalLabel = props => <div className={cn('modallabel-wr', {enabled:
   </div>
 </div>
 
-export const Modal = ({s, children, title, className, onClick}) => {
+export const Modal = ({s, children, title, className, onClick, column}) => {
   const [V1, setV1] = useState(false)
   const [V2, setV2] = useState(false)
   const [linkedPos, setLinkedPos] = useState({loaded: false, x: 0, y: 0, w: 0, h: 0})
@@ -30,7 +30,7 @@ export const Modal = ({s, children, title, className, onClick}) => {
   })
   const updPos = () => {
     if (!s.open || !V1 || !linkedPos.loaded || !ref.current) return
-    const [x, align] = window.innerWidth - (linkedPos.x + ref.current.clientWidth * 2) < window.innerWidth / 100
+    const [x, align] = window.innerWidth - (linkedPos.x + ref.current.clientWidth * 2) < window.innerWidth / 100 * 5
       ? [linkedPos.x - ref.current.clientWidth, 'left']
       : [linkedPos.x + linkedPos.w, 'right']
     const y = linkedPos.y + ref.current.clientHeight > window.innerHeight - window.innerHeight / 100
@@ -60,6 +60,7 @@ export const Modal = ({s, children, title, className, onClick}) => {
   useEffect(() => {
     updPos()
   }, [linkedPos, V1])
+  const styles = {list: s.list, p: s.padding, column}
   return (
     ReactDOM.createPortal(
       V1 && <CSSTransition in={V2} classNames="modal-fadein" timeout={200} onExited={() => setV1(false)}>
@@ -68,11 +69,11 @@ export const Modal = ({s, children, title, className, onClick}) => {
             <div className="modal-fs-wr">
               {title && <div className="modal-title">{title}</div>}
               <div className="modal-fs-container">
-                <Scroll><div className={cn('modal-fs', className)}>{children}</div></Scroll>
+                <Scroll><div className={cn('modal-fs', className, styles)}>{children}</div></Scroll>
               </div>
             </div>
           </div>
-          : <div id={s.id} className={cn('modal-wr', `align-${pos.align}`, className, {list: s.list, p: s.padding})} style={{left: pos.x, top: pos.y, width: vh(s.width)}} onClick={e => onClick && onClick(e)} ref={ref}>
+          : <div id={s.id} className={cn('modal-wr', `align-${pos.align}`, className, styles)} style={{left: pos.x, top: pos.y, width: vh(s.width)}} onClick={e => onClick && onClick(e)} ref={ref}>
             {title && <div className="modal-title">{title}</div>}
             <div className="modal-container">
               <Scroll>

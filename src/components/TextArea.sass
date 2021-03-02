@@ -1,0 +1,99 @@
+@import ../css-legacy/colorlist.scss
+
+.textarea
+  width: 100%
+  flex-direction: column
+  &:not(.nm)
+    margin-bottom: 1.5vh
+  .textareaInner
+    width: 100%
+    min-height: 12.5vh
+    //max-height: 30vh
+    .input
+      display: block
+      flex: 1
+      background: rgba($black, 0.4)
+      backdrop-filter: blur(1rh)
+      padding: 1vh
+      cursor: text
+      -moz-user-select: text !important
+      line-height: 1.6vh
+      user-select: text
+      white-space: pre-wrap
+      word-break: break-all
+      &:before
+        content: attr(placeholder)
+        color: $grey
+        display: flex
+        position: absolute
+      > .textEmoji
+        display: inline-block
+        width: 1.6vh
+        height: 1.6vh
+        border: 0
+        background-image: url(/static/img/emoji.png)
+        vertical-align: bottom
+      > div
+        display: block
+        width: 100%
+        line-height: 2vh
+        word-break: normal
+        user-select: text
+        -moz-user-select: text !important
+        > .text-emoji
+          display: inline-block
+          height: 2vh
+          border: 0
+          background-image: url(/static/img/emoji.png)
+  > .controls
+    width: 100%
+    height: 3vh
+    justify-content: space-between
+    align-items: center
+    border-top: 0.2vh solid $grey
+    transition: 0.2s width
+    &.edit
+      .emoji, .limit, .cancel, .save
+        opacity: 1
+    .emoji, .limit, .cancel, .save
+      height: 100%
+      align-items: center
+      padding: 0 1vh
+      margin-right: 1vh
+      opacity: 0
+      transition: 0.2s opacity
+    .emoji
+      cursor: pointer
+      &:hover
+        background: rgba($grey, 0.4)
+      > div
+        align-items: center
+        > img
+          height: 1.5vh
+          margin-right: 1vh
+    .cancel, .save
+      cursor: pointer
+      &:hover
+        background: rgba($grey, 0.4)
+      > img
+        width: 1.5vh
+        margin-right: 1vh
+    .previewButton
+      width: 10vh
+      height: 100%
+      justify-content: center
+      align-items: center
+      margin-left: 1vh
+      cursor: pointer
+      &.enabled
+        width: 60vh
+      &:hover
+        background: rgba($grey, 0.4)
+      > img
+        height: 1.5vh
+        margin-right: 1vh
+
+
+
+.messageVisualizer
+  margin-left: 1vh

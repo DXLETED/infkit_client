@@ -1,4 +1,5 @@
 import React, { memo } from 'react'
+import { Category } from '../components/Category'
 import { CategoryName } from '../components/categoryName'
 import { CustomTime } from '../components/customTime'
 import { EditableList } from '../components/editableList'
@@ -19,26 +20,23 @@ const AutomodItem = memo(({state, label, api, trigger}) => <ExpansionPanel heade
       <Label>Trigger</Label>
       {trigger}
     </>}
-    <Label mt>Action</Label>
+    <Label mt>Member selection</Label>
+    <ObjectEdit label="Disabled roles" type="roles" data={state.droles} add={api.droles.add} delete={api.droles.del} m />
+    <ObjectEdit label="Disabled channels" type="channels" data={state.dchannels} add={api.dchannels.add} delete={api.dchannels.del} m />
+  </>,
+  <>
+  <Label>Action</Label>
     <MultiSwitch label="Warns" selected={{o: state.warns}} set={n => api.setWarns(n.o)} options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} m />
     <CustomTime label="Text mute time" value={state.muteTime.text} set={api.setMuteTimeText} b m defsize />
     <CustomTime label="Voice mute time" value={state.muteTime.voice} set={api.setMuteTimeVoice} b m defsize />
-    <Switch enabled={state.delMsg} set={api.setDelMsg}>Delete message</Switch>
-  </>,
-  <>
-    <ObjectEdit label="Enabled roles" type="roles" data={state.eroles} add={api.eroles.add} delete={api.eroles.del} default="ALL by default" m />
-    <ObjectEdit label="Disabled roles" type="roles" data={state.droles} add={api.droles.add} delete={api.droles.del} m />
-    <ObjectEdit label="Enabled channels" type="channels" data={state.echannels} add={api.echannels.add} delete={api.echannels.del} default="ANY by default" m />
-    <ObjectEdit label="Disabled channels" type="channels" data={state.dchannels} add={api.dchannels.add} delete={api.dchannels.del} m />
-    <ObjectEdit label="Groups" type="groups" data={state.groups} add={api.groups.add} delete={api.groups.del} />
+    <Switch enabled={state.delMsg} set={api.setDelMsg} p>Delete message</Switch>
   </>
-]} margin={2} />} r={<Enabled state={state.enabled} set={api.enabled} />} column m />)
+]} margin={2} />} r={<Enabled state={state.enabled} set={api.enabled} />} disabled={!state.enabled} column m />)
 
 export const Automod = props => {
   const { state, api } = props
   return <>
-    <div className="filters category">
-      <CategoryName>Filters</CategoryName>
+    <Category title="Filters">
       <AutomodItem label="Spam" state={state.filters.spam} api={api.filters.spam} trigger={
         <>
           <Row elements={[
@@ -59,30 +57,30 @@ export const Automod = props => {
       } />
       <AutomodItem label="Caps" state={state.filters.caps} api={api.filters.caps} trigger={
         <>
-          <Slider label="CAPS %" value={state.filters.caps.threshold} set={api.filters.caps.setThreshold} keyPoints={10} min={0.5} max={1} />
-          <Input value={state.filters.caps.minLength} set={api.filters.caps.setMinLength} label="Min message length" type="number" min={10} max={100} b />
+          <Slider label="CAPS %" value={state.filters.caps.threshold} set={api.filters.caps.setThreshold} keyPoints={10} min={0.5} max={1} m />
+          <Input value={state.filters.caps.minLength} set={api.filters.caps.setMinLength} label="Min message length" type="number" min={10} max={100} b m />
         </>
       } />
       <AutomodItem label="Emoji spam" state={state.filters.emoji} api={api.filters.emoji} trigger={
         <>
-          <Slider label="EMOJI %" value={state.filters.emoji.threshold} set={api.filters.emoji.setThreshold} keyPoints={10} min={0.5} max={1} />
+          <Slider label="EMOJI %" value={state.filters.emoji.threshold} set={api.filters.emoji.setThreshold} keyPoints={10} min={0.5} max={1} m />
+          <Input value={state.filters.emoji.minLength} set={api.filters.emoji.setMinLength} label="Min message length" type="number" min={10} max={100} b m />
         </>
       } />
       <AutomodItem label="Links" state={state.filters.links} api={api.filters.links} trigger={
         <>
-          <ObjectEdit label="Allowed domains" type="aliases" data={['youtube.com'].map(a => ({name: a}))}
+          <ObjectEdit label="Allowed domains" type="aliases" data={state.filters.links.allowedDomains}
             add={api.filters.links.allowedDomains.add}
             delete={api.filters.links.allowedDomains.del} input m />
         </>
       } />
       <AutomodItem label="Zalgo" state={state.filters.zalgo} api={api.filters.zalgo} trigger={
         <>
-          <Slider label="Threshold" value={state.filters.zalgo.threshold} set={api.filters.zalgo.setThreshold} keyPoints={10} min={0.5} max={1} />
+          <Slider label="Threshold" value={state.filters.zalgo.threshold} set={api.filters.zalgo.setThreshold} keyPoints={10} min={0.5} max={1} m />
         </>
       } />
-    </div>
-    <div className="autoactions category">
-      <CategoryName>Automated actions</CategoryName>
+    </Category>
+    <Category title="Automated actions">
       <EditableList data={state.autoActions.map((a, i) => <>
         <Row elements={[
           <>
@@ -123,6 +121,6 @@ export const Automod = props => {
       </>)}
       add={api.autoActions.create}
       delete={api.autoActions.del} column p={1} limit={5} />
-    </div>
+    </Category>
   </>
 }

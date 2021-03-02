@@ -1,73 +1,115 @@
-import React, { useState, useEffect, useRef, memo } from 'react'
+import React, { useRef, memo } from 'react'
 import cn from 'classnames'
-import { useSelector } from 'react-redux'
 import { colors } from './colorlist'
 import Color from 'color'
 import { Modal } from './modal'
-import { Scroll } from './scroll'
 import { Label } from './label'
 import { useModal } from '../hooks/useModal'
-import equal from 'fast-deep-equal'
-import { diff } from 'deep-diff'
 import { isEqual } from 'lodash'
 import { useGuild } from '../hooks/useGuild'
 import { Input } from './input'
 import { MLabel } from './mlabel'
 
+import st from './ObjectEdit.sass'
+
 export const ObjectEdit = memo(props => {
+  const type = props.type
   const [mState, open, close] = useModal({list: true, padding: false})
-  const add = id => {
-    props.add(id)
+  const add = (t, id) => {
+    props.add(props.isGroup ? id : {t, id})
     close()
   }
   let ref = useRef()
+  const roles = useGuild.roles()
+  const channels = useGuild.channels()
+  const groups = useGuild.groups()
   let list = []
-  if (props.type === 'channels')
+  if (type === 'channels')
     list = [
-      ...[{name: 'Text channels', type: 'group'}, ...useGuild.channels().text],
-      ...[{name: 'Voice channels', type: 'group'}, ...useGuild.channels().voice]
+      ...[{name: 'Text channels', type: 'class'}, ...useGuild.channels().text],
+      ...[{name: 'Voice channels', type: 'class'}, ...useGuild.channels().voice]
     ]
-  if (props.type === 'roles')
-    list = useGuild.roles().list
-  if (props.type === 'groups')
+  if (type === 'roles')
+    list = [
+      {name: 'Roles', type: 'class'},
+      ...useGuild.roles().list
+    ]
+  if (type === 'groups')
     list = useGuild.groups().list
   return (
-    <div className={cn('object-edit-wr', props.className, {m: props.m, flex: props.flex})}>
+    <div className={cn(st.objectEditWr, props.className, {m: props.m, flex: props.flex, disabled: props.disabled, right: props.right})}>
       <MLabel d={props.label} />
-      <div className="object-edit" ref={ref} onClick={e => e.stopPropagation()}>
-        {props.data && props.data.length
-          ? props.data.map((ch, i) => {
-            let r
-            if (props.type === 'channels' || props.type === 'roles' || props.type === 'groups') r = list ? list.find(r => r.id === ch) : {}
-            else r = ch
-            return (
-              <div className="el" key={ch}>
-                <div className="delete" onClick={() => props.delete(i)}><img src="/static/img/delete.png" className="delete-img" /></div>
-                {r && r.name || '---'}
-                {props.type === 'channels' && <div className="border" style={r && {background: colors.grey}} />}
-                {props.type === 'roles' && <div className="border" style={r && {background: r.color !== 0 ? Color(r.color).hex() : colors.grey}} />}
-                {(props.type === 'groups' || props.type === 'aliases') && <div className="border" style={r && {background: colors.grey}} />}
-              </div>
-            )
-          })
-          : props.default && <div className="el default">{props.default}<div className="border" style={{background: colors.dgrey}} /></div>}
+      <div className={st.objectEdit} ref={ref} onClick={e => e.stopPropagation()}>
+        {(props.data && props.data.length)
+        ? props.data.map((r = {}, i) => <>
+          <div className={cn(st.el, {group: r.t === 'group'})} key={r.id || i}>
+            <div className={st.delete} onClick={() => props.delete(i)}><img src="/static/img/delete.png" className="deleteImg" /></div>
+            {(() => {
+              if (props.isGroup) {
+                switch (type) {
+                  case 'roles': {
+                    const c = roles.get(r)
+                    return <>{c.name || '---'}<div className={st.border} style={c && {background: (c.color !== 0 && c.color !== undefined) ? Color(c.color).hex() : colors.grey}} /></>
+                  }
+                  case 'channels': {
+                    const c = channels.get(r)
+                    return <>{c.name || '---'}<div className={st.border} /></>
+                  }
+                }
+              } else if (props.type === 'aliases') {
+                return <>{r}<div className={st.border} style={r && {background: colors.grey}} /></>
+              } else {
+                switch (r.t) {
+                  case 'role': {
+                    const c = roles.get(r.id)
+                    return <>{c.name || '---'}<div className={st.border} style={c && {background: (c.color !== 0 && c.color !== undefined) ? Color(c.color).hex() : colors.grey}} /></>
+                  }
+                  case 'channel': {
+                    const c = channels.get(r.id)
+                    return <>{c.name || '---'}<div className={st.border} /></>
+                  }
+                  case 'group': {
+                    const c = groups.get(r.id)
+                    return <>
+                      <img src="/static/img/group.png" />
+                      {c.name || '---'}
+                      <div className={st.border} />
+                    </>
+                  }
+                }
+              }
+            })()}
+          </div>
+          {r.t === 'group' && (() => {
+            const c = groups.get(r.id)
+            return <>
+              {(type === 'roles' && c.roles && c.roles.map((role, i) => <div className={cn(st.details, {[st.last]: i === c.roles.length - 1})}>{roles.get(role).name}<div className={st.border} /></div>))}
+              {(type === 'channels' && c.channels && c.channels.map((ch, i) => <div className={cn(st.details, {[st.last]: i === c.channels.length - 1})}>{channels.get(ch).name}<div className={st.border} /></div>))}
+            </>
+          })()}
+        </>)
+        : props.default && <div className={cn(st.el, st.default)}>{props.default}<div className={st.border} style={{background: colors.dgrey}} /></div>}
         {props.input
           ? <Input set={props.add} clearOnSet b oe />
-          : <div className={cn('add', {ml: !props.noML})} onClick={open}><img src="/static/img/add.png" /><div className="border" /></div>}
-        <Modal id="object-edit" s={mState}>{list && list.map((r, i) => {
-              if (r.type === 'group')
-                return <Label bg p mt={i !== 0} key={i}>{r.name}</Label>
-              if (props.type === 'channels')
-                return <div className="obj-edit-el" onClick={() => add(r.id)} style={{borderColor: colors.grey}} key={i}>
-                  {r.type === 'text' && <img src="/static/img/text.png" />}
-                  {r.type === 'voice' && <img src="/static/img/voice.png" />}
-                  {r.name}
-                </div>
-              if (props.type === 'roles')
-                return <div className="obj-edit-el" onClick={() => add(r.id)} style={{borderColor: r.color !== 0 ? Color(r.color).hex() : colors.grey}} key={i}>{r.name}</div>
-              if (props.type === 'groups')
-                return <div className="obj-edit-el" onClick={() => add(r.id)} style={{borderColor: colors.grey}} key={r.id}>{r.name}</div>
-            })}
+          : <div className={cn(st.add, {ml: !props.noML})} onClick={open}><img src="/static/img/add.png" /><div className={st.border} /></div>}
+        <Modal id="object-edit" s={mState}>
+          {!props.isGroup && <>
+            <Label bg p>Groups</Label>
+            {groups.list.map(gr => <div className={cn('obj-edit-el')} onClick={() => add('group', gr.id)} style={{borderColor: colors.grey}} key={gr.id}>{gr.name}</div>)}
+          </>}
+          {list.map((r, i) => {
+            if (r.type === 'class') return <Label bg p mt={!props.isGroup || i !== 0}>{r.name}</Label>
+            switch (type) {
+              case 'roles':
+                return <div className={cn('obj-edit-el', {disabled: (props.data || []).find(rr => rr.id === r.id)})} onClick={() => add('role', r.id)} style={{borderColor: r.color !== 0 ? Color(r.color).hex() : colors.grey}} key={i}>{r.name}</div>
+              case 'channels':
+                return <div className={cn('obj-edit-el', {disabled: (props.data || []).find(rr => rr.id === r.id)})} onClick={() => add('channel', r.id)} style={{borderColor: colors.grey}} key={i}>
+                    {r.type === 'text' && <img src="/static/img/text.png" />}
+                    {r.type === 'voice' && <img src="/static/img/voice.png" />}
+                    {r.name}
+                  </div>
+            }
+          })}
         </Modal>
       </div>
     </div>

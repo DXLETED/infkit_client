@@ -101,6 +101,7 @@ export const ColorPicker = ({c, label, set, m, reset}) => {
     setPos({x: Color(c).hsv().color[1] / 100, y: 1 - Color(c).hsv().color[2] / 100})
     setMColor(Color(c || '#FF0000').hsv().color[0])
     setOpacity(Color(c).valpha)
+    pickerRef.current && draw1(pickerRef.current, Color(c || '#FF0000').hsv().color[0])
     opacityRef.current && draw3(opacityRef.current, c)
   }
   const select1 = e => {
@@ -156,7 +157,7 @@ export const ColorPicker = ({c, label, set, m, reset}) => {
     }
     setOpacity(o)
   }
-  const [mState, open, close] = useModal({width: 35, closeIf: () => Object.values(pressedRef.current).every(p => !p), onclose: () => updColor(c)})
+  const [mState, open, close] = useModal({width: 35, padding: true, closeIf: () => Object.values(pressedRef.current).every(p => !p), onclose: () => updColor(c)})
   useEffect(() => { openRef.current = mState.open }, [mState.open])
   useEffect(() => { posRef.current = pos }, [pos])
   useEffect(() => { mColorRef.current = mColor }, [mColor])
@@ -207,8 +208,8 @@ export const ColorPicker = ({c, label, set, m, reset}) => {
         <div className="cursor" style={{left: `${opacity * 100}%`}} />
       </div>
       <Row elements={[
-        {width: 3, el: <Input placeholder="#HEX value" value={Color(color).hex()} set={n => Color(n) && updColor(Color(n).hex())} b m />},
-        <Input type="number" placeholder="Opacity" value={parseInt(opacity * 255)} set={n => setOpacity(n / 255)} min={0} max={255} center b m />
+        {width: 3, el: <Input placeholder="#HEX value" value={Color(color).hex()} set={n => Color(n) && updColor(Color(n).hex())} p defsize b m />},
+        <Input type="number" placeholder="Opacity" value={parseInt(opacity * 255)} set={n => setOpacity(n / 255)} min={0} max={255} center p defsize b m />
       ]} />
       <Row className="picked" elements={[
         <div className="current-color cp-button" onClick={() => updColor(Color(c).string())} style={{borderColor: Color(c).string()}}>Cancel</div>,

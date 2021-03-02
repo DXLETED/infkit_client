@@ -4,7 +4,7 @@ import cn from 'classnames'
 import { vh } from './cssVar'
 
 export const EdgedButton = props => {
-  let history = useHistory()
+  const history = useHistory()
   const click = () => {
     props.onClick && props.onClick()
     if (props.to && props.to.includes('://'))
@@ -16,13 +16,11 @@ export const EdgedButton = props => {
     e.preventDefault()
     e.stopPropagation()
   }
-  return (
-    <div className={cn('button', props.className, {enabled: props.status || props.status === undefined, compact: props.compact, center: props.center})} onClick={click}>
-      <div className="border" />
-      <div className="button-label" style={{paddingLeft: props.status !== undefined ? vh(5) : vh(1)}}>
-        {props.status !== undefined && <div className={cn('status')} onClick={statusClick} />}
-        {props.children}
-      </div>
+  return <div className={cn('button', props.className, {enabled: props.status || props.status === undefined, compact: props.compact, center: props.center, m: props.m})} onClick={click}>
+    <div className="border" style={{borderColor: props.borderColor}} />
+    <div className="button-label" style={{paddingLeft: props.status !== undefined ? vh(5) : props.center ? 0 : vh(1), borderColor: props.borderColor}}>
+      {props.status !== undefined && <div className={cn('status')} onClick={statusClick} />}
+      {props.children}
     </div>
-  )
+  </div>
 }

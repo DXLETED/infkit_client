@@ -1,0 +1,69 @@
+@import ./../css-legacy/colorList.scss
+
+.objectEditWr
+  flex-direction: column
+  &:global
+    &.m
+      margin-bottom: 1vh
+    &.flex
+      flex: 1
+    &.right > .object-edit
+      justify-content: flex-end
+  .objectEdit
+    flex: 1
+    flex-wrap: wrap
+    margin-bottom: -0.5vh
+    > .el, > .add
+      position: relative
+      height: 3vh
+      justify-content: center
+      align-items: center
+      margin-bottom: 0.5vh
+      padding: 0 0.5vh
+      cursor: pointer
+      &.default
+        color: $grey
+      > .border
+        width: 100%
+        height: 0.2vh
+        position: absolute
+        bottom: 0
+        background: $grey
+    > .el
+      align-items: center
+      > img
+        height: 50%
+        margin-right: 0.5vh
+      &:not(.group)
+        margin-right: 0.5vh
+      &:hover > .delete > img
+        opacity: 1
+      > .delete
+        width: 2vh
+        height: 100%
+        align-items: center
+        > img
+          height: 30%
+          opacity: 0.5
+    > .details
+      position: relative
+      height: 3vh
+      align-items: center
+      margin-left: 0.5vh
+      padding: 0 0.5vh
+      background: rgba($grey, 0.2)
+      &.last
+        margin-right: 0.5vh
+      > .border
+        width: calc(100% + 0.5vh)
+        height: 0.2vh
+        position: absolute
+        right: 0
+        bottom: 0
+        background: $grey
+    > .add
+      &:hover > img
+        opacity: 1
+      > img
+        height: 40%
+        opacity: 0.5

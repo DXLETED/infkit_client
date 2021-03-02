@@ -1,0 +1,88 @@
+@import './colorlist.scss';
+
+.editable-list-wr {
+  width: 100%;
+  flex-direction: column;
+  &.cpointer > .editable-list > .editable-list-el-wr {
+    cursor: pointer;
+  }
+  &.m {
+    margin-bottom: 1vh;
+  }
+  &.m2 {
+    margin-bottom: 2vh;
+  }
+  .editable-list {
+    width: 100%;
+    flex-direction: column;
+    &.extended {
+      > .editable-list-el {
+        margin-bottom: 2vh;
+      }
+      > .add {
+        height: 4vh;
+      }
+    }
+    &.p > .editable-list-el-wr {
+      padding: 1vh;
+    }
+    > .editable-list-el-wr, > .add {
+      width: 100%;
+      background: rgba($grey, 0.2);
+      align-items: center;
+    }
+    > .editable-list-el-wr {
+      position: relative;
+      background: rgba($grey, 0.15);
+      margin-bottom: 1vh;
+      padding-right: 4vh;
+      .editable-list-el-row {
+        flex: 1;
+        align-items: center;
+      }
+      .editable-list-el-column {
+        flex-direction: column;
+        flex: 1;
+      }
+      > .delete {
+        width: 4vh;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0.2vh;
+            height: 100%;
+            background: $red;
+          }
+          > img {
+            opacity: 1;
+          }
+        }
+        > img {
+          height: 1.5vh;
+          opacity: 0.5;
+        }
+      }
+    }
+    > .add {
+      height: 3vh;
+      justify-content: center;
+      font-family: 'Bold';
+      cursor: pointer;
+      &:hover {
+        background: rgba($grey, 0.5);
+      }
+      > img {
+        height: 1.8vh;
+      }
+    }
+  }
+}

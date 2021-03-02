@@ -1,0 +1,34 @@
+@import ./../css-legacy/colorlist.scss
+
+.switch
+  height: 3vh
+  position: relative
+  align-items: center
+  cursor: pointer
+  align-items: center
+  border-left: 0.1vh solid $grey
+  &:global
+    &.p
+      padding: 0 1vh
+    &.m
+      margin-bottom: 1vh
+    &.flex
+      flex: 1
+  &:hover
+    background: rgba($white, 0.1)
+  &.enabled
+    > .status
+      background: $white
+      border: none
+  > img
+    height: 1.8vh
+    margin-right: 1vh
+    filter: invert(1)
+  > .status
+    content: ""
+    width: 1.2vh
+    height: 1.2vh
+    margin-right: 1vh
+    border: 0.3vh solid $grey
+    &.enabled
+      background: #000

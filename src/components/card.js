@@ -2,7 +2,7 @@ import Color from 'color'
 import React, { useEffect, useRef } from 'react'
 import { useCallbackRef } from 'use-callback-ref'
 
-export const Card = ({s}) => {
+export const Card = ({s, scale = 1}) => {
   const draw = async (canvas, { colors = {} }) => {
     colors = Object.fromEntries(Object.entries(colors).map(([cn, c]) => [cn, Color(c).string()]))
 
@@ -61,5 +61,5 @@ export const Card = ({s}) => {
   useEffect(() => {
     ref.current && draw(ref.current, s)
   }, [s])
-  return <canvas width={600} height={200} ref={ref} />
+  return <canvas width={600} height={200} style={{zoom: scale}} ref={ref} />
 }

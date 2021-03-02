@@ -13,7 +13,7 @@ import { notify } from '../components/notify'
 import { emojis } from '../components/emojis'
 
 const generateId = arr => {
-  var rnd = ''
+  const rnd = ''
   while (rnd.length < 8)
     rnd += Math.random().toString(36).substring(2)
   if (arr.includes(rnd))
@@ -36,10 +36,10 @@ export const reactionRoles = props => {
               type="text"
               add={[{id: null, name: 'Channel not selected'}]}
               set={n => api.setChannel(i, n)} m />}
-            <TextArea spellCheck="false" placeholder="Message" value={state.d[i].msg} set={n => api.setMsg(i, n)} emoji></TextArea>
+            <TextArea spellCheck="false" placeholder="Message" value={state.d[i].msg.content} set={n => api.setMsgContent(i, n)} emoji></TextArea>
             {saveVisible && <div className="save"></div>}
             <EditableList data={state.d[i].reacts.map((r, ii) => <>
-            <div className="emoji"><Emoji current={state.d[i].reacts[ii].emoji} set={n => api.setEmoji(i, ii, emojis.getUnicode(n.label))} disabled={state.d[i].reacts[ii].emoji} mr /></div>
+            <div className="emoji"><Emoji current={state.d[i].reacts[ii].emoji} set={n => api.setEmoji(i, ii, n.label)} disabled={state.d[i].reacts[ii].emoji} mr /></div>
             <ObjectEdit type="roles" data={state.d[i].reacts[ii].roles}
               add={n => api.addRole(i, ii, n)}
               delete={d => api.delRole(i, ii, d)} />

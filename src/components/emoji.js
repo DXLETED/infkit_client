@@ -13,13 +13,28 @@ import { useMemo } from 'react'
 import { Input } from './input'
 import { useSettings } from '../hooks/settings.hook'
 
+import st from './Emoji.sass'
+
+export const EmojiImg = ({className, label, x, y, size}) => {
+  const scale = size / emojis.size
+  return <div className={className} style={{
+      width: size,
+      height: size,
+      display: 'inline-block',
+      backgroundImage: 'url(/static/img/emoji.png)',
+      backgroundSize: `${emojis.width * scale}px ${emojis.height * scale}px`,
+      backgroundPositionX: -x * size,
+      backgroundPositionY: -y * size
+    }} />
+}
+
 const CategoryEmoji = props => {
   const scale = 28 / emojis.size
   const startFrom = emojis.list[props.cat] ? emojis.list[props.cat].startFrom : 0
   const [open, setOpen] = useSettings('emoji_category_' + props.cat, true, {options: [true, false]})
   return <ExpansionPanel header={props.header} dropdown={emojis.list[props.cat]
     ? emojis.list[props.cat].list.map((e, i) =>
-      <div className="category-emoji-el" key={e}>
+      <div className={st.emojiEl} key={e}>
         <div
           style={{
             backgroundSize: `${emojis.width * scale}px ${emojis.height * scale}px`,
@@ -28,7 +43,7 @@ const CategoryEmoji = props => {
           }}
           onClick={() => props.set({label: e.split(' ')[0], x: i % emojis.row, y: Math.floor(i / emojis.row)})} />
       </div>)
-    : ''} onchange={setOpen} open={open} m></ExpansionPanel>
+    : ''} onchange={setOpen} open={open} wrap p m></ExpansionPanel>
 }
 
 const EmojiList = memo(({open, set, us}) => {
@@ -36,17 +51,18 @@ const EmojiList = memo(({open, set, us}) => {
   const scale = 28 / emojis.size
   return <>
     {open && <>
-      <Input input={setSearch} placeholder="Search" b m />
+      <Input input={setSearch} placeholder="Search" p defsize b m />
       {search
-      ? <div className="emoji-search-list">{
+      ? <div className={st.emojiSearchList}>{
         emojis.all().map((e, i) => [e, i]).filter(e => e[0].includes(search)).map(([e, i]) =>
-          <div className="emoji-el" key={e}>
+          <div className={st.emojiEl} key={e}>
             <div
               style={{
                 backgroundSize: `${emojis.width * scale}px ${emojis.height * scale}px`,
                 backgroundPositionX: i % emojis.row * -emojis.size * scale,
                 backgroundPositionY: Math.floor(i / emojis.row) * -emojis.size * scale
               }}
+              aria-label={e}
               onClick={() => set({label: e.split(' ')[0], x: i % emojis.row, y: Math.floor(i / emojis.row)})} />
           </div>)}
         </div>
@@ -89,9 +105,23 @@ export const Emoji = props => {
         }
       })()} />
       {!props.disabled &&
-        <Modal className="emoji" s={mState}>
+        <Modal className={st.emojilist} s={mState}>
           <EmojiList open={mState.open} set={set} us={{}} />
         </Modal>}
     </div>
   )
+}
+
+export const EmojiBtn = ({className, set, children}) => {
+  const [mState, mOpen, close] = useModal({width: 46.5})
+  const set1 = useMemo(() => e => {
+    set(e)
+    close()
+  }, [])
+  return <div className={className}>
+    <div onClick={mOpen}>{children}</div>
+    <Modal className={st.emojilist} s={mState}>
+      <EmojiList open={mState.open} set={set1} us={{}} />
+    </Modal>
+  </div>
 }

@@ -25,6 +25,7 @@ export const useModal = ({initState = false, fixed = false, fullScreen = false, 
   }, [vis])
   const open = e => {
     let ml = e.target.closest('.ml')
+    console.log('OPEN', ml)
     setLink(ml || e.target)
     setVis(true)
   }

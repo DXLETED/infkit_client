@@ -11,15 +11,15 @@ let en = {
   plugin_counters: 'Counters',
   plugin_poll: 'Poll',
   plugin_alerts: 'Twitch alerts',
-  plugindesc_levels: 'Highlight seasoned participants / Reward the olds',
-  plugindesc_moderation: 'Easy-to-use management of your server',
-  plugindesc_automod: '???????',
-  plugindesc_reactionRoles: 'Allow your members to get roles by responding to a message',
-  plugindesc_welcome: 'Customize your welcome image / text',
-  plugindesc_counters: 'Server stats',
-  plugindesc_alerts: 'Instant notifications about streams',
-  plugindesc_music: 'Control high quality music right from the app',
-  plugindesc_poll: 'Finally, decide what to play',
+  plugindesc_levels: 'Rewards / !rank | !addxp',
+  plugindesc_moderation: '!clear | !warn | !kick | !ban ...',
+  plugindesc_automod: 'Filters | AutoActions',
+  plugindesc_reactionRoles: '1 message',
+  plugindesc_welcome: 'Greeting new members',
+  plugindesc_counters: 'Last update: -----',
+  plugindesc_alerts: 'Notices about videos, streams',
+  plugindesc_music: 'Nothing playing',
+  plugindesc_poll: '0 polls last week',
   plugindesc_userRooms: 'User-configurable channels',
   cmddesc_rank: 'Your rank card or another member',
   cmddesc_addxp: 'Adds XP to you or another member',
@@ -43,6 +43,13 @@ let en = {
         default_action_reason: ['None', 'Select a precific reason', 'Ban by reason', 'Select a reason from a list'],
         default_action_time: ['Select a specific time', 'Use reason time', 'Permanently ban']
       }
+    }
+  },
+  log: {
+    t: {
+      'xp': 'XP changed',
+      'levels/xp/add': 'XP added',
+      'levels/xp/sub': 'XP subtracted'
     }
   }
 }

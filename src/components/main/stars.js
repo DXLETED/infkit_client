@@ -4,6 +4,9 @@ import { useEffect } from 'react'
 import { useRef } from 'react'
 import { useCallbackRef } from 'use-callback-ref'
 import { useScroll } from '../../hooks/scroll.hook'
+import cn from 'classnames'
+
+import st from './Stars.sass'
 
 const StarsCanvas = memo(({parallaxLeft, parallaxTop, radius, amount}) => {
   const stars = useRef()
@@ -40,13 +43,13 @@ const StarsCanvas = memo(({parallaxLeft, parallaxTop, radius, amount}) => {
     window.addEventListener('resize', updateCanvas)
     return () => window.removeEventListener('resize', updateCanvas)
   }, [])
-  return <canvas ref={ref} className="field-parallax" style={{transform: `translate(${parallaxLeft * 1}%, ${parallaxTop * 1}%)`}} />
+  return <canvas ref={ref} className={st.fieldParallax} style={{transform: `translate(${parallaxLeft * 1}%, ${parallaxTop * 1}%)`}} />
 })
 
 export const Stars = memo(() => {
   const [parallaxLeft, setParallaxLeft] = useState(0)
   const [parallaxTop, setParallaxTop] = useState(0)
-  const scrollTop = useScroll('.page#main > main', 2, 0, 200)
+  const scrollTop = useScroll('.page#main > .main', 2, 0, 200)
   const updateStars = e => {
     setParallaxLeft(e.pageX / window.innerWidth - 0.5)
     setParallaxTop(e.pageY / window.innerHeight - 0.5)
@@ -55,14 +58,14 @@ export const Stars = memo(() => {
     document.addEventListener('mousemove', updateStars)
     return () => document.removeEventListener('mousemove', updateStars)
   }, [])
-  return <div className="stars" style={{opacity: (200 - scrollTop) / 200}}>
-    <div className="field range3">
+  return <div className={st.stars} style={{opacity: (200 - scrollTop) / 200}}>
+    <div className={cn(st.field, st.range3)}>
       <StarsCanvas parallaxLeft={parallaxLeft} parallaxTop={parallaxTop} radius={1} amount={300} />
     </div>
-    <div className="field range2">
+    <div className={cn(st.field, st.range2)}>
       <StarsCanvas parallaxLeft={parallaxLeft * 2} parallaxTop={parallaxTop * 2} radius={2} amount={50} />
     </div>
-    <div className="field range1">
+    <div className={cn(st.field, st.range1)}>
       <StarsCanvas parallaxLeft={parallaxLeft * 5} parallaxTop={parallaxTop * 5} radius={3} amount={20} />
     </div>
   </div>
