@@ -79,7 +79,7 @@ const TimeSelect = memo(({value, period, set, setMinPeriod, min, max} = {}) => {
 export const CustomTime = memo(({value, label, set, covered, activate, border, min, max = 86400000, defsize, b, m}) => {
   const [minPeriod, setMinPeriod] = useState(0)
   return (
-    <div className={cn(st.customTime, {[st.border]: border, [st.defsize]: defsize, [st.border_bottom]: b, [st.m]: m})}>
+    <div className={cn(st.customTime, {[st.border]: border, [st.defsize]: defsize, [st.b]: b, [st.m]: m})}>
       <MLabel d={label} />
       <div className={st.customTimeInner}>
         {covered

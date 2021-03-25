@@ -4,6 +4,7 @@ import { Markdown } from './Markdown'
 import moment from 'moment'
 import cn from 'classnames'
 import Color from 'color'
+import { Component } from '../Component'
 
 const Author = ({name, url, icon_url}) => <div className={st.author}>
   {icon_url && <img className={st.authorImg} src={icon_url} />}
@@ -31,11 +32,18 @@ const Fields = ({d}) => <div className={st.fields}>
   {(d || []).map((f, i) => <Field {...f} key={i} />)}
 </div>
 
-const EmbedContent = ({author, title, url, description, fields, image, footer}) => <div className={cn(st.content, {[st.m]: image || footer?.text})}>
+const EmbedContentInner = ({author, title, url, description, fields, image, footer}) => <div className={cn(st.contentInner, {[st.m]: image || footer?.text})}>
   {author && <Author {...author} />}
   {title && <Title {...{title, url}} />}
   {description && <Description d={description} />}
   {fields && <Fields d={fields} />}
+</div>
+
+const Thumbnail = ({url}) => <img className={st.richThumb} src={url} />
+
+const EmbedContent = ({d}) => <div className={st.content}>
+  <EmbedContentInner {...d} />
+  {d.thumbnail && <Thumbnail url={d.thumbnail.url} />}
 </div>
 
 const EmbedImage = ({url}) => <div className={st.image}>
@@ -47,18 +55,11 @@ const Footer = ({text, icon_url, timestamp}) => <div className={st.footer}>
   {text}{(text && timestamp) ? ' | ' : ''}{timestamp && moment(timestamp).format('ddd MMM Do, YYYY [at] h:mm A')}
 </div>
 
-const EmbedInner = ({d}) => <div className={st.inner}>
-  <EmbedContent {...d} />
-  {d.image && <EmbedImage {...d.image} />}
-  {d.footer && <Footer {...d.footer} timestamp={d.timestamp} />}
-</div>
-
-const Thumbnail = ({url}) => <img className={st.richThumb} src={url} />
-
-export const Embed = ({d = {}}) => <div className={st.embedWr}>
-  <div className={st.color} style={{backgroundColor: Color(d.color).hex()}} />
+export const Embed = ({d = {}, ...props}) => <Component className={st.embedWr} {...props}>
+  <div className={st.color} style={{backgroundColor: Color(d.color || '#000000').hex()}} />
   <div className={st.embed}>
-    <EmbedInner {...{d}} />
-    {d.thumbnail && <Thumbnail url={d.thumbnail.url} />}
+    <EmbedContent d={d} />
+    {d.image && <EmbedImage {...d.image} />}
+    {d.footer && <Footer {...d.footer} timestamp={d.timestamp} />}
   </div>
-</div>
+</Component>

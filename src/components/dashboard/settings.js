@@ -16,6 +16,7 @@ export const ClientSettings = () => {
   return <div className={cn(st.clientSettings, {[st.visible]: s})}>
     <ClientSettingsSwitch label="Show plugins description" k="plugins-description" def={true} />
     <ClientSettingsSwitch label="Auto reconnect" k="autoreconnect" def={true} />
+    <ClientSettingsSwitch label="ANIME" k="anime" def={false} />
     <div className={st.close} onClick={close}><img src="/static/img/arrow/bottom.png" /></div>
   </div>
 }

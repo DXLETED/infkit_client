@@ -24,12 +24,9 @@ export const Input = props => {
     if (ref.current) ref.current.value = ''
   }
   return (
-    <div className={cn(st.input, props.className, {[st.b]: props.b, [st.m]: props.m, [st.p]: props.p, [st.center]: props.center, [st.oe]: props.oe, [st.fill]: props.fill, [st.black]: props.black, [st.bold]: props.bold, [st.defsize]: props.defsize})}>
+    <div className={cn(st.input, props.className, {[st.b]: props.b, [st.m]: props.m, [st.p]: props.p, [st.center]: props.center, [st.oe]: props.oe, [st.fill]: props.fill, [st.black]: props.black, [st.bold]: props.bold, [st.defsize]: props.defsize, [st.right]: props.right})}>
       <MLabel d={props.label} />
       <input ref={ref} onInput={e => {
-          if (props.type === 'number') {
-            e.target.value = parseInt(e.target.value) || 0
-          }
           props.input && e.target.value !== prevValue.current && props.input(e.target.value)
           if (props.limit && e.target.value.length > props.limit)
             return e.target.value = e.target.value.slice(0, props.limit)
@@ -44,10 +41,15 @@ export const Input = props => {
           e.target.value = props.min
         if (props.max !== undefined && e.target.value > props.max)
           e.target.value = props.max
-        props.set && props.set(props.type === 'number' ? parseInt(e.target.value) : e.target.value)
+        props.set && props.set(props.type === 'number' ? parseFloat(e.target.value) : e.target.value)
         props.clearOnSet && clear()
-        setTarget(false)
-      }} placeholder={props.placeholder} onClick={props.onClick} spellCheck={false} onFocus={() => setTarget(true)} size={1} />
+        setTimeout(() => !ref.current.hasFocus && setTarget(false), 500)
+      }} placeholder={props.placeholder} onMouseUp={e => {
+        if (props.right) {
+          e.target.selectionStart = e.target.value.length
+          e.target.selectionEnd = e.target.value.length
+        }
+      }} onClick={e => props.onClick?.()} spellCheck={false} onFocus={() => setTarget(true)} size={1} />
       {props.dropdown && <div className={cn(st.dropdownWr, {[st.visible]: target && props.dropdownVisible})}>
         <Scroll>
           <div className={st.dropdown}>

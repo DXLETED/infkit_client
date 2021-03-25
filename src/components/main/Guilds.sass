@@ -1,10 +1,15 @@
 @import ./../../css-legacy/colorlist.scss
+@import src/mixins.sass
 
 .guildsWr
   width: 35vh
   height: 100%
+  @include ap3
+    width: calc(100% - 2vh)
+    height: calc(100rh - 42vh)
   > .guilds
-    padding-right: 1vh
+    height: 100%
+    padding: 0 1vh
     &:global
       &:not(.overflow)
         justify-content: center

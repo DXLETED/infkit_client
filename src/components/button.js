@@ -2,11 +2,23 @@ import React from 'react'
 import { useHistory } from 'react-router'
 import cn from 'classnames'
 import { vh } from './cssVar'
+import { Component } from './Component'
+
+import st from './Button.sass'
+
+export const Button = ({label, src, to, onClick, ...props}) => {
+  const history = useHistory()
+  const click = e => {
+    onClick?.(e)
+    to && history.push(to)
+  }
+  return <Component cln={st.button} onClick={click} {...props}><div className={st.img}><img src={src || '/static/img/arrow/right.png'} /></div><div className={st.label}>{label}</div></Component>
+}
 
 export const EdgedButton = props => {
   const history = useHistory()
-  const click = () => {
-    props.onClick && props.onClick()
+  const click = e => {
+    props.onClick && props.onClick(e)
     if (props.to && props.to.includes('://'))
       return window.location = props.to
     props.to && history.push(props.to)

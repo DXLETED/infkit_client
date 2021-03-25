@@ -3,6 +3,8 @@
 .scrollWr
   width: 0.5vh
   flex: 1 1 1
+  &.pl
+    margin-left: 1vh
   > .scroll
     width: 100%
     position: relative
@@ -22,7 +24,7 @@
 \:global
   .withScroll
     flex: 1
-    overflow: auto
+    overflow-y: auto
     scrollbar-width: none
     &::-webkit-scrollbar
       display: none

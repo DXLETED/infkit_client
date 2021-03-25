@@ -17,6 +17,7 @@ export const colors = {
   moderation: 'rgb(189, 51, 51)',
   automod: 'rgb(189, 83, 51)',
   reactionRoles: 'rgb(189, 51, 97)',
+  embeds: 'rgb(54, 179, 133)',
   welcome: 'rgb(51, 145, 189)',
   counters: 'rgb(51, 189, 63)',
   logging: 'rgb(189, 189, 189)',

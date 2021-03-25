@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import cn from 'classnames'
 import { memo } from 'react'
 import { colors } from '../colorlist'
@@ -11,26 +11,33 @@ const FeaturesPreviewItem = ({name, color, indev}) => <div className={cn(st.item
   <div className={st.border} style={{background: color}} />
 </div>
 
-const FeaturesItem = memo(({title, text, src, color, reversed = false} = {}) => <div className={cn(st.item, {[st.reversed]: reversed})}>
-  <img src={src} />
-  <div className={st.d}>
-    <div className={st.title} style={{borderColor: color}}>{title}</div>
-    <div className={st.line} style={{background: color}} />
-    <div className={st.text}>{text}</div>
+const FeaturesItem = memo(({title, text, src, color, reversed = false} = {}) => {
+  const [height, setHeight] = useState(null)
+  const imgRef = useRef()
+  const onMouseEnter = e => setHeight(window.getComputedStyle(imgRef.current).getPropertyValue('height'))
+  const onMouseLeave = e => setHeight(null)
+  return <div className={cn(st.item, {[st.reversed]: reversed})} {...{onMouseEnter, onMouseLeave}}>
+    <div className={st.itemInner}>
+      <div className={st.img} style={{height}}><img src={src} ref={imgRef} /></div>
+      <div className={st.d}>
+        <div className={st.title} style={{borderColor: color}}>{title}</div>
+        <div className={st.line} style={{background: color}} />
+        <div className={st.text}>{text}</div>
+      </div>
+    </div>
   </div>
-</div>)
+})
 
 export const FeaturesPreview = () => <div className={st.featuresPreview}>
   <FeaturesPreviewItem name="Dashboard" color={colors.white} />
   <FeaturesPreviewItem name="Customization" color={colors.pink} />
   <FeaturesPreviewItem name="Leveling system" color={colors.levels} />
-  <FeaturesPreviewItem name="Automod" color={colors.moderation} />
-  <FeaturesPreviewItem name="Embeds (in-dev)" color={colors.welcome} indev />
+  <FeaturesPreviewItem name="Automod" color={colors.automod} />
+  <FeaturesPreviewItem name="Embeds" color={colors.embeds} />
   <FeaturesPreviewItem name="Music player" color={colors.music} />
   <FeaturesPreviewItem name="Twitch alerts" color={colors.alerts} />
   <FeaturesPreviewItem name="Server stats" color={colors.counters} />
   <FeaturesPreviewItem name="Co-Editing" color={colors.grey} />
-  <FeaturesPreviewItem name="And more" color={colors.dgrey} />
 </div>
 
 export const Features = () => <div className={st.features}>

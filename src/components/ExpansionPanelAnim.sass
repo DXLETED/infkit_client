@@ -1,0 +1,23 @@
+.enter
+  top: -5vh
+  opacity: 0
+  visibility: hidden
+  &Active
+    top: 0
+    opacity: 1
+    visibility: visible
+    transition: 0.2s opacity, 0.2s visibility, 0.2s top
+  &Done
+    top: 0
+    opacity: 1
+    visibility: visible
+    pointer-events: unset
+.exit
+  top: 0
+  opacity: 1
+  visibility: visible
+  &Active
+    top: -5vh
+    opacity: 0
+    visibility: hidden
+    transition: 0.2s opacity, 0.2s visibility, 0.2s top

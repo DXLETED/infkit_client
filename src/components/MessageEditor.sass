@@ -1,0 +1,86 @@
+@import ../css-legacy/colorlist.scss
+@import src/mixins.sass
+
+.messageEditor
+  flex-direction: column
+  @include ap2
+    .messageEditorInner
+      flex-direction: column
+    .messageVisualizer
+      margin-left: 0
+      margin-top: 1vh
+    .previewButton2
+      display: flex
+    .controls
+      .previewButton
+        display: none
+  .messageEditorInner
+    width: 100%
+    min-height: 12.5vh
+    .editor
+      flex: 1
+      flex-direction: column
+  .previewButton2
+    display: none
+    width: 100%
+    height: 3vh
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    &:hover
+      background: rgba($grey, 0.4)
+    > img
+      height: 1.5vh
+      margin-right: 1vh
+  .controls
+    width: 100%
+    height: 3vh
+    justify-content: space-between
+    align-items: center
+    border-top: 0.2vh solid $grey
+    transition: 0.2s width
+    &1, &2
+      height: 100%
+    &.editing
+      .emoji, .limit, .cancel, .save, .addEmbed
+        opacity: 1
+    .emoji, .limit, .cancel, .save, .addEmbed
+      height: 100%
+      align-items: center
+      padding: 0 1vh
+      margin-right: 1vh
+      opacity: 0
+      transition: 0.2s opacity
+    .emoji
+      cursor: pointer
+      &:hover
+        background: rgba($grey, 0.4)
+      > div
+        align-items: center
+        > img
+          height: 1.5vh
+          margin-right: 1vh
+    .cancel, .save, .addEmbed
+      cursor: pointer
+      &:hover
+        background: rgba($grey, 0.4)
+      > img
+        width: 1.5vh
+        margin-right: 1vh
+    .previewButton
+      width: 10vh
+      height: 100%
+      justify-content: center
+      align-items: center
+      margin-left: 1vh
+      cursor: pointer
+      &.enabled
+        width: 60vh
+      &:hover
+        background: rgba($grey, 0.4)
+      > img
+        height: 1.5vh
+        margin-right: 1vh
+
+.messageVisualizer
+  margin-left: 1vh

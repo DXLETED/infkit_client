@@ -6,7 +6,7 @@ import { markdownRules } from './markdownRules'
 
 import st from './Markdown.sass'
 
-export const Markdown = ({str, mode, inline}) => {
+export const Markdown = ({str = '', mode, inline}) => {
   let rules
   switch (mode) {
     case 'title': rules = markdownRules.title

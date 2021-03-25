@@ -1,4 +1,5 @@
 @import ./../css-legacy/colorlist.scss
+@import src/mixins.sass
 
 \:global
   .page#main
@@ -15,22 +16,34 @@
   height: 100%
   flex-direction: column
   align-items: center
-  z-index: 1
   > .preview
-    width: 70%
+    width: 75%
     height: 50vh
     max-height: calc(100% - 20vh)
     margin-top: 5vh
     justify-content: space-between
     align-items: center
     z-index: 1
-    > .site
+    @include ap2
+      width: calc(100% - 4vh)
+    @include ap3
+      width: 100%
+      margin-top: 0
+      flex-direction: column
+    .site
       flex-direction: column
       align-items: flex-start
+      @include ap3
+        width: 100%
+        margin-bottom: 3vh
+        padding: 1vh 0
+        align-items: center
+        background: rgba($grey, 0.1)
       > .beta
         position: relative
         font-size: 2vh
         padding: 0.2vh 1vh
+        margin-left: 0.5vh
         &::after
           content: ""
           position: absolute
@@ -86,7 +99,7 @@
   width: 100%
   height: 100%
   opacity: 0.075
-  background: linear-gradient(to bottom, $main 0%, transparent 100%), url(/static/img/bg.png)
+  //background: linear-gradient(to bottom, $main 0%, transparent 100%), url(/static/img/bg.png)
   filter: blur(0.5rh)
   background-size: cover
   background-position: bottom 20% center
@@ -100,3 +113,13 @@
   padding: 0 5vh
   background: rgba($grey, 0.2)
   backdrop-filter: blur(1rh)
+  @include ap3
+    height: auto
+    flex-direction: column
+    padding: 1vh 0
+    .copyright
+      margin-bottom: 0.5vh
+    div
+      width: 100%
+      justify-content: center
+      text-align: center

@@ -12,6 +12,12 @@
   &.m2 {
     margin-bottom: 2vh;
   }
+  &.hl .editable-list-el-wr:hover {
+    background: rgba($grey, 0.3);
+  }
+  &.nobg .editable-list-el-wr {
+    background: none !important;
+  }
   .editable-list {
     width: 100%;
     flex-direction: column;

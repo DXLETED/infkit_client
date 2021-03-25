@@ -1,26 +1,27 @@
 @import './colorlist.scss';
 
 #header {
+  position: relative;
   width: 100%;
   height: 5vh;
-  border-bottom: 0.2vh solid $grey;
   > header {
     display: flex;
+    position: absolute;
     width: 100%;
-    max-width: 2250px;
     margin: 0 auto;
     height: 100%;
-    padding: 0 1vh;
     justify-content: space-between;
+    background: rgba($grey, 0.075);
+    box-shadow: 0 0 1vh $shadow;
+    z-index: 1;
     > * {
       > .header-el {
         height: 100%;
         align-items: center;
         padding: 0 2vh;
         cursor: pointer;
-        border-top: 0.2vh solid transparent;
         &:hover {
-          border-color: $grey;
+          background: rgba($grey, 0.2);
         }
         &.active:not(.main) {
           color: $black;

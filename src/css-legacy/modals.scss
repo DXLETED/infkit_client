@@ -17,6 +17,11 @@
     background: rgba($grey, 0.1);
     backdrop-filter: blur(4rh);
     @supports not (backdrop-filter: blur(1rh)) { background: rgba($lmain, 0.8) }
+    &.w100 {
+      width: calc(80% - 2vh);
+      left: 2vh;
+      bottom: 1vh;
+    }
     &.p .modal {
       padding: 1vh;
     }

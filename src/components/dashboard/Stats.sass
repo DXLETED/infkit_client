@@ -1,0 +1,26 @@
+@import ../../css-legacy/colorlist.scss
+
+.statsTip
+  min-width: 20vh
+  max-width: 30vh
+  .vals
+    flex-direction: column
+    padding: 0.5vh 1vh
+    .value
+      flex-direction: column
+      padding: 0.5vh 0
+      .type
+        color: $lgrey
+        font-size: 1.2vh
+  .nodata
+    padding: 1vh
+  .time
+    padding: 0.5vh 1vh
+    background: $dgrey
+    border-top: 0.2vh solid $grey
+
+\:export
+  online: rgba(#53ff5b, 0.5)
+  voice: #53ffb7
+  any: rgba(#53b2ff, 0.5)
+  commands: #ba53ff

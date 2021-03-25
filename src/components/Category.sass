@@ -1,7 +1,43 @@
+@import ../css-legacy/colorlist.scss
+
 .category
   width: 100%
   flex-direction: column
-  &.dashboard:not(:last-child)
-    margin-bottom: 1.5vh
+  &.dashboard
+    .categoryName > .inner
+      padding: 0 2vh
+    &:not(:last-child)
+      margin-bottom: 2vh
   &:not(:last-child)
     margin-bottom: 3vh
+  .categoryName
+    height: 3.5vh
+    margin-bottom: 2vh
+    .border
+      width: 2vh
+      height: 100%
+      background: $dgrey
+      border-left: 1px solid $grey
+    > .inner
+      flex: 1
+      align-items: center
+      font-family: 'Bold'
+      padding: 0 1vh
+      background: rgba($grey, 0.1)
+  > .inner
+    width: 100%
+    position: relative
+    flex-direction: column
+    border-left: 0.1vh solid $grey
+    padding-left: 1.9vh
+    &.animate
+      opacity: 0
+      animation: categoryFadeIn 0.4s forwards
+
+@keyframes categoryFadeIn
+  0%
+    left: 5vh
+    opacity: 0
+  100%
+    left: 0
+    opacity: 1

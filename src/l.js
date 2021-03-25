@@ -1,9 +1,11 @@
-import objectPath from "object-path"
+import moment from 'moment'
+import objectPath from 'object-path'
 
 let en = {
+  plugin_levels: 'Levels',
   plugin_moderation: 'Moderation',
   plugin_automod: 'Automod',
-  plugin_levels: 'Levels',
+  plugin_embeds: 'Embeds',
   plugin_welcome: 'Welcome',
   plugin_reactionRoles: 'Reaction Roles',
   plugin_music: 'Music',
@@ -14,13 +16,14 @@ let en = {
   plugindesc_levels: 'Rewards / !rank | !addxp',
   plugindesc_moderation: '!clear | !warn | !kick | !ban ...',
   plugindesc_automod: 'Filters | AutoActions',
-  plugindesc_reactionRoles: '1 message',
+  plugindesc_embeds: 'Just a messages',
+  plugindesc_reactionRoles: ({pl}) => `${pl.d.length} ${pl.d.length === 1 ? 'message' : 'messages'}`,
   plugindesc_welcome: 'Greeting new members',
-  plugindesc_counters: 'Last update: -----',
+  plugindesc_counters: ({pl}) => `Last update: ${pl.d.find(el => el.lastUpdate) ? moment(Math.max(...pl.d.map(el => el.lastUpdate))).fromNow() : '-----'}`,
   plugindesc_alerts: 'Notices about videos, streams',
-  plugindesc_music: 'Nothing playing',
+  plugindesc_music: ({pl}) => pl.np?.title ? `${pl.resumed ? '▶' : '❚❚'} ${pl.np.title}` : 'Nothing playing',
   plugindesc_poll: '0 polls last week',
-  plugindesc_userRooms: 'User-configurable channels',
+  plugindesc_userRooms: ({pl}) => `${Object.entries(pl.channels).length} channels active`,
   cmddesc_rank: 'Your rank card or another member',
   cmddesc_addxp: 'Adds XP to you or another member',
   cmddesc_clear: 'Delete channel messages',
@@ -54,4 +57,7 @@ let en = {
   }
 }
 
-export const l = (k, und) => objectPath.get(en, k.split('/')) || (!und && `en__${k}`)
+export const l = (k, {und = false, ...params} = {und: false}) => {
+  const res = objectPath.get(en, k.split('/')) || (!und && `en__${k}`)
+  return typeof res === 'function' ? res(params) : res
+}

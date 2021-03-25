@@ -22,6 +22,10 @@
     line-height: 3.8vh
   &.fill
     flex: 1
+  &.right
+    justify-content: flex-end
+    > input
+      text-align: end
   &.bold > input
     font-family: 'Bold'
   &.black > input
@@ -68,17 +72,3 @@
         border-bottom: 0.2vh solid $grey
       &:hover
         background: $grey
-      &:hover &
-        &__d
-          &__title, &__desc
-            color: $black
-      .thumbnail
-        margin-right: 1vh
-        height: 100%
-      .icon
-        margin-right: 1vh
-      .d
-        flex-direction: column
-        .desc
-          color: $grey
-          font-size: 1.2vh

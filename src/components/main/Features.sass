@@ -1,4 +1,5 @@
 @import ./../../css-legacy/colorlist.scss
+@import src/mixins.sass
 
 .featuresPreview
   position: absolute
@@ -7,6 +8,13 @@
   flex-wrap: wrap
   bottom: 4vh
   padding-left: 1vh
+  @include ap2
+    width: 100%
+  @include ap3
+    top: calc(100rh - 20vh)
+    bottom: unset
+  @include ap4
+    display: none
   > .item
     position: relative
     padding: 1vh 1.5vh
@@ -25,62 +33,114 @@
       height: 0.2vh
 
 .features
-  width: calc(100vw - 10vh)
-  flex-direction: column
-  margin: 10vh auto
-  > .item
-    width: 100%
-    height: 20vh
-    justify-content: space-between
+  width: 100%
+  flex-wrap: wrap
+  margin: 10vh 0
+  padding: 0 10vh
+  @include ap2
+    padding: 0 2vh
+  @include ap4
+    margin-top: -15vh
+  .item
+    width: calc(50% - 5vh)
+    height: 30vh
+    position: relative
     align-items: center
-    background: rgba($black, 0.2)
-    backdrop-filter: blur(0.5rh)
-    border-radius: 0.3vh
-    margin-bottom: 15vh
-    &.reversed
-      flex-direction: row-reverse
-      > .d
-        align-items: flex-end
-        > .text
-          text-align: right
-      > img
-        transform: perspective(2000px) rotateY(-20deg)
-    > img
-      height: 150%
-      max-width: 50%
-      object-fit: cover
-      transform: perspective(2000px) rotateY(20deg)
-      perspective-origin: left
-      box-shadow: $dgrey 0 0 0.5vh
-    > .d
-      flex: 1
-      height: 100%
+    margin-right: 10vh
+    &:nth-child(2n)
+      margin-top: 15vh
+      margin-right: 0
+    @include ap2
+      width: calc(50% - 2vh)
+      margin-right: 4vh
+      .title
+        font-size: 2.2vh !important
+      .text
+        font-size: 1.6vh !important
+    @include ap3
+      width: 100%
+      height: auto
+      margin-right: 0
+      margin-top: 5vh
+      &:nth-child(2n)
+        margin-top: 5vh
+      .itemInner
+        position: relative
+        .img
+          height: auto !important
+    @mixin touch
+      .itemInner
+        position: relative
+        .img
+          height: auto !important
+    &Inner
+      width: 100%
+      position: absolute
       flex-direction: column
-      justify-content: center
-      align-items: flex-start
-      padding: 0 4vh
-      > .title
-        line-height: 4vh
-        font-size: 2.8vh
-        text-transform: uppercase
-        font-family: 'Bold'
-        border-bottom: $white 0.2vh solid
-        margin-bottom: 1vh
-      > .text
-        line-height: 3vh
-        font-size: 2vh
-        color: $lgrey
-  > .item_2
+      background: rgba($black, 0.2)
+      backdrop-filter: blur(0.5rh)
+      box-shadow: 0 0 1vh $shadow
+      transition: 0.4s background
+      &:hover
+        background: rgba($grey, 0.2)
+        z-index: 1
+      .img
+        width: 100%
+        height: 15vh
+        transition: 0.4s height
+        align-items: flex-start
+        overflow: hidden
+        > img
+          width: 100%
+          object-fit: cover
+      .d
+        width: 100%
+        height: 15vh
+        flex-direction: column
+        justify-content: center
+        padding: 0
+        @include ap3
+          border-top: 0.2vh solid $grey
+        > .title
+          line-height: 5vh
+          font-size: 2.4vh
+          justify-content: center
+          text-transform: uppercase
+          font-family: 'Bold'
+          border-bottom: $white 0.2vh solid
+          margin-bottom: 1vh
+        > .text
+          line-height: 3vh
+          font-size: 1.8vh
+          justify-content: center
+          text-align: center
+          color: $lgrey
+  .item_2
     width: 100%
     flex-direction: column
     align-items: center
     padding: 4vh
+    margin-top: 10vh
     background: rgba($black, 0.2)
     backdrop-filter: blur(0.5rh)
+    box-shadow: 0 0 1vh $shadow
+    @include ap2
+      padding: 2vh
+    @include ap3
+      flex-direction: column-reverse
+      margin-top: 4vh
+      padding: 0
+      .title
+        font-size: 2.2vh !important
+        border-top: $white 0.2vh solid
+        border-bottom: none !important
+        margin-bottom: 0 !important
+      .text
+        font-size: 1.6vh !important
     .title
       width: 100%
       justify-content: center
-      line-height: 4vh
+      line-height: 5vh
       font-size: 2.8vh
       text-transform: uppercase
       font-family: 'Bold'

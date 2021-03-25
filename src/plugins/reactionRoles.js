@@ -11,6 +11,8 @@ import { TextArea } from '../components/textarea'
 import { useGuild } from '../hooks/useGuild'
 import { notify } from '../components/notify'
 import { emojis } from '../components/emojis'
+import { Category } from '../components/Category'
+import { MessageEditor } from '../components/MessageEditor'
 
 const generateId = arr => {
   const rnd = ''
@@ -21,41 +23,40 @@ const generateId = arr => {
   return rnd
 }
 
-export const reactionRoles = props => {
-  const { state, api } = props
-  const guild = useSelector(s => s.guild)
-  const [saveVisible, setSaveVisible] = useState(false)
-  if (!guild) return <></>
+const MsgReact = ({state, api}) => <>
+  <div className="emoji"><Emoji current={state.emoji} set={n => api.set.emoji(n.label)} disabled={state.emoji} mr /></div>
+  <ObjectEdit type="roles" data={state.roles}
+    add={api.roles.add}
+    delete={api.roles.del} />
+</>
+
+const Msg = ({g, api, channels}) => <>
+  {g.channel
+    ? <Label className="label-channel" text><img src="/static/img/text.png" />{channels.find(ch => ch.id === g.channel) && channels.find(ch => ch.id === g.channel).name}</Label>
+    : <Select selected={0}
+      type="text"
+      add={[{id: null, name: 'Channel not selected'}]}
+      set={api.set.channel} m />}
+  <MessageEditor placeholder="Message" state={g.msg} set={api.set.msg} m></MessageEditor>
+  <ObjectEdit label="Additional roles (if the user selects at least one role)" type="roles" data={g.addRoles} add={api.addRoles.add} del={api.addRoles.del} m />
+  <ObjectEdit label="Reverse roles (if the user does not select any role)" type="roles" data={g.revRoles} add={api.revRoles.add} del={api.revRoles.del} m />
+  <EditableList data={g.reacts.map((r, ii) => <MsgReact state={r} api={api.reacts.react(ii)} key={ii} />)}
+    label="Reacts"
+    limit={20}
+    addLabel="Add react"
+    add={api.reacts.add}
+    delete={api.reacts.del}
+    p={1} />
+</>
+
+export const reactionRoles = ({state, api}) => {
   const channels = useGuild.channels().list
-  return (
-    <>
-      <EditableList data={state.d.map((g, i) => <>
-          {g.channel
-            ? <Label className="label-channel" text><img src="/static/img/text.png" />{channels.find(ch => ch.id === g.channel) && channels.find(ch => ch.id === g.channel).name}</Label>
-            : <Select selected={0}
-              type="text"
-              add={[{id: null, name: 'Channel not selected'}]}
-              set={n => api.setChannel(i, n)} m />}
-            <TextArea spellCheck="false" placeholder="Message" value={state.d[i].msg.content} set={n => api.setMsgContent(i, n)} emoji></TextArea>
-            {saveVisible && <div className="save"></div>}
-            <EditableList data={state.d[i].reacts.map((r, ii) => <>
-            <div className="emoji"><Emoji current={state.d[i].reacts[ii].emoji} set={n => api.setEmoji(i, ii, n.label)} disabled={state.d[i].reacts[ii].emoji} mr /></div>
-            <ObjectEdit type="roles" data={state.d[i].reacts[ii].roles}
-              add={n => api.addRole(i, ii, n)}
-              delete={d => api.delRole(i, ii, d)} />
-          </>)}
-          label="Reacts"
-          limit={20}
-          addLabel="Add react"
-          add={() => api.addReact(i)}
-          delete={d => api.delReact(i, d)}
-          p={1} />
-        </>)}
-        addLabel="Add message"
-        limit={2}
-        add={api.add}
-        delete={d => notify.question({description: 'Delete a message from a channel?', options: [['Yes', () => api.del(d, true)], ['No', () => api.del(d, false)], ['Cancel']]})}
-        column p={1} />
-    </>
-  )
+  return <Category>
+    <EditableList data={state.d.map((g, i) => <Msg g={g} api={api.msg(i)} key={g.id} {...{channels}} />)}
+      addLabel="Add message"
+      limit={2}
+      add={api.add}
+      delete={d => notify.question({description: 'Delete a message from a channel?', options: [['Yes', () => api.del(d, true)], ['No', () => api.del(d, false)], ['Cancel']]})}
+      column p={1} />
+  </Category>
 }

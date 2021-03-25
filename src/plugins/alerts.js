@@ -12,6 +12,7 @@ import Axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
 import { notify } from '../components/notify'
 import { User } from '../components/user'
+import { Category } from '../components/Category'
 
 const MsgTips = ({ tips, add }) => tips.map(([text, description], i) => <div className="tip" onClick={() => add(`[${text}]`)} key={i}>[{text}]<span className="tip__description">&nbsp;- {description}</span></div>)
 
@@ -56,7 +57,12 @@ const Alert = memo(({d, api, i}) => {
   </Fragment>
 }, isEqual)
 
-export const Alerts = ({ state, api }) => <EditableList data={state.d.map((al, i) => <Alert d={al} api={api} i={i} key={al.id} />)}
-  addLabel="Subscribe to notifications"
-  add={api.add}
-  delete={api.del} extended column p={1} limit={5} />
+export const Alerts = ({ state, api }) => <>
+  <Category>
+    <EditableList data={state.d.map((al, i) => <Alert d={al} api={api} i={i} key={al.id} />)}
+      label="Subscribes"
+      addLabel="Subscribe to notifications"
+      add={api.add}
+      delete={api.del} extended column p={1} limit={5} />
+  </Category>
+</>

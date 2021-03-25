@@ -1,12 +1,27 @@
 import Color from 'color'
 import React, { useEffect, useRef } from 'react'
 import { useCallbackRef } from 'use-callback-ref'
+import { useAuth } from '../hooks/auth.hook'
+
+const loadImage = src => new Promise(res => {
+  const img = new Image()
+  img.src = src
+  img.addEventListener('load', () => res(img))
+  img.addEventListener('error', () => res())
+})
 
 export const Card = ({s, scale = 1}) => {
+  const { user } = useAuth()
   const draw = async (canvas, { colors = {} }) => {
     colors = Object.fromEntries(Object.entries(colors).map(([cn, c]) => [cn, Color(c).string()]))
 
-    const username = 'USERNAME', discriminator = '0000', xp = 20, total = 100, level = 10
+    const username = user?.username || 'USERNAME',
+          discriminator = user?.discriminator || '0000',
+          xp = 20,
+          total = 100,
+          level = 10,
+          avatarUrl = user?.avatar && `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`,
+          image = avatarUrl && await loadImage(avatarUrl)
     const ctx = canvas.getContext('2d')
     const textWidth = {}
     ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -55,6 +70,7 @@ export const Card = ({s, scale = 1}) => {
     ctx.clip()
     ctx.fillStyle = colors.bg
     ctx.fillRect(40, 30, 60, 60)
+    image && ctx.drawImage(image, 40, 30, 60, 60)
     ctx.restore()
   }
   const ref = useCallbackRef(null, reff => reff && draw(reff, s))

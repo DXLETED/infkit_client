@@ -26,10 +26,8 @@ export const Dropdown = props => {
     <div className={cn('dropdown-component', props.className, {open})} ref={ref}>
       <div className="dropdown-label" onClick={() => setOpen(true)}>{props.children}</div>
       <div className={cn('dropdown-wr', {open})}>
-        <Scroll updateScroll={func => updateScroll.current = func}>
-          <div className="dropdown">
-            {props.dropdown}
-          </div>
+        <Scroll updateScroll={func => updateScroll.current = func} column>
+          {props.dropdown.map((el, i) => ({...el, props: {...el.props, className: cn('dropdownEl', el.props.className), key: i}}))}
         </Scroll>
       </div>
     </div>

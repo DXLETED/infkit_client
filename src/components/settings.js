@@ -14,15 +14,18 @@ import { Text } from './Text'
 import { Card } from './card'
 import { Container } from './container'
 import { colors } from './colorlist'
-import { EdgedButton } from './button'
+import { Button, EdgedButton } from './button'
 import { MessageVisualizer } from './MessageVisualizer'
 import { Label } from './label'
+import { useLayout } from '../hooks/layout.hook'
+import { Row2 } from './Row2'
 
 export const Settings = ({path}) => {
   const state = useSelector(s => s.guild.settings),
         id = useSelector(s => s.guild.id),
         cardColors = useSelector(s => s.guild.plugins.levels.card.colors),
         api = useMemo(() => settingsApi, []),
+        layout = useLayout(),
         messages = {
           skip: [
             <>
@@ -65,10 +68,10 @@ export const Settings = ({path}) => {
   return (
     <DashboardContainer k="settings" title="Settings" className={"settings"} icon="/static/img/settings.png" deps={[state]} p {...{path}}>
       <Category title="General">
-        <Row elements={[
+        <Row2 els={[
           <MultiSwitch label="Perfix" type="string" options={['`', '/', '!', '~', '@', '>']} selected={state.prefix} set={api.prefix} limit={2} custom />,
           <Select label="Language" type="options" selected={state.language} dropdown={['English', 'Russian']} options={['en', 'ru']} set={api.setLanguage} />
-        ]} m />
+        ]} column={layout.ap3} m />
         <ObjectEdit label="Admin roles" type="roles" data={state.admRoles} default="Only administrators by default"
           add={api.admRoles.add}
           delete={api.admRoles.del} m />
@@ -89,19 +92,19 @@ export const Settings = ({path}) => {
             <Text disabled>https://infkit.xyz/player/<Input value={id} fill b m /></Text>
             <MLabel d="Rank card" m />
             <Row elements={[
-              {width: 0, el: <Container hp2 vp2 bg={colors.discordBg}>
+              {width: 2.2, el: <Container hp2 vp2 style={{background: colors.discordBg}}>
                 <Card s={{colors: cardColors}} scale={0.8} />
               </Container>},
               <>
                 <div className="fill" />
-                <EdgedButton to={`${path}/levels`} compact center>Edit</EdgedButton>
+                <Button to={`${path}/levels`} label="Edit" />
               </>
             ]} m />
             <MLabel d="Error messages" m />
             <Switch enabled={state.nopermRole} set={api.toggle.nopermRole} p m>No rights</Switch>
             <Switch enabled={state.nopermChannel} set={api.toggle.nopermChannel} p m>Wrong channel</Switch>
           </>
-        ]} />
+        ]} column={layout.ap1} />
       </Category>
     </DashboardContainer>
   )

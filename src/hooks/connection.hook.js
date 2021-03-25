@@ -63,6 +63,7 @@ export const useConnection = () => {
       dispatch({type: 'UPDATE_GUILD_SERVER', data: res})
     })
     io.on('update/stats', res => {
+      if (!store.getState().guild) return
       dispatch({type: 'SAVE_GUILD', data: {stats: res}})
       dispatch({type: 'UPDATE_GUILD_STATS', data: res})
     })
@@ -89,6 +90,9 @@ export const useConnection = () => {
       } else notify.error({description: 'Error loading members', text: `Status: ${res.status}`}, 10000)
     })
   }
-  const disconnect = () => ws && ws.connected && ws.disconnect()
+  const disconnect = () => {
+    ws && ws.connected && ws.disconnect()
+    dispatch({type: 'CLEAR_GUILD'})
+  }
   return { connect, req, disconnect, ws }
 }

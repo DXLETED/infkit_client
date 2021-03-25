@@ -71,13 +71,13 @@ const Member = ({m, mapi, mXP, mMutes, mWarns, mBans, mm}) => {
     </Modal>
     <Modal s={mState1} className={st.modal} title={`${m.name} warnings`}>
       {mWarns.get(m.id).length
-        ? <EditableList data={mWarns.get(m.id).map(el => <Container className={st.modalEl} hp2 vp2 column>
+        ? <EditableList data={mWarns.get(m.id).map(el => ({fixed: true, el: <Container className={st.modalEl} hp2 vp2 column>
             <div className={st.reason}>{el.reason || 'No reason'}</div>
             <div className={st.d}>
               <div className={st.by}>{mm.get(el.by).name}</div>
               <div className={st.time}>{msStr(el.time)}</div>
             </div>
-          </Container>)} noAdd />
+          </Container>}))} noAdd />
         : <Text jcc>No warnings</Text>}
     </Modal>
     <Modal s={mState2} className={st.modal}>
@@ -135,13 +135,13 @@ export const Members = ({path}) => {
   if (search)
     state = state.filter(m => m.name.toLowerCase().includes(search.toLowerCase()))
   return <DashboardContainer k="members" title="Members" className={st.members} icon="/static/img/members.png" deps={[state]} {...{path}}>
-    <Row elements={[
+    <Row className={st.head} elements={[
       <Select type="options" prefix="Sort by: " selected={sort} dropdown={['Name', 'XP', 'Position', 'Mutes', 'Warns', 'Bans']} options={['name', 'xp', 'position', 'mutes', 'warns', 'bans']} set={setSort} />,
       {width: 2, el: <Fill />},
       <Input className={st.search} placeholder="Search" input={n => setSearch(n)} fill b />
     ]} m />
     <Container>
-      <Scroll>
+      <Scroll pl>
         <div className="fill" style={{flexDirection: 'column'}}>
           {state.map((m, i) => <Member m={m} mapi={api.member(m.id)} {...{mXP, mMutes, mWarns, mBans, mm}} key={m.id + i} />)}
           <Loader loadedText={`${state.length} MEMBERS`} {...{load, loaded}} />

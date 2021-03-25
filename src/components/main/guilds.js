@@ -48,7 +48,7 @@ export const Guilds = memo(() => {
       `width=500,height=800,top=${window.top.outerHeight / 2 + window.top.screenY - (800 / 2)},left=${window.top.outerWidth / 2 + window.top.screenX - (500 / 2)}`)
   }
   return <div className={st.guildsWr} style={{opacity: (800 - scrollTop) / 800}}>
-    <Scroll className={st.guilds} deps={[guilds]} column>
+    <Scroll className={st.guilds} deps={[guilds]} pl column>
       {authorized
         ? guilds
           ? <>

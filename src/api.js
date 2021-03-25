@@ -108,6 +108,14 @@ const membersUpdate = (cb, events) => {
   post(ev)
 }
 
+export const customUpdate = set => cb => {
+  set(prev => {
+    const state = cloneDeep(prev)
+    cb(state)
+    return state
+  })
+}
+
 const permissionsSelector = (u, path, {groups = true} = {}) => ({
   eroles: {
     add: n => u.arr([...path, 'eroles']).add(n),
@@ -178,19 +186,17 @@ const cmd = (u, cn) => ({
 })
 
 const levels = u => ({
-  voiceXPRate: {
-    set: n => u(pl => pl.voiceXPRate = n)
-  },
-  textXPRate: {
-    set: n => u(pl => pl.textXPRate = n)
-  },
-  msgTimeout: {
-    set: n => u(pl => pl.msgTimeout = n)
+  set: {
+    voiceXPAdaptivity: n => u(pl => pl.voiceXPAdaptivity = n),
+    voiceXPRate: n => u(pl => pl.voiceXPRate = n),
+    textXPRate: n => u(pl => pl.textXPRate = n),
+    msgTimeout: n => u(pl => pl.msgTimeout = n)
   },
   type: {
     set: n => u(pl => pl.type = n)
   },
   setMode: n => u(pl => pl.levelsMode = n),
+  updAll: () => u(null, () => [{action: 'levels/updAll'}]),
   rewards: {
     add: () => u(pl => pl.rewards.push({level: 0, roles: []})),
     delete: d => u(pl => pl.rewards = pl.rewards.filter((_, i) => i !== d)),
@@ -355,15 +361,46 @@ const automod = u => ({
   }
 })
 
+const embeds = u => ({
+  create: () => u(pl => pl.d.push({id: generateId(pl.d.map(ms => ms.id)), msg: {content: '', embed: {}}})),
+  msg: i => ({
+    set: {
+      channel: n => u(pl => pl.d[i].channel = n, pl => [{action: 'embeds/upd', v: pl.d[i].id}]),
+      msg: n => u(pl => pl.d[i].msg = n, pl => [{action: 'embeds/upd', v: pl.d[i].id}])
+    }
+  }),
+  del: d => u(pl => pl.d = pl.d.filter((_, i) => i !== d))
+})
+
 const reactionRoles = u => ({
-  add: () => u(pl => pl.d.push({id: generateId(pl.d.map(ms => ms.id)), channel: null, msg: '', msgId: null, reacts: []})),
-  setChannel: (i, n) => u(pl => pl.d[i].channel = n, pl => [{action: 'RRSetMsg', v: pl.d[i].id}]),
-  setMsgContent: (i, n) => u(pl => pl.d[i].msg.content = n, pl => [{action: 'RRSetMsg', v: pl.d[i].id}]),
-  addReact: i => u(pl => pl.d[i].reacts.push({emoji: null, roles: []}), pl => [{action: 'RREditReacts', v: pl.d[i].id}]),
-  setEmoji: (i, ii, n) => u(pl => pl.d[i].reacts[ii].emoji = n, pl => [{action: 'RREditReacts', v: pl.d[i].id}]),
-  addRole: (i, ii, n) => u(pl => pl.d[i].reacts[ii].roles.push(n), pl => [{action: 'RRAddRoles', v: {id: pl.d[i].id, roles: [n]}}]),
-  delRole: (i, ii, d) => u(pl => pl.d[i].reacts[ii].roles = pl.d[i].reacts[ii].roles.filter((_, iii) => iii !== d), pl => [{action: 'RRDeleteRoles', v: {id: pl.d[i].id, roles: [pl.d[i].reacts[ii].roles[d]]}}]),
-  delReact: (i, d) => u(pl => pl.d[i].reacts = pl.d[i].reacts.filter((_, ii) => ii !== d), pl => [{action: 'RREditReacts', v: pl.d[i].id}, {action: 'RRDeleteRoles', v: {id: pl.d[i].id, roles: pl.d[i].reacts[d].roles}}]),
+  add: () => u(pl => pl.d.push({id: generateId(pl.d.map(ms => ms.id)), channel: null, msg: {content: ''}, msgId: null, reacts: []})),
+  msg: i => ({
+    set: {
+      channel: n => u(pl => pl.d[i].channel = n, pl => [{action: 'RRSetMsg', v: pl.d[i].id}]),
+      msg: n => u(pl => pl.d[i].msg = n, pl => [{action: 'RRSetMsg', v: pl.d[i].id}])
+    },
+    reacts: {
+      add: () => u(pl => pl.d[i].reacts.push({emoji: null, roles: []}), pl => [{action: 'RREditReacts', v: pl.d[i].id}]),
+      react: ii => ({
+        set: {
+          emoji: n => u(pl => pl.d[i].reacts[ii].emoji = n, pl => [{action: 'RREditReacts', v: pl.d[i].id}])
+        },
+        roles: {
+          add: n => u(pl => pl.d[i].reacts[ii].roles.push(n), pl => [{action: 'RRAddRoles', v: {id: pl.d[i].id, roles: [n]}}]),
+          del: d => u(pl => pl.d[i].reacts[ii].roles = pl.d[i].roles.filter((_, i) => i !== d), pl => [{action: 'RRDeleteRoles', v: {id: pl.d[i].id, roles: [pl.d[i].reacts[ii].roles[d]]}}])
+        }
+      }),
+      del: d => u(pl => pl.d[i].reacts = pl.d[i].reacts.filter((_, ii) => ii !== d), pl => [{action: 'RREditReacts', v: pl.d[i].id}, {action: 'RRDeleteRoles', v: {id: pl.d[i].id, roles: pl.d[i].reacts[d].roles}}])
+    },
+    addRoles: {
+      add: n => u(pl => pl.d[i].addRoles.push(n)),
+      del: d => u(pl => pl.d[i].addRoles = pl.d[i].addRoles.filter((_, i) => i !== d))
+    },
+    revRoles: {
+      add: n => u(pl => pl.d[i].revRoles.push(n)),
+      del: d => u(pl => pl.d[i].revRoles = pl.d[i].revRoles.filter((_, i) => i !== d))
+    }
+  }),
   del: (d, delMsg) => u(pl => pl.d = pl.d.filter((_, i) => i !== d), pl => delMsg && [{action: 'reactionRoles/delete', v: pl.d[d].id}])
 })
 
@@ -371,7 +408,7 @@ const music = u => ({
   setChannel: n => u(pl => pl.channel = n, () => [{action: 'music/channel'}]),
   play: n => u(null, () => [{action: 'play', v: n}]),
   playpause: () => u(pl => pl.resumed = !pl.resumed, pl => [{action: pl.resumed ? 'pause' : 'resume'}]),
-  skip: () => u(pl => pl.repeat && pl.queue.shift(), () => [{action: 'skip'}]),
+  skip: () => u(pl => pl.np = null, () => [{action: 'skip'}]),
   repeat: () => u(pl => pl.repeat = !pl.repeat),
   volume: n => u(pl => pl.volume = n, () => [{action: 'volume'}]),
   queue: {
@@ -455,7 +492,7 @@ const userRooms = u => ({
   setDeleteAfter: n => u(pl => pl.deleteAfter = n)
 })
 
-const plugins = {levels, moderation, automod, alerts, reactionRoles, music, welcome, counters, poll, userRooms}
+const plugins = {levels, moderation, automod, embeds, alerts, reactionRoles, music, welcome, counters, poll, userRooms}
 
 export const pluginApi = pn => ({enabled: {toggle: () => u(pn)(pl => pl.enabled = !pl.enabled)}, ...(plugins[pn] ? plugins[pn](u(pn)) : () => {})})
 
@@ -495,7 +532,7 @@ export const settingsApi = (u => ({
 export const membersApi = (u => ({
   member: m => ({
     set: {
-      XP: n => u((mm, members) => members.levels[m] = n)
+      XP: n => u((mm, members) => members.levels[m] = n, () => [{action: 'levels/upd', v: m}])
     }
   })
 }))(membersUpdate)

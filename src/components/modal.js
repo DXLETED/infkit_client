@@ -5,6 +5,7 @@ import { Scroll } from './scroll'
 import { CSSTransition } from 'react-transition-group'
 import { Memoized } from './Memoized'
 import { vh } from './cssVar'
+import { useLayout } from '../hooks/layout.hook'
 
 export const ModalLabel = props => <div className={cn('modallabel-wr', {enabled: props.enabled === true, switchable: props.enabled !== undefined, m: props.m, disabled: props.disabled})}>
   {props.enabled !== undefined && <div className={cn('ml-enabled', {open: props.enabled})} onClick={() => props.toggle()}><img src={`/static/img/${props.enabled ? 'on' : 'off'}.png`} /></div>}
@@ -21,6 +22,7 @@ export const Modal = ({s, children, title, className, onClick, column}) => {
   const [pos, setPos] = useState({x: 0, y: 0, align: 'right'})
   const ref = useRef()
   const link = useRef()
+  const layout = useLayout()
   const updLinkedPos = () => link.current && setLinkedPos({
     loaded: true,
     x: link.current.getBoundingClientRect().x,
@@ -30,11 +32,13 @@ export const Modal = ({s, children, title, className, onClick, column}) => {
   })
   const updPos = () => {
     if (!s.open || !V1 || !linkedPos.loaded || !ref.current) return
-    const [x, align] = window.innerWidth - (linkedPos.x + ref.current.clientWidth * 2) < window.innerWidth / 100 * 5
+    const width = document.querySelector('page').clientWidth,
+          height = document.querySelector('page').clientHeight
+    const [x, align] = width - (linkedPos.x + ref.current.clientWidth * 2) < width / 100 * 5
       ? [linkedPos.x - ref.current.clientWidth, 'left']
       : [linkedPos.x + linkedPos.w, 'right']
-    const y = linkedPos.y + ref.current.clientHeight > window.innerHeight - window.innerHeight / 100
-      ? window.innerHeight - ref.current.clientHeight - window.innerHeight / 100
+    const y = linkedPos.y + ref.current.clientHeight > height - height / 100
+      ? height - ref.current.clientHeight - height / 100
       : linkedPos.y
     setPos({x, y, align})
     setV2(true)
@@ -66,14 +70,14 @@ export const Modal = ({s, children, title, className, onClick, column}) => {
       V1 && <CSSTransition in={V2} classNames="modal-fadein" timeout={200} onExited={() => setV1(false)}>
         {s.fs
           ? <div id={s.id} className="modal-fs-bg" onClick={e => onClick && onClick(e)} ref={ref}>
-            <div className="modal-fs-wr">
+            <div className="modal-fs-wr" style={{width: s.width && vh(s.width)}}>
               {title && <div className="modal-title">{title}</div>}
               <div className="modal-fs-container">
                 <Scroll><div className={cn('modal-fs', className, styles)}>{children}</div></Scroll>
               </div>
             </div>
           </div>
-          : <div id={s.id} className={cn('modal-wr', `align-${pos.align}`, className, styles)} style={{left: pos.x, top: pos.y, width: vh(s.width)}} onClick={e => onClick && onClick(e)} ref={ref}>
+          : <div id={s.id} className={cn('modal-wr', `align-${pos.align}`, className, styles, {w100: layout.ap3})} style={!layout.ap3 ? {left: pos.x, top: pos.y, width: s.width && vh(s.width)} : {}} onClick={e => onClick && onClick(e)} ref={ref}>
             {title && <div className="modal-title">{title}</div>}
             <div className="modal-container">
               <Scroll>

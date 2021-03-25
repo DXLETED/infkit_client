@@ -1,0 +1,119 @@
+@import ../../css-legacy/colorlist.scss
+@import src/mixins.sass
+  
+.nav
+  width: 100%
+  height: 4.5vh
+  flex-direction: column
+  overflow: hidden
+  background: rgba($black, 0.2)
+  &.page1 .navPage
+      top: -100%
+  &.page2 .navPage
+      top: -200%
+  .navPage
+    width: 100%
+    height: 100%
+    position: relative
+    top: 0
+    overflow-x: auto
+    transition: 0.2s top
+    &::-webkit-scrollbar
+      display: none
+    .el
+      width: 6vh
+      height: 100%
+      position: relative
+      align-items: center
+      cursor: pointer
+      overflow: hidden
+      transition: 0.4s width
+      @media (max-width: 1540px)
+        width: 4vh
+        .inner
+          padding: 0 1vh !important
+      @include ap3
+        .inner span
+          display: none
+      &:hover
+        .inner span
+          visibility: visible
+          opacity: 1
+          left: 0
+          transition-delay: 0.2s
+        .color
+          opacity: 0.25
+      &.active
+        .inner span
+          visibility: visible
+          opacity: 1
+          left: 0
+        .color
+          opacity: 0.5
+      &.textVisible
+        width: auto
+        .inner span
+          visibility: visible
+          opacity: 1
+          left: 0
+      &.m
+        margin-right: 4vh
+      &.ml
+        margin-left: 4vh
+      &.wa
+        width: auto
+      > *:not(.color)
+        z-index: 1
+      .inner
+        align-items: center
+        padding: 0 2vh
+        img
+          height: 2vh
+        span
+          position: relative
+          visibility: hidden
+          opacity: 0
+          margin-left: 1vh
+          left: -1vh
+          transition: 0.2s all
+      .color
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0
+        opacity: 0
+      .enabled
+        width: 4vh
+        height: 100%
+        justify-content: center
+        align-items: center
+        opacity: 0.5
+        transition: 0.4s opacity
+        z-index: 1
+        &:hover
+          background: rgba($white, 0.2)
+        > img
+          height: 40%
+
+.dashboardImg
+  height: 1.4vh !important
+
+.guildIcon
+  width: 2.4vh
+  height: 2.4vh
+  justify-content: center
+  align-items: center
+  background: $grey
+  color: $black
+  border-radius: 50%
+  img
+    height: 2.4vh !important
+    border-radius: 50%
+
+.demoAlert
+  flex: 1
+  justify-content: center
+  align-items: center
+  background: rgba($green, 0.15)
+  box-shadow: inset 0 0 1vh $shadow

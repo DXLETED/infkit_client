@@ -19,7 +19,7 @@ const DropdownListItem = memo(({selected, name, set, click, close}) => {
 })
 
 export const DropdownList = ({visible, list, close}) => {
-  return <div className={cn(st.dropdownlist, {visible})}>
+  return <div className={cn(st.dropdownlist, {[st.visible]: visible})}>
   <Scroll deps={[visible, list]}>
     <div className={st.dropdownlistInner}>{list.map((el, i) => <DropdownListItem selected={el.selected} name={el.name} set={el.set} click={el.click} close={close} key={el.id || i} />)}</div>
   </Scroll>

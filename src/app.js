@@ -19,10 +19,20 @@ import { Login } from './pages/login'
 import { useAuth } from './hooks/auth.hook'
 
 import st from './pages/Main.sass'
+import { colors } from './components/colorlist'
+
+const supportsWebp = async () => {
+  if (!self.createImageBitmap) return false
+  const webpData = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA='
+  const blob = await fetch(webpData).then(r => r.blob())
+  return createImageBitmap(blob).then(() => true, () => false)
+}
+let webp
 
 const Main = () => {
   const dispatch = useDispatch()
   const [cookie] = useCookies(['guild', 'token'])
+  const [animeBg] = useSettings('anime')
   const auth = useSelector(s => s.auth)
   const [cookiesAccepted, cookiesAccept] = useSettings('cookiesAccepted', false)
   const { getUser } = useAuth()
@@ -47,19 +57,29 @@ const Main = () => {
       }
     })
   }, [])
+  const bg = animeBg
+    ? `linear-gradient(to bottom, ${colors.main} 0%, transparent 100%), center center / cover url(/static/img/anime-bg.png)`
+    : `linear-gradient(to bottom, ${colors.main} 0%, transparent 100%), bottom 20% center / cover url(/static/img/bg.${webp ? 'webp' : 'png'})`
   return (
     <>
       <Router>
-        <div className={st.mainBg} />
-        <Header />
-        <Route exact path="/" component={MainPage} />
-        <Route path="/dashboard"><Dashboard path="/dashboard" /></Route>
-        <Route path="/demo"><Demo /></Route>
-        <Route path="/login" component={Login} />
+        <div className={st.mainBg} style={{
+          background: bg
+        }} />
+        <page>
+          <Header />
+          <Route exact path="/" component={MainPage} />
+          <Route path="/dashboard"><Dashboard path="/dashboard" /></Route>
+          <Route path="/demo"><Demo /></Route>
+          <Route path="/login" component={Login} />
+        </page>
       </Router>
       <Notifications />
     </>
   )
 }
 
-ReactDOM.render(<Provider store={store}><Main /></Provider>, document.getElementsByTagName('root')[0])
+(async () => {
+  webp = await supportsWebp()
+  ReactDOM.render(<Provider store={store}><Main /></Provider>, document.getElementsByTagName('root')[0])
+})()

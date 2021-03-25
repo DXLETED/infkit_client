@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import cn from 'classnames'
 import { useSettings } from '../../hooks/settings.hook'
 import { ConnectionState } from './connetionState'
@@ -8,6 +8,7 @@ import { useMenu } from '../../hooks/menu.hook'
 import { ClientSettings } from './settings'
 
 import st from './side.sass'
+import { useLayout } from '../../hooks/layout.hook'
 
 const Version = () => {
   const guild = useSelector(s => s.guild)
@@ -22,19 +23,25 @@ const SettingsButton = () => {
 }
 
 export const DashboardSide = () => {
-  const [groupsOpen, setGroupsOpen] = useSettings('groupsOpen', true)
-  const [logOpen, setLogOpen] = useSettings('logOpen', false)
+  const [groupsOpen, setGroupsOpen] = useSettings('groupsOpen', true),
+        [groupsMOpen, setGroupsMOpen] = useSettings('groupsOpenM', false),
+        layout = useLayout()
+  useEffect(() => { layout.ap3 && setGroupsMOpen(false) }, [layout.ap3])
   return (
-  <div className={cn(st.side, {[st.open]: groupsOpen || logOpen})}>
-    <Groups open={groupsOpen} setOpen={setGroupsOpen} />
-    {/*<div className="side__el"><div className="side__el__label"><div className="side__el__label_in"><img src="/static/img/side/log.png" />Log</div><img src="/static/img/arrow/bottom.png" /></div></div>*/}
-    <ClientSettings />
-    <div className={st.info}>
-      <div className={st.version}>
-        <Version />
+  <div className={cn(st.sideShadowBox)}>
+    <div className={cn(st.side, {[st.open]: groupsOpen})}>
+      <div className={st.sideInner}>
+        <Groups open={layout.ap3 ? groupsMOpen : groupsOpen} setOpen={layout.ap3 ? setGroupsMOpen : setGroupsOpen} />
+        {/*<div className="side__el"><div className="side__el__label"><div className="side__el__label_in"><img src="/static/img/side/log.png" />Log</div><img src="/static/img/arrow/bottom.png" /></div></div>*/}
       </div>
-      <ConnectionState />
-      <SettingsButton />
+      <ClientSettings />
+      <div className={st.info}>
+        <div className={st.version}>
+          <Version />
+        </div>
+        <ConnectionState />
+        <SettingsButton />
+      </div>
     </div>
   </div>
 )}

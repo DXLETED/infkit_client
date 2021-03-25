@@ -7,6 +7,7 @@ import { notify } from './notify'
 
 import st from './TextArea.sass'
 import { MessageVisualizer } from './MessageVisualizer'
+import { Component } from './Component'
 
 export const TextArea = props => {
   const [length, setLength] = useState()
@@ -27,8 +28,12 @@ export const TextArea = props => {
     return c
   }
   const [content, setContent] = useState(props.value)
-  const [previewVisible, setPreviewVisible] = useState(props.preview || false)
-  const updateLength = () => setLength(getContent().length)
+  const [previewVisible, setPreviewVisible] = useState(false)
+  const updateLength = () => {
+    const l = getContent().length
+    setLength(l)
+    props.onLengthUpdate?.(l)
+  }
   const parseEmojis = ({setCursor=true} = {}) => {
     let target = ref.current
     let l
@@ -71,14 +76,35 @@ export const TextArea = props => {
     updateLength()
   }
   useEffect(() => {
-    if (edit)
-      notify.yesno({description: 'Editable text has been changed', text: 'Update?'}, 15000, [updateValue])
-    else
-      updateValue()
+    if (!props.nativeControls)
+      if (edit)
+        notify.yesno({description: 'Editable text has been changed', text: 'Update?'}, 15000, [updateValue])
+      else
+        updateValue()
   }, [props.value])
+  useEffect(() => {
+    edit
+      ? props.onEditingStarted?.()
+      : props.onEditingFinished?.()
+    props.onEditingUpdate?.(edit)
+  }, [edit])
+  useEffect(() => {
+    updateValue()
+    props.getControls?.({
+      insert: n => document.execCommand('insertText', false, n),
+      cancel: () => {
+        setEdit(false)
+        updateValue()
+      },
+      save: () => {
+        setEdit(false)
+        props.set(getContent(null, {md: true}))
+      }
+    })
+  }, [])
   return (
-    <div className={st.textarea}>
-      <div className={st.textareaInner}>
+    <Component cln={st.textarea} rw={[st, ['m']]} {...props}>
+      <div className={cn(st.textareaInner, {[st.h100]: props.h100})}>
         <Scroll deps={[content]}>
           <div className={st.input} suppressContentEditableWarning contentEditable spellCheck={false} onClick={() => {
             setEdit(true)
@@ -94,7 +120,9 @@ export const TextArea = props => {
             }
           }} onInput={e => {
             //undoImages.current.push([getContent(), [...ref.current.childNodes].findIndex(n => n === document.getSelection().anchorNode), document.getSelection().anchorOffset])
-            setContent(getContent())
+            const c = getContent()
+            setContent(c)
+            props.onContentUpdate?.(c)
             if (e.nativeEvent.inputType)
               parseEmojis()
             if (!length)
@@ -119,11 +147,20 @@ export const TextArea = props => {
           {previewVisible && <MessageVisualizer className={st.messageVisualizer} msg={{content}} bot />}
         </Scroll>
       </div>
-      <div className={cn(st.controls, {[st.edit]: edit})}>
+      {props.nativeControls && <div className={st.nativeControls}>
         {props.emoji && <EmojiBtn className={st.emoji} set={e => {
-            ref.current.focus()
-            document.execCommand('insertText', false, e.label)
-          }}><img src="/static/img/emojiBtn.png" /> Emoji</EmojiBtn>}
+          ref.current.focus()
+          document.execCommand('insertText', false, e.label)
+        }}><img src="/static/img/emojiBtn.png" /> Emoji</EmojiBtn>}
+        <div className={cn(st.limit, {exceeded: length > (props.limit || 2000)})}>
+          {length} / {props.limit || 2000}
+        </div>
+      </div>}
+      {props.controls && <div className={cn(st.controls, {[st.edit]: edit})}>
+        {props.emoji && <EmojiBtn className={st.emoji} set={e => {
+          ref.current.focus()
+          document.execCommand('insertText', false, e.label)
+        }}><img src="/static/img/emojiBtn.png" /> Emoji</EmojiBtn>}
         <div className={cn(st.limit, {exceeded: length > (props.limit || 2000)})}>
           {length} / {props.limit || 2000}
         </div>
@@ -136,10 +173,10 @@ export const TextArea = props => {
           props.set(getContent(null, {md: true}))
         }}><img src="/static/img/done.png" />Save</div>
         <div className="fill" />
-        {!props.preview && <div className={cn(st.previewButton, {[st.enabled]: previewVisible})} onClick={() => setPreviewVisible(!previewVisible)}>
+        {props.preview && <div className={cn(st.previewButton, {[st.enabled]: previewVisible})} onClick={() => setPreviewVisible(!previewVisible)}>
           {previewVisible ? <img src="/static/img/arrow/right.png" /> : <img src="/static/img/arrow/left.png" />}Preview
         </div>}
-      </div>
-    </div>
+      </div>}
+    </Component>
   )
 }

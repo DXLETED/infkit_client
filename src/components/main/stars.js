@@ -7,6 +7,7 @@ import { useScroll } from '../../hooks/scroll.hook'
 import cn from 'classnames'
 
 import st from './Stars.sass'
+import { useLayout } from '../../hooks/layout.hook'
 
 const StarsCanvas = memo(({parallaxLeft, parallaxTop, radius, amount}) => {
   const stars = useRef()
@@ -50,6 +51,7 @@ export const Stars = memo(() => {
   const [parallaxLeft, setParallaxLeft] = useState(0)
   const [parallaxTop, setParallaxTop] = useState(0)
   const scrollTop = useScroll('.page#main > .main', 2, 0, 200)
+  const layout = useLayout()
   const updateStars = e => {
     setParallaxLeft(e.pageX / window.innerWidth - 0.5)
     setParallaxTop(e.pageY / window.innerHeight - 0.5)
@@ -58,7 +60,7 @@ export const Stars = memo(() => {
     document.addEventListener('mousemove', updateStars)
     return () => document.removeEventListener('mousemove', updateStars)
   }, [])
-  return <div className={st.stars} style={{opacity: (200 - scrollTop) / 200}}>
+  return <div className={st.stars} style={{opacity: ((200 - scrollTop) / 200) * (layout.ap3 ? 0.4 : 1)}}>
     <div className={cn(st.field, st.range3)}>
       <StarsCanvas parallaxLeft={parallaxLeft} parallaxTop={parallaxTop} radius={1} amount={300} />
     </div>

@@ -9,11 +9,13 @@ import { Welcome } from './welcome'
 import { UserRooms } from './userRooms'
 import { Alerts } from './alerts'
 import { Automod } from './automod'
+import { Embeds } from './embeds'
 
 export const plugins = {
   levels: Levels,
   moderation: Moderation,
   automod: Automod,
+  embeds: Embeds,
   reactionRoles: reactionRoles,
   music: Music,
   welcome: Welcome,

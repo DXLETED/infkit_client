@@ -38,12 +38,6 @@ body {
   overflow: hidden;
 }
 
-@media (max-height: 20vw) {
-  :root {
-    --vh: 0.4vw;
-  }
-}
-
 /*@font-face{
   font-family: 'Title';
   src: url('/static/fonts/Death Hector.otf');

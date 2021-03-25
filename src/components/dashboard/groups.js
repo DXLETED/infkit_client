@@ -14,6 +14,7 @@ import { Fill } from '../fill'
 import { Container } from '../container'
 
 import st from './side.sass'
+import { useLayout } from '../../hooks/layout.hook'
 
 const Group = ({g, i, api}) => {
   const [modalState, open, close] = useModal({fixed: true})
@@ -31,19 +32,19 @@ const Group = ({g, i, api}) => {
 }
 
 export const Groups = ({open, setOpen}) => {
-  const state = useSelector(s => s.guild && s.guild.groups, isEqual),
-        api   = useMemo(() => groupsApi, [])
+  const state   = useSelector(s => s.guild && s.guild.groups, isEqual),
+        api     = useMemo(() => groupsApi, [])
   return (
     <div className={cn(st.el, 'groups', {[st.open]: open})}>
       <div className={st.label} onClick={() => setOpen(!open)}><div className={st.labelInner}><img src="/static/img/side/groups.png" />Groups</div><img src={open ? '/static/img/arrow/top.png' : '/static/img/arrow/bottom.png'} /></div>
         {open && 
           <div className={st.dropdown}>
-            <Scroll deps={[state]} column>
+            <Scroll deps={[state]} pl column>
               <EditableList data={state ? state.map((g, i) => ({fixed: !!g.type, img: g.type && '/static/img/lock.png', el: <Group g={g} i={i} api={api.group(i)} key={g.id} />})) : []}
                 delete={d => {
                   api.del(d)
                 }}
-                add={api.add} cpointer />
+                add={api.add} cpointer hl />
             </Scroll>
           </div>}
     </div>

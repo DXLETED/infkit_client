@@ -2,30 +2,34 @@ import React, { useEffect, useRef, useState } from 'react'
 import cn from 'classnames'
 import { MLabel } from './mlabel'
 import { nearest } from '../utils/nearest'
+import { Input } from './input'
 
-export const Slider = ({value = 0, set, label, icon, keyPoints = 20, m, noPoints, min, max}) => {
+export const Slider = ({value = 0, set, label, icon, keyPoints = 20, modifier = 1, m, noPoints, min, max}) => {
   if (!Array.isArray(keyPoints))
     keyPoints = [...Array(keyPoints + 1)].map((_, i) => i / (keyPoints))
-  const [pos, setPos] = useState(value)
-  const posRef = useRef(value)
+  const [pos, setPos] = useState(value / modifier)
+  const posRef = useRef(value / modifier)
   const startPos = useRef()
   const mouseDown = useRef(false)
   const ref = useRef()
+  const inputSet = n => {
+    setPos(nearest(n / modifier, keyPoints))
+    set(parseFloat((nearest(n, keyPoints)).toFixed(2)))
+  }
   const mouseMove = e => {
     if (mouseDown.current && ref.current) {
       const bcr = ref.current.getBoundingClientRect()
       const poss = (e.pageX - bcr.x) / ref.current.clientWidth
-      if (poss < 0 || poss < min) return setPos(min || 0)
-      if (poss > 1 || poss > max) return setPos(max || 1)
+      if (poss < 0 || poss < min) return setPos(0)
+      if (poss > 1 || poss > max) return setPos(1)
       setPos(poss)
     }
   }
   const mouseOut = () => {
     if (mouseDown.current && ref.current) {
       mouseDown.current = false
-      console.log(nearest(posRef.current, keyPoints))
       setPos(nearest(posRef.current, keyPoints))
-      set(nearest(posRef.current, keyPoints))
+      set(parseFloat((nearest(posRef.current, keyPoints) * modifier).toFixed(2)))
     }
   }
   useEffect(() => {
@@ -38,10 +42,10 @@ export const Slider = ({value = 0, set, label, icon, keyPoints = 20, m, noPoints
       document.removeEventListener('mouseup', mouseOut)
     }
   }, [])
-  useEffect(() => { setPos(value) }, [value])
+  useEffect(() => { setPos(value / modifier) }, [value])
   useEffect(() => { posRef.current = pos }, [pos])
   return <div className={cn('slider-wr', {row: !!icon, m})}>
-    <MLabel d={label} />
+    <MLabel d={label} r={<Input value={parseFloat((nearest(pos, keyPoints) * modifier).toFixed(2))} set={inputSet} {...{min, max}} type="number" fill right />} />
     {icon && <img src={icon} />}
     <div
       className="slider"

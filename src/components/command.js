@@ -37,7 +37,7 @@ export const Command = memo(props => {
     state.groups && state.groups.length ? state.groups.length === 1 ? ['groups', getGroup(state.groups[0]).name, 4] : ['groups', state.groups.length, 4] : ['nogroups', null]
   ].filter(Boolean)
   return (
-    <div className={cn(st.command, {enabled: state.enabled})}>
+    <div className={cn(st.command, {enabled: state.enabled, [st.m]: props.m})}>
       <div className={st.border}></div>
       <div className={st.d}>
         <div className={st.label}>{`${props.prefix}${props.label}`}</div>
@@ -127,11 +127,12 @@ export const Command = memo(props => {
   )
 }, isEqual)
 
-export const CommandsList = memo(props => {
+export const CommandsList = memo(({cmds, api, prefix}) => {
+  const list = Object.entries(cmds).filter(([cmdName]) => api[cmdName])
   return <Category title="Commands">
     <div className={st.commands}>
-      {Object.entries(props.cmds).filter(([cmdName]) => props.api[cmdName]).map(([commandName, command], i) =>
-        <Command prefix={props.prefix} title={commandName} state={command} api={props.api[commandName]} key={i} label={commandName} />
+      {list.map(([commandName, command], i) =>
+        <Command prefix={prefix} title={commandName} state={command} api={api[commandName]} m={i < list.length - 2} key={i} label={commandName} />
       )}
     </div>
   </Category>

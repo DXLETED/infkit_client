@@ -13,12 +13,12 @@
     .hljs
       background: #202225
   .embed
-    max-width: 100%
+    flex: 1
+    flex-direction: column
     padding: 1vh
-    .inner
-      flex: 1
-      flex-direction: column
-      .content
+    .content
+      justify-content: space-between
+      &Inner
         display: block
         &.m
           margin-bottom: 10px
@@ -31,7 +31,6 @@
         .author
           font-weight: 600
           align-items: center
-          font-size: 1rem
           margin-bottom: 5px
           .authorImg
             margin-right: 9px
@@ -42,7 +41,7 @@
           a
             color: #FFF
         .title
-          font-weight: 600
+          font-weight: 700
           font-size: 1rem
           margin-bottom: 4px
           > a
@@ -56,22 +55,28 @@
             &.inline
               width: auto
               flex: 1
-      .image
-        margin-bottom: 10px
-        img
-          max-width: 520px
-          border-radius: 2px
-      .footer
-        align-items: center
-        .footerImg
-          margin-right: 10px
-          width: 18px
-          height: 18px
-          object-fit: contain
-          border-radius: 2.45px
-    .richThumb
-      max-width: 80px
-      max-height: 80px
-      border-radius: 3px
-      object-fit: contain
-      margin-left: 20px
+            .fieldName
+              font-weight: 700
+      .richThumb
+        max-width: 80px
+        max-height: 80px
+        border-radius: 3px
+        object-fit: contain
+        margin-left: 20px
+    .image
+      width: 400px
+      max-width: 100%
+      margin-bottom: 10px
+      img
+        max-width: 100%
+        border-radius: 2px
+    .footer
+      align-items: center
+      font-weight: 500
+      font-size: 0.75rem
+      .footerImg
+        margin-right: 10px
+        width: 18px
+        height: 18px
+        object-fit: contain
+        border-radius: 2.45px

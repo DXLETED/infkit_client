@@ -1,0 +1,25 @@
+@import ../css-legacy/colorlist.scss
+
+.button
+  width: 100%
+  height: 3vh
+  align-items: center
+  cursor: pointer
+  transition: 0.2s border-left
+  &:hover
+    background: rgba($grey, 0.2)
+    border-left-width: 0.5vh
+  .label
+    flex: 1
+    height: 100%
+    align-items: center
+    padding: 0 1vh
+    background: linear-gradient(to right, transparent 0%, rgba($dgrey, 0.2) 0%, transparent 100%)
+  .img
+    height: 100%
+    align-items: center
+    padding: 0 0.5vh
+    margin-right: 1vh
+    background: rgba($grey, 0.2)
+    img
+      height: 1.6vh

@@ -1,0 +1,53 @@
+@import ../css-legacy/colorlist.scss
+
+.embedEditor
+  flex-direction: column
+  .head
+    width: 100%
+    height: 3vh
+    justify-content: space-between
+    margin-bottom: 1vh
+    .name
+      height: 100%
+      align-items: center
+      margin-left: 1vh
+    .remove
+      height: 100%
+      padding: 0 1vh
+      align-items: center
+      cursor: pointer
+      &:hover
+        background: rgba($grey, 0.2)
+      img
+        height: 1vh
+        margin-right: 1vh
+
+.expansion
+  flex-direction: column
+  .title
+    justify-content: space-between
+    padding: 0.5vh 1vh
+    margin-bottom: 1vh
+    cursor: pointer
+    border-left: 0.2vh solid $grey
+    .rTitle
+      color: $lgrey
+      align-items: center
+      img
+        height: 1.5vh
+        margin-left: 1vh
+
+.embedEditorItem
+  flex-direction: column
+  .label
+    width: 100%
+    color: $lgrey
+    font-size: 1.4vh
+  &.input, &.color
+    height: 5.5vh
+    padding: 0.5vh
+    background: rgba($black, 0.2)
+  &.textarea
+    .label
+      padding: 0 0.5vh
+      margin-bottom: 0.5vh
