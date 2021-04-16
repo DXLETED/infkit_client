@@ -59,10 +59,11 @@ const Alert = memo(({d, api, i}) => {
 
 export const Alerts = ({ state, api }) => <>
   <Category>
-    <EditableList data={state.d.map((al, i) => <Alert d={al} api={api} i={i} key={al.id} />)}
+    TEMPORARILY UNAVAILABLE
+    {/*<EditableList data={state.d.map((al, i) => <Alert d={al} api={api} i={i} key={al.id} />)}
       label="Subscribes"
       addLabel="Subscribe to notifications"
       add={api.add}
-      delete={api.del} extended column p={1} limit={5} />
+      delete={api.del} extended column p={1} limit={5} />*/}
   </Category>
 </>

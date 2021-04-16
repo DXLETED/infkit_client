@@ -7,13 +7,14 @@ import st from './ExpansionPanel.sass'
 import stAnim from './ExpansionPanelAnim.sass'
 
 export const ExpansionPanel = ({open, header, dropdown, disabled, r, onchange, ...props}) => {
-  const [isOpen, setIsOpen] = useState(open || false),
+  const [isOpen, setIsOpen] = useState(false),
         [height, setHeight] = useState(0),
         ref = useRef()
   useEffect(() => {
     setHeight(ref.current.clientHeight)
     onchange?.(isOpen)
   }, [isOpen])
+  useEffect(() => { setIsOpen(open) }, [])
   return (
     <Component cln={cn(st.expansionPanel, {[st.open]: isOpen})}
     rw={[st, ['column', 'p', 'np', 'wrap']]} {...props}>
@@ -23,9 +24,9 @@ export const ExpansionPanel = ({open, header, dropdown, disabled, r, onchange, .
           {r}
           <div className={st.arrow}>{isOpen ? <img src="/static/img/arrow/top.png" /> : <img src="/static/img/arrow/bottom.png" />}</div><div className="border" /></div>
         </div>
-      <div className={cn(st.dropdownWr)} style={{height: isOpen && height}}>
+      <div className={cn(st.dropdownWr, {disabled})} style={{height: isOpen && height}}>
         <CSSTransition in={isOpen} classNames={stAnim} timeout={200}>
-          <div className={cn(st.dropdown, {disabled})} ref={ref}>{isOpen && dropdown}</div>
+          <div className={st.dropdown} ref={ref}>{dropdown}</div>
         </CSSTransition>
       </div>
     </Component>

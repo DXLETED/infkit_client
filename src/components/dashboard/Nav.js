@@ -40,7 +40,7 @@ const NavEl = ({text, img, src, color, to, history, active, enabled, toggleEnabl
 export const Nav = ({path, demo}) => {
   const location = useLocation(),
         history = useHistory(),
-        pluginsState = useSelector(s => s.guild?.plugins),
+        pluginsState = useSelector(s => s.guild?.config.plugins),
         guilds = useSelector(s => s.guilds),
         [cookie, setCookie, removeCookie] = useCookies(['guild', 'account']),
         g = (guilds || []).find(g => g.id === cookie.guild)

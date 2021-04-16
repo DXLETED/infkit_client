@@ -2,8 +2,20 @@
 
 .emojilist
   background: #000
-  .emojiSearchList
+  .emojiSearchList, .customEmoji
     flex-wrap: wrap
+  .cemoji
+    width: 4vh
+    height: 4vh
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    &:hover
+      background: $dmain
+    > div
+      width: 2.8vh
+      height: 2.8vh
+      background-size: contain
   .emojiEl
     width: 4vh
     height: 4vh
@@ -11,12 +23,12 @@
     justify-content: center
     align-items: center
     cursor: pointer
+    &:hover
+      background: $dmain
     > div
       width: 2.8vh
       height: 2.8vh
       background-image: url(/static/img/emoji.png)
-    &:hover
-      background: $dmain
 .category
   display: none
   width: 100%

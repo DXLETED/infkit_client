@@ -1,3 +1,4 @@
+import { isEqual } from 'lodash'
 import { useCookies } from 'react-cookie'
 import { useDispatch, useSelector, useStore } from 'react-redux'
 import socketIOClient from 'socket.io-client'
@@ -7,10 +8,19 @@ import { useSettings } from './settings.hook'
 
 let ws = null
 
-export const emit = {
-  update: {
-    guild: ({changes, events} = {}) => ws && new Promise(res => ws.emit('update/guild', {changes, events}, res))
-  }
+const emit = (...args) => ws && ws.connected && ws.emit(...args)
+
+export const update = {
+  plugin: (plugin, changes, events) => emit('update/plugin', {plugin, changes, events}, res => res.status !== 200
+    && notify.error({description: 'Save error', text: `Status: ${res.status}`})),
+  settings: (changes, events) => emit('update/settings', {changes, events}, res => res.status !== 200
+    && notify.error({description: 'Save error', text: `Status: ${res.status}`})),
+  permissions: (changes, events) => emit('update/permissions', {changes, events}, res => res.status !== 200
+    && notify.error({description: 'Save error', text: `Status: ${res.status}`})),
+  groups: (changes, events) => emit('update/groups', {changes, events}, res => res.status !== 200
+    && notify.error({description: 'Save error', text: `Status: ${res.status}`})),
+  eventsOnly: (_, events) => emit('events', {events}, res => res.status !== 200
+    && notify.error({description: 'Save error', text: `Status: ${res.status}`}))
 }
 
 export const useConnection = () => {
@@ -21,6 +31,7 @@ export const useConnection = () => {
         dispatch = useDispatch()
   const setCn = n => dispatch({type: 'UPDATE_CNCT', data: n})
   const updateGuildState = data => {
+    dispatch({type: 'SET_TIMECYNC', data: data.ts - Date.now()})
     dispatch({type: 'SAVE_GUILD', data})
     if (store.getState().guild && isEqual(store.getState().guild, data)) return
     dispatch({type: 'UPDATE_GUILD', data})
@@ -45,18 +56,33 @@ export const useConnection = () => {
         await refreshToken()
         return connect(guild, authorized, {tries: tries + 1})
       }
-      res.status === 200 && updateGuildState(res.d)
-      setCn({active: true, sync: false, limited: false})
+      if (res.status === 200) {
+        updateGuildState(res.d)
+        setCn({active: true, sync: false, limited: false})
+      } else notify.error({description: 'Connection error', text: `Status: ${res.status}`}, 10000)
       console.log(res.d)
     })
-    io.on('update/all', res => res.status === 200 && updateGuildState(res.d))
+    io.on('update/all', res => {
+      console.log('RESET')
+      updateGuildState(res)
+    })
     io.on('update/saving', () => setCn({sync: true}))
-    io.on('update/ustgs', res => {
-      console.log('GUILD UPDATE', res)
-      dispatch({type: 'SAVE_GUILD', data: res})
-      dispatch({type: 'UPDATE_GUILD', data: res})
+    io.on('update/plugin', res => {
+      console.log('PLUGIN UPDATE', res)
+      dispatch({type: 'guild/update/plugin', plugin: res.plugin, data: res.data})
       setCn({active: true, sync: false})
     })
+    io.on('update/settings', res =>
+      dispatch({type: 'guild/update/settings', data: res.data}))
+    io.on('update/permissions', res =>
+      dispatch({type: 'guild/update/permissions', data: res.data}))
+    io.on('update/groups', res =>
+      dispatch({type: 'guild/update/groups', data: res.data}))
+    io.on('update/roles', res =>
+      dispatch({type: 'guild/update/roles', data: res.data}))
+    io.on('update/channels', res =>
+      dispatch({type: 'guild/update/channels', data: res.data}))
+    io.on('update/state', res => dispatch({type: 'guild/update/state', t: res.t, data: res.data}))
     io.on('update/server', res => {
       console.log('UPDATE SERVER', res)
       dispatch({type: 'SAVE_GUILD', data: {server: res}})
@@ -67,12 +93,14 @@ export const useConnection = () => {
       dispatch({type: 'SAVE_GUILD', data: {stats: res}})
       dispatch({type: 'UPDATE_GUILD_STATS', data: res})
     })
-    io.on('error', () => {
+    io.on('error', e => {
       setCn({active: false})
+      console.log(e)
       reconnect()
     })
     io.on('disconnect', dtype => {
       setCn({active: false})
+      console.log(dtype)
       dtype !== 'io client disconnect' && reconnect()
     })
   }
@@ -94,5 +122,5 @@ export const useConnection = () => {
     ws && ws.connected && ws.disconnect()
     dispatch({type: 'CLEAR_GUILD'})
   }
-  return { connect, req, disconnect, ws }
+  return { connect, update, req, disconnect, ws }
 }

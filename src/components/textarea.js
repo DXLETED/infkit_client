@@ -76,7 +76,7 @@ export const TextArea = props => {
     updateLength()
   }
   useEffect(() => {
-    if (!props.nativeControls)
+    if (props.controls)
       if (edit)
         notify.yesno({description: 'Editable text has been changed', text: 'Update?'}, 15000, [updateValue])
       else
@@ -108,6 +108,7 @@ export const TextArea = props => {
         <Scroll deps={[content]}>
           <div className={st.input} suppressContentEditableWarning contentEditable spellCheck={false} onClick={() => {
             setEdit(true)
+            props.onEditingUpdate?.(true)
           }} onKeyDown={e => {
             if (e.keyCode === 13) {
               e.preventDefault()

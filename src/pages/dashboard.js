@@ -1,15 +1,15 @@
-import React, { useEffect, memo, useState } from 'react'
+import React, { useEffect, memo } from 'react'
+import st from './Dashboard.sass'
 import { useLocation, useHistory } from 'react-router'
 import cn from 'classnames'
 import { l } from '../l'
 import { plugins } from '../plugins'
 import { useDispatch, useSelector } from 'react-redux'
 import { Scroll } from '../components/scroll'
-import value from '../../server/discord/value'
+import value from '../../server/client/value'
 import { Stats } from '../components/dashboard/stats'
 import { pluginApi } from '../api'
 import { useMemo } from 'react'
-import { Row } from '../components/row'
 import { Settings } from '../components/settings'
 import { useSettings } from '../hooks/settings.hook'
 import { DashboardSide } from '../components/dashboard/side'
@@ -21,16 +21,14 @@ import { Category } from '../components/Category'
 import { DashboardContainer } from '../components/dashboard/Container'
 import { colors } from '../components/colorlist'
 import { Log } from '../components/dashboard/Log'
-import { notify } from '../components/notify'
 import { useLayout } from '../hooks/layout.hook'
 import { Row2 } from '../components/Row2'
-
-import st from './Dashboard.sass'
 import { Nav } from '../components/dashboard/Nav'
 import { EdgedButton } from '../components/button'
+import { useAddGuild } from '../hooks/addguild.hook'
 
 const Plugin = ({title, path, prefix}) => {
-  const state = useSelector(s => s.guild.plugins[title]),
+  const state = useSelector(s => s.guild.config.plugins[title]),
         api = useMemo(() => pluginApi(title), []),
         layout = useLayout()
   return <DashboardContainer k={title} title={l('plugin_' + title)} icon={`/static/img/plugins/${title}.png`} color={colors[title]} enabled={state.enabled} p {...{path, api}}>
@@ -56,12 +54,13 @@ export const Dashboard = props => {
         [cookie] = useCookies(['guild', 'token']),
         state = useSelector(s => s.guild),
         guilds = useSelector(s => s.guilds),
-        dispatch = useDispatch(),
         authorized = useSelector(s => s.authorized),
         [statsVisible, setStatsVisible] = useSettings('stats_visible', true),
         { connect, disconnect } = useConnection(),
-        botInvited = !guilds || guilds.find(g => g.id === cookie.guild && g.bot)
+        botInvited = !guilds || guilds.find(g => g.id === cookie.guild && g.bot),
+        add = useAddGuild()
   useEffect(() => {
+    if (props.demo) return
     disconnect()
     if (!guilds) return
     botInvited && connect(cookie.guild, authorized)
@@ -70,13 +69,7 @@ export const Dashboard = props => {
     if (location.pathname === props.path) document.title = `${props.demo ? 'Demo' : 'Dashboard'} - InfinityKit`
   }, [location])
   useEffect(() => () => disconnect(), [])
-  /*useEffect(() => {
-    setTimeout(() => navigator.userAgent.toLowerCase().indexOf('firefox') > -1 && notify.question({
-        title: 'Firefox detected',
-        text: 'The site may look worse in this browser, but it can be fixed',
-        options: [['Find out how', () => history.push('firefox-fix')], ['Later', () => 1], ['Do not remind', () => 1]]
-      }), 5000)
-  }, [])*/
+  console.log(state)
   return (
     <div id="plugins" className={cn('page', {ap3: layout.ap3})}>
       <div className="dashboardInner">
@@ -85,16 +78,16 @@ export const Dashboard = props => {
           {!botInvited && <div className={st.botInvitedError}>
             <div className={st.inner}>
               <div className={st.error}>BOT IS NOT INVITED</div>
-              <EdgedButton className={st.invite} center compact>INVITE</EdgedButton>
+              <EdgedButton className={st.invite} onClick={() => add(cookie.guild)} center compact>INVITE</EdgedButton>
             </div>
           </div>}
-          {state
-          && <>
-            {Object.entries(state.plugins).map(([pluginName, plugin], i) => <Plugin title={pluginName} prefix={value.fromOptions(state.settings.prefix, 'prefix')} path={props.path} key={i} />)}
+          {state && <>
+            {Object.entries(state.config.plugins).map(([pluginName, plugin], i) => <Plugin title={pluginName} prefix={value.fromOptions(state.config.settings.prefix, 'prefix')} path={props.path} key={i} />)}
             <Settings path={props.path} />
             <Members path={props.path} />
-            <Log path={props.path} />
+            {/*<Log path={props.path} />*/}
             <div className={cn('plugins-list-page', {visible: location.pathname === props.path})}>
+              {!state.permissions.dashboard.editing && <div className={st.alert}>VIEW MODE</div>}
               <div className="plugins-list-wr">
                 <Scroll column>
                   <div className="plugins-list">
@@ -102,7 +95,7 @@ export const Dashboard = props => {
                       <Stats visible={statsVisible} state={state.stats} />
                       <Row2 className="settings-buttons" els={[
                         <ReviewType2 name="STATS" onClick={() => setStatsVisible(!statsVisible)} className="settings-review" img={statsVisible ? '/static/img/arrow/top.png' : '/static/img/arrow/bottom.png'} />,
-                        <ReviewType2 name="LOG" to={`${props.path}/log`} className="player-review" img="/static/img/log.png" />,
+                        /*<ReviewType2 name="LOG" to={`${props.path}/log`} className="player-review" img="/static/img/log.png" />,*/
                         <ReviewType2 name="MEMBERS" to={`${props.path}/members`} className="members-review" img="/static/img/members.png" />,
                         <ReviewType2 name="SETTINGS" to={`${props.path}/settings`} className="settings-review" img="/static/img/settings.png" />
                       ]} column={layout.ap3} />
@@ -122,7 +115,7 @@ export const Dashboard = props => {
             </div>
           </>}
         </main>
-        <DashboardSide />
+        {state && <DashboardSide />}
       </div>
     </div>
   )

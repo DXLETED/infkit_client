@@ -1,5 +1,3 @@
-const periodMsToTime = ``
-
 export const msToTime = ms => `${ms >= 3600000 && `${ms % 3600000}`}`
   ms < 1000 ? [ms, 'ms'] :
   ms < 60000 ? [ms / 1000, 's'] :

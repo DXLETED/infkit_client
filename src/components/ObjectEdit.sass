@@ -2,13 +2,12 @@
 
 .objectEditWr
   flex-direction: column
-  &:global
-    &.m
-      margin-bottom: 1vh
-    &.flex
-      flex: 1
-    &.right > .object-edit
-      justify-content: flex-end
+  &.m
+    margin-bottom: 1vh
+  &.flex
+    flex: 1
+  &.right .objectEdit
+    justify-content: flex-end
   .objectEdit
     flex: 1
     flex-wrap: wrap
@@ -31,10 +30,9 @@
         background: $grey
     > .el
       align-items: center
+      margin-right: 0.5vh
       > img
         height: 50%
-        margin-right: 0.5vh
-      &:not(.group)
         margin-right: 0.5vh
       &:hover > .delete > img
         opacity: 1
@@ -49,11 +47,11 @@
       position: relative
       height: 3vh
       align-items: center
-      margin-left: 0.5vh
+      margin-right: 0.5vh
       padding: 0 0.5vh
       background: rgba($grey, 0.2)
-      &.last
-        margin-right: 0.5vh
+      &:not(.last)
+        margin-left: -0.5vh
       > .border
         width: calc(100% + 0.5vh)
         height: 0.2vh

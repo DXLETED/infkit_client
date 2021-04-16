@@ -36,3 +36,9 @@ export const Tip = ({children, className, ...props}) => {
     , document.querySelector('.overlays'))}
   </div>
 }
+
+export const TipEl = ({children, ...props}) => <div className={st.tipEl}>
+  <div className={st.layout}>?
+    <Tip {...props}>{children}</Tip>
+  </div>
+</div>

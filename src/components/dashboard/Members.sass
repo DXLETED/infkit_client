@@ -7,13 +7,14 @@
     height: 100%
 
 .head
-  padding: 0 1vh
-  background: rgba($grey, 0.2)
+  padding: 0.5vh 1vh
+  background: rgba($dgrey, 0.1)
 
 .members
   flex: 1
   flex-direction: column
-  padding-top: 1vh
+  .membersList
+    padding: 0 1vh
   .member
     width: 100%
     height: 5vh
@@ -33,6 +34,9 @@
     .ds
       flex: 1
       flex-direction: column
+      .username
+        color: $grey
+        margin-left: 1vh
       .discr
         font-size: 1.3vh
         color: $grey
@@ -69,8 +73,35 @@
           color: $green
 
 .modal
-  .reason
-    margin-bottom: 1vh
-  .d
-    justify-content: space-between
-    font-size: 1.3vh
+  .el
+    background: rgba($black, 0.2)
+    &:not(:last-child)
+      margin-bottom: 1vh
+    .completed
+      width: 4vh
+      justify-content: center
+      align-items: center
+    .inner
+      flex: 1
+      flex-direction: column
+      padding: 1vh
+      .reason
+        margin-bottom: 1vh
+      .d
+        justify-content: space-between
+        font-size: 1.3vh
+
+.footer
+  width: 100%
+  height: 3vh
+  justify-content: flex-end
+  padding: 0 1vh
+  background: rgba($grey, 0.2)
+  .button
+    align-items: center
+    padding: 0 2vh
+    background: rgba($orange, 0.2)
+    cursor: pointer
+    &:hover
+      background: $orange
+      color: $black

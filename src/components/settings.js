@@ -4,7 +4,7 @@ import { ObjectEdit } from './objectEdit'
 import { Select } from './select'
 import { Switch } from './switch'
 import { useSelector } from 'react-redux'
-import { settingsApi } from '../api'
+import { settingsApi, permissionsApi } from '../api'
 import { Row } from './row'
 import { Category } from './Category'
 import { DashboardContainer } from './dashboard/Container'
@@ -19,13 +19,21 @@ import { MessageVisualizer } from './MessageVisualizer'
 import { Label } from './label'
 import { useLayout } from '../hooks/layout.hook'
 import { Row2 } from './Row2'
+import { notify } from './notify'
+import { useHistory } from 'react-router'
+import { PermissionsEditor } from './PermissionsEditor'
+import { ExpansionPanel } from './expansionPanel'
+import { TipEl } from './Tip'
 
 export const Settings = ({path}) => {
-  const state = useSelector(s => s.guild.settings),
+  const state = useSelector(s => s.guild.config.settings),
+        pState = useSelector(s => s.guild.config.permissions),
         id = useSelector(s => s.guild.id),
-        cardColors = useSelector(s => s.guild.plugins.levels.card.colors),
+        cardColors = useSelector(s => s.guild.config.plugins.levels.card.colors),
         api = useMemo(() => settingsApi, []),
+        pApi = useMemo(() => permissionsApi, []),
         layout = useLayout(),
+        history = useHistory(),
         messages = {
           skip: [
             <>
@@ -71,10 +79,18 @@ export const Settings = ({path}) => {
         <Row2 els={[
           <MultiSwitch label="Perfix" type="string" options={['`', '/', '!', '~', '@', '>']} selected={state.prefix} set={api.prefix} limit={2} custom />,
           <Select label="Language" type="options" selected={state.language} dropdown={['English', 'Russian']} options={['en', 'ru']} set={api.setLanguage} />
-        ]} column={layout.ap3} m />
-        <ObjectEdit label="Admin roles" type="roles" data={state.admRoles} default="Only administrators by default"
-          add={api.admRoles.add}
-          delete={api.admRoles.del} m />
+        ]} column={layout.ap3} />
+      </Category>
+      <Category title="Permissions">
+        <PermissionsEditor label={<>ADMINISTRATORS<TipEl column p>
+          <span>Administrators have all rights:</span>
+          <span>- View and edit config</span>
+          <span>- Use any commands</span>
+          <span>- Change permission settings</span>
+        </TipEl></>} state={pState.administrators} set={pApi.administrators} admins privateOnly m />
+        <PermissionsEditor label="DASHBOARD | Viewing" state={pState.dashboard.viewing} set={pApi.dashboard.viewing} privateOnly m />
+        <PermissionsEditor label="DASHBOARD | Editing" state={pState.dashboard.editing} set={pApi.dashboard.editing} privateOnly m />
+        <Switch p>Detailed settings</Switch>
       </Category>
       <Category title="Personalization">
         <Row elements={[
@@ -83,7 +99,7 @@ export const Settings = ({path}) => {
             <MultiSwitch options={['Embed', 'Embed/Markdown', 'Embed/Emoji']} selected={{o: state.responseDesign}} set={api.set.responseDesign} m />
             {messages.skip[state.responseDesign]}
             {messages.clear[state.responseDesign]}
-            <Switch enabled={state.border} set={api.toggle.border} p m>Fixed minimum width (border)</Switch>
+            <Switch enabled={state.border} set={api.toggle.border} p>Fixed minimum width (border)</Switch>
           </>,
           <>
             <MLabel d="Log link" m />
@@ -102,9 +118,18 @@ export const Settings = ({path}) => {
             ]} m />
             <MLabel d="Error messages" m />
             <Switch enabled={state.nopermRole} set={api.toggle.nopermRole} p m>No rights</Switch>
-            <Switch enabled={state.nopermChannel} set={api.toggle.nopermChannel} p m>Wrong channel</Switch>
+            <Switch enabled={state.nopermChannel} set={api.toggle.nopermChannel} p>Wrong channel</Switch>
           </>
         ]} column={layout.ap1} />
+      </Category>
+      <Category title="Reset">
+        <Row2 els={[
+          <Button label="Reset settings" onClick={() => notify.yesno({fs: true, title: 'Reset', text: 'All settings will be reset. Are you sure?\nTHIS ACTION CANNOT BE UNDONE!'}, null, [() => {
+            api.reset()
+            history.push('/dashboard')
+          }])} />,
+          <div />
+        ]} />
       </Category>
     </DashboardContainer>
   )

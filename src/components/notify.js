@@ -1,9 +1,9 @@
 import { store } from "../store"
 import { generateId } from "../utils/generateId"
 
-const newNotify = (type, {title, text, description, options}, duration) => {
+const newNotify = (type, {title, text, description, options, fs}, duration) => {
   let id = generateId(store.getState().ntfs.map(ntf => ntf.id))
-  store.dispatch({type: 'NEW_NOTIFY', data: {id, type, title, text, description, options, duration}})
+  store.dispatch({type: 'NEW_NOTIFY', data: {id, type, title, text, description, options, fs, duration}})
 }
 
 export const notify = {

@@ -15,6 +15,7 @@ import { convertYTTime } from '../../utils/convertYTTime'
 
 import st from './Player.sass'
 import { CustomTime } from '../customTime'
+import { useSelector } from 'react-redux'
 
 const Timeline = ({playing, resumed, pos, posUpdate, duration}) => {
   const [state, setState] = useState({resumed: 0, pos: 0, posUpdate: 0, duration: 0, time: Date.now()})
@@ -43,6 +44,7 @@ const Timeline = ({playing, resumed, pos, posUpdate, duration}) => {
 }
 
 export const Player = ({state, api}) => {
+  const mstate = useSelector(s => s.guild.state.music)
   const [searchResults, setResults] = useState([])
   const inputVal = useRef()
   const clearInput = useRef(0)
@@ -59,7 +61,7 @@ export const Player = ({state, api}) => {
     return () => document.removeEventListener('keydown', keyup)
   })
   return <>
-    <Select type="voice" selected={state.channel} add={[{id: null, name: 'OFF'}]} set={api.setChannel} m />
+    <Select type="voice" selected={mstate.channel} add={[{id: null, name: 'OFF'}]} set={api.setChannel} m />
     <Input placeholder="Search" ddset={n => {
       api.play(searchResults[n].id)
       setResults([])
@@ -76,23 +78,23 @@ export const Player = ({state, api}) => {
       search({url: '/api/v1/youtube/videos', params: {query: n}})
     }} dropdownVisible={searchResults.length} clear={clearInput.current} defsize p m b />
     <div className={st.np}>
-      <div className={st.thumbnail}>{state.playing && state.np && <img src={state.np.thumbnail} />}</div>
+      <div className={st.thumbnail}>{mstate.playing && mstate.np && <img src={mstate.np.thumbnail} />}</div>
       <div className={st.d}>
-        {state.playing && state.np ? <>
-          <div className={st.title}>{state.np.title}</div>
-          <div className={st.author}>{state.np.author}</div>
-          <div className={st.views}>{state.np.views} views</div>
+        {mstate.playing && mstate.np ? <>
+          <div className={st.title}>{mstate.np.title}</div>
+          <div className={st.author}>{mstate.np.author}</div>
+          <div className={st.views}>{mstate.np.views} views</div>
         </> : <div className={st.nothing}>Nothing is playing right now</div>}
       </div>
     </div>
     <div className={st.controlPanel}>
       <Row elements={[
-        {className: st.timeline, el: <Timeline playing={state.playing} resumed={state.resumed} pos={state.pos} posUpdate={state.posUpdate} duration={state.playing && state.np?.duration} />},
+        {className: st.timeline, el: <Timeline playing={mstate.playing} resumed={mstate.resumed} pos={mstate.pos} posUpdate={mstate.posUpdate} duration={mstate.playing && mstate.np?.duration} />},
         {width: 0, el: <Switch className={st.repeat} enabled={state.repeat} set={api.repeat} flex p><img src="/static/img/music-control/repeat.png" />Repeat</Switch>}
       ]} m />
       <div className={st.control1}>
         <div className="prev"><img src="/static/img/music-control/prev.png" /><div className={st.border} /></div>
-        <div className="pause" onClick={api.playpause}>{(!state.playing || !state.resumed) ? <img src="/static/img/music-control/play.png" /> : <img src="/static/img/music-control/pause.png" />}<div className={st.border} /></div>
+        <div className="pause" onClick={api.playpause}>{(!mstate.playing || !mstate.resumed) ? <img src="/static/img/music-control/play.png" /> : <img src="/static/img/music-control/pause.png" />}<div className={st.border} /></div>
         <div className="next" onClick={api.skip}><img src="/static/img/music-control/next.png" /><div className={st.border} /></div>
       </div>
     </div>
@@ -100,7 +102,7 @@ export const Player = ({state, api}) => {
     <div className={st.queue}>
       <Scroll>
         <div className={st.queueInner}>
-          <EditableList label="Queue" data={[state.playing && {...state.np, np: true}, ...state.queue].filter(Boolean).map((m, i) => ({fixed: m.np, el: <Container hp2 vp2 spaceBetween key={m.url + i}>
+          <EditableList label="Queue" data={[mstate.playing && {...mstate.np, np: true}, ...mstate.queue].filter(Boolean).map((m, i) => ({fixed: m.np, el: <Container hp2 vp2 spaceBetween key={m.url + i}>
             <div className={st.title}>{m.title}</div>
             <div className={st.duration}>{m.duration}</div>
           </Container>}))} delete={api.queue.del} empty={<Container hp2 vp2 spaceBetween>The queue is empty</Container>} noAdd />

@@ -12,6 +12,9 @@
     height: 100%;
     justify-content: space-between;
     background: rgba($grey, 0.075);
+    &.animated {
+      background: url(/static/img/header-bg.webp), $black;
+    }
     box-shadow: 0 0 1vh $shadow;
     z-index: 1;
     > * {
@@ -23,10 +26,10 @@
         &:hover {
           background: rgba($grey, 0.2);
         }
-        &.active:not(.main) {
-          color: $black;
-          background: $grey;
-          font-weight: bold;
+        &.active {
+          background: rgba($grey, 0.2);
+          border-top: 0.2vh solid $lgrey;
+          font-weight: 700;
         }
         &.main {
           &.active > img {

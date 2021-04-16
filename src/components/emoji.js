@@ -14,6 +14,7 @@ import { Input } from './input'
 import { useSettings } from '../hooks/settings.hook'
 
 import st from './Emoji.sass'
+import { useSelector } from 'react-redux'
 
 export const EmojiImg = ({className, label, x, y, size}) => {
   const scale = size / emojis.size
@@ -43,12 +44,13 @@ const CategoryEmoji = props => {
           }}
           onClick={() => props.set({label: e.split(' ')[0], x: i % emojis.row, y: Math.floor(i / emojis.row)})} />
       </div>)
-    : ''} onchange={setOpen} open={open} wrap p m></ExpansionPanel>
+    : ''} onchange={setOpen} open={open} wrap m></ExpansionPanel>
 }
 
 const EmojiList = memo(({open, set, us}) => {
   const [search, setSearch] = useState('')
   const scale = 28 / emojis.size
+  const cemoji = useSelector(s => s.guild.emojis)
   return <>
     {open && <>
       <Input input={setSearch} placeholder="Search" p defsize b m />
@@ -67,6 +69,14 @@ const EmojiList = memo(({open, set, us}) => {
           </div>)}
         </div>
       : <>
+        <div className={st.customEmoji}>
+          {cemoji.map((e, i) =>
+            <div className={st.cemoji} key={e.id}>
+              <div style={{ backgroundImage: `url(https://cdn.discordapp.com/emojis/${e.id}.${e.animated ? 'gif' : 'png'})` }}
+                aria-label={e.id}
+                onClick={() => set({label: `<:${e.identifier}>`, custom: true})} />
+            </div>)}
+        </div>
         <CategoryEmoji header="People" cat="people" set={set} />
         <CategoryEmoji header="Nature" cat="nature" set={set} />
         <CategoryEmoji header="Food" cat="food" set={set} />

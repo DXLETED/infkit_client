@@ -1,13 +1,10 @@
-import { useSelector, useDispatch } from "react-redux"
-import { cloneDeep, isEqual } from "lodash"
+import { cloneDeep } from "lodash"
 import { diff } from "deep-diff"
-import axios from "axios"
 import { store } from "./store"
 import { notify } from "./components/notify"
 import { generateId } from "./utils/generateId"
-import { refreshToken } from './hooks/auth.hook'
 import objectPath from "object-path"
-import { emit } from "./hooks/connection.hook"
+import { update } from "./hooks/connection.hook"
 
 export const post = async events => {
   let prev = store.getState().guildPrev
@@ -16,37 +13,28 @@ export const post = async events => {
   let changes = diff(prev, current)
   if (!changes && !events) return
   store.dispatch({type: 'UPDATE_CNCT', data: {sync: true}})
-  const storeState = store.getState()
-  const res = await emit.update.guild({changes, events})
+  const res = await update.guild({changes, events})
   if (res.status >= 400) {
     if (res.err === 'invalid_changes')
       notify.error({title: 'Invalid changes', text: 'Try reloading the page'})
   }
   console.log(res, changes, events)
-  /*axios.post('/api/v1/update', {id: current.id, changes, events}, {headers: {authorization: 'Bearer ' + storeState.auth.token, user_id: storeState.auth.userId}, validateStatus: () => true})
-    .then(async r => {
-      console.log('CHANGES', changes, r, events)
-      if (r.status === 200) {
-        //notify.success({title: 'Saved'}, 5000)
-      } else {
-        if (r.status === 400)
-          return notify.error({title: 'Invalid changes', text: 'Try reloading the page'})
-        if (r.status === 401) {
-          await refreshToken()
-          return post(events)
-        }
-        notify.error({title: 'Changes not saved', text: 'Unknown error'})
-      }
-    })*/
 }
 
-const u = pn => {
-  const fn = (cb, events) => {
-    let pl = cloneDeep(store.getState().guild.plugins[pn]),
-        ev = events ? events(pl) : null
-    cb && cb(pl)
-    store.dispatch({type: 'UPDATE_PLUGIN', pl: pn, data: pl})
-    post(ev)
+const baseUpdate = (getState, dispatch, update) => {
+  const fn = (cb, eventsCb, replace) => {
+    const prev = getState(),
+          guildState = store.getState().guild.state,
+          state = cloneDeep(prev),
+          events = eventsCb?.(state, guildState),
+          viewMode = !store.getState().guild.permissions.dashboard.editing
+    if (viewMode) return
+    let cbState
+    if (replace)
+      cbState = cb?.(state, guildState)
+    else cb?.(state, guildState)
+    dispatch?.(cbState || state)
+    update(diff(prev, cbState || state), events)
   }
   fn.arr = function (path) {
     return {
@@ -65,48 +53,35 @@ const u = pn => {
   return fn
 }
 
-const groupsUpdate = () => {
-  const fn = (cb, events) => {
-    let st = cloneDeep(store.getState().guild.groups),
-        ev = events ? events(pl) : null
-    cb(st)
-    store.dispatch({type: 'UPDATE_GROUPS', data: st.filter(Boolean)})
-    post(ev)
-  }
-  fn.arr = function (path) {
-    return {
-      add: n => this(pl => {
-        let s = objectPath.get(pl, path) || []
-        s.push(n)
-        objectPath.set(pl, path, s)
-      }),
-      del: d => this(pl => {
-        let s = objectPath.get(pl, path) || []
-        s = s.filter((_, i) => i !== d)
-        s.length ? objectPath.set(pl, path, s) : objectPath.del(pl, path)
-      })
-    }
-  }
-  return fn
-}
+const pluginUpdate = pl => baseUpdate(
+  () => store.getState().guild.config.plugins[pl],
+  data => store.dispatch({type: 'guild/update/plugin', plugin: pl, data}),
+  (...args) => update.plugin(pl, ...args)
+)
 
-const settingsUpdate = (cb, events) => {
-  let st = cloneDeep(store.getState().guild.settings),
-      ev = events ? events(pl) : null
-  cb(st)
-  store.dispatch({type: 'UPDATE_GUILD_SETTINGS', data: st})
-  post(ev)
-}
+const groupsUpdate = baseUpdate(
+  () => store.getState().guild.config.groups,
+  data => store.dispatch({type: 'guild/update/groups', data}),
+  update.groups
+)
 
-const membersUpdate = (cb, events) => {
-  let mm = cloneDeep(store.getState().members),
-      members = cloneDeep(store.getState().guild.members),
-      ev = events ? events(mm) : null
-  cb(mm, members)
-  store.dispatch({type: 'SET_MEMBERS_CACHE', data: mm})
-  store.dispatch({type: 'UPDATE_MEMBERS', data: members})
-  post(ev)
-}
+const settingsUpdate = baseUpdate(
+  () => store.getState().guild.config.settings,
+  data => store.dispatch({type: 'guild/update/settings', data}),
+  update.settings
+)
+
+const permissionsUpdate = baseUpdate(
+  () => store.getState().guild.config.permissions,
+  data => store.dispatch({type: 'guild/update/permissions', data}),
+  update.permissions
+)
+
+const membersUpdate = baseUpdate(
+  () => store.getState().guild.state.members,
+  null,
+  update.eventsOnly
+)
 
 export const customUpdate = set => cb => {
   set(prev => {
@@ -142,6 +117,9 @@ const permissionsSelector = (u, path, {groups = true} = {}) => ({
 const cmd = (u, cn) => ({
   enabled: {
     toggle: () => u(pl => pl.commands[cn].enabled = !pl.commands[cn].enabled)
+  },
+  set: {
+    permissions: n => u(pl => pl.commands[cn].permissions = n)
   },
   ...permissionsSelector(u, ['commands', cn]),
   aliases: {
@@ -182,6 +160,13 @@ const cmd = (u, cn) => ({
       enabled: () => u(pl => pl.commands[cn].deleteAfter.res.enabled = !pl.commands[cn].deleteAfter.res.enabled),
       set: n => u(pl => pl.commands[cn].deleteAfter.res.v = n)
     },
+  },
+  vote: {
+    enabled: () => u(pl => pl.commands[cn].vote.enabled = !pl.commands[cn].vote.enabled),
+    roles: {
+      add: n => u(pl => pl.commands[cn].vote.roles.push(n)),
+      del: d => u(pl => pl.commands[cn].vote.roles = pl.commands[cn].vote.roles.filter((_, i) => i !== d))
+    }
   }
 })
 
@@ -190,7 +175,8 @@ const levels = u => ({
     voiceXPAdaptivity: n => u(pl => pl.voiceXPAdaptivity = n),
     voiceXPRate: n => u(pl => pl.voiceXPRate = n),
     textXPRate: n => u(pl => pl.textXPRate = n),
-    msgTimeout: n => u(pl => pl.msgTimeout = n)
+    msgTimeout: n => u(pl => pl.msgTimeout = n),
+    gettingXP: n => u(pl => pl.gettingXP = n)
   },
   type: {
     set: n => u(pl => pl.type = n)
@@ -203,14 +189,6 @@ const levels = u => ({
     setLevel: (i, n) => u(pl => pl.rewards[i].level = n),
     addRole: (i, n) => u(pl => pl.rewards[i].roles.push(n)),
     delRole: (i, d) => u(pl => pl.rewards[i].roles = pl.rewards[i].roles.filter((_, ii) => ii !== d))
-  },
-  disabledRoles: {
-    add: n => u(pl => pl.disabledRoles.push(n)),
-    del: d => u(pl => pl.disabledRoles = pl.disabledRoles.filter((_, i) => i !== d))
-  },
-  disabledChannels: {
-    add: n => u(pl => pl.disabledChannels.push(n)),
-    del: d => u(pl => pl.disabledChannels = pl.disabledChannels.filter((_, i) => i !== d))
   },
   card: {
     colors: {
@@ -362,7 +340,7 @@ const automod = u => ({
 })
 
 const embeds = u => ({
-  create: () => u(pl => pl.d.push({id: generateId(pl.d.map(ms => ms.id)), msg: {content: '', embed: {}}})),
+  create: () => u(pl => pl.d.push({id: generateId(pl.d.map(ms => ms.id)), msg: {content: '', embed: {color: 9671571}}})),
   msg: i => ({
     set: {
       channel: n => u(pl => pl.d[i].channel = n, pl => [{action: 'embeds/upd', v: pl.d[i].id}]),
@@ -405,10 +383,10 @@ const reactionRoles = u => ({
 })
 
 const music = u => ({
-  setChannel: n => u(pl => pl.channel = n, () => [{action: 'music/channel'}]),
+  setChannel: n => u(null, () => [{action: 'music/channel', v: n}]),
   play: n => u(null, () => [{action: 'play', v: n}]),
-  playpause: () => u(pl => pl.resumed = !pl.resumed, pl => [{action: pl.resumed ? 'pause' : 'resume'}]),
-  skip: () => u(pl => pl.np = null, () => [{action: 'skip'}]),
+  playpause: () => u(null, (pl, state) => [{action: state.music.resumed ? 'pause' : 'resume'}]),
+  skip: () => u(null, () => [{action: 'skip'}]),
   repeat: () => u(pl => pl.repeat = !pl.repeat),
   volume: n => u(pl => pl.volume = n, () => [{action: 'volume'}]),
   queue: {
@@ -494,10 +472,10 @@ const userRooms = u => ({
 
 const plugins = {levels, moderation, automod, embeds, alerts, reactionRoles, music, welcome, counters, poll, userRooms}
 
-export const pluginApi = pn => ({enabled: {toggle: () => u(pn)(pl => pl.enabled = !pl.enabled)}, ...(plugins[pn] ? plugins[pn](u(pn)) : () => {})})
+export const pluginApi = pn => ({enabled: {toggle: () => pluginUpdate(pn)(pl => pl.enabled = !pl.enabled)}, ...(plugins[pn] ? plugins[pn](pluginUpdate(pn)) : () => {})})
 
 export const groupsApi = (u => ({
-  add: () => u(grps => grps.push({id: generateId(grps.map(g => g.id)), name: 'New group', enabledRoles: [], disabledRoles: [], enabledChannels: [], disabledChannels: []})),
+  add: name => u(grps => grps.push({id: generateId(grps.map(g => g.id)), name: name || 'New group', enabledRoles: [], disabledRoles: [], enabledChannels: [], disabledChannels: []})),
   group: i => ({
     setName: n => u(grps => grps[i].name = n || 'Group'),
     roles: {
@@ -507,10 +485,10 @@ export const groupsApi = (u => ({
     channels: {
       add: n => u.arr([i, 'channels']).add(n),
       del: d => u.arr([i, 'channels']).del(d)
-    }
-  }),
-  del: d => u(grps => delete grps[d])
-}))(groupsUpdate())
+    },
+    del: () => u(grps => grps.filter((_, ii) => ii !== i), null, true)
+  })
+}))(groupsUpdate)
 
 export const settingsApi = (u => ({
   prefix: n => u(stgs => stgs.prefix = n),
@@ -526,13 +504,23 @@ export const settingsApi = (u => ({
   },
   set: {
     responseDesign: n => u(stgs => stgs.responseDesign = n.o)
-  }
+  },
+  reset: () => u(null, () => [{action: 'reset'}])
 }))(settingsUpdate)
+
+export const permissionsApi = (u => ({
+  administrators: n => u(p => p.administrators = n),
+  dashboard: {
+    viewing: n => u(p => p.dashboard.viewing = n),
+    editing: n => u(p => p.dashboard.editing = n)
+  }
+}))(permissionsUpdate)
 
 export const membersApi = (u => ({
   member: m => ({
     set: {
-      XP: n => u((mm, members) => members.levels[m] = n, () => [{action: 'levels/upd', v: m}])
-    }
+      XP: n => u((mm, members) => null, () => [{action: 'members/xp', v: {mId: m, value: n}}])
+    },
+    warn: () => u(null, () => [{action: 'members/warn', v: {mId: m, reason: ''}}])
   })
 }))(membersUpdate)

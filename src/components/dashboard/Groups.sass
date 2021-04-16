@@ -1,0 +1,65 @@
+@import ../../css-legacy/colorlist.scss
+@import src/mixins.sass
+
+.groups
+  width: 100%
+  height: 100%
+  flex-direction: column
+  position: relative
+  align-items: center
+  padding-top: 1vh
+  .label
+    width: 100%
+    height: 3vh
+    align-items: center
+    padding: 0 1vh
+    &:not(.info)
+      cursor: pointer
+    .labelInner
+      flex: 1
+      height: 100%
+      align-items: center
+      img
+        height: 1.5vh
+        margin-right: 1vh
+    img
+      height: 1.5vh
+  .dropdown
+    width: 100%
+    height: calc(100% - 3vh)
+    .list
+      flex-direction: column
+      padding: 1vh 0
+      .group
+        width: 100%
+        height: 4vh
+        cursor: pointer
+        &:hover
+          background: rgba($grey, 0.2)
+        .name
+          flex: 1
+          align-items: center
+          padding: 0 1vh
+      .add
+        width: 100%
+        height: 3vh
+        padding-left: 1vh
+        .btn
+          height: 100%
+          align-items: center
+          padding: 0 2vh
+          cursor: pointer
+          &:hover
+            background: rgba($grey, 0.2)
+
+.remove
+  width: 100%
+  height: 3vh
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  &:hover
+    background: rgba($grey, 0.2)
+  img
+    height: 2vh
+    margin-right: 1vh

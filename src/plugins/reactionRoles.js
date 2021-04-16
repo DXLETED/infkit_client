@@ -37,16 +37,18 @@ const Msg = ({g, api, channels}) => <>
       type="text"
       add={[{id: null, name: 'Channel not selected'}]}
       set={api.set.channel} m />}
-  <MessageEditor placeholder="Message" state={g.msg} set={api.set.msg} m></MessageEditor>
-  <ObjectEdit label="Additional roles (if the user selects at least one role)" type="roles" data={g.addRoles} add={api.addRoles.add} del={api.addRoles.del} m />
-  <ObjectEdit label="Reverse roles (if the user does not select any role)" type="roles" data={g.revRoles} add={api.revRoles.add} del={api.revRoles.del} m />
+  <MessageEditor placeholder="Message" state={g.msg} set={api.set.msg} m />
   <EditableList data={g.reacts.map((r, ii) => <MsgReact state={r} api={api.reacts.react(ii)} key={ii} />)}
     label="Reacts"
     limit={20}
     addLabel="Add react"
     add={api.reacts.add}
     delete={api.reacts.del}
-    p={1} />
+    p={1} m />
+  <Category>
+    <ObjectEdit label="Additional roles (if the user selects at least one role)" type="roles" data={g.addRoles} add={api.addRoles.add} delete={api.addRoles.del} m />
+    <ObjectEdit label="Reverse roles (if the user does not select any role)" type="roles" data={g.revRoles} add={api.revRoles.add} delete={api.revRoles.del} />
+  </Category>
 </>
 
 export const reactionRoles = ({state, api}) => {

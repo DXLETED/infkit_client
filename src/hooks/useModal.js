@@ -6,7 +6,7 @@ export const useModal = ({initState = false, fixed = false, fullScreen = false, 
   const visRef = useRef(initState)
   const id = useMemo(() => generateId(), [])
   const [link, setLink] = useState()
-  const dclick = e => (!closeIf || closeIf(e) === true) && visRef.current && e.target.closest('body') && e.target.tagName !== 'INPUT' && ((fixed || fullScreen)
+  const dclick = e => (!closeIf || closeIf(e) === true) && visRef.current && e.target.closest('body') && !e.target.closest('.overlays') && e.target.tagName !== 'INPUT' && ((fixed || fullScreen)
     ? (!e.target.closest('.modal-fs-wr') && !e.target.closest('.modal') && setVis(false))
     : (e.target.id !== id && !e.target.closest(`[id='${id}'`)) && setVis(false))
   const keyDown = e => visRef.current && e.keyCode === 27 && setVis(false)
@@ -26,13 +26,13 @@ export const useModal = ({initState = false, fixed = false, fullScreen = false, 
       setTimeout(() => onclosed(), 200)
   }, [vis])
   const open = e => {
+    if (fullScreen) return setVis(true)
     let ml = e.target.closest('.ml')
-    console.log('OPEN', ml)
     setLink(ml || e.target)
     setVis(true)
   }
   const close = () => {
     setVis(false)
   }
-  return [{id, open: vis, link, fs: fullScreen, fixed, width, list, padding}, open, close]
+  return [{id, open: vis, link, fs: fullScreen, fixed, width, list, padding, close}, open, close]
 }

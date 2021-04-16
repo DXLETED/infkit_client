@@ -65,7 +65,7 @@ const Counter = ({c, api, layout}) => {
             ]} add={n => api.set.name(c.name.concat(n))} />
           </>}
         </div>
-      </>} key={c.id} column np />
+      </>} key={c.id} p column np />
 }
 
 export const Counters = ({state, api, layout}) => <>

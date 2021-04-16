@@ -58,6 +58,7 @@
     > .modal-title {
       width: 100%;
       height: 4vh;
+      justify-content: space-between;
       background: rgba($white, 0.5);
     }
     > .modal-container {
@@ -200,6 +201,7 @@
     pointer-events: all;
     > .modal-fs-wr {
       width: 75vh;
+      max-width: 100vw;
       flex-direction: column;
       background: rgba($grey, 0.2);
       backdrop-filter: blur(1rh);
@@ -207,6 +209,7 @@
       > .modal-title {
         width: 100%;
         height: 4vh;
+        justify-content: space-between;
         align-items: center;
         padding: 0 2vh;
         color: $black;
@@ -219,7 +222,6 @@
         .modal-fs {
           flex: 1;
           flex-direction: column;
-          padding: 1vh;
           &.p {
             padding: 1vh;
           }
@@ -229,7 +231,7 @@
         }
       }
     }
-    &.modal-fadein-enter {
+    &.modal-fadein-enter, &.modal-fadein-appear {
       opacity: 0;
       > .modal-fs-wr { transform: translateY(4vh) }
       &-active {
@@ -257,5 +259,16 @@
         transition: 0.2s linear;
       }
     }
+  }
+}
+
+.modal-close {
+  width: 4vh;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  > img {
+    height: 1.5vh;
   }
 }

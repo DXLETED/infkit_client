@@ -14,7 +14,8 @@ const initialState = {
   membersLoaded: false,
   channels: {
     twitch: {}
-  }
+  },
+  timesync: 0
 }
 
 function todos(state = {}, action) {
@@ -47,6 +48,8 @@ function todos(state = {}, action) {
       return {...state, guild: {...state.guild, stats: action.data}}
     case 'UPDATE_GUILD_SETTINGS':
       return {...state, guild: {...state.guild, settings: action.data}}
+    case 'SET_TIMESYNC':
+      return {...state, timesync: state.data}
     case 'UPDATE_CNCT':
       return {...state, cnct: {...state.cnct, ...action.data}}
     case 'SET_MEMBERS':
@@ -71,6 +74,22 @@ function todos(state = {}, action) {
       return {...state, menus: {...state.menus, [action.data]: true}}
     case 'MENU_CLOSE':
       return {...state, menus: {...state.menus, [action.data]: false}}
+    case 'guild/init':
+      return {...state, guild: action.data}
+    case 'guild/update/plugin':
+      return {...state, guild: {...state.guild, config: {...state.guild.config, plugins: {...state.guild.config.plugins, [action.plugin]: action.data}}}}
+    case 'guild/update/settings':
+      return {...state, guild: {...state.guild, config: {...state.guild.config, settings: action.data}}}
+    case 'guild/update/permissions':
+      return {...state, guild: {...state.guild, config: {...state.guild.config, permissions: action.data}}}
+    case 'guild/update/groups':
+      return {...state, guild: {...state.guild, config: {...state.guild.config, groups: action.data}}}
+    case 'guild/update/roles':
+      return {...state, guild: {...state.guild, roles: action.data}}
+    case 'guild/update/channels':
+      return {...state, guild: {...state.guild, channels: action.data}}
+    case 'guild/update/state':
+      return {...state, guild: {...state.guild, state: {...state.guild.state, [action.t]: action.data}}}
     default:
       return state
   }

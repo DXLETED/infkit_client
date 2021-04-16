@@ -13,7 +13,7 @@ import { useLayout } from '../../hooks/layout.hook'
 
 const PluginPreviewEl = memo(({pn, path, i, length}) => {
   let history = useHistory()
-  const state = useSelector(s => s.guild.plugins[pn])
+  const state = useSelector(s => s.guild.config.plugins[pn])
   const api = useMemo(() => pluginApi(pn), [])
   const [pluginDesc] = useSettings('plugins-description')
   const layout = useLayout()

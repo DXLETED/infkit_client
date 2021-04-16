@@ -9,9 +9,10 @@ import { EmbedEditor } from './EmbedEditor'
 import { useSettings } from '../hooks/settings.hook'
 import { useLayout } from '../hooks/layout.hook'
 import { customUpdate } from '../api'
-import { isEqual } from 'lodash'
+import { cloneDeep, isEqual } from 'lodash'
 import { notify } from './notify'
 import Color from 'color'
+import { useStateRef } from '../hooks/stateref.hook'
 
 export const msgApi = (u => ({
   set: {
@@ -52,16 +53,21 @@ export const msgApi = (u => ({
   }
 }))
 
-export const MessageEditor = ({state, set}) => {
-  const [msg, setMsg] = useState(state),
+export const MessageEditor = ({state, set, ...props}) => {
+  const [msg, setMsg, msgRef] = useStateRef(cloneDeep(state)),
+        initial = useRef(state),
         mapi = msgApi(customUpdate(setMsg))
   const [isEditing, setIsEditing] = useState(false)
   const [length, setLength] = useState(!state.embed && state.content)
   const [previewVisible, setPreviewVisible] = useSettings('preview', false)
   const layout = useLayout()
   const controls = useRef()
-  useEffect(() => () => !isEqual(msg, state) && notify.yesno({text: 'Save changes?'}, 10000, [() => set(msg)]), [])
-  return <Component cln={cn(st.messageEditor)}>
+  useEffect(() => { initial.current = state }, [state])
+  useEffect(() => () =>
+    !isEqual(msgRef.current, initial.current)
+      && notify.yesno({fs: true, title: 'Save changes in the message?', text: <MessageVisualizer msg={msgRef.current} w100 bot />}, null, [() => set(msgRef.current)])
+  , [])
+  return <Component cln={cn(st.messageEditor)} {...props}>
     <div className={st.messageEditorInner}>
       <div className={st.editor}>
         {msg.embed
@@ -88,9 +94,8 @@ export const MessageEditor = ({state, set}) => {
         <div className={st.save} onClick={() => {
           set(msg)
           setIsEditing(false)
-          console.log(msg, state)
         }}><img src="/static/img/done.png" />Save</div>
-        {!msg.embed && <div className={st.addEmbed} onClick={() => setMsg({...msg, embed: {}})}><img src="/static/img/add.png" />Add embed</div>}
+        {!msg.embed && <div className={st.addEmbed} onClick={() => setMsg({...msg, embed: {color: 9671571}})}><img src="/static/img/add.png" />Add embed</div>}
       </div>
       <div className={st.controls2}>
         <div className={cn(st.previewButton, {[st.enabled]: previewVisible})} onClick={() => setPreviewVisible(!previewVisible)}>

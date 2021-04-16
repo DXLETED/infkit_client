@@ -60,7 +60,7 @@ const LogItem = ({s}) => <div className={st.logItem}>
 </div>
 
 export const Log = ({path}) => {
-  const state = useSelector(s => s.guild.log)
+  const state = useSelector(s => s.guild.logs) || []
   const [filtersVisible, setFiltersVisible] = useState(false)
   const log = state//.sort((x, y) => y.ts - x.ts)
   return <DashboardContainer k="log" title="Log" className={st.log} icon="/static/img/log.png" deps={[state]} {...{path}}>

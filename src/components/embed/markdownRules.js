@@ -153,7 +153,6 @@ export const base = {
   text: {
     ...markdown.defaultRules.text,
     parse(capture, recurseParse, state) {
-      console.log(capture, )
       return state.nested
         ? {
           content: capture[0]

@@ -16,7 +16,7 @@ export const ObjectEdit = memo(props => {
   const type = props.type
   const [mState, open, close] = useModal({list: true, padding: false})
   const add = (t, id) => {
-    props.add(props.isGroup ? id : {t, id})
+    props.add(props.isGroup ? id : id ? {t, id} : {t})
     close()
   }
   let ref = useRef()
@@ -37,12 +37,12 @@ export const ObjectEdit = memo(props => {
   if (type === 'groups')
     list = useGuild.groups().list
   return (
-    <div className={cn(st.objectEditWr, props.className, {m: props.m, flex: props.flex, disabled: props.disabled, right: props.right})}>
+    <div className={cn(st.objectEditWr, props.className, {[st.m]: props.m, [st.flex]: props.flex, disabled: props.disabled, [st.right]: props.right})}>
       <MLabel d={props.label} />
       <div className={st.objectEdit} ref={ref} onClick={e => e.stopPropagation()}>
         {(props.data && props.data.length)
         ? props.data.map((r = {}, i) => <>
-          <div className={cn(st.el, {group: r.t === 'group'})} key={r.id || i}>
+          <div className={cn(st.el, {[st.group]: r.t === 'group'})} key={r.id || i}>
             <div className={st.delete} onClick={() => props.delete(i)}><img src="/static/img/delete.png" className="deleteImg" /></div>
             {(() => {
               if (props.isGroup) {
@@ -93,12 +93,12 @@ export const ObjectEdit = memo(props => {
           ? <Input set={props.add} clearOnSet b oe />
           : <div className={cn(st.add, {ml: !props.noML})} onClick={open}><img src="/static/img/add.png" /><div className={st.border} /></div>}
         <Modal id="object-edit" s={mState}>
-          {!props.isGroup && <>
-            <Label bg p>Groups</Label>
-            {groups.list.map(gr => <div className={cn('obj-edit-el')} onClick={() => add('group', gr.id)} style={{borderColor: colors.grey}} key={gr.id}>{gr.name}</div>)}
+          {!props.isGroup && !!groups.list.length && <>
+            <Label p>Groups</Label>
+            {groups.list.map(gr => <div className={cn('obj-edit-el', {disabled: (props.data || []).find(rr => rr.id === gr.id)})} onClick={() => add('group', gr.id)} style={{borderColor: colors.grey}} key={gr.id}>{gr.name}</div>)}
           </>}
-          {list.map((r, i) => {
-            if (r.type === 'class') return <Label bg p mt={!props.isGroup || i !== 0}>{r.name}</Label>
+          {list.sort((x, y) => y.rawPosition - x.rawPosition).map((r, i) => {
+            if (r.type === 'class') return <Label p mt={!props.isGroup || i !== 0}>{r.name}</Label>
             switch (type) {
               case 'roles':
                 return <div className={cn('obj-edit-el', {disabled: (props.data || []).find(rr => rr.id === r.id)})} onClick={() => add('role', r.id)} style={{borderColor: r.color !== 0 ? Color(r.color).hex() : colors.grey}} key={i}>{r.name}</div>

@@ -18,6 +18,12 @@ import { MLabel } from '../components/mlabel'
 import { CardCustomization } from '../components/plugins/CardCustomization'
 import { Row2 } from '../components/Row2'
 import { Button } from '../components/button'
+import { notify } from '../components/notify'
+import { PermissionsEditor } from '../components/PermissionsEditor'
+import { useServerTime } from '../hooks/servertime.hook'
+import { useSelector } from 'react-redux'
+import moment from 'moment'
+import cn from 'classnames'
 
 const Reward = memo(props => <Container hp1 vp1 vcenter>
   <Select selected={props.level} set={n => props.api.setLevel(props.i, n)} prefix="Level " dropdown={[...Array(101)].map((l, i) => i)} nm mr width={12.5} />
@@ -27,6 +33,16 @@ const Reward = memo(props => <Container hp1 vp1 vcenter>
     add={n => props.api.addRole(props.i, n)}
     delete={d => props.api.delRole(props.i, d)} flex />
 </Container>, isEqual)
+
+const UpdateRewards = ({api}) => {
+  const time = useServerTime(1000)
+  const timeout = useSelector(s => s.guild.state.timeouts.recalculateRewards)
+  return <Button
+    src="/static/img/plugins/automod.png"
+    label={`Recalculate rewards${timeout >= time ? ` (${moment(timeout).fromNow()})` : ''}`}
+    className={cn({disabled: timeout >= time})}
+    onClick={() => notify.yesno({fs: true, title: 'Recalculate rewards', text: 'You will not be able to repeat this action for a while'}, 10000, [() => api.updAll()])} />
+}
 
 export const Levels = memo(({state, api, layout, prefix}) => <>
   <Category title="XP Rates">
@@ -41,13 +57,13 @@ export const Levels = memo(({state, api, layout, prefix}) => <>
         <Switch enabled={state.voiceXPAdaptivity} set={api.set.voiceXPAdaptivity} p m>XP depends on the number of interlocutors</Switch>
         <CustomTime label="Message timeout" value={state.msgTimeout} set={api.set.msgTimeout} max={86400000} b defsize />
       </>, {flex: 2}]
-    ]} column={layout.ap2} c={{marginBottom: 20}} m />
+    ]} column={layout.ap2} c={{marginBottom: 20}} />
   </Category>
   <Category title="Rewards">
     <Row elements={[
       <>
         <Options options={['Replace rewards', 'Stack previous rewards']} set={api.type.set} selected={state.type} label="Rewards type" />
-        <Button src="/static/img/plugins/automod.png" label="Recalculate rewards" onClick={api.updAll} />
+        <UpdateRewards api={api} />
       </>,
       <EditableList data={state.rewards.map((r, i) => <Reward level={r.level} roles={r.roles} api={api.rewards} i={i} key={i} />)}
         add={api.rewards.add}
@@ -59,16 +75,9 @@ export const Levels = memo(({state, api, layout, prefix}) => <>
   <Category title="Settings">
     <Row2 els={[
       <Options options={['Linear', 'Progressive']} set={api.setMode} selected={state.levelsMode} keys={['linear', 'progressive']} label="Levels mode" />,
-      <>
-        <ObjectEdit type="roles" data={state.disabledRoles}
-          add={api.disabledRoles.add}
-          delete={api.disabledRoles.del}
-          label="NO XP roles" m />
-        <ObjectEdit type="channels" data={state.disabledChannels}
-          add={api.disabledChannels.add}
-          delete={api.disabledChannels.del}
-          label="NO XP channels" />
-      </>
+      <PermissionsEditor label="Getting hp"
+        state={state.gettingXP}
+        set={api.set.gettingXP} />
     ]} column={layout.ap2} />
   </Category>
   <Category title="Card customization">

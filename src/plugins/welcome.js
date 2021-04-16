@@ -17,13 +17,13 @@ export const Welcome = props => {
         {state.toChannel.enabled && state.toChannel.msg && <>
           <Select type="text" add={[{id: null, name: 'Select channel'}]} selected={state.toChannel.enabled ? state.toChannel.channel : null}
             set={api.toChannel.set.channel} m />
-          <TextArea placeholder="Message" value={state.toChannel.msg.content} set={api.toChannel.set.msg}></TextArea>
+          <TextArea placeholder="Message" value={state.toChannel.msg.content} set={api.toChannel.set.msg} m></TextArea>
         </>}
         <Switch enabled={state.private.enabled} set={api.private.toggle.enabled} p m>Send private message</Switch>
-        {state.private.enabled && state.private.msg && <TextArea placeholder="Private message" value={state.private.msg.content} set={api.private.set.msg}></TextArea>}
+        {state.private.enabled && state.private.msg && <TextArea placeholder="Private message" value={state.private.msg.content} set={api.private.set.msg} m></TextArea>}
         <ObjectEdit label="Roles to give" type="roles" data={state.roles}
           add={api.roles.add}
-          delete={api.roles.del} m />
+          delete={api.roles.del} />
       </Category>
     </>
   )

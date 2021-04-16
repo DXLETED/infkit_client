@@ -77,5 +77,5 @@ export const Card = ({s, scale = 1}) => {
   useEffect(() => {
     ref.current && draw(ref.current, s)
   }, [s])
-  return <canvas width={600} height={200} style={{zoom: scale}} ref={ref} />
+  return <canvas width={600} height={200} style={{height: 200 * scale}} ref={ref} />
 }

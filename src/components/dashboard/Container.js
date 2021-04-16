@@ -20,18 +20,6 @@ export const DashboardContainer = ({k, icon, title, enabled, color, path, classN
   return <CSSTransition in={visible} classNames={fadeSt} timeout={200} onEnter={() => setV2(true)} onExited={() => setV2(false)}>
     <div id={k} className={cn(st.dashboardPageContainer, `${k}-page`, {[st.p]: p})}>
       {v2 && <>
-        {/*<div className={st.title}>
-          <div className={st.border} style={{background: color || colors.grey}} />
-          <div className={st.inner}>
-            <NavLink to={path} className={st.back}>
-              <img src="/static/img/arrow/left.png" />
-            </NavLink>
-            <img src={icon} />
-            <span className={st.label}>{title}</span>
-            <div className={st.color} style={{background: color || colors.grey}} />
-          </div>
-          {enabled !== undefined && api && <div className={st.enabled} onClick={api.enabled.toggle}>{enabled ? <><img src="/static/img/on.png" />ENABLED</> : <><img src="/static/img/off.png" />DISABLED</>}</div>}
-        </div>*/}
         <div className={cn(st.dashboardPageWr, `${k}-wr`)}>
           <Scroll className={cn(st.dashboardPage, className, {disabled: enabled === false})} deps={[visible, v2, ...deps || []]}>
             {children}

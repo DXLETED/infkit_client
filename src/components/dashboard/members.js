@@ -23,6 +23,8 @@ import { Text } from '../Text'
 
 import st from './Members.sass'
 import { Scroll } from '../scroll'
+import { Row2 } from '../Row2'
+import { Svg } from '../svg'
 
 const getLevel = xp => {
   const l = levelsMode.progressive.findIndex(l => l > xp)
@@ -39,14 +41,29 @@ const EXP = ({xp, mapi}) => {
 }
 
 const Member = ({m, mapi, mXP, mMutes, mWarns, mBans, mm}) => {
-  const [mState0, open0] = useModal({fullScreen: true})
-  const [mState1, open1] = useModal({fullScreen: true})
-  const [mState2, open2] = useModal({fullScreen: true})
+  const [mState0, open0] = useModal({fullScreen: true}),
+        [mState1, open1] = useModal({fullScreen: true}),
+        [mState2, open2] = useModal({fullScreen: true})
+  const mutes = mMutes.get(m.id),
+        warns = mWarns.get(m.id),
+        bans  = mBans.get(m.id)
+  const isMuted = mutes.find(el => el.a),
+        isBanned = bans.find(el => el.a)
+  const list = (s, {time = false} = {}) => s.map(el => <div className={st.el}>
+    <div className={st.completed}>{!el.a && <Svg k="done" />}</div>
+    <div className={st.inner}>
+      <div className={st.reason}>{el.reason || 'No reason'}</div>
+      <div className={st.d}>
+        <div className={st.by}>{mm.get(el.by).nickname || mm.get(el.by).username}</div>
+        {time && <div className={st.time}>{msStr(el.time)}</div>}
+      </div>
+    </div>
+  </div>)
   return <div className={st.member} style={{borderLeftColor: m.color !== '#000000' ? m.color : null}} key={m.id}>
     <img className={st.avatar} src={m.avatar ? `https://cdn.discordapp.com/avatars/${m.id}/${m.avatar}.png?size=64` : 'https://discord.com/assets/322c936a8c8be1b803cd94861bdfa868.png'} />
     <div className={st.ds}>
-      <div className={st.name}>{m.name}</div>
-      <div className={st.discr}>#{m.discr}</div>
+      <div className={st.nickname}>{m.nickname ? <>{m.nickname} <div className={st.username}>[ {m.username} ]</div></> : m.username}</div>
+      <div className={st.discr}>#{m.discriminator}</div>
     </div>
     <div className={st.mutes} onClick={open0}>
       <img src="/static/img/mute.png" />
@@ -60,52 +77,44 @@ const Member = ({m, mapi, mXP, mMutes, mWarns, mBans, mm}) => {
       <img src="/static/img/ban.png" />
       {mBans.get(m.id).length}
     </div>
-    <Modal s={mState0} className={st.modal}>
-      <EditableList data={mMutes.get(m.id).map(el => <Container className={st.modalEl} hp2 vp2 column>
-        <div className={st.reason}>{el.reason || 'No reason'}</div>
-        <div className={st.d}>
-          <div className={st.by}>{mm.get(el.by).name}</div>
-          <div className={st.time}>{msStr(el.time)}</div>
-        </div>
-      </Container>)} />
+    <Modal s={mState0} className={st.modal} title={`${m.nickname || m.username} mutes`} footer={<div className={st.footer}>
+      <div className={st.button}>{isMuted ? 'ADD MUTE' : 'MUTE'}</div>
+      {isMuted && <div className={st.button}>UNMUTE</div>}
+    </div>} column>
+      {mutes.length ? list(mutes, {time: true}) : <Text jcc>No mutes</Text>}
     </Modal>
-    <Modal s={mState1} className={st.modal} title={`${m.name} warnings`}>
-      {mWarns.get(m.id).length
-        ? <EditableList data={mWarns.get(m.id).map(el => ({fixed: true, el: <Container className={st.modalEl} hp2 vp2 column>
-            <div className={st.reason}>{el.reason || 'No reason'}</div>
-            <div className={st.d}>
-              <div className={st.by}>{mm.get(el.by).name}</div>
-              <div className={st.time}>{msStr(el.time)}</div>
-            </div>
-          </Container>}))} noAdd />
-        : <Text jcc>No warnings</Text>}
+    <Modal s={mState1} className={st.modal} title={`${m.nickname || m.username} warnings`} footer={<div className={st.footer}>
+        <div className={st.button} onClick={() => mapi.warn()}>WARN</div>
+      </div>}>
+      {warns.length ? list(warns) : <Text jcc>No warnings</Text>}
     </Modal>
-    <Modal s={mState2} className={st.modal}>
-      <EditableList data={mBans.get(m.id).map(el => <div className={st.modalEl}>
-        {el.reason}
-        {el.by}
-        {el.time}
-      </div>)} />
+    <Modal s={mState2} className={st.modal} title={`${m.nickname || m.username} bans`} footer={<div className={st.footer}>
+        <div className={st.button}>{isBanned ? 'ADD BAN' : 'BAN'}</div>
+        {isBanned && <div className={st.button}>UNBAN</div>}
+      </div>
+    }>
+      {bans.length ? list(bans, {time: true}) : <Text jcc>No bans</Text>}
     </Modal>
     <EXP xp={mXP.get(m.id)} mapi={mapi} />
   </div>
 }
 
 export const Members = ({path}) => {
-  let state = useSelector(s => s.members)
+  let state = useSelector(s => s.guild.members.list)
   const api = useMemo(() => membersApi, []),
         {req} = useConnection(),
         [sort, setSort] = useSettings('membersSort', 'xp', {options: ['name', 'xp', 'position', 'mutes', 'warns', 'bans']}),
         [search, setSearch] = useState(''),
-        loaded = useSelector(s => s.membersLoaded),
+        loaded = useSelector(s => s.guild.members.loaded),
         location = useLocation(),
         [v, setV] = useState(location.pathname === `${path}/members`),
         mm = useGuild.membersCache(),
-        mXP = useGuild.members.xp(),
-        mMutes = useGuild.members.mutes(),
-        mWarns = useGuild.members.warns(),
-        mBans = useGuild.members.bans(),
-        page = useRef(1)
+        mXP = useGuild.state.members.xp(),
+        mMutes = useGuild.state.members.mutes(),
+        mWarns = useGuild.state.members.warns(),
+        mBans = useGuild.state.members.bans(),
+        page = useRef(1),
+        isDemo = useSelector(s => s.guild.demo)
   const load = async () => {
     console.log(page.current, loaded)
     await req.members({p: page.current + 1, sort, search})
@@ -135,17 +144,18 @@ export const Members = ({path}) => {
   if (search)
     state = state.filter(m => m.name.toLowerCase().includes(search.toLowerCase()))
   return <DashboardContainer k="members" title="Members" className={st.members} icon="/static/img/members.png" deps={[state]} {...{path}}>
-    <Row className={st.head} elements={[
+    <Row2 className={st.head} els={[
       <Select type="options" prefix="Sort by: " selected={sort} dropdown={['Name', 'XP', 'Position', 'Mutes', 'Warns', 'Bans']} options={['name', 'xp', 'position', 'mutes', 'warns', 'bans']} set={setSort} />,
-      {width: 2, el: <Fill />},
+      [<Fill />, {flex: 2}],
       <Input className={st.search} placeholder="Search" input={n => setSearch(n)} fill b />
     ]} m />
     <Container>
-      <Scroll pl>
-        <div className="fill" style={{flexDirection: 'column'}}>
+      <Scroll>
+        <Container className={st.membersList} style={{flexDirection: 'column'}}>
+          {isDemo && <Container hp2 vp2 noflex>Not available in demo mode</Container>}
           {state.map((m, i) => <Member m={m} mapi={api.member(m.id)} {...{mXP, mMutes, mWarns, mBans, mm}} key={m.id + i} />)}
           <Loader loadedText={`${state.length} MEMBERS`} {...{load, loaded}} />
-        </div>
+        </Container>
       </Scroll>
     </Container>
   </DashboardContainer>
