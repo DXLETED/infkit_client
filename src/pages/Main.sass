@@ -98,12 +98,22 @@
   top: 0
   width: 100%
   height: 100%
+  justify-content: center
   opacity: 0.075
-  //background: linear-gradient(to bottom, $main 0%, transparent 100%), url(/static/img/bg.png)
-  filter: blur(0.5rh)
-  background-size: cover
-  background-position: bottom 20% center
   z-index: -1
+  .imageLeft
+    flex: 1
+    background-position-x: left !important
+    filter: blur(1.5rh)
+  .image
+    width: 100%
+    max-width: 2250px
+    height: 100%
+    filter: blur(0.5rh)
+  .imageRight
+    flex: 1
+    background-position-x: right !important
+    filter: blur(1.5rh)
 
 .footer
   width: 100%

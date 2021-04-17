@@ -1,21 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDelayedRequest } from '../../hooks/useDelayedRequest'
-import { Container } from '../container'
-import { EditableList } from '../editableList'
 import { Input } from '../input'
-import { Row } from '../row'
 import { Scroll } from '../scroll'
 import { Select } from '../select'
-import { Slider } from '../slider'
 import moment from 'moment'
 import momentDurationFormatSetup from 'moment-duration-format'
 momentDurationFormatSetup(moment)
 import { Switch } from '../switch'
-import { convertYTTime } from '../../utils/convertYTTime'
+import cn from 'classnames'
 
 import st from './Player.sass'
-import { CustomTime } from '../customTime'
 import { useSelector } from 'react-redux'
+import { Slider } from '../slider'
 
 const Timeline = ({playing, resumed, pos, posUpdate, duration}) => {
   const [state, setState] = useState({resumed: 0, pos: 0, posUpdate: 0, duration: 0, time: Date.now()})
@@ -28,17 +24,18 @@ const Timeline = ({playing, resumed, pos, posUpdate, duration}) => {
       return () => clearInterval(interval)
     }
   }, [posUpdate])
-  const durationFormatted = convertYTTime(state.duration) * 1000
+  const durationFormatted = state.duration * 1000
   const position = playing ? state.resumed ? (state.pos + (state.time - state.posUpdate)) : state.pos : 0
   return <>
-      <div className={st.status}>
+    <div className={st.timelineInner}>
+      <div className={st.pl} />
+      <div className={st.progress} style={{width: `${position / durationFormatted * 100}%`}}></div>
+    </div>
+    <div className={st.status}>
       <div className={st.position}>{position <= durationFormatted
         ? playing && position > 1000 ? moment.duration(Math.floor(position / 1000), 'seconds').format() : '0:00'
         : moment.duration(Math.floor(durationFormatted / 1000), 'seconds').format()}</div>
-      <div className={st.duration}>{state.duration}</div>
-    </div>
-    <div className={st.timelineInner}>
-      <div className={st.progress} style={{width: `${position / durationFormatted * 100}%`}}></div>
+      <div className={st.duration}>{!!state.duration && moment.duration(Math.floor(state.duration), 'seconds').format()}</div>
     </div>
   </>
 }
@@ -60,8 +57,86 @@ export const Player = ({state, api}) => {
     document.addEventListener('keydown', keyup)
     return () => document.removeEventListener('keydown', keyup)
   })
-  return <>
-    <Select type="voice" selected={mstate.channel} add={[{id: null, name: 'OFF'}]} set={api.setChannel} m />
+  return <div className={cn(st.player, {[st.bg]: !!mstate.np?.thumbnail})}>
+    <div className={st.image} style={{backgroundImage: `url(${mstate.np?.thumbnail})`}} />
+    <div className={st.controls}>
+      <Select type="voice" selected={mstate.channel} add={[{id: null, name: 'OFF'}]} set={api.setChannel} m />
+      <div className={st.info}>
+        <div className={st.thumbnail}>{mstate.playing && mstate.np && <img src={mstate.np.thumbnail} />}</div>
+        <div className={st.d}>
+          {mstate.playing && mstate.np ? <>
+            <div className={st.title}>{mstate.np.title}</div>
+            <div className={st.author}>{mstate.np.author}</div>
+            <div className={st.views}>{mstate.np.views} views</div>
+          </> : <div className={st.nothing}>Nothing is playing right now</div>}
+        </div>
+      </div>
+      <div className={st.timeline}>
+        <Timeline playing={mstate.playing} resumed={mstate.resumed} pos={mstate.pos} posUpdate={mstate.posUpdate} duration={mstate.playing && mstate.np?.duration} />
+      </div>
+      <div className={st.buttons}>
+        <div className={st.volume}>
+          <div className={st.icon}>
+            <img src="/static/img/music-control/volume.png" />
+          </div>
+          <Slider label="Volume" value={state.volume} keyPoints={20} set={api.volume} min={0.1} compact flex />
+          <div className={st.state}>{parseFloat((state.volume * 100).toFixed(2))}%</div>
+        </div>
+        <div className={cn(st.btn, {disabled: true || !mstate.prev})} onClick={api.prev}><img src="/static/img/music-control/prev.png" /><div className={st.border} /></div>
+        <div className={st.btn} onClick={api.playpause}>{(!mstate.playing || !mstate.resumed) ? <img src="/static/img/music-control/play.png" /> : <img src="/static/img/music-control/pause.png" />}<div className={st.border} /></div>
+        <div className={st.btn} onClick={api.skip}><img src="/static/img/music-control/next.png" /><div className={st.border} /></div>
+      </div>
+    </div>
+    <div className={st.queue}>
+      <Input placeholder="Search" ddset={n => {
+        api.play(searchResults[n].link)
+        setResults([])
+        clearInput.current ++
+        }} dropdown={searchResults ? searchResults.map(r => <div className={st.searchRes}>
+          <img className={st.thumbnail} src={r.thumbnail} />
+          <div className={st.d}>
+            <div className={st.title}>{r.title}</div>
+            <div className={st.desc}>{r.type.slice(0, 1).toUpperCase()}{r.type.slice(1)} | {r.duration} | {r.views} views</div>
+          </div>
+      </div>) : []} input={n => {
+        inputVal.current = n
+        setResults([])
+        search({url: '/api/v1/youtube/videos', params: {query: n}})
+      }} dropdownVisible={searchResults.length} clear={clearInput.current} defsize p m b />
+      <div className={st.list}>
+        <Scroll deps={[mstate.queue]} column pl>
+          {!mstate.np && !mstate.queue.length && <div className={st.noitems}>The queue is empty</div>}
+          {mstate.prev && <div className={st.el}>
+            <div className={st.d}>
+              <div className={st.icon}><img src="/static/img/music-control/prev.png" /></div>
+              <a className={st.title}>{mstate.prev.title}</a>
+              <div className={st.duration}>{moment.duration(Math.floor(mstate.prev.duration), 'seconds').format()}</div>
+            </div>
+          </div>}
+          {mstate.np && <div className={cn(st.el, st.np)}>
+            <div className={st.d}>
+              <div className={st.icon}><img src="/static/img/music-control/play.png" /></div>
+              <a className={st.title}>{mstate.np.title}</a>
+              <div className={st.duration}>{moment.duration(Math.floor(mstate.np.duration), 'seconds').format()}</div>
+            </div>
+          </div>}
+          {mstate.queue.map((el, i) => <div className={st.el} key={i}>
+            <div className={st.d}>
+              <div className={st.icon}>{i === 0 && <img src="/static/img/music-control/next.png" />}</div>
+              <a className={st.title}>{el.title}</a>
+              <div className={st.duration}>{moment.duration(Math.floor(el.duration), 'seconds').format()}</div>
+            </div>
+            <div className={st.ctrl}>
+              {/*<div className={st.up}><img src="/static/img/arrow/top.png" /></div>
+              <div className={st.down}><img src="/static/img/arrow/bottom.png" /></div>*/}
+              <div onClick={() => api.queue.del(i)}><img src="/static/img/delete.png" /></div>
+            </div>
+          </div>)}
+        </Scroll>
+      </div>
+      <Switch className={st.repeat} enabled={state.repeat} set={api.repeat} p><img src="/static/img/music-control/repeat.png" />Repeat</Switch>
+    </div>
+    {/*<Select type="voice" selected={mstate.channel} add={[{id: null, name: 'OFF'}]} set={api.setChannel} m />
     <Input placeholder="Search" ddset={n => {
       api.play(searchResults[n].id)
       setResults([])
@@ -109,6 +184,6 @@ export const Player = ({state, api}) => {
         </div>
       </Scroll>
     </div>
-    <CustomTime label="Leave after" value={0} max={600000} defsize b />
-  </>
+    <CustomTime label="Leave after" value={0} max={600000} defsize b />*/}
+  </div>
 }

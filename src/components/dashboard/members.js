@@ -77,22 +77,21 @@ const Member = ({m, mapi, mXP, mMutes, mWarns, mBans, mm}) => {
       <img src="/static/img/ban.png" />
       {mBans.get(m.id).length}
     </div>
-    <Modal s={mState0} className={st.modal} title={`${m.nickname || m.username} mutes`} footer={<div className={st.footer}>
+    <Modal s={mState0} className={st.modal} title={`${m.nickname || m.username} mutes`} footer={<></>/*<div className={st.footer}>
       <div className={st.button}>{isMuted ? 'ADD MUTE' : 'MUTE'}</div>
       {isMuted && <div className={st.button}>UNMUTE</div>}
-    </div>} column>
+    </div>*/}>
       {mutes.length ? list(mutes, {time: true}) : <Text jcc>No mutes</Text>}
     </Modal>
-    <Modal s={mState1} className={st.modal} title={`${m.nickname || m.username} warnings`} footer={<div className={st.footer}>
-        <div className={st.button} onClick={() => mapi.warn()}>WARN</div>
-      </div>}>
+    <Modal s={mState1} className={st.modal} title={`${m.nickname || m.username} warnings`} footer={<></>/*<div className={st.footer}>
+      <div className={st.button} onClick={() => mapi.warn()}>WARN</div>
+    </div>*/}>
       {warns.length ? list(warns) : <Text jcc>No warnings</Text>}
     </Modal>
-    <Modal s={mState2} className={st.modal} title={`${m.nickname || m.username} bans`} footer={<div className={st.footer}>
+    <Modal s={mState2} className={st.modal} title={`${m.nickname || m.username} bans`} footer={<></>/*<div className={st.footer}>
         <div className={st.button}>{isBanned ? 'ADD BAN' : 'BAN'}</div>
         {isBanned && <div className={st.button}>UNBAN</div>}
-      </div>
-    }>
+      </div>*/}>
       {bans.length ? list(bans, {time: true}) : <Text jcc>No bans</Text>}
     </Modal>
     <EXP xp={mXP.get(m.id)} mapi={mapi} />

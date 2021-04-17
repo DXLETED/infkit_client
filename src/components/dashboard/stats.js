@@ -65,7 +65,7 @@ const StatsItem = memo(({title, state, color, k, defaultStage, diff}) => {
   const layout = useLayout()
   return <div className={cn('stat', 'stat-members', {ap3: layout.ap3})}>
     <div className="stat-header"><div className="stat-name">{title}</div><Select type="options" selected={period} set={setPeriod} dropdown={['15 minutes', '1 hour', '1 day']} options={['15m', '1h', '1d']} width={12.5} noborder nm /></div>
-    <Chart dataset={state[period]} diff={diff} flex max={k === 'members' ? 2 : 5} color={color} />
+    <Chart dataset={state[period]} diff={diff} flex max={k === 'members' ? 2 : 5} min={0} color={color} />
   </div>
 })
 

@@ -386,11 +386,12 @@ const music = u => ({
   setChannel: n => u(null, () => [{action: 'music/channel', v: n}]),
   play: n => u(null, () => [{action: 'play', v: n}]),
   playpause: () => u(null, (pl, state) => [{action: state.music.resumed ? 'pause' : 'resume'}]),
+  prev: () => u(null, () => [{action: 'prev'}]),
   skip: () => u(null, () => [{action: 'skip'}]),
   repeat: () => u(pl => pl.repeat = !pl.repeat),
   volume: n => u(pl => pl.volume = n, () => [{action: 'volume'}]),
   queue: {
-    del: d => u(pl => pl.queue = pl.queue.filter((_, i) => i !== d))
+    del: d => u(null, () => [{action: 'music/dqueue', v: d}])
   },
   cmds: {
     play: cmd(u, 'play'),

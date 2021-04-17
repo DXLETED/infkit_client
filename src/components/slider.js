@@ -3,8 +3,9 @@ import cn from 'classnames'
 import { MLabel } from './mlabel'
 import { nearest } from '../utils/nearest'
 import { Input } from './input'
+import { Component } from './Component'
 
-export const Slider = ({value = 0, set, label, icon, keyPoints = 20, modifier = 1, m, noPoints, min, max}) => {
+export const Slider = ({value = 0, set, label, icon, keyPoints = 20, modifier = 1, m, noPoints, min, max, compact, ...props}) => {
   if (!Array.isArray(keyPoints))
     keyPoints = [...Array(keyPoints + 1)].map((_, i) => i / (keyPoints))
   const [pos, setPos] = useState(value / modifier)
@@ -44,8 +45,8 @@ export const Slider = ({value = 0, set, label, icon, keyPoints = 20, modifier = 
   }, [])
   useEffect(() => { setPos(value / modifier) }, [value])
   useEffect(() => { posRef.current = pos }, [pos])
-  return <div className={cn('slider-wr', {row: !!icon, m})}>
-    <MLabel d={label} r={<Input value={parseFloat((nearest(pos, keyPoints) * modifier).toFixed(2))} set={inputSet} {...{min, max}} type="number" fill right />} />
+  return <Component className={cn('slider-wr', {row: !!icon, m, compact})} {...props}>
+    {!compact && <MLabel d={label} r={<Input value={parseFloat((nearest(pos, keyPoints) * modifier).toFixed(2))} set={inputSet} {...{min, max}} type="number" fill right />} />}
     {icon && <img src={icon} />}
     <div
       className="slider"
@@ -62,5 +63,5 @@ export const Slider = ({value = 0, set, label, icon, keyPoints = 20, modifier = 
       <div className="slider-fill" style={{width: `${pos * 100}%`}} />
       <div className="slider-unfilled" />
     </div>
-  </div>
+  </Component>
 }

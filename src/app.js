@@ -58,14 +58,16 @@ const Main = () => {
     })
   }, [])
   const bg = animeBg
-    ? `linear-gradient(to bottom, ${colors.main} 0%, transparent 100%), center center / cover url(/static/img/anime-bg.png)`
+    ? `linear-gradient(to bottom, ${colors.main} 0%, transparent 100%), center center / cover url(/static/img/anime-bg.png), #000`
     : `linear-gradient(to bottom, ${colors.main} 0%, transparent 100%), bottom 20% center / cover url(/static/img/bg.${webp ? 'webp' : 'png'})`
   return (
     <>
       <Router>
-        <div className={st.mainBg} style={{
-          background: bg
-        }} />
+        <div className={st.mainBg}>
+          <div className={st.imageLeft} style={{ background: bg }} />
+          <div className={st.image} style={{ background: bg }} />
+          <div className={st.imageRight} style={{ background: bg }} />
+        </div>
         <page>
           <Header />
           <Route exact path="/" component={MainPage} />

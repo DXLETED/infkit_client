@@ -35,7 +35,6 @@ const Group = ({g, api}) => {
 export const Groups = ({open, setOpen}) => {
   const state = useSelector(s => s.guild && s.guild.config.groups, isEqual),
         api   = useMemo(() => groupsApi, [])
-  const [addName, setAddName] = useState('')
   return (
     <div className={cn(st.groups, {[st.open]: open})}>
       <div className={st.label} onClick={() => setOpen(!open)}><div className={st.labelInner}><img src="/static/img/side/groups.png" />Groups</div><img src={open ? '/static/img/arrow/top.png' : '/static/img/arrow/bottom.png'} /></div>
@@ -43,9 +42,9 @@ export const Groups = ({open, setOpen}) => {
           <div className={st.dropdown}>
             <Scroll className={st.list} deps={[state]} pl>
               {state ? state.map((g, i) => <Group g={g} api={api.group(i)} key={i} />) : <></>}
-              <div className={st.add}>
-                <Input set={setAddName} placeholder="Group name" clear={state?.length} fill />
-                <div className={st.btn} onClick={() => api.add(addName)}>CREATE</div>
+              <div className={st.add} onClick={() => api.add()}>
+                <img src="/static/img/add.png" />
+                CREATE
               </div>
             </Scroll>
           </div>}

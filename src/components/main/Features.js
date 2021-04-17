@@ -47,8 +47,8 @@ export const Features = () => <div className={st.features}>
   <FeaturesItem title="Music player" text="Control music directly from the app" src="/static/img/features/music_player.png" color={colors.music} reversed />
   <FeaturesItem title="Twitch alerts" text="Notify people when streams are launched" src="/static/img/features/alerts.png" color={colors.alerts} />
   <FeaturesItem title="Server stats" text="Follow the development of the server" src="/static/img/features/stats.png" color={colors.counters} reversed />
-  <div className={st.item_2}>
+  {/*<div className={st.item_2}>
     <div className={st.title} style={{borderColor: colors.grey}}>Co-Editing</div>
     <VideoHover className={st.video} />
-  </div>
+  </div>*/}
 </div>

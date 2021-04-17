@@ -1,113 +1,179 @@
 @import ../../css-legacy/colorlist.scss
+@import src/mixins.sass
 
-.np
-  margin-bottom: 1vh
-  .thumbnail
-    height: 15vh
-    width: calc((var(--vh) * var(--sc) * 15) / 9 * 16)
-    background: rgba($black, 0.5)
-    img
-      width: 100%
-      height: 100%
-      object-fit: contain
-  .d
-    flex-direction: column
-    justify-content: center
-    padding: 0 4vh
-  .nothing
-    font-size: 2.2vh
-    color: $grey
-  .title
-    font-size: 2.2vh
-    font-family: 'Bold'
-    margin-bottom: 0.5vh
-  .author
-    margin-top: 1vh
-    color: $grey
-  .views
-    margin-top: 0.5vh
-    color: $grey
-  
-.controlPanel
-  flex-direction: column
-  .control1
-    height: 4vh
-    margin-bottom: 1vh
-    > *
-      position: relative
-      flex: 1
-      justify-content: center
-      align-items: center
-      cursor: pointer
-      &:hover
-        > .border
-          height: 0.3vh
-          background: $white
-        > img
-          opacity: 1
-      > img
-        height: 50%
-        opacity: 0.5
-      > .border
-        content: ""
-        position: absolute
-        width: 100%
-        height: 0.2vh
-        bottom: 0
-        background: $grey
-
-.timeline
-  flex: 1
-  height: 3.5vh
-  justify-content: space-between
-  flex-direction: column
-  .status
-    justify-content: space-between
-    .duration
-      color: $grey
-  .timelineInner
+.player
+  width: 100%
+  height: 60vh
+  &.bg
+    background: $main
+    .image
+      opacity: 0.2
+  &:not(.bg)
+    background: rgba($black, 0.2)
+  > *:not(.image)
+    z-index: 1
+  .image
     width: 100%
-    height: 0.5vh
-    background: $dgrey
-    .progress
-      max-width: 100%
-      height: 100%
-      background: $white
-
-.queue
-  max-height: 29vh
-  .queueInner
-    flex: 1
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    background-repeat: no-repeat
+    background-size: cover
+    opacity: 0
+    filter: blur(5rh)
+    transition: 1s opacity, 1s background
+  .controls
+    width: calc(100% - 40vh)
+    position: relative
     flex-direction: column
-    .song
+    overflow: hidden
+    padding: 1vh
+    .info
+      flex: 1
+      align-items: center
+      margin-bottom: 1vh
+      user-select: text
+      .thumbnail
+        height: 15vh
+        width: calc((var(--vh) * var(--sc) * 15) / 9 * 16)
+        background: rgba($black, 0.5)
+        img
+          width: 100%
+          height: 100%
+          object-fit: contain
+      .d
+        flex-direction: column
+        justify-content: center
+        padding: 0 4vh
+      .nothing
+        font-size: 2.2vh
+        color: $grey
+      .title
+        font-size: 2.2vh
+        font-family: 'Bold'
+        margin-bottom: 0.5vh
+        user-select: text
+        cursor: default
+      .author
+        margin-top: 1vh
+        color: $grey
+        user-select: text
+        cursor: default
+      .views
+        margin-top: 0.5vh
+        color: $grey
+        user-select: text
+        cursor: default
+    .timeline
       width: 100%
-      height: 4vh
-      background: $dmain
-      &:not(:last-child)
-        margin-bottom: 1vh
-      > .d
-        flex: 1
+      height: 3vh
+      justify-content: space-between
+      flex-direction: column
+      margin-bottom: 1vh
+      .status
         justify-content: space-between
-        align-items: center
-        padding: 0 2vh
-      > .delete
-        width: 4vh
-        height: 100%
+        .duration
+          color: $grey
+      .timelineInner
+        width: 100%
+        height: 0.4vh
+        position: relative
+        .pl
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 0.2vh
+          background: $dgrey
+        .progress
+          max-width: 100%
+          height: 100%
+          background: $white
+          z-index: 1
+    .buttons
+      width: 100%
+      height: 3.5vh
+      .btn
+        flex: 1
         justify-content: center
         align-items: center
         cursor: pointer
         &:hover
-          background: $red
-          > img
+          background: rgba($black, 0.4)
+        img
+          height: 1.6vh
+      .volume
+        flex: 2
+        align-items: center
+        padding: 0 1vh
+        background: rgba($black, 0.4)
+        border-radius: 0.3vh
+        .icon
+          margin-right: 1vh
+          img
+            height: 1.6vh
+            transition: 0.2s height
+        .state
+          margin-left: 1vh
+  .queue  
+    width: 40vh
+    height: 100%
+    background: rgba($black, 0.2)
+    flex-direction: column
+    padding: 1vh
+    .list
+      height: calc(100% - 9.5vh)
+      margin-bottom: 1vh
+      .noitems
+        flex: 1
+        justify-content: center
+        align-items: center
+        color: $grey
+      .el
+        width: 100%
+        min-height: 4vh
+        position: relative
+        &.np
+          background: rgba($grey, 0.2)
+        &:hover
+          .ctrl
             opacity: 1
-        > img
-          height: 40%
-          opacity: 0.5
-    > .nothing
-      height: 4vh
-      align-items: center
-      padding: 0 2vh
-      background: $dmain
+        .d
+          width: 100%
+          .icon
+            width: 1.4vh
+            align-items: center
+            margin-left: 1vh
+            img
+              width: 1.4vh
+          .title
+            flex: 1
+            align-items: center
+            padding: 0.5vh 1vh
+          .duration
+            align-items: center
+            color: $grey
+            padding: 0 1vh
+        .ctrl
+          height: 100%
+          position: absolute
+          right: 0
+          top: 0
+          opacity: 0
+          backdrop-filter: blur(1vh)
+          @supports not (backdrop-filter: blur(1vh))
+            background: rgba($black, 0.5)
+          transition: 0.2s opacity
+          > *
+            height: 100%
+            align-items: center
+            padding: 0 1vh
+            cursor: pointer
+            &:hover
+              background: rgba($grey, 0.2)
+            img
+              height: 1.6vh
 
 .searchRes
   height: 100%
@@ -125,3 +191,27 @@
     .desc
       color: $grey
       font-size: 1.2vh
+
+@include ap1
+  .player .controls .info
+    justify-content: center
+    align-items: flex-start
+    flex-direction: column
+    .thumbnail
+      width: 100%
+      margin-bottom: 4vh
+    .d
+      padding: 0
+
+@include ap2
+  .player
+    height: auto
+    flex-direction: column
+    .controls
+      width: 100%
+      height: 45vh
+      .info .thumbnail
+        margin-bottom: 2vh
+    .queue
+      width: 100%
+      height: 50vh

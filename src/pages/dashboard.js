@@ -57,7 +57,7 @@ export const Dashboard = props => {
         authorized = useSelector(s => s.authorized),
         [statsVisible, setStatsVisible] = useSettings('stats_visible', true),
         { connect, disconnect } = useConnection(),
-        botInvited = !guilds || guilds.find(g => g.id === cookie.guild && g.bot),
+        botInvited = !guilds || !guilds.find(g => g.id === cookie.guild) || guilds.find(g => g.bot),
         add = useAddGuild()
   useEffect(() => {
     if (props.demo) return
