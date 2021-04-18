@@ -82,7 +82,7 @@ export const MessageEditor = ({state, set, ...props}) => {
     <div className={cn(st.previewButton2, {[st.enabled]: previewVisible})} onClick={() => setPreviewVisible(!previewVisible)}>
       {previewVisible ? <img src="/static/img/arrow/top.png" /> : <img src="/static/img/arrow/bottom.png" />}Preview
     </div>
-    <div className={cn(st.controls, {[st.editing]: isEditing || !isEqual(msg, state)})}>
+    <div className={cn(st.controls)}>
       <div className={st.controls1}>
         {!msg.embed && <>
           <EmojiBtn className={st.emoji} set={e => controls.current?.insert(e.label)}><img src="/static/img/emojiBtn.png" /> Emoji</EmojiBtn>

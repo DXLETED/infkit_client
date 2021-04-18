@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { CSSTransition } from 'react-transition-group'
 
 import st from './notifications.sass'
-import stAnimation from './notificationsAnimation.sass'
+import stAnimation from './NotificationsAnimation.sass'
 import { Modal } from './modal'
 import { useModal } from '../hooks/useModal'
 

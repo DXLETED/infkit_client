@@ -4,6 +4,7 @@
 .player
   width: 100%
   height: 60vh
+  border: 0.2vh solid $dgrey
   &.bg
     background: $main
     .image
@@ -60,7 +61,7 @@
         color: $grey
         user-select: text
         cursor: default
-      .views
+      .views, .duration
         margin-top: 0.5vh
         color: $grey
         user-select: text
@@ -115,6 +116,8 @@
             height: 1.6vh
             transition: 0.2s height
         .state
+          width: 4vh
+          justify-content: flex-end
           margin-left: 1vh
   .queue  
     width: 40vh

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { useDelayedRequest } from '../../hooks/useDelayedRequest'
 import { Input } from '../input'
 import { Scroll } from '../scroll'
@@ -12,6 +12,8 @@ import cn from 'classnames'
 import st from './Player.sass'
 import { useSelector } from 'react-redux'
 import { Slider } from '../slider'
+import { throttle } from '../../utils/throttle'
+import { debounce } from 'lodash'
 
 const Timeline = ({playing, resumed, pos, posUpdate, duration}) => {
   const [state, setState] = useState({resumed: 0, pos: 0, posUpdate: 0, duration: 0, time: Date.now()})
@@ -46,17 +48,32 @@ export const Player = ({state, api}) => {
   const inputVal = useRef()
   const clearInput = useRef(0)
   const [search, cancelSearch] = useDelayedRequest((input, data) => input.params.query === inputVal.current && setResults(data), 2000)
-  const keyup = e => {
+  const controls = useMemo(() => ({
+    playpause: throttle(api.playpause, 500, {trailing: false}),
+    volume: {
+      add: throttle(api.volume.add, 200, {trailing: false}),
+      sub: throttle(api.volume.sub, 200, {trailing: false})
+    }
+  }), [])
+  const keyup = useMemo(() => e => {
     if (e.target.tagName.toUpperCase() === 'INPUT') return
     if (e.keyCode === 32) {
-      api.playpause()
+      controls.playpause()
       e.preventDefault()
     }
-  }
+    if (e.keyCode === 38) {
+      controls.volume.add()
+      e.preventDefault()
+    }
+    if (e.keyCode === 40) {
+      controls.volume.sub()
+      e.preventDefault()
+    }
+  })
   useEffect(() => {
     document.addEventListener('keydown', keyup)
     return () => document.removeEventListener('keydown', keyup)
-  })
+  }, [])
   return <div className={cn(st.player, {[st.bg]: !!mstate.np?.thumbnail})}>
     <div className={st.image} style={{backgroundImage: `url(${mstate.np?.thumbnail})`}} />
     <div className={st.controls}>
@@ -68,6 +85,7 @@ export const Player = ({state, api}) => {
             <div className={st.title}>{mstate.np.title}</div>
             <div className={st.author}>{mstate.np.author}</div>
             <div className={st.views}>{mstate.np.views} views</div>
+            <div className={st.duration}>{moment.duration(Math.floor(mstate.np.duration), 'seconds').format()}</div>
           </> : <div className={st.nothing}>Nothing is playing right now</div>}
         </div>
       </div>
@@ -79,7 +97,7 @@ export const Player = ({state, api}) => {
           <div className={st.icon}>
             <img src="/static/img/music-control/volume.png" />
           </div>
-          <Slider label="Volume" value={state.volume} keyPoints={20} set={api.volume} min={0.1} compact flex />
+          <Slider label="Volume" value={state.volume} keyPoints={20} set={api.volume.set} min={0.1} compact flex />
           <div className={st.state}>{parseFloat((state.volume * 100).toFixed(2))}%</div>
         </div>
         <div className={cn(st.btn, {disabled: true || !mstate.prev})} onClick={api.prev}><img src="/static/img/music-control/prev.png" /><div className={st.border} /></div>

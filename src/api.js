@@ -389,7 +389,11 @@ const music = u => ({
   prev: () => u(null, () => [{action: 'prev'}]),
   skip: () => u(null, () => [{action: 'skip'}]),
   repeat: () => u(pl => pl.repeat = !pl.repeat),
-  volume: n => u(pl => pl.volume = n, () => [{action: 'volume'}]),
+  volume: {
+    set: n => u(pl => pl.volume = n, () => [{action: 'volume'}]),
+    add: () => u(pl => u(pl => pl.volume = pl.volume + 0.05, () => [{action: 'volume'}])),
+    sub: () => u(pl => u(pl => pl.volume = pl.volume - 0.05, () => [{action: 'volume'}]))
+  },
   queue: {
     del: d => u(null, () => [{action: 'music/dqueue', v: d}])
   },

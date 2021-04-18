@@ -31,7 +31,7 @@ export const Guilds = memo(() => {
   return <div className={st.guildsWr} style={{opacity: (800 - scrollTop) / 800}}>
     <Scroll className={st.guilds} deps={[guilds]} pl column>
       {authorized
-        ? guilds
+        ? guilds?.length
           ? <>
             {guilds.map((g, i) =>
               <EdgedButton
