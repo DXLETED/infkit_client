@@ -49,7 +49,7 @@ function todos(state = {}, action) {
     case 'UPDATE_GUILD_SETTINGS':
       return {...state, guild: {...state.guild, settings: action.data}}
     case 'SET_TIMESYNC':
-      return {...state, timesync: state.data}
+      return {...state, timesync: action.data}
     case 'UPDATE_CNCT':
       return {...state, cnct: {...state.cnct, ...action.data}}
     case 'SET_MEMBERS':
@@ -90,6 +90,13 @@ function todos(state = {}, action) {
       return {...state, guild: {...state.guild, channels: action.data}}
     case 'guild/update/state':
       return {...state, guild: {...state.guild, state: {...state.guild.state, [action.t]: action.data}}}
+    case 'guild/update/members':
+      return {...state, guild: {...state.guild, members: action.data}}
+    case 'guild/update/member':
+      return {...state, guild: {...state.guild, members: {...state.guild.members, list: state.guild.members.list.find(m => m.id === action.id)
+        ? state.guild.members.list.map(m => m.id === action.id ? action.data : m)
+        : [...state.guild.members.list, action.data]
+      }}}
     default:
       return state
   }

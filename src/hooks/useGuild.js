@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { isEqual } from 'lodash'
+import { useConnection } from './connection.hook'
 
 const sel = path => useSelector(path, isEqual)
+
+const membersRequested = []
 
 export const useGuild = {
   roles: () => {
@@ -57,9 +60,20 @@ export const useGuild = {
       }
     }
   },
-  members: () => {
-    const list = sel(s => s.guild.members)
-    return {list, get: id => list[id] || {}}
+  members: ids => {
+    const loaded = sel(s => s.guild.members.loaded),
+          list = sel(s => s.guild.members.list),
+          connection = useConnection()
+    useEffect(() => { !loaded && ids && ids.map(id => {
+      if (!membersRequested.includes(id)) {
+        connection.req.member(id)
+        delete membersRequested[id]
+      }
+    }) }, [ids])
+    return {
+      list,
+      get: id => list.find(el => el.id === id) || {loading: !loaded}
+    }
   },
   membersCache: () => {
     let list = sel(s => s.members)

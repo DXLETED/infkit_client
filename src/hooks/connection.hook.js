@@ -31,7 +31,7 @@ export const useConnection = () => {
         dispatch = useDispatch()
   const setCn = n => dispatch({type: 'UPDATE_CNCT', data: n})
   const updateGuildState = data => {
-    dispatch({type: 'SET_TIMECYNC', data: data.ts - Date.now()})
+    dispatch({type: 'SET_TIMESYNC', data: data.ts - Date.now()})
     dispatch({type: 'SAVE_GUILD', data})
     if (store.getState().guild && isEqual(store.getState().guild, data)) return
     dispatch({type: 'UPDATE_GUILD', data})
@@ -106,15 +106,15 @@ export const useConnection = () => {
   }
   const req = {
     member: id => ws && ws.connected && ws.emit('member', {id}, res => {
+      console.log('MEMBER', res)
       if (res.status === 200)
-        dispatch({type: 'UPDATE_MEMBERS_CACHE', data: {[id]: res.d}})
+        dispatch({type: 'guild/update/member', id: res.d.id, data: res.d})
       else if (res.status === 404)
-        dispatch({type: 'UPDATE_MEMBERS_CACHE', data: {[id]: {avatar: null, name: '?????', discr: '----'}}})
+        dispatch({type: 'guild/update/member', id: res.d.id, data: {avatar: null, name: '?????', discr: '----'}})
     }),
     members: ({p = 1, sort = 'xp', search = ''}) => ws && ws.connected && ws.emit('members', {lim: p * 50, sort, search}, res => {
       if (res.status === 200) {
-        dispatch({type: 'SET_MEMBERS', data: res.d})
-        dispatch({type: 'SET_MEMBERS_LOADED', data: res.loaded})
+        dispatch({type: 'guild/update/members', data: {loaded: res.loaded, list: res.d}})
       } else notify.error({description: 'Error loading members', text: `Status: ${res.status}`}, 10000)
     })
   }

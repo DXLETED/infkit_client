@@ -14,14 +14,19 @@ import { useSelector } from 'react-redux'
 import { Slider } from '../slider'
 import { throttle } from '../../utils/throttle'
 import { debounce } from 'lodash'
+import { numberWithSpaces } from '../../utils/numberWithSpaces'
+import { useGuild } from '../../hooks/useGuild'
+import { Member } from '../Member'
+import { Svg } from '../svg'
 
 const Timeline = ({playing, resumed, pos, posUpdate, duration}) => {
   const [state, setState] = useState({resumed: 0, pos: 0, posUpdate: 0, duration: 0, time: Date.now()})
+  const timesync = useSelector(s => s.timesync)
   useEffect(() => {
-    setState({resumed, pos, posUpdate, duration, time: Date.now()})
+    setState({resumed, pos, posUpdate, duration, time: Date.now() + timesync})
     if (playing && resumed && posUpdate && duration) {
       const interval = setInterval(() => {
-        setState(s => ({...s, time: Date.now()}))
+        setState(s => ({...s, time: Date.now() + timesync}))
       }, 1000 / 10)
       return () => clearInterval(interval)
     }
@@ -79,15 +84,21 @@ export const Player = ({state, api}) => {
     <div className={st.controls}>
       <Select type="voice" selected={mstate.channel} add={[{id: null, name: 'OFF'}]} set={api.setChannel} m />
       <div className={st.info}>
+        {mstate.playing && mstate.np && <>
         <div className={st.thumbnail}>{mstate.playing && mstate.np && <img src={mstate.np.thumbnail} />}</div>
-        <div className={st.d}>
-          {mstate.playing && mstate.np ? <>
+          <div className={st.d}>
             <div className={st.title}>{mstate.np.title}</div>
             <div className={st.author}>{mstate.np.author}</div>
-            <div className={st.views}>{mstate.np.views} views</div>
-            <div className={st.duration}>{moment.duration(Math.floor(mstate.np.duration), 'seconds').format()}</div>
-          </> : <div className={st.nothing}>Nothing is playing right now</div>}
-        </div>
+            <div className={st.details}>
+              <div className={st.el}><Svg className={st.icon} k="views" size={14} />{numberWithSpaces(mstate.np.views)}</div>
+              <div className={st.el}><Svg className={st.icon} k="like" size={14} />{numberWithSpaces(mstate.np.likes)}</div>
+              <div className={st.el}><Svg className={st.icon} k="dislike" size={14} />{numberWithSpaces(mstate.np.dislikes)}</div>
+            </div>
+            <div className={st.requested}>
+              <Member id={mstate.np.requested} bg />
+            </div>
+          </div>
+        </>}
       </div>
       <div className={st.timeline}>
         <Timeline playing={mstate.playing} resumed={mstate.resumed} pos={mstate.pos} posUpdate={mstate.posUpdate} duration={mstate.playing && mstate.np?.duration} />
@@ -100,9 +111,11 @@ export const Player = ({state, api}) => {
           <Slider label="Volume" value={state.volume} keyPoints={20} set={api.volume.set} min={0.1} compact flex />
           <div className={st.state}>{parseFloat((state.volume * 100).toFixed(2))}%</div>
         </div>
-        <div className={cn(st.btn, {disabled: true || !mstate.prev})} onClick={api.prev}><img src="/static/img/music-control/prev.png" /><div className={st.border} /></div>
-        <div className={st.btn} onClick={api.playpause}>{(!mstate.playing || !mstate.resumed) ? <img src="/static/img/music-control/play.png" /> : <img src="/static/img/music-control/pause.png" />}<div className={st.border} /></div>
-        <div className={st.btn} onClick={api.skip}><img src="/static/img/music-control/next.png" /><div className={st.border} /></div>
+        <div className={st.track}>
+          <div className={cn(st.btn, {disabled: true || !mstate.prev})} onClick={api.prev}><img src="/static/img/music-control/prev.png" /><div className={st.border} /></div>
+          <div className={st.btn} onClick={api.playpause}>{(!mstate.playing || !mstate.resumed) ? <img src="/static/img/music-control/play.png" /> : <img src="/static/img/music-control/pause.png" />}<div className={st.border} /></div>
+          <div className={st.btn} onClick={api.skip}><img src="/static/img/music-control/next.png" /><div className={st.border} /></div>
+        </div>
       </div>
     </div>
     <div className={st.queue}>
@@ -123,7 +136,7 @@ export const Player = ({state, api}) => {
       }} dropdownVisible={searchResults.length} clear={clearInput.current} defsize p m b />
       <div className={st.list}>
         <Scroll deps={[mstate.queue]} column pl>
-          {!mstate.np && !mstate.queue.length && <div className={st.noitems}>The queue is empty</div>}
+          {!mstate.prev && !mstate.np && !mstate.queue.length && <div className={st.noitems}>The queue is empty</div>}
           {mstate.prev && <div className={st.el}>
             <div className={st.d}>
               <div className={st.icon}><img src="/static/img/music-control/prev.png" /></div>

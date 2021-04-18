@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, memo } from 'react'
+import React, { useRef, useEffect, useState, memo, useMemo } from 'react'
 import ReactDOM from 'react-dom'
 import cn from 'classnames'
 import { Scroll } from './scroll'
@@ -6,6 +6,7 @@ import { CSSTransition } from 'react-transition-group'
 import { Memoized } from './Memoized'
 import { vh } from './cssVar'
 import { useLayout } from '../hooks/layout.hook'
+import { throttle } from '../utils/throttle'
 
 export const ModalLabel = props => <div className={cn('modallabel-wr', {enabled: props.enabled === true, switchable: props.enabled !== undefined, m: props.m, disabled: props.disabled})}>
   {props.enabled !== undefined && <div className={cn('ml-enabled', {open: props.enabled})} onClick={() => props.toggle()}><img src={`/static/img/${props.enabled ? 'on' : 'off'}.png`} /></div>}
@@ -23,13 +24,13 @@ export const Modal = ({s, children, title, className, onClick, column, footer}) 
   const ref = useRef()
   const link = useRef()
   const layout = useLayout()
-  const updLinkedPos = () => !s.fs && link.current && setLinkedPos({
+  const updLinkedPos = useMemo(() => throttle(() => !s.fs && link.current && setLinkedPos({
     loaded: true,
     x: link.current.getBoundingClientRect().x,
     y: link.current.getBoundingClientRect().y,
     w: link.current.clientWidth,
     h: link.current.clientHeight
-  })
+  }), 1000 / 60), [])
   const updPos = () => {
     if (s.fs) return setTimeout(() => setV2(true))
     if (!s.open || !V1 || !linkedPos.loaded || !ref.current) return
